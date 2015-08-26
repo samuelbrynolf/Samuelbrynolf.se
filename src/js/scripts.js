@@ -43,7 +43,7 @@
 	
 	
 	function fadeImg(elem){
-		var fadeTarget = 	elem.find('img');
+		var fadeTarget = elem.find('img');
 		
 		fadeTarget.each(function(i){
 			var $this = $(this);
@@ -139,13 +139,13 @@
 
 	
 	if($.fn.imgLoadCheck){
-		var loadCheckEl = $('.js-loadCheck');
-    if(loadCheckEl.length){
-    	loadCheckEl.imgLoadCheck({
-    		loader: true,
-    		callbackTimeout: 300
-    	},showElem);
-	   }
+        var loadCheckEl = $('.js-loadCheck');
+        if(loadCheckEl.length){
+    	    loadCheckEl.imgLoadCheck({
+    		    loader: true,
+    		    callbackTimeout: 300
+            },showElem);
+	    }
 	}
 	
 	

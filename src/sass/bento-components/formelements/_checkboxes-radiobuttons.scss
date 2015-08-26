@@ -1,0 +1,97 @@
+// ATOMS
+// ===========================================================
+
+.js .a-label{
+  position: relative;
+  font-family: $bodyfont;
+  @include type-to-em($basefont,$body_leading);
+  color: $subtle-text;
+  cursor: pointer;
+
+  &.block{
+    display: block;
+    width: 100%;
+  }
+
+  &.checkbox,
+  &.radio{
+    padding-left: 1em;
+
+    &:before{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 50;
+      height: 24/18+0em;
+      width: 24/18+0em;
+      margin-top: -12/18+0em;
+      font-family: $icon-font;
+      font-size: 24/18+0em;
+      content: '\e045';
+      pointer-events: none;
+    }
+  }
+
+  &.radio{
+
+    &:before{
+      content: '\e049';
+    }
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    visibility: hidden;
+  }
+}
+
+
+// MOLECULE
+// ===========================================================
+
+
+// ORGANSIM
+// ===========================================================
+
+
+// STATES
+// ===========================================================
+
+.js .a-label.s-is-checked{
+  color: $msg-ok;
+
+  &.checkbox:before{
+    content: '\e046';
+  }
+
+  &.radio:before{
+    content: '\e042';
+  }
+}
+
+.js .a-label.s-is-disabled{
+  color: $subtle-text !important;
+  cursor: default !important;
+}
+
+
+// ANIMATIONS
+// ===========================================================
+
+.transitions{
+  .a-label:before,
+  .a-label{
+    transition: all 0.06s ease-in-out;
+  }
+}
+
+.js .a-label.s-is-checked:before {
+  @include animation('iconlove .2s 1');
+}
+
+@include keyframes(iconlove) {
+  20%{
+    transform: translate3d(-0.1em,0,0) rotate(1turn) scale(1.1);
+  }
+}

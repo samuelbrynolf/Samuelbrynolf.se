@@ -1,0 +1,43 @@
+// ATOMS
+// ===========================================================
+
+
+// MOLECULE
+// ===========================================================
+
+@media screen and (min-width: $charlie_query) {
+	.js-JVC{
+		
+		&.m-components,
+		&.example-1{
+			opacity: 0.1;
+		}
+	}
+}
+
+
+// ORGANSIM
+// ===========================================================
+
+
+// STATES
+// ===========================================================
+
+.js-JVC.s-is-visible,
+.no-js .js-JVC{
+	
+	&.m-components,
+	&.example-1{
+		opacity: 1;
+	}
+}
+
+
+// ANIMATIONS
+// ===========================================================
+
+@media screen and (min-width: $charlie_query) {
+	.js-JVC{
+		transition: all 0.450s ease-in-out;
+	}
+}

@@ -1,0 +1,158 @@
+// TEXT ==============================================================================================================
+
+.a-xlarge,
+.a-large,
+.a-medium,
+.a-small,
+strong,
+.a-sitename,
+strong,
+.overlay-item{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  a,
+  span{
+    font-weight: inherit;
+  }
+}
+
+.a-xlarge{
+  @include type-to-em(84,108);
+  font-family: $captionfont-1;
+}
+
+.a-large{
+  @include type-to-em(54,72);
+  font-family: $captionfont-1;
+  color: lighten($bodycolor, 50%);
+  text-transform: uppercase;
+}
+
+.a-medium{
+  @include type-to-em(36,48);
+  font-family: $captionfont-1;
+}
+
+.a-small{
+  font-family: $captionfont-2;
+  text-transform: uppercase;
+}
+
+.a-small,
+.a-fineprint{
+  @include type-to-em(14,21);
+}
+
+.a-preamble{
+  @include type-to-em(21,33);
+
+  p{
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+a{
+  color: $action;
+  text-decoration: none;
+}
+
+strong{
+  font-family: $captionfont-2;
+}
+
+p + p{
+  margin-top: $leading;
+}
+
+
+//a[href^="http://"] {
+//  -ms-word-break: break-all;
+//  word-break: break-all;
+//  word-break: break-word;
+//  hyphens: auto;
+//}
+
+//a[href^="http://www.domain.com"],
+//a[href^="http://domain.com"] {
+//  word-break: normal;
+//}
+
+
+// LISTS =============================================================================================================
+
+
+.a-ol,
+.a-ul{
+
+  li + li{
+    margin-top: rem($body_leading/2);
+  }
+}
+
+.a-ol{
+  list-style-type: decimal-leading-zero;
+  margin-left: 2em;
+
+  li{}
+}
+
+.a-ul{
+  list-style-type: square;
+  margin-left: 2em;
+
+  li{}
+}
+
+
+// IMAGES + VIDEO/MEDIA =============================================================================================================
+
+.a-sitename{
+  @include swap_text_for_img(60,60);
+  background-image: url(../img/component_demo_imgs/logo.jpg);
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url(../img/component_demo_imgs/logo_hires.jpg);
+  }
+}
+
+img.lazyload,
+img.lazyloaded,
+img.forcewidth{
+  width: 100%;
+}
+
+@media all and (min-width: $beta_query) {
+  .js .js-medialoadEffect img{
+    opacity: 0;
+  }
+}
+
+// FORMS ==============================================================================================================
+
+.a-inputText{
+  @include formText();
+  border: 1px solid $action;
+  background: $inputbg;
+}
+
+.a-textarea{
+  @include formText();
+  line-height: 1.5;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  background: $inputbg;
+}
+
+
+// BUTTONS + EVENT-ELEMENTS ==============================================================================================================
+
+.a-btn{
+  @include formBtn();
+}

@@ -1,0 +1,94 @@
+// ATOMS
+// ===========================================================
+
+.a-contentslide__btn{
+	position: absolute;
+	z-index: 40;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	text-indent: -99999px;
+	background-color: $action;
+	
+	&.next{
+		right: 0;
+	}
+}
+
+// MOLECULE
+// ===========================================================
+
+.m-contentslide__ul{
+	display: table;	
+	width: 500%;
+	
+	@media all and (min-width: $beta_query) {
+		width: 300%;
+	}
+	
+	@media all and (min-width: $charlie_query) {
+		width: 200%;
+	}
+	
+	@media all and (min-width: $delta_query) {
+		width: 100%;
+	}
+}
+
+.m-contentslide__li{
+	display: table-cell;
+	width: 12.5%; // 8 items
+	
+	&.expired{
+
+	}
+}
+
+.no-js .m-contentslide__ul,
+.no-js .m-contentslide__li{
+	display: block;
+}
+
+// ORGANSIM
+// ===========================================================
+
+.o-scrolledSliderParent{
+	position: relative;
+	
+	&.trigTarget{
+	
+		.m-contentslide__li{
+			cursor: pointer;
+		}
+	}
+	
+}
+
+.o-contentslide__slider{
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	
+	@media all and (min-width: $delta_query) {
+		overflow-x: hidden;
+	}
+	
+	&::-webkit-scrollbar{
+		width: 0 !important;
+		display: none;
+	}
+}
+
+// STATES
+// ===========================================================
+
+
+
+// ANIMATIONS
+// ===========================================================
+
+.transitions{
+
+	.js-contentTargetsParent{
+		transition: all 0.350s 0.3s ease-in-out;
+	}
+}

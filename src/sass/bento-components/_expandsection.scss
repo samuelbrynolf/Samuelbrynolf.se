@@ -1,0 +1,75 @@
+// ATOMS
+// ===========================================================
+
+.js .a-expand-section__button{
+	color: $action;
+	width: 100%;
+	margin-top: 0;
+	padding-top: $leading/2;
+	text-align: left;
+	
+	&:after{
+		font-family: $icon-font;
+		content: '\e114';
+		font-size: 13/$basefont+0em;
+		padding-left: $gutter_alpha;
+		color: $action;
+		opacity: 1;
+	}
+}
+
+// MOLECULE
+// ===========================================================
+
+.js .m-expand-section {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+	  content: ' ';
+	  display: block;
+	  position: absolute;
+	  z-index: 50;
+	  bottom: 0;
+	  width: 100%;
+	  height: $leading*3.5;
+	  opacity: 1;
+	  @include gradient(rgba($body, 0), rgba($body, 1), transparent);
+	  pointer-events: none;
+  }
+}
+
+// ORGANSIM
+// ===========================================================
+
+
+// STATES
+// ===========================================================
+
+.a-expand-section__button.s-is-hidden{
+	opacity: 0;
+}
+
+.m-expand-section.s-is-expanded{
+
+	&:after{
+		opacity: 0;
+	}
+}
+
+
+
+// ANIMATIONS
+// ===========================================================
+
+.transitions{
+	.m-expand-section{
+		transition: max-height 0.2s ease-in;
+	}
+	
+	.m-expand-section.s-is-expanded:after,
+	.a-expand-section__button{
+		transition: opacity 0.3s ease-out;
+	}
+	
+}

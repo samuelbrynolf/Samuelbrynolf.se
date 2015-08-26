@@ -1,0 +1,60 @@
+// ATOMS
+// ===========================================================
+
+
+// MOLECULE
+// ===========================================================
+
+.js .m-alert{
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	left: 50%;
+	z-index: 600;
+	transform: translate(-50%, 0);
+	pointer-events: none;
+	top: $leading*2;
+	width: 90%;
+	max-width: 45em;
+	padding: $leading;
+	border-radius: ($body_leading*2)/$basefont+0em;
+	color: $body;
+	text-align: center;
+	background: rgba($bodycolor, 0.94);
+	//box-shadow: 0 0 8px rgba($bodycolor, 0.14);
+	
+	&.warning{
+		color: $msg-warning;
+		background-color: $msg-warning-bg;
+	}
+	
+	&.ok{
+		color: $msg-ok;
+		background-color: $msg-ok-bg;
+	}
+}
+
+// ORGANSIM
+// ===========================================================
+
+
+// STATES
+// ===========================================================
+
+.js .m-alert.s-is-active{
+	visibility: visible;
+	opacity: 1;
+}
+
+.no-js .m-alert{
+	display: none;
+}
+
+// ANIMATIONS
+// ===========================================================
+
+.js .transitions{
+	.m-alert{
+		transition: opacity 0.3s ease-out;
+	}
+}

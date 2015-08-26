@@ -45,10 +45,3 @@
 		
 </head>
 <?php get_template_part('partials/global-components/o-global-header'); ?>
-
-<div class="l-container">
-
-    <div class="l-span-A12"></div>
-    <div class="l-span-A6 l-span-B4"></div>
-    <div class="l-span-A6 l-pre-B1 l-span-B7"></div>
-</div>

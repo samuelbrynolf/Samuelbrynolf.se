@@ -37,11 +37,11 @@ var gulp = require('gulp'),
             bundleOutputMin: 'bundled.js'
         },
         ftp: {
-            enabled: false,
+            enabled: true,
             host: "ftp.1979design.se",
-            key: "1979design",
+            key: "samuelbrynolf",
             destination: '/mis/wp-content/themes/samuelbrynolf',
-            fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!src', '!src/**', './**']
+            fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!gulpfile.js', '!src', '!src/**', './**']
         }
     }
 

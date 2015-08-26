@@ -110,7 +110,7 @@ p + p{
 
 .a-sitename{
   @include swap_text_for_img(60,60);
-  background-image: url(../img/component_demo_imgs/logo.jpg);
+  background-image: url(img/component_demo_imgs/logo.jpg);
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (   min--moz-device-pixel-ratio: 2),
@@ -118,7 +118,7 @@ p + p{
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) {
-    background-image: url(../img/component_demo_imgs/logo_hires.jpg);
+    background-image: url(img/component_demo_imgs/logo_hires.jpg);
   }
 }
 

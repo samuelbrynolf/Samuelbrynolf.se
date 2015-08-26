@@ -38,9 +38,9 @@ var gulp = require('gulp'),
         },
         ftp: {
             enabled: false,
-            host: "uba.oderland.com",
-            key: "aventyret",
-            destination: '/staging/womentor/wp-content/themes/womentor',
+            host: "ftp.1979design.se",
+            key: "1979design",
+            destination: '/mis/wp-content/themes/samuelbrynolf',
             fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!src', '!src/**', './**']
         }
     }

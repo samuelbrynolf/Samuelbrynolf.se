@@ -1,61 +1,57 @@
-<?php
-/**
- * Custom functions that act independently of the theme templates
- *
- * Eventually, some of the functionality here could be replaced by core features
- *
- * @package bento
- */
- 
-/**
- * Remove generated wordpress-version from wp-head
- */
- 
-function complete_version_removal() {
-	return '';
+<?php remove_filter('term_description','wpautop');
+
+//-------------------------------------------------------------------
+
+if ( !function_exists( 'remove_more_jump_link' )) {
+    function remove_more_jump_link($link)
+    {
+        $offset = strpos($link, '#more-');
+        if ($offset) {
+            $end = strpos($link, '"', $offset);
+        }
+        if ($end) {
+            $link = substr_replace($link, '', $offset, $end - $offset);
+        }
+        return $link;
+    }
+
+    add_filter('the_content_more_link', 'remove_more_jump_link');
 }
-add_filter('the_generator', 'complete_version_removal');
 
-/**
- * Add favicon
- */
- 
-function blog_favicon() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('template_url').'/favicon.ico" />';
+//-------------------------------------------------------------------
+
+if ( !function_exists( 'remove_width_attribute' )) {
+    function remove_width_attribute($html)
+    {
+        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
+        return $html;
+    }
+
+    add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
+    add_filter('image_send_to_editor', 'remove_width_attribute', 10);
 }
-add_action('wp_head', 'blog_favicon');
 
-/**
- * Prevent jumping when using read-more-links
- */
+//-------------------------------------------------------------------
 
-function remove_more_jump_link($link) { 
-	$offset = strpos($link, '#more-');
-	if ($offset) {
-		$end = strpos($link, '"',$offset);
-	}
-	if ($end) {
-		$link = substr_replace($link, '', $offset, $end-$offset);
-	}
-	return $link;
+if ( !function_exists( 'bento_body_classes' )) {
+    function bento_body_classes($classes)
+    {
+        // Adds a class of group-blog to blogs with more than 1 published author.
+        //if ( is_multi_author() ) {
+        //	$classes[] = 'group-blog';
+        //}
+
+        if (is_single() && has_post_thumbnail()) {
+            $classes[] = 'has-thumb';
+        }
+
+        return $classes;
+    }
+
+    add_filter('body_class', 'bento_body_classes');
 }
-add_filter('the_content_more_link', 'remove_more_jump_link');
 
-/**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function bento_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'bento_body_classes' );
+//-------------------------------------------------------------------
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
@@ -90,3 +86,15 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_filter( 'wp_title', 'bento_wp_title', 10, 2 );
 endif;
+
+//-------------------------------------------------------------------
+
+if ( !function_exists( 'trim_private_titles' )) {
+    function trim_private_titles($string)
+    {
+        $string = str_replace("Privat: ", "&#126; ", $string);
+        return $string;
+    }
+
+    add_filter('the_title', 'trim_private_titles');
+}

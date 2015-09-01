@@ -1,20 +1,16 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package _s
- */
-?>
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <ul id="menu-global-nav" class="l-span-A12 menu">
+            <?php if (current_user_can('delete_users')) {
+                echo '<li class="menu-item"><a href="'.get_bloginfo('url').'/wp-admin">Admin</a></li>';
+            }
 
-	</div><!-- #content -->
+            wp_nav_menu(array('container' => '', 'items_wrap' => '%3$s'));
+            if (is_search() && !have_posts()) {
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', '_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+            } else { ?>
+                <li class="m-global-search"><?php get_search_form(); ?></li>
+            <?php } ?>
+        </ul>
+    </nav>
+</footer><!-- #colophon -->

@@ -1,6 +1,6 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
     <nav id="site-navigation" class="main-navigation" role="navigation">
-        <ul id="menu-global-nav" class="l-span-A12 menu">
+        <ul id="menu-global-nav" class="menu">
             <?php if (current_user_can('delete_users')) {
                 echo '<li class="menu-item"><a href="'.get_bloginfo('url').'/wp-admin">Admin</a></li>';
             }

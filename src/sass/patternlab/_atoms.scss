@@ -5,43 +5,48 @@
 .a-medium,
 .a-small,
 strong,
-.a-sitename,
-strong,
-.overlay-item{
+.a-sitename{
+  font-family: $captionfont-1;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
   a,
-  span{
+  span,
+  strong{
     font-weight: inherit;
   }
 }
 
+.a-xlarge,
+.a-large{
+  word-wrap: break-word;
+
+  @media all and (min-width: $beta_query) {
+    word-wrap: normal;
+  }
+}
+
 .a-xlarge{
-  @include type-to-em(84,108);
-  font-family: $captionfont-1;
+  @include type-to-em(48,57);
+  text-align: center;
+  // font-weight: bold;
 }
 
 .a-large{
-  @include type-to-em(54,72);
-  font-family: $captionfont-1;
-  color: lighten($bodycolor, 50%);
-  text-transform: uppercase;
+  @include type-to-em(33,42);
 }
 
 .a-medium{
-  @include type-to-em(36,48);
-  font-family: $captionfont-1;
+  @include type-to-em(24,30);
 }
 
 .a-small{
-  font-family: $captionfont-2;
-  text-transform: uppercase;
+  @include type-to-em(15,$body_leading);
+  font-weight: bold;
 }
 
-.a-small,
 .a-fineprint{
-  @include type-to-em(14,21);
+  @include type-to-em(13,$body_leading);
 }
 
 .a-preamble{
@@ -53,17 +58,22 @@ strong,
   }
 }
 
-a{
-  color: $action;
-  text-decoration: none;
+p{
+  margin-top: $leading;
+  margin-bottom: $leading;
 }
 
 strong{
-  font-family: $captionfont-2;
+  font-weight: bold;
 }
 
-p + p{
-  margin-top: $leading;
+em{
+  font-style: italic;
+}
+
+a{
+  color: $action;
+  text-decoration: none;
 }
 
 

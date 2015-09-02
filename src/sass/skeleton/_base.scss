@@ -1,6 +1,6 @@
 html{
   font-size: $basefont/16*100+0%;
-  line-height: $body_leading/16;
+  line-height: $body_leading/$basefont;
   box-sizing: border-box;
 }
 

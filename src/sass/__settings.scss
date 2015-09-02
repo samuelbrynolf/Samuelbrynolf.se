@@ -45,7 +45,7 @@ $spanwidth-12: 100%;
 
 // 1.2 -----------------------------------------------------------------------------------------------------------
 
-$alpha_gutter: 30; // (Use as variable: "$gutter_alpha" and "$gutter_alpha_half")
+$alpha_gutter: 21; // (Use as variable: "$gutter_alpha" and "$gutter_alpha_half")
 $beta_gutter: 30; // Use as variable: "$gutter_beta" and "$gutter_beta_half")
 $charlie_gutter: 30; // (Use as variable: "$gutter_charlie" and "$gutter_charlie_half")
 $delta_gutter: 30; // (Use as variable: "$gutter_delta" and "$gutter_delta_half")
@@ -53,14 +53,14 @@ $echo_gutter: 30; // (Use as variable: "$gutter_echo" and "$gutter_echo_half")
 
 // 2 -----------------------------------------------------------------------------------------------------------
 
-$basefont: 16;
+$basefont: 18;
 $body_leading: 24; // (Use as variable: "$leading")
 
 // -- 
 
 $beta_basefontsize: 16;
 $charlie_basefontsize: 16;
-$delta_basefontsize:16;
+$delta_basefontsize: 16;
 $echo_basefontsize: 16;
 
 // --
@@ -71,11 +71,11 @@ $btnfontsize: 18;
 
 // 3 -----------------------------------------------------------------------------------------------------------
 
-$bodyfont: sans-serif;
-$captionfont-1: sans-serif;
-$captionfont-2: sans-serif;
-$compfont: sans-serif;
-$wfl-fallbackfont: sans-serif;
+$bodyfont: 'ff-tisa-web-pro', serif;
+$captionfont-1: $bodyfont;
+$captionfont-2: serif;
+$compfont: serif;
+$wfl-fallbackfont: serif;
 $icon-font: 'icomoon';
 
 
@@ -83,8 +83,8 @@ $icon-font: 'icomoon';
 
 // Color scheme
 
-$body: #ececec;
-$bodycolor: #000;
+$body: white;
+$bodycolor: #212121;
 
 $action: #da537e; // pink
 $accent-1: #00b9ee; // blue

@@ -17,7 +17,14 @@
 
     <script>
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js wfl');
-        // Add webfont loader
+        (function(d) {
+            var config = {
+                kitId: 'nky2ajj',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
     </script>
 
     <!--[if lt IE 9]>
@@ -41,4 +48,6 @@
     <?php }; ?>
 		
 </head>
-<?php get_template_part('partials/global-components/o-global-header'); ?>
+
+<body <?php body_class(); ?>>
+<?php // get_template_part('partials/global-components/o-global-header'); ?>

@@ -1,18 +1,42 @@
-// FORMS =============================================================================================================
+.m-entry-content{
+  margin-top: $leading;
+  margin-bottom: $leading;
 
+  h2{
+    @extend .a-large;
+    margin-top: rem($body_leading*3);
+    margin-bottom: 1em;
+    text-align: center;
 
+    &:before{
+      content: '';
+      display: block;
+      width: 1em;
+      height: 3px;
+      margin-right: auto;
+      margin-bottom: 1em;
+      margin-left: auto;
+      background-color: lighten($bodycolor, 72%);
+    }
+  }
 
+  h3{
+    @extend .a-medium;
+    margin-top: rem($body_leading*2);
+    margin-bottom: rem($body_leading);
+    text-align: center;
+  }
 
+  h4{
+    @extend .a-small;
+    margin-top: rem($body_leading);
+    // text-align: center;
 
-
-// SHOW / HIDE COMPONENTS =============================================================================================================
-
-
-
-
-// MESSAGING =============================================================================================================
-
-
-
-// GRIDVIEW =============================================================================================================
-
+    & + p,
+    & + ol,
+    & + ul,
+    & + blockquote{
+      margin-top: rem($body_leading/6);
+    }
+  }
+}

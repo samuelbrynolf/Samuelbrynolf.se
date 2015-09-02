@@ -1,29 +1,5 @@
-<?php
-/**
- * @package bento
- */
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php bento_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bento' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php bento_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <?php // get_template_part('partials/single/single-header'); ?>
+    <?php get_template_part('partials/single/single-content'); ?>
+    <?php // get_template_part('partials/single/single-footer'); ?>
 </article><!-- #post-## -->

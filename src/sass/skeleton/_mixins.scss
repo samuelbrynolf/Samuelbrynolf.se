@@ -2,14 +2,14 @@
 // MIXINS & FUNCTIONS (prefixes removed since Grunt-setup uses Autoprefixer)
 //==============================================================================================================
 
-@mixin type-to-em( $fontsizepx: 16, $lineheightpx: $body_leading ) {
-  font-size: $fontsizepx / 16 + 0em;
+@mixin type-to-em( $fontsizepx: $basefont, $lineheightpx: $body_leading ) {
+  font-size: $fontsizepx / $basefont + 0em;
   line-height: $lineheightpx / $fontsizepx;
 }
 
 // http://snook.ca/archives/html_and_css/font-size-with-rem
 
-@mixin type-to-rem( $fontsizepx: 16, $lineheightpx: $body_leading ) {
+@mixin type-to-rem( $fontsizepx: $basefont, $lineheightpx: $body_leading ) {
   font-size: $fontsizepx / $basefont + 0rem;
   line-height: $lineheightpx / $fontsizepx;
 }

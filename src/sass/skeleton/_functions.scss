@@ -2,6 +2,6 @@
   @return $num / ($num * 0 + 1);
 }
 
-@function rem($px, $basefont: $basefont){
-  @return strip-unit($px)/$basefont+0rem;
+@function rem($px, $countbase: $basefont){
+  @return strip-unit($px)/$countbase+0rem;
 }

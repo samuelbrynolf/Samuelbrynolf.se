@@ -84,14 +84,16 @@ $icon-font: 'icomoon';
 // Color scheme
 
 $body: white;
-$bodycolor: #212121;
+$bodycolor: #111;
 
 $action: #da537e; // pink
 $accent-1: #00b9ee; // blue
 $accent-2: #343d51; // dark purple
 $accent-3: #7895d4; // light purple
 
-$subtle-text: #aaa;
+$subtle-border: lighten($bodycolor, 50%);
+$subtle-text: lighten($bodycolor, 35%);
+$thick-text: #000;
 $subtle-bg: #eee;
 
 //Gradients

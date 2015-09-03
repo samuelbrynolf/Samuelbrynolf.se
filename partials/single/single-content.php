@@ -1,6 +1,6 @@
 <div class="l-pre-C1 l-span-C10 m-entry-content">
     <?php // the_content(); ?>
-    <h1 class="a-xlarge">7 things to know when designing for the Internet of Things</h1>
+<!--    <h1 class="a-xlarge">7 things to know when designing for the Internet of Things</h1>-->
     <p>Srcset är en metod för att välja rätt bildkälla för responsiva bilder med målet att aldrig läsa in för stora filer. Då responsiv design i övrigt är rätt straight forward, har bildhantering och framförallt att enas kring ”best practice” för bildhantering varit en käpphäst. Srcset är nu ett attribut som accepterats i W3C HTML-spec och får därmed ses som en av de lyckade metoder som lyfts till ett mer vanligt sätt att hantera responsiva bilder.</p>
     <h2>Konfiguration av Make it Srcset</h2>
     <p>Srcset handlar enbart om att ladda in rätt bildstorlek. <strong>Oavsett skärmupplösning och visningsbredd</strong> ska bilden vara skarp utan att vara för tung. Srcset handlar inte om layout eller bildformat (Är du intresserad av att också ändra bildformat ska du använda picture istället.).</p>

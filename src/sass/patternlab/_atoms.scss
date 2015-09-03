@@ -20,6 +20,7 @@ strong,
 .a-xlarge,
 .a-large{
   word-wrap: break-word;
+  text-align: center;
 
   @media all and (min-width: $beta_query) {
     word-wrap: normal;
@@ -27,9 +28,8 @@ strong,
 }
 
 .a-xlarge{
-  @include type-to-em(48,57);
+  @include type-to-em(45,54);
   text-align: center;
-  // font-weight: bold;
 }
 
 .a-large{
@@ -41,26 +41,28 @@ strong,
 }
 
 .a-small{
-  @include type-to-em(15,$body_leading);
+  @include type-to-em(16,$body_leading);
   font-weight: bold;
 }
 
-.a-fineprint{
-  @include type-to-em(13,$body_leading);
-}
+.m-preamble{
+  @include type-to-em(24,30);
+  font-style: italic;
+  text-align: center;
 
-.a-preamble{
-  @include type-to-em(21,33);
-
-  p{
-    font-size: inherit;
-    line-height: inherit;
+  h2{
+    font-style: inherit;
   }
 }
 
+.a-fineprint{
+  @include type-to-em(14,21);
+  color: $subtle-text;
+}
+
 p{
-  margin-top: $leading;
-  margin-bottom: $leading;
+  margin-top: rem($body_leading);
+  margin-bottom: rem($body_leading);
 }
 
 strong{

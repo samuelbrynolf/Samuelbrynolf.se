@@ -28,16 +28,16 @@ strong,
 }
 
 .a-xlarge{
-  @include type-to-em(45,54);
+  @include type-to-em(45,51);
   text-align: center;
 }
 
 .a-large{
-  @include type-to-em(33,42);
+  @include type-to-em(36,48);
 }
 
 .a-medium{
-  @include type-to-em(24,30);
+  @include type-to-em(27,36);
 }
 
 .a-small{
@@ -46,7 +46,7 @@ strong,
 }
 
 .m-preamble{
-  @include type-to-em(24,30);
+  @include type-to-em(27,33);
   font-style: italic;
   text-align: center;
 
@@ -60,36 +60,17 @@ strong,
   color: $subtle-text;
 }
 
-p{
-  margin-top: rem($body_leading);
-  margin-bottom: rem($body_leading);
+a[href^="http://"],
+a[href^="https://"]{
+  word-wrap: break-word;
 }
 
-strong{
-  font-weight: bold;
+a[href^="http://www.mis.1979design.se"],
+a[href^="http://mis.1979design.se"],
+a[href^="http://www.samuelbrynolf.se"],
+a[href^="http://samuelbrynolf.se"]{
+  word-wrap: normal;
 }
-
-em{
-  font-style: italic;
-}
-
-a{
-  color: $action;
-  text-decoration: none;
-}
-
-
-//a[href^="http://"] {
-//  -ms-word-break: break-all;
-//  word-break: break-all;
-//  word-break: break-word;
-//  hyphens: auto;
-//}
-
-//a[href^="http://www.domain.com"],
-//a[href^="http://domain.com"] {
-//  word-break: normal;
-//}
 
 
 // LISTS =============================================================================================================
@@ -97,6 +78,8 @@ a{
 
 .a-ol,
 .a-ul{
+  margin-top: $leading;
+  margin-bottom: $leading;
 
   li + li{
     margin-top: rem($body_leading/2);
@@ -104,17 +87,13 @@ a{
 }
 
 .a-ol{
-  list-style-type: decimal-leading-zero;
-  margin-left: 2em;
-
-  li{}
+  margin-left: rem($alpha_gutter*2);
+  list-style: decimal-leading-zero;
 }
 
 .a-ul{
-  list-style-type: square;
-  margin-left: 2em;
-
-  li{}
+  margin-left: rem($alpha_gutter);
+  list-style: disc;
 }
 
 

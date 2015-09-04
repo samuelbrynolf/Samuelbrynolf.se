@@ -44,3 +44,26 @@ body{
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color : rgba(0,0,0,0.2);
 }
+
+p{
+  margin-top: rem($body_leading);
+  margin-bottom: rem($body_leading);
+}
+
+strong{
+  font-weight: bold;
+}
+
+em,
+blockquote{
+  font-style: italic;
+}
+
+a{
+  color: $action;
+  text-decoration: none;
+}
+
+code{
+  font-size: rem(19);
+}

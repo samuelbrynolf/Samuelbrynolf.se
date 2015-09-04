@@ -1,4 +1,4 @@
-<header class="l-span m-entry-header">
+<header class="m-entry-header row">
 <!--    --><?php //the_title( '<h1 class="a-xlarge entry-title">', '</h1>' ); ?>
     <h1 class="a-xlarge entry-title">7 things to know when designing for the Internet of Things</h1>
     <div class="m-preamble entry-preamble">

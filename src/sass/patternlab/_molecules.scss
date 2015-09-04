@@ -2,10 +2,7 @@
 
 // ENTRY HEADER ---------------------------------------------------------------------
 
-.m-entry-header{
-  //margin-top: $leading;
-  //margin-bottom: $leading;
-}
+.m-entry-header{}
 
 .a-xlarge.entry-title{
   margin-top: rem($body_leading);
@@ -17,7 +14,8 @@
   margin-bottom: rem($body_leading*1.5);
   padding-bottom: rem($body_leading)*1.5;
   text-align: center;
-  border-bottom: 2px dashed $subtle-border;
+  //border-bottom: $borderwidth solid $bodycolor;
+  border-bottom: $borderwidth dashed $subtle-border;
 }
 
 .a-entry-meta__time{}
@@ -25,30 +23,29 @@
 // ENTRY CONTENT ---------------------------------------------------------------------
 
 .m-entry-content{
-  margin-top: $leading;
-  margin-bottom: $leading;
 
   h2{
     @extend .a-large;
     margin-top: 1.75em;
     margin-bottom: rem($body_leading);
 
-//    &:before{
-//      content: '';
-//      display: block;
-//      width: 1em;
-//      height: 3px;
-//      margin-right: auto;
-//      margin-bottom: 1em;
-//      margin-left: auto;
-//      background-color: lighten($bodycolor, 72%);
-//    }
+      &:before{
+        content: '';
+        display: block;
+        width: 1em;
+        height: $borderwidth;
+        margin-right: auto;
+        margin-bottom: 1em;
+        margin-left: auto;
+        //background-color: $subtle-border;
+        background-color: $subtle-border;
+      }
   }
 
   h3{
     @extend .a-medium;
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: rem($body_leading);
   }
 
   h4{
@@ -59,18 +56,38 @@
     & + ol,
     & + ul,
     & + blockquote{
-      margin-top: rem($body_leading/6);
+      margin-top: rem($body_leading/4);
+    }
+  }
+
+  ol{
+    @extend .a-ol;
+  }
+
+  ul{
+    @extend .a-ul;
+  }
+
+  blockquote{
+    padding-left: $gutter_alpha;
+    border-left: $borderwidth solid $subtle-border;
+
+    p{
+      font-style: inherit;
+    }
+
+    p + p{
+      @extend .a-fineprint;
     }
   }
 }
 
 // ENTRY FOOTER ---------------------------------------------------------------------
 
-.m-entry-footer{
-  margin-top: $leading*2;
-  margin-bottom: $leading*3;
-}
+.m-entry-footer{}
 
 .a-fineprint.entry-footer{
+  margin-top: rem($body_leading*2);
+  margin-bottom: rem($body_leading*3);
   text-align: center;
 }

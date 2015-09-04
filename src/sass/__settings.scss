@@ -53,8 +53,8 @@ $echo_gutter: 30; // (Use as variable: "$gutter_echo" and "$gutter_echo_half")
 
 // 2 -----------------------------------------------------------------------------------------------------------
 
-$basefont: 18;
-$body_leading: 24; // (Use as variable: "$leading")
+$basefont: 20;
+$body_leading: 27; // (Use as variable: "$leading")
 
 // -- 
 
@@ -91,7 +91,6 @@ $accent-1: #00b9ee; // blue
 $accent-2: #343d51; // dark purple
 $accent-3: #7895d4; // light purple
 
-$subtle-border: lighten($bodycolor, 50%);
 $subtle-text: lighten($bodycolor, 35%);
 $thick-text: #000;
 $subtle-bg: #eee;
@@ -110,6 +109,7 @@ $gradient_nosupport: $accent-1;
 
 // Formborders + borders
 
+$subtle-border: lighten($bodycolor, 50%);
 $border-1: rgba($accent-2, 0.3);
 $border-2: $accent-2;
 $inputbg: white;
@@ -128,7 +128,7 @@ $highlight: lighten($accent-1, 28%);
 // 5 -----------------------------------------------------------------------------------------------------------
 
 $rounded: 5px;
+$borderwidth: 3px;
 
 
 // 6 -----------------------------------------------------------------------------------------------------------
-

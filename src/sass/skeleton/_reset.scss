@@ -87,7 +87,7 @@ textarea {
   background:transparent;
 }
 
-img,
+// img, Prev reflow tech
 object,
 embed {
   display: block;
@@ -125,6 +125,10 @@ input[type="submit"]::-moz-focus-inner {
 ol,
 ul{
 	list-style: none;
+}
+
+img{
+  display: block;
 }
 
 // http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari

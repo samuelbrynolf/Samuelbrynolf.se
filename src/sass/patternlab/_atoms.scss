@@ -87,12 +87,12 @@ a[href^="http://samuelbrynolf.se"]{
 }
 
 .a-ol{
-  margin-left: rem($alpha_gutter*2);
-  list-style: decimal-leading-zero;
+  margin-left: rem($alpha_gutter*1.8);
+  list-style: decimal;
 }
 
 .a-ul{
-  margin-left: rem($alpha_gutter);
+  margin-left: rem($alpha_gutter*1.5);
   list-style: disc;
 }
 
@@ -113,8 +113,6 @@ a[href^="http://samuelbrynolf.se"]{
   }
 }
 
-img.lazyload,
-img.lazyloaded,
 img.forcewidth{
   width: 100%;
 }

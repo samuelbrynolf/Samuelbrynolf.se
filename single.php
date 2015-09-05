@@ -1,21 +1,28 @@
-<?php get_header(); ?>
-    <main id="main" class="l-gutter o-site-main row" role="main">
+<?php get_header();
 
-        <?php while ( have_posts() ) : the_post(); ?>
+if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
+    makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'prf ratio-by-ori');
+} elseif (has_post_thumbnail()){
+    the_post_thumbnail();
+} ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <?php get_template_part('partials/single/single-header');
-                get_template_part('partials/single/single-content');
-                get_template_part('partials/single/single-footer'); ?>
-            </article><!-- #post-## -->
+<main id="main" class="l-gutter o-site-main row" role="main">
 
-            <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || get_comments_number() ) :
-                    // comments_template();
-                endif;
+    <?php while ( have_posts() ) : the_post(); ?>
 
-        endwhile; // end of the loop. ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <?php get_template_part('partials/single/single-header');
+            get_template_part('partials/single/single-content');
+            get_template_part('partials/single/single-footer'); ?>
+        </article><!-- #post-## -->
 
-    </main><!-- #main -->
+        <?php
+        // If comments are open or we have at least one comment, load up the comment template
+        if ( comments_open() || get_comments_number() ) :
+            // comments_template();
+        endif;
+
+    endwhile; // end of the loop. ?>
+
+</main><!-- #main -->
 <?php get_footer(); ?>

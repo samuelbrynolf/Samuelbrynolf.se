@@ -38,9 +38,10 @@
 .a-xlarge.entry-title{
   margin-top: rem($body_leading);
   margin-bottom: rem($body_leading);
+  text-align: center;
 }
 
-.a-fineprint.a-entry-meta{
+.a-fineprint.entry-meta{
   margin-top: rem($body_leading);
   margin-bottom: rem($body_leading*1.5);
   padding-bottom: rem($body_leading)*1.5;
@@ -59,6 +60,7 @@
     @extend .a-large;
     margin-top: 1.75em;
     margin-bottom: rem($body_leading);
+    text-align: center;
 
       &:before{
         content: '';
@@ -121,4 +123,10 @@
   margin-top: rem($body_leading*2);
   margin-bottom: rem($body_leading*3);
   text-align: center;
+}
+
+// LIST ITEM ---------------------------------------------------------------------
+
+.a-listitem-meta__span{
+  color: $bodycolor;
 }

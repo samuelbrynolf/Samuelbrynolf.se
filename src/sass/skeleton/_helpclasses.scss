@@ -9,6 +9,10 @@
     margin-bottom: 0;
     padding-top: $leading;
     padding-bottom: $leading;
+
+    & + .padded{
+      border-top: 1px solid;
+    }
   }
 }
 

@@ -20,7 +20,6 @@ strong,
 .a-xlarge,
 .a-large{
   word-wrap: break-word;
-  text-align: center;
 
   @media all and (min-width: $beta_query) {
     word-wrap: normal;
@@ -29,7 +28,6 @@ strong,
 
 .a-xlarge{
   @include type-to-em(45,51);
-  text-align: center;
 }
 
 .a-large{

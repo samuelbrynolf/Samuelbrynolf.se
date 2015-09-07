@@ -3,8 +3,7 @@
 //-------------------------------------------------------------------
 
 if ( !function_exists( 'remove_more_jump_link' )) {
-    function remove_more_jump_link($link)
-    {
+    function remove_more_jump_link($link){
         $offset = strpos($link, '#more-');
         if ($offset) {
             $end = strpos($link, '"', $offset);
@@ -21,8 +20,7 @@ if ( !function_exists( 'remove_more_jump_link' )) {
 //-------------------------------------------------------------------
 
 if ( !function_exists( 'remove_width_attribute' )) {
-    function remove_width_attribute($html)
-    {
+    function remove_width_attribute($html){
         $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
         return $html;
     }
@@ -34,8 +32,7 @@ if ( !function_exists( 'remove_width_attribute' )) {
 //-------------------------------------------------------------------
 
 if ( !function_exists( 'bento_body_classes' )) {
-    function bento_body_classes($classes)
-    {
+    function bento_body_classes($classes){
         // Adds a class of group-blog to blogs with more than 1 published author.
         //if ( is_multi_author() ) {
         //	$classes[] = 'group-blog';
@@ -90,11 +87,27 @@ endif;
 //-------------------------------------------------------------------
 
 if ( !function_exists( 'trim_private_titles' )) {
-    function trim_private_titles($string)
-    {
+    function trim_private_titles($string){
         $string = str_replace("Privat: ", "&#126; ", $string);
         return $string;
     }
-
     add_filter('the_title', 'trim_private_titles');
+}
+
+//-------------------------------------------------------------------
+
+if ( !function_exists( 'new_excerpt_more' )) {
+    function new_excerpt_more($more){
+        return '&hellip;';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+}
+
+//-------------------------------------------------------------------
+
+if ( !function_exists( 'add_excerpts_to_pages' )) {
+    function add_excerpts_to_pages(){
+        add_post_type_support('page', 'excerpt');
+    }
+    add_action('init', 'add_excerpts_to_pages');
 }

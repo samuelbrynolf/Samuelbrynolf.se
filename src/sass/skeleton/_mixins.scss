@@ -7,6 +7,17 @@
   line-height: $lineheightpx / $fontsizepx;
 }
 
+@mixin divider(){
+  content: '';
+  display: block;
+  width: 1em;
+  height: $borderwidth;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  background-color: $bodycolor;
+}
+
 @mixin type-to-vmin($pxFallback: 16, $vmin: 4, $lineheight: 1.5){
   font-size: $pxFallback / 16 + 0em;
   font-size: $vmin + 0vm;

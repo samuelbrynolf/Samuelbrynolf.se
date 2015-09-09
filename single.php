@@ -6,14 +6,14 @@ if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
     the_post_thumbnail();
 } ?>
 
-<main id="main" class="l-gutter o-site-main row" role="main">
+<main id="main" class="o-site-main" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php get_template_part('partials/single/single-header');
             get_template_part('partials/single/single-content');
-            get_template_part('partials/single/single-footer'); ?>
+            // get_template_part('partials/single/single-footer'); ?>
         </article><!-- #post-## -->
 
         <?php

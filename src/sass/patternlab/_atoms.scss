@@ -27,15 +27,16 @@ strong,
 }
 
 .a-xlarge{
-  @include type-to-em(45,51);
+  @include type-to-em(42,48);
 }
 
 .a-large{
-  @include type-to-em(36,48);
+  @include type-to-em(30,36);
+  margin-bottom: rem($body_leading);
 }
 
 .a-medium{
-  @include type-to-em(27,36);
+  @include type-to-em(24,30);
 }
 
 .a-small{

@@ -38,8 +38,8 @@ if ( !function_exists( 'bento_body_classes' )) {
         //	$classes[] = 'group-blog';
         //}
 
-        if (is_single() && has_post_thumbnail()) {
-            $classes[] = 'has-thumb';
+        if (is_single() && !has_post_thumbnail()) {
+            $classes[] = 'no-thumb';
         }
 
         return $classes;

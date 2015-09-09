@@ -1,5 +1,18 @@
 // EXTENDS & PLACEHOLDERS ===========================================================================================================
 
+.divider{
+  content: '';
+  display: block;
+  width: 1em;
+  height: $borderwidth;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  background-color: $bodycolor;
+}
+
+// --
+
 .row{
   margin-top: $leading;
   margin-bottom: $leading;
@@ -7,12 +20,12 @@
   &.padded{
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: $leading;
-    padding-bottom: $leading;
+    padding-top: $leading*2;
+    padding-bottom: $leading*2;
 
-    & + .padded{
-      border-top: 1px solid;
-    }
+//    & + .padded{
+//      border-top: 1px solid;
+//    }
   }
 }
 

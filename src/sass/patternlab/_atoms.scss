@@ -31,7 +31,7 @@ strong,
 }
 
 .a-large{
-  @include type-to-em(30,36);
+  @include type-to-em(33,39);
   margin-bottom: rem($body_leading);
 }
 

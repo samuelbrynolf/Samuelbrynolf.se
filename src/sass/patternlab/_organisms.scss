@@ -1,4 +1,10 @@
+.o-global-header{
+  margin-bottom: rem($body_leading*3);
+}
 
+.single.has-thumb .o-global-header{
+ // margin-bottom: 0;
+}
 // MESSAGING =============================================================================================================
 
 

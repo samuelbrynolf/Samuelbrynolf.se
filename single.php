@@ -1,10 +1,4 @@
-<?php get_header();
-
-if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-    makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'prf ratio-by-ori');
-} elseif (has_post_thumbnail()){
-    the_post_thumbnail();
-} ?>
+<?php get_header(); ?>
 
 <main id="main" class="o-site-main" role="main">
 
@@ -12,6 +6,13 @@ if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php get_template_part('partials/single/single-header');
+
+            if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
+                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'prf ratio-by-ori');
+            } elseif (has_post_thumbnail()){
+                the_post_thumbnail();
+            }
+
             get_template_part('partials/single/single-content');
             // get_template_part('partials/single/single-footer'); ?>
         </article><!-- #post-## -->

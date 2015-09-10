@@ -10,12 +10,18 @@
 @mixin divider(){
   content: '';
   display: block;
-  width: 1em;
+  width: rem(33);
   height: $borderwidth;
   margin-right: auto;
-  margin-bottom: 1em;
+  margin-bottom: rem(33);
   margin-left: auto;
   background-color: $bodycolor;
+}
+
+@mixin monospaced(){
+  font-family: $compfont;
+  font-size: 85%;
+  color: $subtle-text;
 }
 
 @mixin type-to-vmin($pxFallback: 16, $vmin: 4, $lineheight: 1.5){

@@ -74,7 +74,7 @@ $btnfontsize: 18;
 $bodyfont: 'ff-tisa-web-pro', serif;
 $captionfont-1: $bodyfont;
 $captionfont-2: serif;
-$compfont: serif;
+$compfont: 'droid-sans-mono', sans-serif;
 $wfl-fallbackfont: serif;
 $icon-font: 'icomoon';
 
@@ -83,11 +83,11 @@ $icon-font: 'icomoon';
 
 // Color scheme
 
-$body: yellow;
-$bodycolor: #111;
+$body: #fff;
+$bodycolor: #222;
 
-$action: purple;
-$accent-1: red;
+$action: green;
+$accent-1: #111;
 $accent-2: #343d51; // dark purple
 $accent-3: #7895d4; // light purple
 
@@ -128,7 +128,7 @@ $highlight: lighten($accent-1, 28%);
 // 5 -----------------------------------------------------------------------------------------------------------
 
 $rounded: 5px;
-$borderwidth: 2px;
+$borderwidth: 3px;
 
 
 // 6 -----------------------------------------------------------------------------------------------------------

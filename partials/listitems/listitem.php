@@ -7,16 +7,10 @@
         <p class="a-fineprint a-listitem-meta-date"><?php the_date(); ?></p>
 
         <?php if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-            makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'prf ratio-16-9');
+            makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf ratio-16-9');
         } elseif (has_post_thumbnail()){
             the_post_thumbnail();
-        }
-
-        if(function_exists('get_field') && get_field('preamble')){ ?>
-            <p class="l-gutter a-listitem-content">
-                <?php the_field('preamble'); ?>
-            </p><!-- .listitem-content -->
-        <?php } ?>
+        } ?>
 
     </article><!-- #post-## -->
 </a>

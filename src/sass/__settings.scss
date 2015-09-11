@@ -109,7 +109,7 @@ $gradient_nosupport: $accent-1;
 
 // Formborders + borders
 
-$subtle-border: lighten($bodycolor, 50%);
+$subtle-border: lighten($bodycolor, 65%);
 $border-1: rgba($accent-2, 0.3);
 $border-2: $accent-2;
 $inputbg: white;
@@ -128,7 +128,6 @@ $highlight: lighten($accent-1, 28%);
 // 5 -----------------------------------------------------------------------------------------------------------
 
 $rounded: 5px;
-$borderwidth: 3px;
-
+$borderwidth: 2px;
 
 // 6 -----------------------------------------------------------------------------------------------------------

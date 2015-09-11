@@ -1,131 +1,56 @@
 // IMAGES ------------------------------------------------------------------
 
-.prf{
+.m-prf {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: transparent;
-}
 
-.prf.ratio-4-3{
-  padding-bottom: 74%; // about ratio-4-3
-}
-
-.prf.ratio-16-9{
-  padding-bottom: 56%; // about ratio-16-9
-}
-
-.prf.ratio-by-ori{
-  padding-bottom: 74%; // about ratio-4-3
-
-  @media all and (orientation: landscape) {
-    padding-bottom: 30%;
-  }
-}
-
-.prf .mis_img{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width:100%;
-}
-
-// ENTRY HEADER ---------------------------------------------------------------------
-
-.m-entry__header{
-  //padding-bottom: rem($body_leading*1.5);
-  text-align: center;
-  // color: $body;
-  // background-color: lighten($action, 2%);
-}
-
-.single.has-thumb .m-entry__header{
-  //padding-top: rem($body_leading);
-}
-
-.a-xlarge.entry-title{
-  margin-bottom: rem($body_leading);
-}
-
-.single.no-thumb .entry-meta{
-  //margin-top: rem($body_leading);
-  //margin-bottom: rem($body_leading);
-  //padding-bottom: rem($body_leading);
-  //border-bottom: 1px dashed;
-  // color: $bodycolor;
-}
-
-.a-entry-meta__time{}
-
-// ENTRY CONTENT ---------------------------------------------------------------------
-
-.m-entry-content{
-
-  h2{
-    @extend .a-large;
-    margin-top: rem($body_leading*3);
-    text-align: center;
-
-      &:before{
-        @include divider();
-      }
+  .mis_img{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width:100%;
   }
 
-  h3{
-    @extend .a-medium;
-    margin-top: 2em;
-    margin-bottom: rem($body_leading);
+  &.ratio-4-3{
+    padding-bottom: 74%; // about ratio-4-3
   }
 
-  h4{
-    @extend .a-small;
-    margin-top: rem($body_leading);
-
-    & + p,
-    & + ol,
-    & + ul,
-    & + blockquote{
-      margin-top: rem($body_leading/4);
-    }
+  &.ratio-16-9{
+    padding-bottom: 56%; // about ratio-16-9
   }
 
-  ol{
-    @extend .a-ol;
-  }
+  &.ratio-by-ori{
+    padding-bottom: 74%; // about ratio-4-3
 
-  ul{
-    @extend .a-ul;
-  }
-
-  blockquote{
-    padding-left: $gutter_alpha;
-    border-left: $borderwidth solid;
-
-    p{
-      font-style: inherit;
-    }
-
-    p + p{
-      @extend .a-fineprint;
+    @media all and (orientation: landscape) {
+      padding-bottom: 56%; // about ratio-16-9
     }
   }
 }
 
-//.single.no-thumb .m-entry-content {
-//
-//  &:before {
-//    @include divider();
-//  }
-//}
+.m-prf.avatar{
+  border-radius: 50%;
+  width: $avatar-size;
+  padding-bottom: $avatar-size;
+
+  .mis_img{
+    top: 0;
+    transform: none;
+  }
+}
+
 
 // ENTRY FOOTER ---------------------------------------------------------------------
 
-.m-entry-footer{}
+.m-entry-footer{
 
-.a-fineprint.entry-footer{
-  margin-top: rem($body_leading*3);
-  text-align: center;
+  .entry-footer {
+    margin-top: rem($body_leading*3);
+    text-align: center;
+  }
 }
 
 // LIST ITEM ---------------------------------------------------------------------
@@ -141,8 +66,12 @@
 .m-listitem{
   text-align: center;
 
-  .a-large{
+  .a-entry-title{
     margin-top: rem($body_leading);
+  }
+
+  .a-listitem-meta-date{
+    margin-top: rem($body_leading/2);
   }
 }
 

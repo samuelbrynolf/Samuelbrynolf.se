@@ -33,11 +33,6 @@ if ( !function_exists( 'remove_width_attribute' )) {
 
 if ( !function_exists( 'bento_body_classes' )) {
     function bento_body_classes($classes){
-        // Adds a class of group-blog to blogs with more than 1 published author.
-        //if ( is_multi_author() ) {
-        //	$classes[] = 'group-blog';
-        //}
-
         if (is_single() && !has_post_thumbnail()) {
             $classes[] = 'no-thumb';
         }

@@ -2,13 +2,83 @@
   margin-bottom: rem($body_leading*3);
 }
 
-.single.has-thumb .o-global-header{
- // margin-bottom: 0;
+
+// ENTRY HEADER ---------------------------------------------------------------------
+
+.o-entry__header{
+  text-align: center;
+
+  .a-entry-title{
+    margin-bottom: rem($body_leading);
+  }
 }
-// MESSAGING =============================================================================================================
 
+.single.no-thumb .a-entry-meta{
+  margin-bottom: rem($body_leading);
+  padding-bottom: rem($body_leading);
+  border-bottom: 1px solid $subtle-border;
+}
 
+// ENTRY CONTENT ---------------------------------------------------------------------
 
+.o-entry-content{
 
-// GRIDVIEW =============================================================================================================
+  h2{
+    @extend .a-large;
+    margin-top: rem($body_leading*3);
+    margin-bottom: rem($body_leading);
+    text-align: center;
 
+    &:before{
+      @include divider();
+    }
+  }
+
+  h3{
+    @extend .a-medium;
+    margin-top: 2em;
+    margin-bottom: rem($body_leading);
+  }
+
+  h4{
+    @extend .a-small;
+    margin-top: rem($body_leading);
+
+    & + p,
+    & + ol,
+    & + ul,
+    & + blockquote{
+      margin-top: rem($body_leading/4);
+    }
+  }
+
+  ol{
+    @extend .a-ol;
+  }
+
+  ul{
+    @extend .a-ul;
+  }
+
+  blockquote{
+    padding-left: $gutter_alpha;
+    border-left: $borderwidth solid;
+
+    p{
+      font-style: inherit;
+    }
+
+    p + p{
+      @extend .a-fineprint;
+    }
+  }
+}
+
+// CALLING CARD ---------------------------------------------------------------------
+
+.o-ccard{
+
+  .a-ccard-avatar{
+    margin: rem($body_leading) auto;
+  }
+}

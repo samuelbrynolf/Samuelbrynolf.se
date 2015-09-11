@@ -8,13 +8,17 @@
             <?php get_template_part('partials/single/single-header');
 
             if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'prf ratio-by-ori');
+                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf ratio-by-ori');
             } elseif (has_post_thumbnail()){
                 the_post_thumbnail();
             }
 
             get_template_part('partials/single/single-content');
             // get_template_part('partials/single/single-footer'); ?>
+
+            <aside class="l-gutter o-ccard" role="complementary">
+                <?php get_template_part('partials/global-components/ccard'); ?>
+            </aside>
         </article><!-- #post-## -->
 
         <?php

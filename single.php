@@ -16,18 +16,16 @@
             get_template_part('partials/single/single-content');
             // get_template_part('partials/single/single-footer'); ?>
 
-            <aside class="l-gutter o-ccard" role="complementary">
-                <?php get_template_part('partials/global-components/ccard'); ?>
+            <aside role="complementary">
+                <?php get_template_part('partials/global-components/ccard_avatar');
+                get_template_part('partials/global-components/ccard_socialnw');
+                if ( comments_open() || get_comments_number() ) :
+                    // comments_template();
+                endif; ?>
             </aside>
         </article><!-- #post-## -->
 
-        <?php
-        // If comments are open or we have at least one comment, load up the comment template
-        if ( comments_open() || get_comments_number() ) :
-            // comments_template();
-        endif;
-
-    endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop. ?>
 
 </main><!-- #main -->
 <?php get_footer(); ?>

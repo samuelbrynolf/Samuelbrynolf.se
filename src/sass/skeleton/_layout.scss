@@ -83,7 +83,8 @@
   }
 }
 
-.l-container .l-container{
+.l-container .l-container,
+.l-gutter .l-container{
   padding-right: 0 !important;
   padding-left: 0 !important;
   margin-right: -$gutter_alpha_half;
@@ -209,7 +210,8 @@
 	  padding-left: $gutter_beta_half;
 	}
 	
-	.l-container .l-container{
+	.l-container .l-container,
+    .l-gutter .l-container{
 		margin-right: -$gutter_beta_half;
 		margin-left: -$gutter_beta_half;
 	}
@@ -335,7 +337,8 @@
 	  padding-left: $gutter_charlie_half;
 	}
 	
-	.l-container .l-container{
+	.l-container .l-container,
+    .l-gutter .l-container{
 		margin-right: -$gutter_charlie_half;
 		margin-left: -$gutter_charlie_half;
 	}
@@ -460,7 +463,8 @@
 	  padding-left: $gutter_delta_half;
 	}
 	
-	.l-container .l-container{
+	.l-container .l-container,
+    .l-gutter .l-container{
 		margin-right: -$gutter_delta_half;
 		margin-left: -$gutter_delta_half;
 	}
@@ -580,18 +584,19 @@
 @media all and (min-width: $echo_query) {
 	
 	.l-container{
-		padding-right: $gutter_echo_half;
+      padding-right: $gutter_echo_half;
 	  padding-left: $gutter_echo_half;
 	}
 	
-	.l-container .l-container{
+	.l-container .l-container,
+    .l-gutter .l-container{
 		margin-right: -$gutter_echo_half;
 		margin-left: -$gutter_echo_half;
 	}
 	
 	[class*='l-span']{
 		padding-right: $gutter_echo_half;
-	  padding-left: $gutter_echo_half;
+	    padding-left: $gutter_echo_half;
 	}
 	
 	[class*='l-span-E']{

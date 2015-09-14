@@ -94,6 +94,10 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: disc;
 }
 
+.a-ccard__p{
+  text-align: center;
+}
+
 
 // IMAGES + VIDEO/MEDIA =============================================================================================================
 
@@ -118,6 +122,49 @@ img.forcewidth{
 @media all and (min-width: $beta_query) {
   .js .js-medialoadEffect img{
     opacity: 0;
+  }
+}
+
+.a-ccard-avatar{
+  margin: rem($body_leading) auto;
+}
+
+// ICONS =============================================================================================================
+
+.a-socialicon{
+  position: relative;
+  display: block;
+
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    //top: 50%;
+    //transform: translateX(-50%);
+    font-family: $icon-font;
+    font-size: inherit;
+    line-height: inherit;
+    pointer-events: none;
+  }
+
+  &.twitter:before{
+    content: '\ea91';
+  }
+
+  &.github:before{
+    content: '\eab2';
+  }
+
+  &.linkedin:before{
+    content: '\eac9';
+  }
+
+  &.codepen:before{
+    content: "\eae4";
+  }
+
+  &.aventyret:before{
+    content: '\e916';
   }
 }
 

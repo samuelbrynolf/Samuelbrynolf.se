@@ -131,7 +131,7 @@ img.forcewidth{
 
 // ICONS =============================================================================================================
 
-.a-socialicon{
+.a-icon {
   position: relative;
   display: block;
 
@@ -139,8 +139,6 @@ img.forcewidth{
     display: block;
     position: absolute;
     left: 0;
-    //top: 50%;
-    //transform: translateX(-50%);
     font-family: $icon-font;
     font-size: inherit;
     line-height: inherit;

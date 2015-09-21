@@ -17,11 +17,15 @@
             // get_template_part('partials/single/single-footer'); ?>
 
             <aside role="complementary">
-                <?php get_template_part('partials/global-components/ccard_avatar');
-                get_template_part('partials/global-components/ccard_socialnw');
-                if ( comments_open() || get_comments_number() ) :
-                    // comments_template();
-                endif; ?>
+                <?php
+                if ( comments_open() || get_comments_number() ) {
+                    echo '<div class="l-gutter o-comments">';
+                        echo '<h3 class="a-large">Vad tycker du?</h3>';
+                        comments_template();
+                    echo '</div>';
+                }
+                get_template_part('partials/global-components/ccard_avatar');
+                get_template_part('partials/global-components/ccard_socialnw');?>
             </aside>
         </article><!-- #post-## -->
 

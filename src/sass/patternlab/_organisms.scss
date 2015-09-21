@@ -74,4 +74,17 @@
   }
 }
 
-// CALLING CARD ---------------------------------------------------------------------
+.o-comments{
+  margin-top: rem($body_leading*3);
+  margin-bottom: rem($body_leading);
+
+  .a-large{
+    margin-top: rem($body_leading);
+    margin-bottom: rem($body_leading);
+    text-align: center;
+
+    &:before{
+      @include divider();
+    }
+  }
+}

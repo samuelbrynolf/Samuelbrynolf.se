@@ -31,6 +31,28 @@ if ( !function_exists( 'remove_width_attribute' )) {
 
 //-------------------------------------------------------------------
 
+if ( !function_exists( 'posts_previouslink_attributes' )) {
+    function posts_previouslink_attributes($output) {
+        $cssclass = 'class="l-pull-left a-postlink a-icon previouspostlink"';
+        return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
+    }
+    add_filter('previous_post_link', 'posts_previouslink_attributes');
+}
+
+if ( !function_exists( 'posts_nextlink_attributes' )) {
+    function posts_nextlink_attributes($output) {
+        $cssclass = 'class="l-pull-right a-postlink a-icon nextpostlink"';
+        return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
+    }
+    add_filter('next_post_link', 'posts_nextlink_attributes');
+}
+
+//-------------------------------------------------------------------
+
+
+
+//-------------------------------------------------------------------
+
 if ( !function_exists( 'bento_body_classes' )) {
     function bento_body_classes($classes){
         if (is_single() && !has_post_thumbnail()) {

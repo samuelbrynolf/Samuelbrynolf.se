@@ -1,4 +1,4 @@
-<?php // get_template_part('partials/global-components/o-global-footer');
+<?php get_template_part('partials/global-components/global-footer');
 wp_footer(); ?>
 
 </body>

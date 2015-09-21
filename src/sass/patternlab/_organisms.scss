@@ -1,4 +1,4 @@
-.o-global-header{
+.o-global__header{
   margin-bottom: rem($body_leading*3);
 }
 
@@ -80,7 +80,7 @@
 
   .a-large{
     margin-top: rem($body_leading);
-    margin-bottom: rem($body_leading);
+    margin-bottom: rem($body_leading*1.5);
     text-align: center;
 
     &:before{

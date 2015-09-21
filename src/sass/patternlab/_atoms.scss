@@ -164,6 +164,16 @@ img.forcewidth{
   &.aventyret:before{
     content: '\e916';
   }
+
+  &.previouspostlink:before{
+    content: '\ea40';
+  }
+
+  &.nextpostlink:before{
+    content: '\ea3c';
+    left: auto;
+    right: 0;
+  }
 }
 
 // FORMS ==============================================================================================================

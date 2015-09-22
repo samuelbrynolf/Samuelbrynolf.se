@@ -89,6 +89,7 @@ a .m-listitem{
   }
 
   .a-postlink{
+    width: 100%;
 
     & + .a-postlink{
       margin-top: rem($body_leading/2);

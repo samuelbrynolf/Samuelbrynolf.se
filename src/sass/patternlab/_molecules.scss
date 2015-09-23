@@ -55,7 +55,7 @@
   height: 0;
   padding-bottom: 100%;
   overflow: hidden;
-  background-color: rgba($action, 0.75);
+  background-color: rgba($action, 0.5);
 }
 
 .a-textbox__p{
@@ -66,22 +66,22 @@
   z-index: 150;
   width: 90%;
   margin: 0;
-  text-align: center;
-  color: rgba($body, 0.9);
-  @include type-to-vmin(16, 7, 1.5);
+  color: $body;
+  @include type-to-vmin(16, 6.5, 1.6);
 
   @media all and (min-width: $beta_query) {
-    @include type-to-vmin(18, 4.5, 1.5);
+    @include type-to-vmin(18, 4, 1.6);
+    width: 85%;
   }
 
   a{
-    color: $bodycolor;
+    color: darken($bodycolor, 100%);
   }
 }
 
 .a-textbox__a{
   display: block;
-  margin-top: rem($body_leading/2);
+  margin-top: rem($body_leading);
   font-size: rem(12);
   line-height: 1.2;
 

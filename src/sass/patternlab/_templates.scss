@@ -4,7 +4,7 @@
 
   .a-large {
     margin-top: rem($body_leading*3);
-    margin-bottom: rem($body_leading);
+    margin-bottom: rem($body_leading*2);
     text-align: center;
 
     &:before {
@@ -38,6 +38,10 @@
       width: 50%;
       padding-bottom: 50%;
     }
+
+    .m-textbox{
+      background-color: $action;
+    }
   }
 }
 
@@ -46,6 +50,12 @@
   .a-icon {
     border-top: none;
     border-bottom: 1px solid $subtle-border;
+  }
+}
+
+.t-frontpage__footer .m-ccard__list li:last-of-type .a-icon{
+  @media all and (max-width: $beta_query) {
+    border-bottom: none;
   }
 }
 

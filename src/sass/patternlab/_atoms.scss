@@ -5,8 +5,8 @@
 .a-medium,
 .a-small,
 strong,
-.a-sitename{
-  font-family: $captionfont-1;
+.a-sitename,
+.a-textbox__p{
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
@@ -157,16 +157,20 @@ img.forcewidth{
     content: '\eac9';
   }
 
-  &.codepen:before{
-    content: "\eae4";
-  }
-
   &.aventyret:before{
     content: '\e916';
   }
 
   &.previouspostlink:before{
     content: '\ea40';
+  }
+
+  &.email:before{
+    content: '\e908';
+  }
+
+  &.phone:before{
+    content: '\e942';
   }
 
   &.nextpostlink:before{

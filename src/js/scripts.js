@@ -73,12 +73,12 @@
             success: function (data, textStatus, XMLHttpRequest) {
                 loadcontainer.html('');
                 loadcontainer.append(data).removeClass('s-is-hidden');
+                console.log(flag);
             },
             error: function (MLHttpRequest, textStatus, errorThrown) {
 
             }
         });
-
     }
 
 
@@ -140,14 +140,14 @@
 	// -------------------------------------------------------------------------------------------------------
 	
 	
-	if(screen != 'aq'){
-		$('.js-medialoadEffect').viewportChecker({
-  		classToAdd: 's-is-active', 
-  		offset: 168,
-  		callbackFunction: fadeImg,
-  		repeat: false
-		});
-	} 
+	//if(screen != 'aq'){
+	//	$('.js-medialoadEffect').viewportChecker({
+  	//	classToAdd: 's-is-active',
+  	//	offset: 168,
+  	//	callbackFunction: fadeImg,
+  	//	repeat: false
+	//	});
+	//}
 	
 	
 	// -------------------------------------------------------------------------------------------------------
@@ -155,7 +155,7 @@
 
 
     $('#js-frontpage__aside').viewportChecker({
-        classToAdd: '',
+        classToAdd: 'execLoad',
         offset: 0,
         callbackFunction: socialcontentLoader,
         repeat: false

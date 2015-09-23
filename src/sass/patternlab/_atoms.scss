@@ -171,8 +171,11 @@ img.forcewidth{
 
   &.nextpostlink:before{
     content: '\ea3c';
-    left: auto;
+    top: auto;
     right: 0;
+    bottom: 0;
+    left: auto;
+    transform: translateY(-50%);
   }
 }
 

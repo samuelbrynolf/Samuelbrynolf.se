@@ -24,8 +24,8 @@
   color: $subtle-text;
 }
 
-@mixin type-to-vmin($pxFallback: 16, $vmin: 4, $lineheight: 1.5){
-  font-size: $pxFallback / 16 + 0em;
+@mixin type-to-vmin($pxFallback: $basefont, $vmin: 4, $lineheight: 1.5){
+  font-size: $pxFallback / $basefont + 0em;
   font-size: $vmin + 0vm;
   font-size: $vmin + 0vmin;
   line-height: $lineheight;

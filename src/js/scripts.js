@@ -56,7 +56,35 @@
 	
 	
 	// -------------------------------------------------------------------------------------------------------
-	
+
+
+
+    function socialcontentLoader(){
+
+        var loadcontainer = $("#js-frontpage__aside");
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://mis.1979design.se/wp-admin/admin-ajax.php',
+            data: {
+                action: 'loadSocialContent',
+                //getTemplate: getTemplate,
+            },
+            success: function (data, textStatus, XMLHttpRequest) {
+                loadcontainer.html('');
+                loadcontainer.append(data).removeClass('s-is-hidden');
+            },
+            error: function (MLHttpRequest, textStatus, errorThrown) {
+
+            }
+        });
+
+    }
+
+
+
+	// -------------------------------------------------------------------------------------------------------
+
 	
 	function showElem(){
 		var $this = $(this);
@@ -123,7 +151,20 @@
 	
 	
 	// -------------------------------------------------------------------------------------------------------
-	
+
+
+
+    $('#js-frontpage__aside').viewportChecker({
+        classToAdd: '',
+        offset: 0,
+        callbackFunction: socialcontentLoader,
+        repeat: false
+    });
+
+
+
+    // -------------------------------------------------------------------------------------------------------
+
 	
 	$('a.tappilyTap').bind('tap', function(e){
 		window.location=e.target.href;

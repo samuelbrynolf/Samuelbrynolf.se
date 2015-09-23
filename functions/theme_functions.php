@@ -49,7 +49,13 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 
 //-------------------------------------------------------------------
 
+function loadSocialContent(){
+    $content = get_template_part('partials/frontpage/twitter_instagram');
+    die($content);
+}
 
+add_action( 'wp_ajax_nopriv_loadSocialContent', 'loadSocialContent' );
+add_action( 'wp_ajax_loadSocialContent', 'loadSocialContent' );
 
 //-------------------------------------------------------------------
 

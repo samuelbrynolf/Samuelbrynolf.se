@@ -7,8 +7,9 @@
 		transition: transform 0.2s ease-out;
 	}
 	
-	.js-medialoadEffect img{
-		transition: opacity 0.3s ease-out;
+	.js-medialoadEffect img,
+    .t-frontpage__aside{
+		transition: opacity 0.25s ease-out;
 	}
 	
 	.a-btn:focus{

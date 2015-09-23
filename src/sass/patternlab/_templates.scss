@@ -1,9 +1,53 @@
-@charset "UTF-8";
-
-
-
 // STARTPAGE =============================================================================================================
 
+.t-frontpage__article {
+
+  .a-large {
+    margin-top: rem($body_leading*3);
+    margin-bottom: rem($body_leading);
+    text-align: center;
+
+    &:before {
+      @include divider();
+    }
+  }
+}
+
+.t-frontpage__aside{
+  position: relative;
+  margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-bottom: rem($body_leading*2);
+  }
+
+  .m-textbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  @media all and (min-width: $beta_query) {
+
+    .m-textbox,
+    .m-prf{
+      position: relative;
+      float: left;
+      width: 50%;
+      padding-bottom: 50%;
+    }
+  }
+}
+
+.t-frontpage__footer{
+
+  .a-icon {
+    border-top: none;
+    border-bottom: 1px solid $subtle-border;
+  }
+}
 
 
 // LANDINGPAGE =============================================================================================================

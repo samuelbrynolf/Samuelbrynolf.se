@@ -71,9 +71,8 @@
                 //getTemplate: getTemplate,
             },
             success: function (data, textStatus, XMLHttpRequest) {
-                loadcontainer.html('');
+                //loadcontainer.html('');
                 loadcontainer.append(data).removeClass('s-is-hidden');
-                console.log(flag);
             },
             error: function (MLHttpRequest, textStatus, errorThrown) {
 

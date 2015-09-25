@@ -1,14 +1,19 @@
 <?php /* Template Name: Startsida */
 get_header(); ?>
 
-<main id="main" class="o-site-main" role="main">
+<main id="main" role="main">
 
-    <article class="t-frontpage__article">
-        <h2 class="a-large">Le plateu dú social</h2>
+    <article>
 
-        <aside id="js-frontpage__aside" class="l-clearfix t-frontpage__aside s-is-hidden"></aside>
+        <header>
+            <h1 class="a-large">Kontakt</h1>
+        </header>
 
-        <footer class="t-frontpage__footer">
+        <?php get_template_part('partials/global-components/ccard_avatar'); ?>
+
+        <aside id="js-socialfeedBox" class="l-clearfix m-article__aside s-is-hidden"></aside>
+
+        <footer class="m-frontpage__footer">
             <?php get_template_part('partials/global-components/ccard_socialnw'); ?>
         </footer>
 

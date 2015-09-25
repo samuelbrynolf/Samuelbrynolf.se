@@ -32,6 +32,13 @@ strong,
 
 .a-large{
   @include type-to-em(33,39);
+  margin-top: rem($body_leading*3);
+  margin-bottom: rem($body_leading*2);
+  text-align: center;
+
+  &:before {
+    @include divider();
+  }
 }
 
 .a-medium{
@@ -69,6 +76,8 @@ a[href^="http://www.samuelbrynolf.se"],
 a[href^="http://samuelbrynolf.se"]{
   word-wrap: normal;
 }
+
+// ----------
 
 
 // LISTS =============================================================================================================
@@ -123,10 +132,6 @@ img.forcewidth{
   .js .js-medialoadEffect img{
     opacity: 0;
   }
-}
-
-.a-ccard-avatar{
-  margin: rem($body_leading) auto;
 }
 
 // ICONS =============================================================================================================

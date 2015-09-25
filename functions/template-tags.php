@@ -72,13 +72,13 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
                  'tweets_to_retrieve'    => 1, // Specifies the number of tweets to try and fetch, up to a maximum of 200
                  'tweets_to_display'     => 1, // Number of tweets to display
                  'ignore_replies'        => true, // Ignore @replies
-                 'ignore_retweets'       => true, // Ignore retweets
+                 'ignore_retweets'       => false, // Ignore retweets
                  'twitter_style_dates'   => true, // Use twitter style dates e.g. 2 hours ago
-                 'twitter_date_text'     => array('seconds', 'minutes', 'about', 'hour', 'ago'),
+                 'twitter_date_text'     => array('sekunder', 'minuter', 'cirkagurka', 'timmar', 'sedan'),
                  'date_format'           => '%I:%M %p %b %e%O', // The defult date format e.g. 12:08 PM Jun 12th. See: http://php.net/manual/en/function.strftime.php
                  'date_lang'             => 'sv_SE', // Language for date e.g. 'fr_FR'. See: http://php.net/manual/en/function.setlocale.php
-                 'twitter_template'      => '<div class="m-textbox">{tweets}</div>',
-                 'tweet_template'        => '<p class="a-textbox__p">{tweet}<a class="a-textbox__a" href="{link}">Twitter: @samuelbrynolf, {date}</a></p>',
+                 'twitter_template'      => '<div class="m-textbox twitter">{tweets}</div>',
+                 'tweet_template'        => '<p class="a-textbox__p a-icon twitter">{tweet}<a class="a-textbox__a" href="{link}">@samuelbrynolf, {date}</a></p>',
                  'error_template'        => '<p class="a-textbox__p">Pang!<br/>Min twitterfeed &auml; nere.</p>',
                  'debug'                 => false
              ),

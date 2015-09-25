@@ -38,13 +38,14 @@
 }
 
 .m-prf.avatar{
-  border-radius: 50%;
   width: $avatar-size;
   padding-bottom: $avatar-size;
 
   .mis_img{
     top: 0;
     transform: none;
+    padding: 3px;
+    border-radius: 50%;
   }
 }
 
@@ -53,9 +54,13 @@
 .m-textbox{
   position: relative;
   height: 0;
-  padding-bottom: 100%;
   overflow: hidden;
-  background-color: rgba($action, 0.5);
+  padding-bottom: 100%;
+  background-color: $action;
+
+  @media all and (min-width: $beta_query) {
+    text-align: center;
+  }
 }
 
 .a-textbox__p{
@@ -69,9 +74,17 @@
   color: $body;
   @include type-to-vmin(16, 6.5, 1.6);
 
-  @media all and (min-width: $beta_query) {
-    @include type-to-vmin(18, 4, 1.6);
-    width: 85%;
+  &.a-icon:before{
+    display: inline;
+    position: static;
+    font-size: 75%;
+    margin-right: 0.5em;
+
+    @media all and (min-width: $beta_query) {
+      display: block;
+      font-size: 100%;
+      margin-right: 0;
+    }
   }
 
   a{
@@ -179,6 +192,11 @@ a .m-listitem{
 .a-ccard__p + .m-ccard__list{
   margin-top: rem($body_leading*2);
 }
+
+.m-ccard-avatar{
+  margin: rem($body_leading) auto;
+}
+
 
 
 // GLOBAL FOOTER ---------------------------------------------------------------------

@@ -59,24 +59,33 @@
 
 
 
-    function socialcontentLoader(){
+    function loadSocialData($feedTarget){
 
-        var loadcontainer = $("#js-frontpage__aside");
+        var feedTarget = $feedTarget;
 
         $.ajax({
             type: 'POST',
             url: 'http://mis.1979design.se/wp-admin/admin-ajax.php',
             data: {
                 action: 'loadSocialContent',
-                //getTemplate: getTemplate,
             },
             success: function (data, textStatus, XMLHttpRequest) {
-                //loadcontainer.html('');
-                loadcontainer.append(data).removeClass('s-is-hidden');
+                feedTarget.append(data).removeClass('s-is-hidden');
             },
             error: function (MLHttpRequest, textStatus, errorThrown) {
-
+                feedTarget.remove();
             }
+        });
+    }
+
+    function recentSocials(){
+        var feedTarget = $("#js-socialfeedBox");
+
+        $('#js-socialfeedBox').viewportChecker({
+            classToAdd: 'execLoad',
+            //offset: 320,
+            callbackFunction: loadSocialData(feedTarget),
+            repeat: false
         });
     }
 
@@ -99,7 +108,7 @@
 
 	
 	$('html').addClass('transitions');
-	
+    recentSocials();
 	
 	// -------------------------------------------------------------------------------------------------------
 	
@@ -150,15 +159,6 @@
 	
 	
 	// -------------------------------------------------------------------------------------------------------
-
-
-
-    $('#js-frontpage__aside').viewportChecker({
-        classToAdd: 'execLoad',
-        offset: 0,
-        callbackFunction: socialcontentLoader,
-        repeat: false
-    });
 
 
 

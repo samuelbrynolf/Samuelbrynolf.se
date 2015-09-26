@@ -33,7 +33,7 @@ if ( !function_exists( 'remove_width_attribute' )) {
 
 if ( !function_exists( 'posts_previouslink_attributes' )) {
     function posts_previouslink_attributes($output) {
-        $cssclass = 'class="l-pull-left a-postlink a-icon previouspostlink"';
+        $cssclass = 'class="a-prf-text a-icon arrowleft"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('previous_post_link', 'posts_previouslink_attributes');
@@ -41,7 +41,7 @@ if ( !function_exists( 'posts_previouslink_attributes' )) {
 
 if ( !function_exists( 'posts_nextlink_attributes' )) {
     function posts_nextlink_attributes($output) {
-        $cssclass = 'class="l-pull-right a-postlink a-icon nextpostlink"';
+        $cssclass = 'class="a-prf-text a-icon arrowright"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('next_post_link', 'posts_nextlink_attributes');
@@ -50,7 +50,7 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 //-------------------------------------------------------------------
 
 function loadSocialContent(){
-    $content = get_template_part('partials/frontpage/twitter_instagram');
+    $content = get_template_part('partials/global-components/twitter_instagram');
     die($content);
 }
 

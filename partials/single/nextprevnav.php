@@ -3,25 +3,39 @@ $nextPost = get_adjacent_post( false, '', false );
 
 if ($previousPost || $nextPost) {
 
-    echo '<div class="l-clearfix m-dual-nav">';
-        echo '<h3 class="a-medium">Fler inlägg:</h3>';
+    echo '<div class="m-dual-nav">';
+        echo '<h3 class="a-medium">Fler inlägg</h3>';
+        echo '<div class="l-container">';
 
-        if($previousPost){
-            $prevPostfeatImg = get_the_post_thumbnail($previousPost->ID);
+            if($previousPost){
+                $prevPostfeatImg = get_the_post_thumbnail($previousPost->ID);
 
-            if (function_exists('makeitSrcset') && $prevPostfeatImg) {
-                makeitSrcset(get_post_thumbnail_id($previousPost->ID), null, null, null, null, null, 'l-clear m-prf ratio-16-9');
+                echo '<div class="l-span l-span-B6">';
+                    echo '<div class="m-prf ratio-4-3 overlay">';
+
+                        if (function_exists('makeitSrcset') && $prevPostfeatImg) {
+                            makeitSrcset(get_post_thumbnail_id($previousPost->ID), null, null, null, null, null);
+                        }
+                        previous_post_link('%link');
+
+                    echo '</div>';
+                echo '</div>';
             }
-            previous_post_link('%link');
-        }
 
-        if ($nextPost){
-            $nextPostfeatImg = get_the_post_thumbnail($nextPost->ID);
+            if ($nextPost){
+                $nextPostfeatImg = get_the_post_thumbnail($nextPost->ID);
 
-            next_post_link('%link');
-            if (function_exists('makeitSrcset') && $nextPostfeatImg) {
-                makeitSrcset(get_post_thumbnail_id($nextPost->ID), null, null, null, null, null, 'l-clear m-prf ratio-16-9');
+                echo '<div class="l-span l-span-B6">';
+                    echo '<div class="m-prf ratio-4-3 overlay">';
+
+                        if (function_exists('makeitSrcset') && $nextPostfeatImg) {
+                            makeitSrcset(get_post_thumbnail_id($nextPost->ID), null, null, null, null, null);
+                        }
+                        next_post_link('%link');
+
+                    echo '</div>';
+                echo '</div>';
             }
-        }
+        echo '</div>';
     echo '</div>';
 }

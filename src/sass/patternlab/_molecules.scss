@@ -49,21 +49,22 @@
   }
 }
 
-// TEXTBOX ---------------------------------------------------------------------
+.m-prf.overlay {
 
-.m-textbox{
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 100%;
-  background-color: $action;
-
-  @media all and (min-width: $beta_query) {
-    text-align: center;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba($action, 0.6);
+    pointer-events: none;
   }
 }
 
-.a-textbox__p{
+.a-prf-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -71,36 +72,18 @@
   z-index: 150;
   width: 90%;
   margin: 0;
-  color: $body;
-  @include type-to-vmin(16, 6.5, 1.6);
 
-  &.a-icon:before{
+  &.a-icon:before,
+  &.a-icon:after{
     display: inline;
     position: static;
     font-size: 75%;
     margin-right: 0.5em;
-
-    @media all and (min-width: $beta_query) {
-      display: block;
-      font-size: 100%;
-      margin-right: 0;
-    }
   }
 
-  a{
-    color: darken($bodycolor, 100%);
-  }
-}
-
-.a-textbox__a{
-  display: block;
-  margin-top: rem($body_leading);
-  font-size: rem(12);
-  line-height: 1.2;
-
-  @media all and (min-width: $beta_query) {
-    font-size: rem(14);
-    margin-top: rem($body_leading);
+  &.a-icon:after{
+    margin-right: 0;
+    margin-left: 0.5em;
   }
 }
 
@@ -144,33 +127,31 @@ a .m-listitem{
 
 .m-dual-nav{
 
+  @media all and (max-width: $beta_query) {
+    .l-span + .l-span{
+      margin-top: $gutter_alpha;
+    }
+  }
+
   .a-medium{
     text-align: center;
     margin-bottom: rem($body_leading*2);
   }
 
-  .a-postlink{
-    width: 100%;
-    padding-top: rem($body_leading);
-    padding-bottom: rem($body_leading);
-
-    & + .a-postlink{
-      border-top: 1px solid;
-    }
-
-    &.previouspostlink{
-      padding-left: 2em;
-      text-align: left;
-    }
-
-    &.nextpostlink{
-      padding-right: 2em;
-      text-align: right;
-    }
+  .a-prf-text{
+    font-weight: bold;
   }
 
-  .a-medium + .a-postlink{
-    padding-top: 0;
+  a{
+    color: $body;
+  }
+
+  .arrowleft{
+    text-align: center;
+  }
+
+  .arrowright{
+    text-align: center;
   }
 }
 

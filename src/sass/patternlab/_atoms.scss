@@ -6,7 +6,7 @@
 .a-small,
 strong,
 .a-sitename,
-.a-textbox__p{
+.a-prf-text{
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
@@ -166,10 +166,6 @@ img.forcewidth{
     content: '\e916';
   }
 
-  &.previouspostlink:before{
-    content: '\ea40';
-  }
-
   &.email:before{
     content: '\e908';
   }
@@ -178,13 +174,12 @@ img.forcewidth{
     content: '\e942';
   }
 
-  &.nextpostlink:before{
+  &.arrowleft:before{
+    content: '\ea40';
+  }
+
+  &.arrowright:after{
     content: '\ea3c';
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    transform: translateY(-50%);
   }
 }
 

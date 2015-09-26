@@ -66,7 +66,7 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
                  'access_token'          => '17597132-BoGoLVUyErKSlZyddsUGZLbK7dOLWjwtWu8vWKEa3',
                  'access_token_secret'   => 'AYcPrlZfLd2yItkMtKvgCiPQvABjtJGtg5LWDhQYAkZRn',
                  'twitter_screen_name'   => 'samuelbrynolf',
-                 'enable_cache'          => true,
+                 'enable_cache'          => false,
                  'cache_dir'             => dirname(__FILE__) . '/cache/', // Where on the server to save cached tweets
                  'cachetime'             => 60 * 60, // Seconds to cache feed (1 hour).
                  'tweets_to_retrieve'    => 1, // Specifies the number of tweets to try and fetch, up to a maximum of 200
@@ -77,9 +77,9 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
                  'twitter_date_text'     => array('sekunder', 'minuter', 'cirkagurka', 'timmar', 'sedan'),
                  'date_format'           => '%I:%M %p %b %e%O', // The defult date format e.g. 12:08 PM Jun 12th. See: http://php.net/manual/en/function.strftime.php
                  'date_lang'             => 'sv_SE', // Language for date e.g. 'fr_FR'. See: http://php.net/manual/en/function.setlocale.php
-                 'twitter_template'      => '<div class="m-textbox twitter">{tweets}</div>',
-                 'tweet_template'        => '<p class="a-textbox__p a-icon twitter">{tweet}<a class="a-textbox__a" href="{link}">@samuelbrynolf, {date}</a></p>',
-                 'error_template'        => '<p class="a-textbox__p">Pang!<br/>Min twitterfeed &auml; nere.</p>',
+                 'twitter_template'      => '<div class="m-prf ratio-1-1 overlay">{tweets}</div>',
+                 'tweet_template'        => '<p class="a-prf-text a-icon twitter">{tweet}<a class="a-prf__a" href="{link}">@samuelbrynolf, {date}</a></p>',
+                 'error_template'        => '<p class="a-prf-text">Pang!<br/>Min twitterfeed &auml; nere.</p>',
                  'debug'                 => false
              ),
              $options

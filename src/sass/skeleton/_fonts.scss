@@ -54,10 +54,9 @@
   font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"],
-.a-icon:before{
-  font-family: 'icomoon';
+.a-icon:before,
+.a-icon:after{
+  font-family: $icon-font;
   speak: none;
   font-style: normal;
   font-weight: normal;

@@ -16,9 +16,9 @@
             get_template_part('partials/single/single-content');
             // get_template_part('partials/single/single-footer'); ?>
 
-            <aside class="o-single__aside l-gutter" role="complementary">
+            <aside class="o-single__aside" role="complementary">
                 <?php if (comments_open() || get_comments_number()) {
-                    echo '<div class="o-comments">';
+                    echo '<div class="l-gutter o-comments">';
                         echo '<h3 class="a-large">Vad tycker du?</h3>';
                         comments_template();
                     echo '</div>';

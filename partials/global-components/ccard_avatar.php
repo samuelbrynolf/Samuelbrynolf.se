@@ -1,2 +1,2 @@
 <?php makeitSrcset(41, 50, 50, 25, 25, 15, 'm-prf avatar m-ccard-avatar'); // Configure vw later ?>
-<p class="l-gutter a-ccard__p">Jag heter <strong>Samuel Brynolf</strong>. Jag tar fram form, koncept och gränssnittskod tillsammans med en rad överjordiskt intelligenta människor på <a href="#">Äventyret</a>. Det här är min blogg.</p>
+<p class="a-ccard__p">Jag heter <strong>Samuel Brynolf</strong>. Jag tar fram form, koncept och gränssnittskod tillsammans med en rad överjordiskt intelligenta människor på <a href="#">Äventyret</a>. Det här är min blogg.</p>

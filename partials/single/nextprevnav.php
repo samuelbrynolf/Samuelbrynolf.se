@@ -4,7 +4,7 @@ $nextPost = get_adjacent_post( false, '', false );
 if ($previousPost || $nextPost) {
 
     echo '<div class="m-dual-nav">';
-        echo '<h3 class="a-medium">Fler inlägg</h3>';
+        echo '<h3 class="a-medium">Mer att l&auml;sa</h3>';
         echo '<div class="l-container">';
 
             if($previousPost){
@@ -14,9 +14,10 @@ if ($previousPost || $nextPost) {
                     echo '<div class="m-prf ratio-4-3 overlay">';
 
                         if (function_exists('makeitSrcset') && $prevPostfeatImg) {
-                            makeitSrcset(get_post_thumbnail_id($previousPost->ID), null, null, null, null, null);
+                            makeitSrcset(get_post_thumbnail_id($previousPost->ID), null, null, '25', null, null);
                         }
                         previous_post_link('%link');
+
 
                     echo '</div>';
                 echo '</div>';
@@ -29,7 +30,7 @@ if ($previousPost || $nextPost) {
                     echo '<div class="m-prf ratio-4-3 overlay">';
 
                         if (function_exists('makeitSrcset') && $nextPostfeatImg) {
-                            makeitSrcset(get_post_thumbnail_id($nextPost->ID), null, null, null, null, null);
+                            makeitSrcset(get_post_thumbnail_id($nextPost->ID), null, null, '25', null, null);
                         }
                         next_post_link('%link');
 

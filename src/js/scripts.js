@@ -83,7 +83,7 @@
 
         $('#js-socialfeedBox').viewportChecker({
             classToAdd: 'execLoad',
-            //offset: 320,
+            offset: 0,
             callbackFunction: loadSocialData(feedTarget),
             repeat: false
         });

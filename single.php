@@ -25,13 +25,10 @@
                 }
 
                 get_template_part('partials/single/nextprevnav'); ?>
-
             </aside>
 
-            <footer class="m-entry__footer">
-                <?php get_template_part('partials/global-components/ccard_avatar');
-                get_template_part('partials/global-components/ccard_socialnw'); ?>
-            </footer>
+<!--            <footer class="m-entry__footer">-->
+<!--            </footer>-->
 
         </article><!-- #post-## -->
 

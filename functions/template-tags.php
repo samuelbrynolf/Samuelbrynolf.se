@@ -14,28 +14,32 @@
 
 function pull_instagram($user_id = '', $client_id = '', $count = '8'){
 
-    if (!is_numeric($user_id) && !is_numeric($client_id)){
+    if (!is_numeric($user_id) && !is_numeric($client_id)) {
         return;
     }
 
-    $url = 'https://api.instagram.com/v1/users/'.$user_id.'/media/recent/?client_id='.$client_id.'&count='.$count;
-    $all_result  = process_instagram_URL($url);
+    $url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?client_id=' . $client_id . '&count=' . $count;
+    $all_result = process_instagram_URL($url);
     $decoded_results = json_decode($all_result, true);
 
-    foreach($decoded_results['data'] as $item){
-        $thumbsize_url = $item['images']['thumbnail']['url'];
-        $loressize_url = $item['images']['low_resolution']['url'];
-        $standardsize_url = $item['images']['standard_resolution']['url'];
-        //$media_page = $item['link'];
+    if (isset($decoded_results['data']) && is_array($decoded_results['data'])) {
+        foreach ($decoded_results['data'] as $item) {
+            $thumbsize_url = $item['images']['thumbnail']['url'];
+            $loressize_url = $item['images']['low_resolution']['url'];
+            $standardsize_url = $item['images']['standard_resolution']['url'];
+            //$media_page = $item['link'];
 
-        echo '<div class="m-prf ratio-1-1">';
-            echo '<img class="a-instagram__img a-prf__img" src="'.$loressize_url.'" srcset="'.$standardsize_url.' 612w,
-            '.$loressize_url.' 306w,
-            '.$thumbsize_url.' 150w"
+            echo '<div class="m-prf ratio-1-1">';
+            echo '<img class="a-instagram__img a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
+                ' . $loressize_url . ' 306w,
+                ' . $thumbsize_url . ' 150w"
 
-            sizes="(min-width: 768px) 50vw,
-            100vw"/>';
-        echo '</div>';
+                sizes="(min-width: 768px) 50vw,
+                100vw"/>';
+            echo '</div>';
+        }
+    } else {
+
     }
 }
 
@@ -66,7 +70,7 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
                  'access_token'          => '17597132-BoGoLVUyErKSlZyddsUGZLbK7dOLWjwtWu8vWKEa3',
                  'access_token_secret'   => 'AYcPrlZfLd2yItkMtKvgCiPQvABjtJGtg5LWDhQYAkZRn',
                  'twitter_screen_name'   => 'samuelbrynolf',
-                 'enable_cache'          => false,
+                 'enable_cache'          => true,
                  'cache_dir'             => dirname(__FILE__) . '/cache/', // Where on the server to save cached tweets
                  'cachetime'             => 60 * 60, // Seconds to cache feed (1 hour).
                  'tweets_to_retrieve'    => 1, // Specifies the number of tweets to try and fetch, up to a maximum of 200

@@ -140,14 +140,21 @@ img.forcewidth{
   position: relative;
   display: block;
 
-  &:before{
+  &:before,
+  &:after{
     display: block;
     position: absolute;
+    top: 0;
     left: 0;
     font-family: $icon-font;
     font-size: inherit;
     line-height: inherit;
     pointer-events: none;
+  }
+
+  &:after{
+    left: auto;
+    right: 0;
   }
 
   &.twitter:before{

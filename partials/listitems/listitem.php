@@ -1,7 +1,7 @@
-<a class="a-listitem__a" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<a class="m-listitem__a" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
     <article id="post-<?php the_ID(); ?>" <?php post_class('m-listitem'); ?>>
         <header class="l-gutter m-listitem__header">
-            <h2 class="a-large"><?php the_title(); ?></h2>
+            <h2 class="a-large a-listitem-title"><?php the_title(); ?></h2>
         </header><!-- .listitem-header -->
 
         <p class="a-fineprint a-listitem-meta-date"><?php the_date(); ?></p>

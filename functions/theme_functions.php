@@ -2,6 +2,13 @@
 
 //-------------------------------------------------------------------
 
+function register_my_menu(){
+    register_nav_menu('navigation', __('Huvudnavigation'));
+}
+add_action('init', 'register_my_menu');
+
+//-------------------------------------------------------------------
+
 if ( !function_exists( 'remove_more_jump_link' )) {
     function remove_more_jump_link($link){
         $offset = strpos($link, '#more-');

@@ -1,8 +1,29 @@
 // GLOBAL HEADER ---------------------------------------------------------------------
 
 .o-global__header{
+  margin-top: rem($body_leading);
   margin-bottom: rem($body_leading*3);
   transform: translateZ(0); // Hackster
+
+  .m-global__nav{
+    width: 60%;
+    line-height: 42px;
+    text-align: right;
+    //padding-bottom: 1px;
+    border-bottom: 1px solid $subtle-border;
+
+    li{
+      display: inline-block;
+    }
+
+    li + li{
+      padding-left: $leading/4;
+    }
+
+    a{
+      font-size: rem(14);
+    }
+  }
 }
 
 // ARCHIVE HEADER ---------------------------------------------------------------------

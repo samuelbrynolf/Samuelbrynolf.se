@@ -226,10 +226,8 @@
 	
 	
 	if($.fn.smoothScroll){
-		var jumper = $('.js-jumper');
-		if(jumper.length){
-    	jumper.smoothScroll();
-    }
+		var jumper = $('.js-colophon-jumper a, .js-jumper');
+        jumper.smoothScroll();
 	}
 	
 	

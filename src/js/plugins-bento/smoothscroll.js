@@ -10,9 +10,9 @@
           //e.preventDefault(); Eftersom vi kör tappy, dödas default automatiskt
          } 
        }
-	 	});
-	 	
-	 	return this;
+    });
+
+    return this;
 	 		
   };
 }( jQuery ));

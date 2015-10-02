@@ -138,7 +138,7 @@
   margin-top: rem($body_leading*3);
 }
 
-.m-listitem__a.has-no-thumbnail + .m-listitem__a.has-no-thumbnail{
+.m-listitem__a + .m-listitem__a.has-no-thumbnail{
   padding-top: rem($body_leading*3);
   border-top: 1px solid $subtle-border;
 }

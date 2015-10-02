@@ -8,7 +8,8 @@
 	}
 	
 	.js-medialoadEffect img,
-    #js-socialfeedBox{
+    #js-socialfeedBox,
+    .o-taglist{
 		transition: opacity 0.25s ease-out;
 	}
 	
@@ -25,6 +26,10 @@
 	.m-global-nav__a{
 		transition: all 0.06s ease-in-out;
 	}
+
+  #js-colophon{
+    transition: background-color 0.750s ease-out 750ms;
+  }
 }
 
 

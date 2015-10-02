@@ -56,13 +56,28 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 
 //-------------------------------------------------------------------
 
-function loadSocialContent(){
-    $content = get_template_part('partials/global-components/twitter_instagram');
-    die($content);
-}
+if ( !function_exists( 'loadSocialContent' )) {
+    function loadSocialContent()
+    {
+        $content = get_template_part('partials/global-components/twitter_instagram');
+        die($content);
+    }
 
-add_action( 'wp_ajax_nopriv_loadSocialContent', 'loadSocialContent' );
-add_action( 'wp_ajax_loadSocialContent', 'loadSocialContent' );
+    add_action('wp_ajax_nopriv_loadSocialContent', 'loadSocialContent');
+    add_action('wp_ajax_loadSocialContent', 'loadSocialContent');
+}
+//-------------------------------------------------------------------
+
+if ( !function_exists('build_tags')) {
+    function build_tags()
+    {
+        $content = get_template_part('partials/global-components/taglist');
+        die($content);
+    }
+
+    add_action('wp_ajax_nopriv_build_tags', 'build_tags');
+    add_action('wp_ajax_build_tags', 'build_tags');
+}
 
 //-------------------------------------------------------------------
 

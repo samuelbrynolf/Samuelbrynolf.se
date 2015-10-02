@@ -58,6 +58,27 @@
 	// -------------------------------------------------------------------------------------------------------
 
 
+    function show_contact(){
+        var contactTrigger = $('.js-colophon-jumper a');
+        var contactArea = $(contactTrigger.attr('href'));
+
+        contactTrigger.bind('tap', function(){
+            contactArea.addClass('s-is-highlighted');
+            setTimeout(function(){
+                contactArea.removeClass('s-is-highlighted');
+            }, 1500);
+        });
+
+
+        if($.fn.smoothScroll && contactArea.length){
+            contactTrigger.smoothScroll();
+        }
+    }
+
+
+	// -------------------------------------------------------------------------------------------------------
+
+
 
     function loadSocialData($feedTarget){
 
@@ -65,7 +86,7 @@
 
         $.ajax({
             type: 'POST',
-            url: 'http://mis.1979design.se/wp-admin/admin-ajax.php',
+            url: '/wp-admin/admin-ajax.php',
             data: {
                 action: 'loadSocialContent',
             },
@@ -81,11 +102,56 @@
     function recentSocials(){
         var feedTarget = $("#js-socialfeedBox");
 
-        $('#js-socialfeedBox').viewportChecker({
+        feedTarget.viewportChecker({
             classToAdd: 'execLoad',
             offset: 0,
             callbackFunction: loadSocialData(feedTarget),
             repeat: false
+        });
+    }
+
+
+
+	// -------------------------------------------------------------------------------------------------------
+
+    function populate_tags($loadtarget){
+        var loadtarget = $($loadtarget);
+
+        $.ajax({
+            type: 'POST',
+            url: '/wp-admin/admin-ajax.php',
+            data: {
+                action: 'build_tags',
+            },
+            success: function (data, textStatus, XMLHttpRequest) {
+                loadtarget.append(data).removeClass('s-is-hidden');
+            },
+            error: function (MLHttpRequest, textStatus, errorThrown) {
+                loadtarget.remove();
+            }
+        });
+    }
+
+    function top_tags($trigger){
+        var tagsloaded = false;
+        var trigger = $($trigger);
+
+        trigger.bind('tap', function(){
+            var href = $(this).attr('href');
+
+            if(href.indexOf('#') == 0){
+                var loadtarget = $(href);
+
+                if(loadtarget.length){
+
+                    if(tagsloaded){
+                        loadtarget.toggleClass('s-is-hidden');
+                    } else {
+                        populate_tags(loadtarget);
+                        tagsloaded = true;
+                    }
+                }
+            }
         });
     }
 
@@ -109,6 +175,8 @@
 	
 	$('html').addClass('transitions');
     recentSocials();
+    show_contact();
+    top_tags('.js-toptags a');
 	
 	// -------------------------------------------------------------------------------------------------------
 	
@@ -130,7 +198,12 @@
 	
 	
 	// -------------------------------------------------------------------------------------------------------
-	
+
+
+
+
+	// -------------------------------------------------------------------------------------------------------
+
 	
 	if($('#getActiveMQ-watcher').length){
 		var viewPort = $(window);
@@ -164,10 +237,15 @@
 
     // -------------------------------------------------------------------------------------------------------
 
-	
-	$('a.tappilyTap').bind('tap', function(e){
-		window.location=e.target.href;
-	});
+
+    $('a').each( function(){
+        var href = $( this ).attr( "href" );
+        if( href.indexOf( "#" ) !== 0 ){
+            $( this ).bind( "tap", function(){
+                window.location.href = this.href;
+            });
+        }
+    } );
 	
 	
 	
@@ -223,12 +301,12 @@
 	
 	
 	// -------------------------------------------------------------------------------------------------------
-	
-	
-	if($.fn.smoothScroll){
-		var jumper = $('.js-colophon-jumper a, .js-jumper');
-        jumper.smoothScroll();
-	}
+
+
+	//if($.fn.smoothScroll){
+	//	var jumper = $('.js-jumper');
+     //   jumper.smoothScroll();
+	//}
 	
 	
 	// -------------------------------------------------------------------------------------------------------

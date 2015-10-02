@@ -2,7 +2,7 @@
 $tags = get_tags();
 
 if ($tags) { ?>
-    <ul class="a-ul-large o-taglist">
+    <ul class="a-ul-large">
         <li id="js-listhead">
             <h2 class="a-xlarge a-icon close">Etiketter<br/>A&mdash;&Ouml;</h2>
         </li>

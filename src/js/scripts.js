@@ -120,6 +120,10 @@
 
         menuitems.removeClass('current-menu-item');
         trigger.toggleClass('current-menu-item');
+
+        $('html, body').animate({
+            scrollTop: 0
+        },'slow');
     }
 
     function populate_tags($loadtarget, $trigger){
@@ -152,7 +156,7 @@
             var $this = $(this);
             var href = $this.attr('href');
 
-            if(href.indexOf('#') == 0){
+            if(href.indexOf('#') === 0){
                 var loadtarget = $(href);
 
                 if(loadtarget.length){

@@ -11,7 +11,7 @@
     <p class="a-fineprint a-entry-meta">
         <?php the_date('', '<span class="a-listitem-meta__span">', '</span>');
         if (has_tag()) {
-            the_tags(' &#183 ', ' &#183 ');
+            the_tags(' &#183; ', ' &#183; ');
         } ?>
     </p><!-- .entry-meta -->
 

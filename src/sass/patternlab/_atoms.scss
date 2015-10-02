@@ -103,6 +103,23 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: disc;
 }
 
+.a-ul-large{
+  text-align: center;
+
+  li{
+    padding: rem($body_leading);
+  }
+
+  li + li{
+    border-top: 1px solid $subtle-border;
+  }
+
+  .a-ul-large__span,
+  a .a-ul-large__span{
+    color: $bodycolor;
+  }
+}
+
 .a-ccard__p{
   text-align: center;
 }
@@ -191,6 +208,10 @@ img.forcewidth{
 
   &.search:before{
     content: '\e986';
+  }
+
+  &.close:after{
+    content: '\ea0f';
   }
 }
 

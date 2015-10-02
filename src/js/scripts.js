@@ -114,8 +114,15 @@
 
 	// -------------------------------------------------------------------------------------------------------
 
-    function populate_tags($loadtarget){
-        var loadtarget = $($loadtarget);
+    function clearCurrent($trigger){
+        var menuitems = $('.menu-item');
+        var trigger = $trigger;
+
+        menuitems.removeClass('current-menu-item');
+        trigger.toggleClass('current-menu-item');
+    }
+
+    function populate_tags($loadtarget, $trigger){
 
         $.ajax({
             type: 'POST',
@@ -123,11 +130,16 @@
             data: {
                 action: 'build_tags',
             },
-            success: function (data, textStatus, XMLHttpRequest) {
-                loadtarget.append(data).removeClass('s-is-hidden');
+            success: function (data) {
+                $loadtarget.append(data).removeClass('s-is-hidden');
+                var closetrigger = $('#js-listhead');
+                closetrigger.bind('tap', function(){
+                    $loadtarget.addClass('s-is-hidden');
+                    clearCurrent($trigger);
+                });
             },
             error: function (MLHttpRequest, textStatus, errorThrown) {
-                loadtarget.remove();
+                $loadtarget.remove();
             }
         });
     }
@@ -137,17 +149,19 @@
         var trigger = $($trigger);
 
         trigger.bind('tap', function(){
-            var href = $(this).attr('href');
+            var $this = $(this);
+            var href = $this.attr('href');
 
             if(href.indexOf('#') == 0){
                 var loadtarget = $(href);
 
                 if(loadtarget.length){
+                    clearCurrent(trigger);
 
                     if(tagsloaded){
                         loadtarget.toggleClass('s-is-hidden');
                     } else {
-                        populate_tags(loadtarget);
+                        populate_tags(loadtarget, trigger);
                         tagsloaded = true;
                     }
                 }

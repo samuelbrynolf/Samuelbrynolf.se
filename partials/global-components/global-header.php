@@ -1,4 +1,4 @@
-<aside id="js-taglist" class="l-container o-taglist s-is-hidden"></aside>
+<aside id="js-taglist" class="o-taglist s-is-hidden"></aside>
 <header id="js-masthead" class="l-gutter l-clearfix o-global__header" role="banner">
 <!--    <div class="site-branding">-->
 <!--        --><?php //if(is_front_page()) { echo '<h1>'; } else { echo '<h2>'; } ?>

@@ -68,10 +68,33 @@ if ( !function_exists( 'loadSocialContent' )) {
 }
 //-------------------------------------------------------------------
 
+
+if ( !function_exists('listTags')) {
+    function listTags() {
+        $tags = get_tags();
+
+        if ($tags) {
+            echo '<ul class="a-ul-large">';
+                echo '<li id="js-listhead">';
+                    echo '<h2 class="a-xlarge a-icon close">Etiketter<br/>A&mdash;&Ouml;</h2>';
+                echo '</li>';
+
+                foreach ($tags as $tag) {
+                    echo '<li>';
+                        echo '<a href="'.get_tag_link($tag->term_id).'" title="'.sprintf(__("Se allt inom &auml;mnet %s"), $tag->name).'" rel="nofollow">';
+                            echo '<h3 class="a-medium">'.$tag->name.'<span class="a-ul-large__span">['.$tag->count.']</span></h3>';
+                        echo '</a>';
+                    echo '</li>';
+                }
+            echo '</ul>';
+        }
+    }
+}
+
 if ( !function_exists('build_tags')) {
     function build_tags()
     {
-        $content = get_template_part('partials/global-components/taglist');
+        $content = listTags();
         die($content);
     }
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" role="main">
+<main id="js-main" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -15,6 +15,11 @@
 
             get_template_part('partials/single/single-content');
             // get_template_part('partials/single/single-footer'); ?>
+
+
+
+            <!-- USE FOR PAGES AS WELL? TEMPLATE HIARERCHY SINGLE/PAGES ETC??? -->
+
 
             <aside class="o-single__aside" role="complementary">
                 <?php if (comments_open() || get_comments_number()) {
@@ -35,4 +40,4 @@
     <?php endwhile; // end of the loop. ?>
 
 </main><!-- #main -->
-<?php get_footer(); ?>
+<?php get_footer();

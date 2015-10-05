@@ -1,30 +1,17 @@
-<?php remove_filter('term_description','wpautop');
+<?php // REGISTER MENU -------------------------------------------------------------------
 
-//-------------------------------------------------------------------
-
-function register_my_menu(){
-    register_nav_menu('navigation', __('Huvudnavigation'));
-}
-add_action('init', 'register_my_menu');
-
-//-------------------------------------------------------------------
-
-if ( !function_exists( 'remove_more_jump_link' )) {
-    function remove_more_jump_link($link){
-        $offset = strpos($link, '#more-');
-        if ($offset) {
-            $end = strpos($link, '"', $offset);
-        }
-        if ($end) {
-            $link = substr_replace($link, '', $offset, $end - $offset);
-        }
-        return $link;
+if ( !function_exists( 'register_my_menu' )) {
+    function register_my_menu()
+    {
+        register_nav_menu('navigation', __('Huvudnavigation'));
     }
 
-    add_filter('the_content_more_link', 'remove_more_jump_link');
+    add_action('init', 'register_my_menu');
 }
 
-//-------------------------------------------------------------------
+
+
+// REMOVE WIDTH-ATTRIBUTES FROM <img> -------------------------------------------------------------------
 
 if ( !function_exists( 'remove_width_attribute' )) {
     function remove_width_attribute($html){
@@ -36,7 +23,9 @@ if ( !function_exists( 'remove_width_attribute' )) {
     add_filter('image_send_to_editor', 'remove_width_attribute', 10);
 }
 
-//-------------------------------------------------------------------
+
+
+// BUILD CUSTOM PREV/PREVIOUS POST-LINKS -------------------------------------------------------------------
 
 if ( !function_exists( 'posts_previouslink_attributes' )) {
     function posts_previouslink_attributes($output) {
@@ -54,55 +43,9 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
     add_filter('next_post_link', 'posts_nextlink_attributes');
 }
 
-//-------------------------------------------------------------------
-
-if ( !function_exists( 'loadSocialContent' )) {
-    function loadSocialContent()
-    {
-        $content = get_template_part('partials/global-components/twitter_instagram');
-        die($content);
-    }
-
-    add_action('wp_ajax_nopriv_loadSocialContent', 'loadSocialContent');
-    add_action('wp_ajax_loadSocialContent', 'loadSocialContent');
-}
-//-------------------------------------------------------------------
 
 
-if ( !function_exists('listTags')) {
-    function listTags() {
-        $tags = get_tags();
-
-        if ($tags) {
-            echo '<ul class="a-ul-large">';
-                echo '<li id="js-listhead">';
-                    echo '<h2 class="a-xlarge a-icon close">Etiketter<br/>A&mdash;&Ouml;</h2>';
-                echo '</li>';
-
-                foreach ($tags as $tag) {
-                    echo '<li>';
-                        echo '<a href="'.get_tag_link($tag->term_id).'" title="'.sprintf(__("Se allt inom &auml;mnet %s"), $tag->name).'" rel="nofollow">';
-                            echo '<h3 class="a-medium">'.$tag->name.'<span class="a-ul-large__span">['.$tag->count.']</span></h3>';
-                        echo '</a>';
-                    echo '</li>';
-                }
-            echo '</ul>';
-        }
-    }
-}
-
-if ( !function_exists('build_tags')) {
-    function build_tags()
-    {
-        $content = listTags();
-        die($content);
-    }
-
-    add_action('wp_ajax_nopriv_build_tags', 'build_tags');
-    add_action('wp_ajax_build_tags', 'build_tags');
-}
-
-//-------------------------------------------------------------------
+// ADD CUSTOM BODY CLASSES -------------------------------------------------------------------
 
 if ( !function_exists( 'bento_body_classes' )) {
     function bento_body_classes($classes){
@@ -116,7 +59,9 @@ if ( !function_exists( 'bento_body_classes' )) {
     add_filter('body_class', 'bento_body_classes');
 }
 
-//-------------------------------------------------------------------
+
+
+// BUILD HEAD-TITLES -------------------------------------------------------------------
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
@@ -152,7 +97,20 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	add_filter( 'wp_title', 'bento_wp_title', 10, 2 );
 endif;
 
-//-------------------------------------------------------------------
+
+
+// FILTER ARCHIVE TITLES -------------------------------------------------------------------
+
+add_filter('get_the_archive_title', function ($title) {
+    //if (is_category() || is_tag()) {
+        $title = single_cat_title('', false);
+    //}
+    return $title;
+});
+
+
+
+// MARK PRIVATE-POST-TITLES -------------------------------------------------------------------
 
 if ( !function_exists( 'trim_private_titles' )) {
     function trim_private_titles($string){
@@ -160,22 +118,4 @@ if ( !function_exists( 'trim_private_titles' )) {
         return $string;
     }
     add_filter('the_title', 'trim_private_titles');
-}
-
-//-------------------------------------------------------------------
-
-if ( !function_exists( 'new_excerpt_more' )) {
-    function new_excerpt_more($more){
-        return '&hellip;';
-    }
-    add_filter('excerpt_more', 'new_excerpt_more');
-}
-
-//-------------------------------------------------------------------
-
-if ( !function_exists( 'add_excerpts_to_pages' )) {
-    function add_excerpts_to_pages(){
-        add_post_type_support('page', 'excerpt');
-    }
-    add_action('init', 'add_excerpts_to_pages');
 }

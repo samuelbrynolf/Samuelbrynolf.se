@@ -198,12 +198,16 @@ img.forcewidth{
     content: '\e942';
   }
 
+  &.arrowright:after{
+    content: '\ea3c';
+  }
+
   &.arrowleft:before{
     content: '\ea40';
   }
 
-  &.arrowright:after{
-    content: '\ea3c';
+  &.arrowdown:after{
+    content: '\ea3e';
   }
 
   &.search:before{

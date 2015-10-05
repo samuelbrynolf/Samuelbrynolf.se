@@ -1,16 +1,27 @@
 <?php get_header(); ?>
 
-<main id="main" role="main">
+<main id="js-main" role="main">
 
-    <?php if ( have_posts() ) :
-        while ( have_posts() ) : the_post();
+    <?php if(is_home()){
+        if(is_paged()){
+            // echo 'Yey! Paged!';
+        } else {
+            // echo 'Not paged!';
+        }
+        // echo 'bloggg!';
+    } else {
+        get_template_part('partials/global-components/archive-header');
+    }
+
+    if ( have_posts() ) {
+        while ( have_posts() ) {
+            the_post();
             get_template_part('partials/listitems/listitem', get_post_format());
-        endwhile;
-        the_posts_navigation();
-    else :
-        get_template_part( 'content', 'none' );
-    endif; ?>
+        }
+
+        //the_posts_navigation();
+    } ?>
 
 </main><!-- #main -->
 
-<?php get_footer(); ?>
+<?php get_footer();

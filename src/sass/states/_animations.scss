@@ -31,8 +31,11 @@
   }
 
   .o-taglist{
-    //transition: transform 1.35s ease-out;
-    transition: opacity 0.35s ease-out;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+  }
+
+  .o-taglist .a-ul-large{
+   // transition: transform 0.55s ease-out;
   }
 }
 

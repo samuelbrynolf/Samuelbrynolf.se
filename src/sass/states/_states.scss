@@ -94,10 +94,11 @@ a.current-menu-item{
 
 .o-taglist.s-is-hidden{
   position: relative;
+  transform: translate3d(0,rem(-$body_leading*2),0);
   opacity: 0;
   visibility: hidden;
-  z-index: -100;
-  max-height: 0;
+  overflow: hidden;
+  height: 0;
 
   a{
     pointer-events: none;

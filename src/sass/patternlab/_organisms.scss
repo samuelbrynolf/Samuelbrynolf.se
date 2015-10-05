@@ -42,17 +42,16 @@
 
 
 .o-taglist .a-ul-large{
+  padding-bottom: rem($body_leading*2);
   background-color: $action;
-  padding-top: rem($body_leading*3);
-  padding-bottom: rem($body_leading*3);
 
   .a-xlarge{
     margin-bottom: rem($body_leading);
+    padding-top: rem($body_leading*2);
 
     &:after{
-      position: static;
-      font-size: 50%;
-      margin-top: rem($body_leading*2);
+      font-size: rem($body_leading/2);
+      top: 0;
       color: $body;
       pointer-events: auto;
       cursor: pointer;
@@ -64,7 +63,7 @@
   }
 
   li + li{
-    border-color: rgba($bodycolor, 0.3);
+    border-color: rgba($bodycolor, 0.4);
   }
 }
 

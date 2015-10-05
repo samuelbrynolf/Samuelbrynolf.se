@@ -1,4 +1,6 @@
-<?php function process_instagram_URL($url){
+<?php // PULL IMAGES FROM INSTAGRAM -------------------------------------------------------------------
+
+function process_instagram_URL($url){
     $ch = curl_init();
     curl_setopt_array($ch, array(
     CURLOPT_URL => $url,
@@ -44,10 +46,10 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
 }
 
 
-// ---------------------------------------------------------------------------------
 
+// PULL LATEST TWEETS -------------------------------------------------------------------
 
- class TweetPHP {
+class TweetPHP {
      private $tmhOAuth;
      private $options;
      private $tweet_found = false;

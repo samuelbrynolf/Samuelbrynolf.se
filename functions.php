@@ -1,5 +1,7 @@
 <?php if ( ! function_exists( 'bento_setup' ) ) :
 
+
+
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -7,6 +9,10 @@
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
+
+
+
+    // THEME SETUP -------------------------------------------------------------------
 
     function bento_setup() {
 
@@ -29,8 +35,12 @@
 
         add_theme_support( 'post-formats', array( 'link' ));
     }
-endif; // bento_setup
+endif;
 add_action( 'after_setup_theme', 'bento_setup' );
+
+
+
+// SCRIPTS & STYLES -------------------------------------------------------------------
 
 function bento_scripts() {
 	wp_enqueue_style( 'bento-style', get_stylesheet_uri());
@@ -42,5 +52,10 @@ function bento_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bento_scripts' );
 
+
+
+// IMPORT THEME, TEMPLATE & AJAX-FUNCTIONS -------------------------------------------------------------------
+
 require get_template_directory() . '/functions/theme_functions.php';
 require get_template_directory() . '/functions/template-tags.php';
+require get_template_directory() . '/functions/ajax_triggered_functions.php';

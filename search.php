@@ -1,44 +1,27 @@
-<?php
-/**
- * The template for displaying search results pages.
- *
- * @package bento
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<main id="js-main" role="main">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <?php if(is_home()){
+        if(is_paged()){
+            // echo 'Yey! Paged!';
+        } else {
+            // echo 'Not paged!';
+        }
+        // echo 'bloggg!';
+    } else {
+        get_template_part('partials/global-components/archive-header');
+    }
 
-		<?php if ( have_posts() ) : ?>
+    if ( have_posts() ) {
+        while ( have_posts() ) {
+            the_post();
+            get_template_part('partials/listitems/listitem', get_post_format());
+        }
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'bento' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+        //the_posts_navigation();
+    } ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</main>
 
 <?php get_footer(); ?>

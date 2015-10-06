@@ -174,12 +174,9 @@
 .m-archive__header{
   text-align: center;
   margin-bottom: rem($body_leading*3);
-  
-  &.a-icon.arrowdown:after{
-    position: static;
-    margin-top: rem($body_leading);
-    margin-bottom: rem($body_leading);
-    color: $subtle-text;
+
+  p{
+    margin: rem($body_leading/2) 0 0 0;
   }
 }
 

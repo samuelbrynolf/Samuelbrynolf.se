@@ -122,7 +122,7 @@ if ( !function_exists( 'trim_private_titles' )) {
 
 
 
-// MARK PRIVATE-POST-TITLES -------------------------------------------------------------------
+// DISABLE PAGINATION BY TEMPLATE -------------------------------------------------------------------
 
 function no_nopaging($query) {
     if (is_search()) {

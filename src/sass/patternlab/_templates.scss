@@ -12,17 +12,11 @@
 
 // ARCHIVE =============================================================================================================
 
-.archive .o-global__footer,
-.blog .o-global__footer{
-  padding-top: rem($body_leading*3);
-  border-top: 1px solid $subtle-border;
-}
 
 // SINGLE =============================================================================================================
 
 .single.no-thumb .a-entry-meta{
-  margin-bottom: rem($body_leading);
-  padding-bottom: rem($body_leading);
+  padding-bottom: rem($body_leading*1.25);
   border-bottom: 1px solid $subtle-border;
 }
 

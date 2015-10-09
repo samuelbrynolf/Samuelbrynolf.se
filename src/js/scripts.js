@@ -195,7 +195,7 @@
 
 	
 	$('html').addClass('transitions');
-    recentSocials();
+    // recentSocials();
     show_contact();
     top_tags('.js-toptags a');
 	
@@ -259,14 +259,14 @@
     // -------------------------------------------------------------------------------------------------------
 
 
-    $('a').each( function(){
-        var href = $( this ).attr( "href" );
-        if( href.indexOf( "#" ) !== 0 ){
-            $( this ).bind( "tap", function(){
-                window.location.href = this.href;
-            });
-        }
-    } );
+    //$('a').each( function(){
+    //    var href = $( this ).attr( "href" );
+    //    if( href.indexOf( "#" ) !== 0 ){
+    //        $( this ).bind( "tap", function(){
+    //            window.location.href = this.href;
+    //        });
+    //    }
+    //} );
 	
 	
 	

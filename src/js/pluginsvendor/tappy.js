@@ -3,6 +3,7 @@
 
     // handling flag is true when an event sequence is in progress (thx androood)
     w.tapHandling = false;
+    w.tappy = true;
 
     var tap = function( $els ){
         return $els.each(function(){
@@ -16,7 +17,6 @@
 
             function trigger( e ){
                 $( e.target ).trigger( "tap", [ e, $( e.target ).attr( "href" ) ] );
-                e.stopImmediatePropagation();
             }
 
             function getCoords( e ){

@@ -14,12 +14,7 @@
     }
 
     if ( have_posts() ) {
-        while ( have_posts() ) {
-            the_post();
-            get_template_part('partials/listitems/listitem', get_post_format());
-        }
-
-        //the_posts_navigation();
+        get_template_part('partials/global-components/loop-listitems');
     } ?>
 
 </main>

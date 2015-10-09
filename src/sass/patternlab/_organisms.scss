@@ -26,14 +26,12 @@
   }
 }
 
-// ARCHIVE HEADER ---------------------------------------------------------------------
+// GLOBAL FOOTER ---------------------------------------------------------------------
 
 .o-global__footer{
-  margin-top: rem($body_leading*3);
+  padding-top: rem($body_leading*3);
   margin-bottom: rem($body_leading*3);
 }
-
-// ARCHIVE HEADER ---------------------------------------------------------------------
 
 
 
@@ -73,8 +71,8 @@
 .o-entry__header{
   text-align: center;
 
-  .a-entry-title{
-    margin-bottom: rem($body_leading);
+  .a-entry-meta{
+    margin-bottom: rem($body_leading*1.25);
   }
 }
 

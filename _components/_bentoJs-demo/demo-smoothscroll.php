@@ -1,2 +1,0 @@
-<h2 class="a-components__sectiontitle"><a class="js-jumper" href="#topsection" rel="nofollow">Click me</a> to smoothscroll to top of document: <code>smoothScroll();</code></h2>
-<p>Add <code>.js-jumper</code> to the link. Set target for scroll as an ID as href. Use <code>rel="nofollow"</code></p>

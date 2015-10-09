@@ -30,7 +30,8 @@
     transition: background-color 0.750s ease-out 750ms;
   }
 
-  .o-taglist{
+  .o-taglist,
+  .m-listitem__a{
     transition: opacity 0.35s ease-out, transform 0.35s ease-out;
   }
 

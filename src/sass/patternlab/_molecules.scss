@@ -128,8 +128,6 @@
 
 // LIST ITEM ---------------------------------------------------------------------
 
-
-
 .m-listitem__a{
   display: block;
   text-align: center;
@@ -148,7 +146,7 @@
 }
 
 .m-listitem__a + .m-listitem__a,
-.m-listitem__a + .js-addedPage{
+.js-addedPage{
   margin-top: rem($body_leading*3);
 }
 
@@ -157,19 +155,19 @@
   border-top: 1px solid $subtle-border;
 }
 
-.m-listitem__a:last-of-type{
-  //padding-bottom: rem($body_leading*3);
-  //border-bottom: 1px solid $subtle-border;
-}
-
 .m-listitem__a .mis_container{
   margin-top: $leading*1.25;
 }
 
-.a-btn.nextpostslink{
+.bap_loadbutton{
   margin-top: $leading*3;
   margin-right: $gutter_alpha;
   margin-left: $gutter_alpha;
+}
+
+.js-addedPage .m-listitem__a{
+  opacity: 0;
+  transform: translate3d(0,rem($body_leading*3),0);
 }
 
 

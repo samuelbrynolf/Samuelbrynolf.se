@@ -15,7 +15,15 @@
 
     if ( have_posts() ) {
         get_template_part('partials/listitems/loop-listitems');
-    } ?>
+    }
+
+    if (!have_posts() && is_search()) {
+        get_template_part('partials/no-content/bad-search');
+    }
+
+    if (is_404()){
+        echo 'duh 404';
+    }?>
 
 </main>
 

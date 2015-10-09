@@ -11,7 +11,7 @@ if ( !function_exists( 'register_my_menu' )) {
 
 
 
-// REMOVE WIDTH-ATTRIBUTES FROM <img> -------------------------------------------------------------------
+// REMOVE WIDTH-ATTRIBUTES FROM <IMG> -------------------------------------------------------------------
 
 if ( !function_exists( 'remove_width_attribute' )) {
     function remove_width_attribute($html){
@@ -25,11 +25,11 @@ if ( !function_exists( 'remove_width_attribute' )) {
 
 
 
-// BUILD CUSTOM PREV/PREVIOUS POST-LINKS -------------------------------------------------------------------
+// BUILD CUSTOM PREV/PREVIOUS POST-LINKS CLASSES -------------------------------------------------------------------
 
 if ( !function_exists( 'posts_previouslink_attributes' )) {
     function posts_previouslink_attributes($output) {
-        $cssclass = 'class="a-prf-text a-icon arrowleft"';
+        $cssclass = 'class="a-prf-text a-icon arrowleft js-tappy"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('previous_post_link', 'posts_previouslink_attributes');
@@ -37,7 +37,7 @@ if ( !function_exists( 'posts_previouslink_attributes' )) {
 
 if ( !function_exists( 'posts_nextlink_attributes' )) {
     function posts_nextlink_attributes($output) {
-        $cssclass = 'class="a-prf-text a-icon arrowright"';
+        $cssclass = 'class="a-prf-text a-icon arrowright js-tappy"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('next_post_link', 'posts_nextlink_attributes');

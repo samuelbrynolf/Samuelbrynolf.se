@@ -20,7 +20,7 @@ if ( !function_exists('listTags')) {
 
         if ($tags) {
             echo '<ul class="a-ul-large">';
-            echo '<li id="js-listhead">';
+            echo '<li id="js-listhead" class="m-listhead">';
             echo '<h2 class="a-xlarge a-icon close">Etiketter<br/>A&mdash;&Ouml;</h2>';
             echo '</li>';
 

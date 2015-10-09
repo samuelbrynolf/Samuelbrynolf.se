@@ -147,8 +147,9 @@
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: $inputbg;
-  background-color: $action;
+  color: $action;
+  border: 1px solid $action;
+  background-color: $body;
 
   @media all and (min-width: $beta_query) {
     padding-right: $body_leading/$btnfontsize+0em;

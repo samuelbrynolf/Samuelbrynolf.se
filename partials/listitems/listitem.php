@@ -1,4 +1,4 @@
-<a class="m-listitem__a<?php echo (has_post_thumbnail() ? ' has-thumbnail' : ' has-no-thumbnail') ?>" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+<a class="m-listitem__a js-tappy<?php echo (has_post_thumbnail() ? ' has-thumbnail' : ' has-no-thumbnail') ?>" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
     <article id="post-<?php the_ID(); ?>" <?php post_class('m-listitem'); ?>>
 
         <header class="l-gutter m-listitem__header">

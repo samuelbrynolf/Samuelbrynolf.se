@@ -14,7 +14,7 @@
     }
 
     if ( have_posts() ) {
-        get_template_part('partials/global-components/loop-listitems');
+        get_template_part('partials/listitems/loop-listitems');
     } ?>
 
 </main>

@@ -51,23 +51,9 @@
 
 // SEARCH RESULTS =============================================================================================================
 
-.o-search.no-result{
-
-  .m-listhead{
-    display: none;
-  }
-
-  .a-ul-large li:last-of-type{
-    padding-bottom: 0;
-  }
-
-  .a-large{
-    margin-top: rem($body_leading*1.5);
-  }
-}
-
-.search-no-results .m-archive__header{
-  margin-bottom: rem($body_leading*1.5);
+.search-no-results .m-archive__header,
+.error404 .m-archive__header{
+  margin-bottom: 0;
 }
 
 

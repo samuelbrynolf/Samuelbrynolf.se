@@ -17,13 +17,9 @@
         get_template_part('partials/listitems/loop-listitems');
     }
 
-    if (!have_posts() && is_search()) {
-        get_template_part('partials/no-content/bad-search');
-    }
-
-    if (is_404()){
-        echo 'duh 404';
-    }?>
+    if (!have_posts() && is_search() || is_404()) {
+        get_template_part('partials/global-components/no-content');
+    } ?>
 
 </main>
 

@@ -66,7 +66,7 @@
 }
 
 
-// ENTRY HEADER ---------------------------------------------------------------------
+// ENTRIES---------------------------------------------------------------------
 
 .o-entry__header{
   text-align: center;
@@ -75,8 +75,6 @@
     margin-bottom: rem($body_leading*1.25);
   }
 }
-
-// ENTRY CONTENT ---------------------------------------------------------------------
 
 .o-entry-content{
 
@@ -123,6 +121,29 @@
     }
   }
 }
+
+
+
+// NO-CONTENT ---------------------------------------------------------------------
+
+.o-no-content{
+
+  .m-listhead{
+    display: none;
+  }
+
+  .a-ul-large li:last-of-type{
+    padding-bottom: 0;
+  }
+
+  .a-fineprint{
+    margin-top: rem($body_leading/2);
+    text-align: center;
+  }
+}
+
+
+
 
 // STACK & SPLIT ---------------------------------------------------------------------
 

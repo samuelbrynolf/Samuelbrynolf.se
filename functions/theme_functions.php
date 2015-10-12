@@ -119,15 +119,3 @@ if ( !function_exists( 'trim_private_titles' )) {
     }
     add_filter('the_title', 'trim_private_titles');
 }
-
-
-
-// DISABLE PAGINATION BY TEMPLATE -------------------------------------------------------------------
-
-function no_nopaging($query) {
-    if (is_search()) {
-        $query->set('nopaging', 1);
-    }
-}
-
-add_action('parse_query', 'no_nopaging');

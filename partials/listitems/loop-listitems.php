@@ -5,8 +5,4 @@
     }
 echo '</div>';
 
-if(function_exists('bap_next_posts_link')){
-    bap_next_posts_link();
-} else{
-    next_posts_link();
-}
+next_posts_link();

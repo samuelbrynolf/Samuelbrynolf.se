@@ -120,6 +120,37 @@
       @extend .a-fineprint;
     }
   }
+
+  .mis_container{
+    margin-top: rem($body_leading);
+    margin-bottom: rem($body_leading);
+  }
+
+  .mis_container.pull-left,
+  .mis_container.pull-right{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 48%;
+  }
+
+  .mis_container.pull-left{
+    float: left;
+    margin-right: rem($alpha_gutter);
+  }
+
+  .mis_container.pull-right{
+    float: right;
+    margin-left: rem($alpha_gutter);
+  }
+
+  .mis_figure.pull-left .mis_figcaption {
+    text-align: left;
+  }
+
+  .mis_div.pull-left,
+  .mis_div.pull-right{
+    padding-bottom: 37%;
+  }
 }
 
 

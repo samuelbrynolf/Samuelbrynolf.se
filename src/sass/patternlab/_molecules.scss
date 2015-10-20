@@ -2,7 +2,6 @@
 
 // Make It Srcset ------------------------------------------------------------------
 
-
 .mis_figure{
 
   .mis_img{
@@ -26,32 +25,44 @@
 
 .m-prf {
   position: relative;
+  width: 100%;
   height: 0;
+  padding-bottom: $ratio-4-3;
   overflow: hidden;
   background-color: transparent;
 
+  @media all and (orientation: landscape) {
+    padding-bottom: $ratio-16-9;
+  }
+
   &.ratio-1-1{
-    padding-bottom: 100%;
+    padding-bottom: $ratio-1-1;
   }
 
   &.ratio-4-3{
-    padding-bottom: 74%; // about ratio-4-3
+    padding-bottom: $ratio-4-3;
   }
 
   &.ratio-16-9{
-    padding-bottom: 56%; // about ratio-16-9
+    padding-bottom: $ratio-16-9;
   }
 
-  &.ratio-by-ori{
-    padding-bottom: 74%; // about ratio-4-3
+  &.overlay {
 
-    @media all and (orientation: landscape) {
-      padding-bottom: 56%; // about ratio-16-9
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      width: 100%;
+      background-color: rgba($action, 0.6);
+      pointer-events: none;
     }
   }
 
-  .mis_img,
-  .a-prf__img{
+  .mis_img{
     position: absolute;
     top: 50%;
     left: 0;
@@ -59,32 +70,17 @@
     transform: translateY(-50%);
     width:100%;
   }
-}
 
-.m-prf.avatar{
-  width: $avatar-size;
-  padding-bottom: $avatar-size;
+  &.avatar{
+    width: $avatar-size;
+    padding-bottom: $avatar-size;
 
-  .mis_img{
-    top: 0;
-    transform: none;
-    padding: 3px;
-    border-radius: 50%;
-  }
-}
-
-.m-prf.overlay {
-
-  &:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 100;
-    width: 100%;
-    background-color: rgba($action, 0.6);
-    pointer-events: none;
+    .mis_img{
+      top: 0;
+      transform: none;
+      padding: 3px;
+      border-radius: 50%;
+    }
   }
 }
 

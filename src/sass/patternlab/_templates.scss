@@ -23,7 +23,7 @@
 .single .m-dual-nav{
   margin-top: rem($body_leading*2);
   padding-top: rem($body_leading*2);
-  padding-bottom: $alpha_gutter;
+  padding-bottom: $gutter_alpha;
   background-color: $subtle-bg;
 
   @media all and (min-width: $beta_query) {

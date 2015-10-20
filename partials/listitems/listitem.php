@@ -8,7 +8,7 @@
         <p class="a-fineprint a-listitem-meta-date"><?php the_date(); ?></p>
 
         <?php if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-            makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf ratio-by-ori');
+            makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
         } elseif (has_post_thumbnail()){
             the_post_thumbnail();
         } ?>

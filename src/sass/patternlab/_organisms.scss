@@ -121,10 +121,14 @@
     }
   }
 
+  // All images margin ----------------------------------------------------------
+
   .mis_container{
     margin-top: rem($body_leading);
     margin-bottom: rem($body_leading);
   }
+
+  // All floated Images ----------------------------------------------------------
 
   .mis_container.pull-left,
   .mis_container.pull-right{
@@ -143,13 +147,17 @@
     margin-left: rem($alpha_gutter);
   }
 
-  .mis_figure.pull-left .mis_figcaption {
-    text-align: left;
+  // Floated Prf-images needs padding/2
+
+  .m-prf.pull-left,
+  .m-prf.pull-right{
+    padding-bottom: $ratio-4-3/2;
   }
 
-  .mis_div.pull-left,
-  .mis_div.pull-right{
-    padding-bottom: 37%;
+  // Adjust figcaption textalign
+
+  .mis_figure.pull-left .mis_figcaption {
+    text-align: left;
   }
 }
 

@@ -8,7 +8,7 @@
             <?php get_template_part('partials/single/single-header');
 
             if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf ratio-by-ori');
+                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
             } elseif (has_post_thumbnail()){
                 the_post_thumbnail();
             }

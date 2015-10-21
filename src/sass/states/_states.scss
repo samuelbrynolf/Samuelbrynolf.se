@@ -108,6 +108,22 @@ a.current-menu-item{
 // IS-VISIBLE + NO-JS
 //==============================================================================================================
 
+#js-image_modal.s-is-visible{
+  z-index: 500;
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba($bodycolor, 0.75);
+  pointer-events: auto;
+
+  button{
+    z-index: 550;
+  }
+
+  img{
+    transform: translate(-50%, -50%);
+  }
+}
+
 
 // IS-HIGHLIGHTED
 //==============================================================================================================

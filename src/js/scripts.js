@@ -222,6 +222,14 @@
 
 
 
+    if($.fn.modal_image){
+        var modalTrigger = $('a.js-modal');
+        if(modalTrigger.length){
+            modalTrigger.modal_image();
+        }
+    }
+
+
 
 	// -------------------------------------------------------------------------------------------------------
 
@@ -277,10 +285,10 @@
 // ==============================================================================================================
 
 	
-	//if($.fn.imgLoadCheck){
+	//if($.fn.modal_image){
      //   var loadCheckEl = $('.js-loadCheck');
      //   if(loadCheckEl.length){
-    	//    loadCheckEl.imgLoadCheck({
+    	//    loadCheckEl.modal_image({
     	//	    loader: true,
     	//	    callbackTimeout: 300
      //       },showElem);

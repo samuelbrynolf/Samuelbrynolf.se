@@ -2,29 +2,15 @@
 //==============================================================================================================¨
 
 .transitions{
-	
-  .example-transform{
-		transition: transform 0.2s ease-out;
-	}
-	
-	.js-medialoadEffect img,
-    #js-socialfeedBox{
-		transition: opacity 0.25s ease-out;
-	}
-	
-	.a-btn:focus{
-		transition-property: none;
-	}
 
-	.a-inputText{
-		transition: border-color 0.06s ease-out;
-	}
-	
-	p a,
-	.a-sitename,
-	.m-global-nav__a{
-		transition: all 0.06s ease-in-out;
-	}
+  #js-socialfeedBox,
+  #js-image_modal{
+      transition: opacity 0.35s ease-out;
+  }
+
+  #js-image_modal img{
+    transition: transform 0.35s ease-out;
+  }
 
   #js-colophon{
     transition: background-color 0.750s ease-out 750ms;

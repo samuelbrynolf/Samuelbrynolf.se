@@ -19,6 +19,10 @@
   }
 }
 
+.no-js .mis_img.mis_omitSrc{
+  display: none; // Native srcset-support bugfix
+}
+
 
 
 // PRF ------------------------------------------------------------------

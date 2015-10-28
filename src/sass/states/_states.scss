@@ -108,20 +108,16 @@ a.current-menu-item{
 // IS-VISIBLE + NO-JS
 //==============================================================================================================
 
-#js-image_modal.s-is-visible{
-  z-index: 500;
+#mis_overlay.s-is-visible,
+.mis_popup.mis_is-cloned.s-is-visible{
   visibility: visible;
+  z-index: 500;
   opacity: 1;
-  background-color: rgba($bodycolor, 0.75);
   pointer-events: auto;
+}
 
-  button{
-    z-index: 550;
-  }
-
-  img{
-    transform: translate(-50%, -50%);
-  }
+.mis_popup.mis_is-cloned.s-is-visible{
+  z-index: 550;
 }
 
 

@@ -86,7 +86,7 @@ textarea {
   background:transparent;
 }
 
-// img, Prev reflow tech
+img,
 object,
 embed {
   display: block;
@@ -125,10 +125,5 @@ ol,
 ul{
 	list-style: none;
 }
-
-img{
-  display: block;
-}
-
 // http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari
 //https://github.com/paulirish/html5-boilerplate/blob/362d0b7/css/style.css#L35-37

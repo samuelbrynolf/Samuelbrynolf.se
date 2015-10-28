@@ -4,12 +4,9 @@
 .transitions{
 
   #js-socialfeedBox,
-  #js-image_modal{
+  #mis_overlay,
+  .mis_popup.mis_is-cloned{
       transition: opacity 0.35s ease-out;
-  }
-
-  #js-image_modal img{
-    transition: transform 0.35s ease-out;
   }
 
   #js-colophon{

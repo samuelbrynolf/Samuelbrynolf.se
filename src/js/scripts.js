@@ -222,10 +222,10 @@
 
 
 
-    if($.fn.modal_image){
-        var modalTrigger = $('a.js-modal');
-        if(modalTrigger.length){
-            modalTrigger.modal_image();
+    if($.fn.mis_popup) {
+        var popup_src = $('.mis_popup');
+        if(popup_src.length){
+            popup_src.mis_popup();
         }
     }
 

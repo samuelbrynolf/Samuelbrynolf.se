@@ -4,11 +4,6 @@
 
 .mis_figure{
 
-  .mis_img{
-    max-width: 100%;
-    height: auto;
-  }
-
   .mis_figcaption{
     @extend .a-fineprint;
     text-align: right;
@@ -21,6 +16,38 @@
 
 .no-js .mis_img.mis_omitSrc{
   display: none; // Native srcset-support bugfix
+}
+
+// Popup ------------------
+
+.mis_popup{
+  cursor: pointer;
+}
+
+#mis_overlay,
+.mis_popup.mis_is-cloned{
+  visibility: hidden;
+  z-index: -500;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mis_overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($bodycolor, 0.75);
+}
+
+.mis_popup.mis_is-cloned{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  max-width: $containerwidth;
 }
 
 
@@ -276,39 +303,4 @@
 
 .m-ccard-avatar{
   margin: 0 auto;
-}
-
-
-
-// IMAGE MODAL ---------------------------------------------------------------------
-
-#js-image_modal{
-  position: fixed;
-  z-index: -500;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  background-color: rgba($bodycolor, 0.87);
-  pointer-events: none;
-
-  img{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 96%;
-    height: auto;
-    margin-right: 2%;
-    margin-left: 2%;
-  }
-
-  button{
-    position: fixed;
-    top: $leading;
-    right: $leading;
-    color: white;
-  }
 }

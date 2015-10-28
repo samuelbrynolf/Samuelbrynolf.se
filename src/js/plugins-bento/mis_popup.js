@@ -32,9 +32,20 @@
 
             popup_src.bind('tap', function(e){
                 var $this = $(this);
+                var thisclone = $('#'+ $this.attr('data-misid'));
+                var thisclone_width = thisclone.width();
+                var thisclone_height = thisclone.height();
+                var viewport_height = $(window).height();
+
+                if(thisclone_height > thisclone_width){
+                    thisclone.css({
+                        'width' : 'auto',
+                        'max-height' : (viewport_height - 100) + 'px'
+                    });
+                }
 
                 overlay.addClass(settings.show_class);
-                $('#'+ $this.attr('data-misid')).addClass(settings.show_class);
+                thisclone.addClass(settings.show_class);
                 e.stopPropagation();
                 e.preventDefault(e);
             });

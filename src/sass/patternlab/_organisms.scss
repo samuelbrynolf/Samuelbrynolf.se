@@ -1,9 +1,17 @@
 // GLOBAL HEADER ---------------------------------------------------------------------
 
+#js-masthead {
+  height: rem($header-slide_height);
+  position: fixed;
+  top: 0;
+  padding-top: rem($body_leading);
+  z-index: $header-slide_z;
+  transform: translateY(0);
+  width: 100%;
+  background-color: rgba($body, 0.9);
+}
+
 .o-global__header{
-  margin-top: rem($body_leading);
-  margin-bottom: rem($body_leading*3);
-  transform: translateZ(0); // Hackster
 
   .m-global__nav{
     width: 60%;
@@ -29,7 +37,8 @@
 // GLOBAL FOOTER ---------------------------------------------------------------------
 
 .o-global__footer{
-  padding-top: rem($body_leading*3);
+  transform: translateZ(0); // Hackster
+  padding-top: rem($body_leading*2.75);
   margin-bottom: rem($body_leading*3);
 }
 
@@ -40,20 +49,13 @@
 
 
 .o-taglist .a-ul-large{
+  padding-top: rem($header-slide__offset);
   padding-bottom: rem($body_leading*2);
   background-color: $action;
 
   .a-xlarge{
     margin-bottom: rem($body_leading);
-    padding-top: rem($body_leading*2);
-
-    &:after{
-      font-size: rem($body_leading/2);
-      top: 0;
-      color: $body;
-      pointer-events: auto;
-      cursor: pointer;
-    }
+    //padding-top: rem($body_leading*2);
   }
 
   a{

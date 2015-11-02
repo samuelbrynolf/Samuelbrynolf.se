@@ -118,15 +118,11 @@
 
 
     function clearCurrent($trigger){
-        var menuitems = $('.menu-item');
         var trigger = $trigger;
 
-        menuitems.removeClass('current-menu-item');
+        $('main').toggleClass('tags-is-active');
+        $('.menu-item').removeClass('current-menu-item');
         trigger.toggleClass('current-menu-item');
-
-        $('html, body').animate({
-            scrollTop: 0
-        },'slow');
     }
 
     function populate_tags($loadtarget, $trigger){
@@ -152,8 +148,8 @@
     }
 
     function top_tags($trigger){
-        var tagsloaded = false;
-        var trigger = $($trigger);
+        var tagsloaded = false,
+            trigger = $($trigger);
 
         trigger.bind('tap', function(){
             var $this = $(this);
@@ -170,6 +166,12 @@
                     } else {
                         populate_tags(loadtarget, trigger);
                         tagsloaded = true;
+                    }
+
+                    if($('main').hasClass('tags-is-active')){
+                        $('body').animate({
+                            scrollTop: 0
+                        },'fast');
                     }
                 }
             }
@@ -222,12 +224,14 @@
 
 
 
-    if($.fn.mis_popup) {
-        var popup_src = $('.mis_popup');
-        if(popup_src.length){
-            popup_src.mis_popup();
+    $('.js-tappy').each( function(){
+        var href = $( this ).attr( "href" );
+        if( href.indexOf( "#" ) !== 0 ){
+            $( this ).bind( "tap", function(){
+                window.location.href = this.href;
+            });
         }
-    }
+    });
 
 
 
@@ -262,23 +266,21 @@
   	//	repeat: false
 	//	});
 	//}
-	
-	
-	// -------------------------------------------------------------------------------------------------------
 
 
 
     // -------------------------------------------------------------------------------------------------------
 
 
-    $('.js-tappy').each( function(){
-        var href = $( this ).attr( "href" );
-        if( href.indexOf( "#" ) !== 0 ){
-            $( this ).bind( "tap", function(){
-                window.location.href = this.href;
-            });
-        }
-    } );
+
+
+
+
+
+    // -------------------------------------------------------------------------------------------------------
+
+
+
 	
 	
 	
@@ -287,6 +289,46 @@
 // 3 EXECUTE PLUGINS
 
 // ==============================================================================================================
+
+
+
+    if($.fn.mis_popup) {
+        var popup_src = $('.mis_popup');
+        if(popup_src.length){
+            popup_src.mis_popup();
+        }
+    }
+
+
+
+    // -------------------------------------------------------------------------------------------------------
+
+
+
+    if($.fn.header_slide) {
+
+        $('#js-masthead').header_slide({
+            disable: function(){
+                return $('#mis_overlay').hasClass('s-is-visible');
+            }
+        });
+    }
+
+
+
+    // -------------------------------------------------------------------------------------------------------
+
+
+
+
+    if($.fn.smoothScroll){
+        var jumper = $('.js-jumper');
+        jumper.smoothScroll();
+    }
+
+
+
+    // -------------------------------------------------------------------------------------------------------
 
 	
 	//if($.fn.modal_image){
@@ -317,15 +359,7 @@
 
 	
 	
-	// -------------------------------------------------------------------------------------------------------
 
-	
-
-
-	if($.fn.smoothScroll){
-        var jumper = $('.js-jumper');
-        jumper.smoothScroll();
-	}
 	
 
 	
@@ -333,15 +367,15 @@
 	// -------------------------------------------------------------------------------------------------------
 	
 	
-	if($.fn.toggleElem){
-		var toggledElem = $('.js-toggle');
-		if(toggledElem.length){
-	    toggledElem.toggleElem({
-	    	toggledElem: 'js-toggled',
-	 			speed: 80
-	 		});
-		}
-	}
+	//if($.fn.toggleElem){
+	//	var toggledElem = $('.js-toggle');
+	//	if(toggledElem.length){
+	//    toggledElem.toggleElem({
+	//    	toggledElem: 'js-toggled',
+	// 			speed: 80
+	// 		});
+	//	}
+	//}
 
 
 	// -------------------------------------------------------------------------------------------------------

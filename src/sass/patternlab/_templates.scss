@@ -27,19 +27,19 @@
   background-color: $subtle-bg;
 
   @media all and (min-width: $beta_query) {
-    padding-bottom: $gutter_beta;
+    //padding-bottom: $gutter_beta;
   }
 
   @media all and (min-width: $charlie_query) {
-    padding-bottom: $gutter_charlie;
+    //padding-bottom: $gutter_charlie;
   }
 
   @media all and (min-width: $delta_query) {
-    padding-bottom: $gutter_delta
+    //padding-bottom: $gutter_delta
   }
 
   @media all and (min-width: $echo_query) {
-    padding-bottom: $gutter_echo;
+    //padding-bottom: $gutter_echo;
   }
 }
 

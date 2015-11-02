@@ -2,6 +2,9 @@
 //==============================================================================================================¨
 
 .transitions{
+  #js-masthead{
+    transition: transform 0.35s ease-in-out;
+  }
 
   #js-socialfeedBox,
   #mis_overlay,

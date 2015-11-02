@@ -12,6 +12,24 @@
 
 // ARCHIVE =============================================================================================================
 
+.archive,
+.home{
+
+  main .mis_container:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 75;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $leading/2 $leading/2 0 $leading/2;
+    border-color: $body transparent transparent transparent;
+  }
+}
 
 // SINGLE =============================================================================================================
 

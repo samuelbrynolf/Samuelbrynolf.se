@@ -137,16 +137,13 @@
 @mixin formBtn(){
   display: block;
   width: auto;
-  height: $inputheight+0px;
-  height: $inputheight/$basefont+0rem;
+  height: rem($inputheight);
+  font-family: $bodyfont;
   @include type-to-em($btnfontsize,$inputheight);
-  font-family: $captionfont-2;
   padding-right: $alpha_gutter/$btnfontsize+0em;
   padding-left:  $alpha_gutter/$btnfontsize+0em;
   text-align: center;
   text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   color: $action;
   border: 1px solid $action;
   background-color: $body;

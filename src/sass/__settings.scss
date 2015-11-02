@@ -65,9 +65,9 @@ $echo_basefontsize: 16;
 
 // --
 
-$inputfontsize: 21;
-$inputheight: 60; // used for input type="submit" aka .a-btn as well
-$btnfontsize: 18;
+$inputfontsize: $basefont;
+$inputheight: $body_leading*2; // used for input type="submit" aka .a-btn as well
+$btnfontsize: 16;
 
 // 3 -----------------------------------------------------------------------------------------------------------
 
@@ -138,6 +138,6 @@ $ratio-16-9: 56%;
 
 // 7 -----------------------------------------------------------------------------------------------------------
 
-$header-slide_height: $body_leading*3.5;
+$header-slide_height: $body_leading*4;
 $header-slide_z: 200;
 $header-slide__offset: $body_leading*6;

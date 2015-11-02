@@ -5,4 +5,4 @@
     }
 echo '</div>';
 
-next_posts_link();
+next_posts_link('Visa fler inlägg');

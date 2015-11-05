@@ -149,33 +149,40 @@
 
     function top_tags($trigger){
         var tagsloaded = false,
-            trigger = $($trigger);
+            trigger = $($trigger),
+            targetelem = $('<aside id="js-taglist" class="o-taglist s-is-hidden"></aside>');
 
-        trigger.bind('tap', function(){
-            var $this = $(this);
-            var href = $this.attr('href');
+        if($('body').hasClass('search-no-results') && $.fn.smoothScroll){
+            targetelem.insertBefore('#js-tags__ul');
+            trigger.smoothScroll();
+        } else {
+            targetelem.prependTo('body');
+            trigger.bind('tap', function(){
+                var $this = $(this);
+                var href = $this.attr('href');
 
-            if(href.indexOf('#') === 0){
-                var loadtarget = $(href);
+                if(href.indexOf('#') === 0){
+                    var loadtarget = $(href);
 
-                if(loadtarget.length){
-                    clearCurrent(trigger);
+                    if(loadtarget.length){
+                        clearCurrent(trigger);
 
-                    if(tagsloaded){
-                        loadtarget.toggleClass('s-is-hidden');
-                    } else {
-                        populate_tags(loadtarget, trigger);
-                        tagsloaded = true;
-                    }
+                        if(tagsloaded){
+                            loadtarget.toggleClass('s-is-hidden');
+                        } else {
+                            populate_tags(loadtarget, trigger);
+                            tagsloaded = true;
+                        }
 
-                    if($('main').hasClass('tags-is-active')){
-                        $('body').animate({
-                            scrollTop: 0
-                        },'fast');
+                        if($('main').hasClass('tags-is-active')){
+                            $('body').animate({
+                                scrollTop: 0
+                            },'fast');
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
 
 

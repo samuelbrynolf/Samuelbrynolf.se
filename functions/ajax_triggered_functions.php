@@ -19,7 +19,7 @@ if ( !function_exists('listTags')) {
         $tags = get_tags();
 
         if ($tags) {
-            echo '<ul class="a-ul-large">';
+            echo '<ul id="js-tags__ul" class="a-ul-large">';
             echo '<li id="js-listhead" class="m-listhead">';
             echo '<h2 class="a-xlarge">Etiketter<br/>A&mdash;&Ouml;</h2>';
             echo '</li>';

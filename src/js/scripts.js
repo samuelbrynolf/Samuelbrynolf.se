@@ -204,6 +204,7 @@
 
 	
 	$('html').addClass('transitions');
+    // $('.mis_img').not('.lazyload').css('opacity', '1');
     // recentSocials();
     show_contact();
     top_tags('.js-toptags a');

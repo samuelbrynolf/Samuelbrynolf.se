@@ -3,26 +3,27 @@
 
 .transitions{
   #js-masthead{
-    transition: transform 0.35s ease-in-out;
+    transition: transform $transition-time ease-in-out;
   }
 
   #js-socialfeedBox,
   #mis_overlay,
-  .mis_popup.mis_is-cloned{
-      transition: opacity 0.35s ease-out;
+  .mis_popup.mis_is-cloned,
+  .mis_img{
+      transition: opacity $transition-time ease-out;
   }
 
   #js-colophon{
-    transition: background-color 0.750s ease-out 750ms;
+    transition: background-color $transition-time*2 ease-out $transition-time*2;
   }
 
   .o-taglist,
   .m-listitem__a{
-    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    transition: opacity $transition-time ease-out, transform $transition-time ease-out;
   }
 
   .bap_loadbutton{
-    transition: color 0.35s ease-out, border-color 0.35s ease-out;
+    transition: color $transition-time ease-out, border-color $transition-time ease-out;
   }
 }
 

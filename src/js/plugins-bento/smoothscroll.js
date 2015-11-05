@@ -6,7 +6,7 @@
         jQuerytarget = jQuerytarget.length && jQuerytarget || jQuery('[name=' + this.hash.slice(1) +']');
         if (jQuerytarget.length) {
         	var targetOffset = jQuerytarget.offset().top;
-          $('html,body').animate({scrollTop: targetOffset}, 750);
+          $('html,body').animate({scrollTop: targetOffset}, 600);
           //e.preventDefault(); Eftersom vi kör tappy, dödas default automatiskt
          } 
        }

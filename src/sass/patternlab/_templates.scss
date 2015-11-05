@@ -26,7 +26,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: $leading/2 $leading/2 0 $leading/2;
+    border-width: rem(9) rem(9) 0 rem(9);
     border-color: $body transparent transparent transparent;
   }
 }

@@ -61,6 +61,33 @@
 	}
 }
 
+.l-row{
+  margin-top: $leading;
+  margin-bottom: $leading;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: $leading*2;
+    margin-bottom: $leading*2;
+  }
+
+  &.padded{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: $leading;
+    padding-bottom: $leading;
+
+    @media all and (min-width: $beta_query) {
+      padding-top: $leading*2;
+      padding-bottom: $leading*2;
+    }
+  }
+}
+
+.l-fullbleed{
+  @include fullbleed('bq');
+}
+
+
 
 // ALPHA
 //==============================================================================================================
@@ -105,52 +132,64 @@
 	float: left;
 }
 
-.l-span-A1{
+.l-span-A1,
+.l-width1{
   width: $spanwidth-1;
 }
 
-.l-span-A2{
+.l-span-A2,
+.l-width2{
   width: $spanwidth-2;
 }
 
-.l-span-A3{
+.l-span-A3,
+.l-width3{
   width: $spanwidth-3;
 }
 
-.l-span-A4{
+.l-span-A4,
+.l-width4 {
 	width: $spanwidth-4;
 }
 
-.l-span-A5{
+.l-span-A5,
+.l-width5{
 	width: $spanwidth-5;
 }
 
-.l-span-A6{
+.l-span-A6,
+.l-width6{
   width: $spanwidth-6;
 }
 
-.l-span-A7{
+.l-span-A7,
+.l-width7{
   width: $spanwidth-7;
 }
 
-.l-span-A8{
+.l-span-A8,
+.l-width8{
   width: $spanwidth-8;
 }
 
-.l-span-A9{
+.l-span-A9,
+.l-width9{
 	width: $spanwidth-9;
 }
 
-.l-span-A10{
+.l-span-A10,
+.l-width10{
 	width: $spanwidth-10;
 }
 
-.l-span-A11{
+.l-span-A11,
+.l-width11{
  width: $spanwidth-11;
 }
 
-.l-span-A12{
-  float: none;
+.l-span-A12,
+.l-width12{
+  clear: both;
   width: $spanwidth-12;
 }
 
@@ -224,8 +263,7 @@
 	[class*='l-span-B']{
 		float: left;
 	}
-	
-//	 FLOAT ALL ALPHA SPANS
+
 	.l-span-A12{
 		float: left;
 	}
@@ -275,9 +313,13 @@
     }
 	
 	.l-span-B12{
-      float: none;
+      clear: both;
 	  width: $spanwidth-12;
 	}
+
+    .l-pre-B0{
+      margin-left: 0;
+    }
 	
 	.l-pre-B1{
 	  margin-left: $spanwidth-1;
@@ -401,10 +443,14 @@
 	}
 	
 	.l-span-C12{
-		float: none;
+      clear: both;
 	  width: $spanwidth-12;
 	}
-	
+
+    .l-pre-C0{
+      margin-left: 0;
+    }
+
 	.l-pre-C1{
 	  margin-left: $spanwidth-1;
 	}
@@ -529,6 +575,10 @@
 	.l-span-D12{
 		width: $spanwidth-12;
 	}
+
+    .l-pre-D0{
+      margin-left: 0;
+    }
 	
 	.l-pre-D1{
 	  margin-left: $spanwidth-1;
@@ -584,7 +634,7 @@
 @media all and (min-width: $echo_query) {
 	
 	.l-container{
-      padding-right: $gutter_echo_half;
+		padding-right: $gutter_echo_half;
 	  padding-left: $gutter_echo_half;
 	}
 	
@@ -596,7 +646,7 @@
 	
 	[class*='l-span']{
 		padding-right: $gutter_echo_half;
-	    padding-left: $gutter_echo_half;
+	  padding-left: $gutter_echo_half;
 	}
 	
 	[class*='l-span-E']{
@@ -652,7 +702,7 @@
 	}
 	
 	.l-span-E12{
-	  float: none;
+      clear: both;
 	  width: $spanwidth-12;
 	}
 	

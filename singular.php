@@ -13,8 +13,7 @@
                 the_post_thumbnail();
             }
 
-            get_template_part('partials/single/single-content');
-            // get_template_part('partials/single/single-footer'); ?>
+            get_template_part('partials/single/single-content'); ?>
 
 
 
@@ -31,9 +30,6 @@
 
                 get_template_part('partials/single/nextprevnav'); ?>
             </aside>
-
-<!--            <footer class="m-entry__footer">-->
-<!--            </footer>-->
 
         </article><!-- #post-## -->
 

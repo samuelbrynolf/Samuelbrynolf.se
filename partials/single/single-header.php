@@ -12,7 +12,8 @@
         <?php the_date('', '<span class="a-listitem-meta__span">', '</span>');
         if (has_tag()) {
             the_tags(' &#183; ', ' &#183; ');
-        } ?>
+        }
+        edit_post_link('Redigera', ' &mdash; ', ''); ?>
     </p><!-- .entry-meta -->
 
 </header><!-- .entry-header -->

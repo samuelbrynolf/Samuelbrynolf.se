@@ -245,21 +245,13 @@
 
 	// -------------------------------------------------------------------------------------------------------
 
-	
-	//if($('#getActiveMQ-watcher').length){
-	//	var viewPort = $(window);
-	//	var resizeTimeoutId = 0;
-	//
-	//	mediaChecker();
-	//
-	//	viewPort.on('resize', function(){
-	//		clearTimeout(resizeTimeoutId);
-	//		resizeTimeoutId = setTimeout(mediaChecker,300);
-	//	});
-	//}
 
 
-
+    $('#js-topjump').bind('tap', function(){
+        $('html, body').animate({
+            scrollTop:0
+        }, 600);
+    });
 
 	
 	

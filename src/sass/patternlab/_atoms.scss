@@ -198,6 +198,10 @@ img.forcewidth{
     content: '\e942';
   }
 
+  &.arrowtop:after{
+    content: '\ea3a';
+  }
+
   &.arrowright:after{
     content: '\ea3c';
   }
@@ -241,4 +245,12 @@ img.forcewidth{
 .a-btn,
 .bap_loadbutton{
   @include formBtn();
+}
+
+.a-topjump{
+  @extend .a-fineprint;
+  margin-top: $leading*3;
+  padding-right: $alpha_gutter*2/$btnfontsize+0em;
+  text-align: right;
+  color: $action;
 }

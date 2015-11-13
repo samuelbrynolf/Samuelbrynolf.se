@@ -49,7 +49,7 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 
 if ( !function_exists( 'bento_body_classes' )) {
     function bento_body_classes($classes){
-        if (is_single() && !has_post_thumbnail()) {
+        if (is_single() && !has_post_thumbnail() || is_page() && !has_post_thumbnail()) {
             $classes[] = 'no-thumb';
         }
 

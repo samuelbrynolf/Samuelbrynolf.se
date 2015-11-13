@@ -13,23 +13,22 @@
                 the_post_thumbnail();
             }
 
-            get_template_part('partials/single/single-content'); ?>
+            get_template_part('partials/single/single-content');
 
+            if(is_single()){ ?>
 
+                <aside class="o-single__aside" role="complementary">
+                    <?php if (comments_open() || get_comments_number()) {
+                        echo '<div class="l-gutter o-comments">';
+                            echo '<h3 class="a-large">Vad tycker du?</h3>';
+                            comments_template();
+                        echo '</div>';
+                    }
 
-            <!-- USE FOR PAGES AS WELL? TEMPLATE HIARERCHY SINGLE/PAGES ETC??? -->
+                    get_template_part('partials/single/nextprevnav'); ?>
+                </aside>
 
-
-            <aside class="o-single__aside" role="complementary">
-                <?php if (comments_open() || get_comments_number()) {
-                    echo '<div class="l-gutter o-comments">';
-                        echo '<h3 class="a-large">Vad tycker du?</h3>';
-                        comments_template();
-                    echo '</div>';
-                }
-
-                get_template_part('partials/single/nextprevnav'); ?>
-            </aside>
+            <?php } ?>
 
         </article><!-- #post-## -->
 

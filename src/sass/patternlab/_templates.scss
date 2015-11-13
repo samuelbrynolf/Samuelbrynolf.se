@@ -33,7 +33,8 @@
 
 // SINGLE =============================================================================================================
 
-.single.no-thumb .a-entry-meta{
+.single.no-thumb .a-entry-meta,
+.page.no-thumb .a-entry-meta{
   padding-bottom: rem($body_leading*1.25);
   border-bottom: 1px solid $subtle-border;
 }

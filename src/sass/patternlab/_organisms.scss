@@ -161,6 +161,16 @@
   .mis_figure.pull-left .mis_figcaption {
     text-align: left;
   }
+
+
+
+  // Tweet btn ----------------------------------------------------------
+
+  .twitter-share-button{
+    float: right;
+    margin-bottom: $leading;
+    margin-left: $gutter_alpha;
+  }
 }
 
 

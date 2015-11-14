@@ -304,3 +304,25 @@
 .m-ccard-avatar{
   margin: 0 auto;
 }
+
+
+// SHARE POST ---------------------------------------------------------------------
+
+.m-sharepost{
+  text-align: right;
+}
+
+.a-sharepost-title {
+  margin-bottom: $leading*1.25;
+
+  span {
+    padding-bottom: $leading/2;
+    border-bottom: 1px solid $subtle-border;
+  }
+}
+
+.m-sharepost__ul li{
+  margin-top: $leading;
+  margin-bottom: $leading;
+  color: $bodycolor;
+}

@@ -53,7 +53,6 @@ function bento_scripts() {
 add_action( 'wp_enqueue_scripts', 'bento_scripts' );
 
 
-
 // IMPORT THEME, TEMPLATE & AJAX-FUNCTIONS -------------------------------------------------------------------
 
 require get_template_directory() . '/functions/theme_functions.php';

@@ -8,25 +8,19 @@
             <?php get_template_part('partials/single/single-header');
 
             if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-
                 echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
                     makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
                 echo '</a>';
-
             } elseif (has_post_thumbnail()){
-
                 echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
                     the_post_thumbnail();
                 echo '</a>';
-
             }
 
             get_template_part('partials/single/single-content');
 
             if(is_single()){
-
                 get_template_part('partials/single/single-aside'); ?>
-
             <?php } ?>
         </article><!-- #post-## -->
 

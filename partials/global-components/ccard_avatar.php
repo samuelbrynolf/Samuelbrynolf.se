@@ -7,4 +7,3 @@ if(get_field('options_ccard_profilebio', 'option')){
         echo get_field('options_ccard_profilebio', 'option');
     echo '</div>';
 } ?>
-<!--<p class="a-ccard__p">Jag heter <strong>Samuel Brynolf</strong>. Jag tar fram form, koncept och gränssnittskod tillsammans med en rad överjordiskt intelligenta människor på <a href="#">Äventyret</a>. Det här är min blogg.</p>-->

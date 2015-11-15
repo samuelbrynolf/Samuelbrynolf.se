@@ -8,37 +8,26 @@
             <?php get_template_part('partials/single/single-header');
 
             if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
+
+                echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
+                    makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
+                echo '</a>';
+
             } elseif (has_post_thumbnail()){
-                the_post_thumbnail();
+
+                echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
+                    the_post_thumbnail();
+                echo '</a>';
+
             }
 
             get_template_part('partials/single/single-content');
 
-            if(is_single()){ ?>
+            if(is_single()){
 
-                <aside class="o-single__aside" role="complementary">
-
-                    <div class="l-gutter m-sharepost">
-                        <h4 class="a-fineprint a-sharepost-title"><span>Dela inl&auml;gg</span></h4>
-                        <ul class="m-sharepost__ul">
-                            <li class="a-fineprint"><?php echo wp_get_shortlink(); ?></li>
-                        </ul>
-                        <?php get_template_part('partials/single/tweet-script'); ?>
-                    </div>
-
-                    <?php if (comments_open() || get_comments_number()) {
-                        echo '<div class="l-gutter o-comments">';
-                            echo '<h3 class="a-large">Vad tycker du?</h3>';
-                            comments_template();
-                        echo '</div>';
-                    }
-
-                    get_template_part('partials/single/nextprevnav'); ?>
-                </aside>
+                get_template_part('partials/single/single-aside'); ?>
 
             <?php } ?>
-
         </article><!-- #post-## -->
 
     <?php endwhile; // end of the loop. ?>

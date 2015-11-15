@@ -3,15 +3,24 @@
 <main id="js-main" role="main">
 
     <?php if(is_home()){
+
         if(is_paged()){
-            // echo 'Yey! Paged!';
+            // Is Blog + Not first page
+
         } else {
-            // echo 'Not paged!';
+            // Is Blog + First page
+           get_template_part('partials/startpage/start-featured');
         }
-        // echo 'bloggg!';
+
     } else {
+        // Archive-templates
         get_template_part('partials/global-components/archive-header');
     }
+
+
+     // -----
+
+
 
     if ( have_posts() ) {
         get_template_part('partials/listitems/loop-listitems');

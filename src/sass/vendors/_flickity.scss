@@ -12,7 +12,6 @@ http://flickity.metafizzy.co
   overflow: hidden;
   position: relative;
   height: 100%;
-  //padding-bottom: rem($body_leading*2);
 }
 
 .flickity-slider {
@@ -114,8 +113,7 @@ http://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  //bottom: rem(-$body_leading);
-  bottom: 0;
+  bottom: rem(-($body_leading + 9));
   padding: 0;
   margin: 0;
   list-style: none;
@@ -127,8 +125,8 @@ http://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 9px;
+  height: 9px;
   margin: 0 ($body_leading/4) + 0px;
   background-color: $subtle-border;
   border-radius: 50%;
@@ -141,20 +139,26 @@ http://flickity.metafizzy.co
 
 // Custom
 
-
-
-.gallery-cell {
-  width: $flickety-cell-width +0%;
-  display: block;
+.m-flickity{
+  margin-bottom: $leading*4;
 }
 
-.m-flickety{
+.gallery-cell.m-prf {
+  display: block;
+  width: $flickety-cell-width +0%;
+  margin-right: 4%;
+  padding-bottom: $ratio-4-3 * ($flickety-cell-width/100);
 
-  .m-prf{
-    padding-bottom: $ratio-4-3 * ($flickety-cell-width/100);
+  @media all and (orientation: landscape) {
+    padding-bottom: $ratio-16-9 * ($flickety-cell-width/100);
   }
 
   .a-prf-text{
     color: $body;
+    text-align: center;
   }
 }
+
+
+
+

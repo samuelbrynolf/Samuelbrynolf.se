@@ -14,7 +14,7 @@ function process_instagram_URL($url){
     return $result;
 }
 
-function pull_instagram($user_id = '', $client_id = '', $count = '8'){
+function pull_instagram($user_id = '', $client_id = '', $count = '8', $container = true){
 
     if (!is_numeric($user_id) && !is_numeric($client_id)) {
         return;
@@ -31,17 +31,20 @@ function pull_instagram($user_id = '', $client_id = '', $count = '8'){
             $standardsize_url = $item['images']['standard_resolution']['url'];
             //$media_page = $item['link'];
 
-            echo '<div class="m-prf ratio-1-1">';
-            echo '<img class="a-instagram__img a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
+            if ($container){
+                echo '<div class="m-prf ratio-1-1">';
+            }
+
+                echo '<img class="a-instagram__img a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
                 ' . $loressize_url . ' 306w,
                 ' . $thumbsize_url . ' 150w"
 
-                sizes="(min-width: 768px) 50vw,
-                100vw"/>';
-            echo '</div>';
-        }
-    } else {
+                sizes="100vw"/>';
 
+            if ($container) {
+                echo '</div>';
+            }
+        }
     }
 }
 

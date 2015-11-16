@@ -53,6 +53,10 @@ if ( !function_exists( 'bento_body_classes' )) {
             $classes[] = 'no-thumb';
         }
 
+        if (is_front_page() && is_home() && !is_paged()) {
+            $classes[] = 'startpage';
+        }
+
         return $classes;
     }
 

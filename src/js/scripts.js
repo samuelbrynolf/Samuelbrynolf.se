@@ -80,7 +80,7 @@
 
 
 
-    function loadSocialData($feedTarget){
+    function loadSocialData($feedTarget, $action_function){
 
         var feedTarget = $feedTarget;
 
@@ -88,7 +88,7 @@
             type: 'POST',
             url: '/wp-admin/admin-ajax.php',
             data: {
-                action: 'loadSocialContent',
+                action: $action_function,
             },
             success: function (data, textStatus, XMLHttpRequest) {
                 feedTarget.append(data).removeClass('s-is-hidden');
@@ -99,16 +99,19 @@
         });
     }
 
-    function recentSocials(){
-        var feedTarget = $("#js-socialfeedBox");
 
-        feedTarget.viewportChecker({
-            classToAdd: 'execLoad',
-            offset: 0,
-            callbackFunction: loadSocialData(feedTarget),
-            repeat: false
-        });
-    }
+
+    // -------------------------------------------------------------------------------------------------------
+
+
+
+    //$("#js-example").viewportChecker({
+    //    classToAdd: 'execLoad',
+    //    offset: 0,
+    //    callbackFunction: loadSocialData(feedTarget, action_function),
+    //    repeat: false
+    //});
+
 
 
 
@@ -211,7 +214,7 @@
 	
 	$('html').addClass('transitions');
     // $('.mis_img').not('.lazyload').css('opacity', '1');
-    // recentSocials();
+    loadSocialData($('#js-instagram'), 'loadInstagram');
     bind_tappy($('.js-tappy'));
     show_contact();
     top_tags('.js-toptags a');
@@ -237,11 +240,6 @@
 	
 	// -------------------------------------------------------------------------------------------------------
 
-
-
-
-
-	// -------------------------------------------------------------------------------------------------------
 
 
 
@@ -324,7 +322,11 @@
 
     // -------------------------------------------------------------------------------------------------------
 
-	
+
+
+
+
+
 	
 	// -------------------------------------------------------------------------------------------------------
 
@@ -334,7 +336,14 @@
         var screen = getActiveMQ();
 
         if(screen == 'aq' || screen == 'bq'){
-            bind_tappy($('.gallery-cell'));
+
+            if($.fn.expandSection){
+                $('#js-aventyret-about-bio').expandSection({
+                    timeout: 300,
+                    divideBy: 3,
+                    expandText: 'Läs allt'
+                });
+            }
         }
     }
 	

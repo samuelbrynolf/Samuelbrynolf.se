@@ -1,4 +1,4 @@
-<?php  $args = array(
+<?php $args = array(
     'post_type' => 'post',
     'posts_per_page' => -1,
     'meta_query' => array(
@@ -8,11 +8,11 @@
         )
     )
 );
+
 $feat_query = new WP_Query( $args );
 
-
 if ( $feat_query->have_posts() ) { ?>
-    <section class="js-flickity m-flickety" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
+    <section class="js-flickity m-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
 
         <?php while ( $feat_query->have_posts() ) {
             $feat_query->the_post();

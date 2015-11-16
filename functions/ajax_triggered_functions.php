@@ -1,12 +1,12 @@
-<?php // LOAD SOCIALCONTENT TEMPLATES -------------------------------------------------------------------
+<?php // LOAD Instagram -------------------------------------------------------------------
 
-if ( !function_exists( 'loadSocialContent' )) {
-    function loadSocialContent(){
-        $content = get_template_part('partials/global-components/twitter_instagram');
+if ( !function_exists( 'loadInstagram' )) {
+    function loadInstagram(){
+        $content = pull_instagram('1537565402', 'd93b5d133c354946845bece40ea08617', '1', false);
         die($content);
     }
-    add_action('wp_ajax_nopriv_loadSocialContent', 'loadSocialContent');
-    add_action('wp_ajax_loadSocialContent', 'loadSocialContent');
+    add_action('wp_ajax_nopriv_loadInstagram', 'loadInstagram');
+    add_action('wp_ajax_loadInstagram', 'loadInstagram');
 }
 
 

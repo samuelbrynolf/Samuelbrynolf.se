@@ -176,13 +176,13 @@
 .m-listitem__a{
   display: block;
   text-align: center;
+}
 
-  .a-listitem-title{
-    margin: 0;
+.a-listitem-title{
+  margin: 0;
 
-    &:before{
-      display: none;
-    }
+  &:before{
+    display: none;
   }
 }
 
@@ -213,6 +213,13 @@
 .js-addedPage .m-listitem__a{
   opacity: 0;
   transform: translate3d(0,rem($body_leading*3),0);
+}
+
+.m-listitem__section{
+
+  .m-prf{
+    margin-bottom: $leading;
+  }
 }
 
 

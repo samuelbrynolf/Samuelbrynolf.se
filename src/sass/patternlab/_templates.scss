@@ -1,12 +1,7 @@
 // STARTPAGE =============================================================================================================
 
-.page-template-page-frontpage .o-stack_n_split{
-  margin-top: rem($body_leading*2);
-  margin-bottom: rem($body_leading);
-
-  @media all and (min-width: $beta_query) {
-    margin-bottom: rem($body_leading*2);
-  }
+.startpage .m-listitem__section.aventyret-about{
+  margin-bottom: $leading*3;
 }
 
 

@@ -17,7 +17,7 @@
             <li class="l-span-A12 l-span-B4"><a class="a-icon email" href="mailto:<?php echo get_field('options_ccard_snw_emailUrl', 'option'); ?>" title="Eposta Samuel Brynolf"><?php echo get_field('options_ccard_snw_emailLabel', 'option'); ?></a></li>
         <?php } ?>
         <?php if(get_field('options_ccard_snw_phoneLabel', 'option')){ ?>
-            <li class="l-span-A12 l-span-B4"><span class="a-icon phone"><?php echo get_field('options_ccard_snw_phoneLabel', 'option'); ?></li>
+            <li class="l-span-A12 l-span-B4"><span class="a-icon phone"><?php echo get_field('options_ccard_snw_phoneLabel', 'option'); ?></span></li>
         <?php } ?>
     </ul>
 

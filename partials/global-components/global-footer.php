@@ -1,4 +1,4 @@
-<footer id="js-colophon" class="l-gutter o-global__footer" role="contentinfo">
+<footer id="js-colophon" class="l-gutter o-global__footer">
 
     <?php if (is_front_page() && is_home() && !is_paged()) {
         get_template_part('partials/global-components/ccard_socialnw');

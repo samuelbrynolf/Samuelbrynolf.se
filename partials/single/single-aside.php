@@ -1,4 +1,4 @@
-<aside class="o-single__aside" role="complementary">
+<aside class="o-single__aside">
 
     <div class="l-gutter m-sharepost">
         <h4 class="a-fineprint a-sharepost-title"><span>Dela inl&auml;gg</span></h4>

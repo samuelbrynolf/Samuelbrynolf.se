@@ -1,4 +1,4 @@
-<header id="js-masthead" class="l-gutter l-clearfix o-global__header" role="banner">
+<header id="js-masthead" class="l-gutter l-clearfix o-global__header">
 <!--    <div class="site-branding">-->
 <!--        --><?php //if(is_front_page()) { echo '<h1>'; } else { echo '<h2>'; } ?>
 <!--            <a id="js-sitename" class="a-sitename" href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo('name'); ?><!--</a>-->

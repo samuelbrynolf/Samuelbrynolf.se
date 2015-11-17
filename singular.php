@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="js-main" role="main">
+<main id="js-main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 

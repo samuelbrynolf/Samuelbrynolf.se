@@ -217,8 +217,8 @@
 
 .m-listitem__section{
 
-  .m-prf{
-    margin-bottom: $leading;
+  .m-prf + .a-listitem-title{
+    margin-top: rem($body_leading+3);
   }
 }
 

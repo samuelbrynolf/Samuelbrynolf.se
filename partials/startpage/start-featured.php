@@ -3,19 +3,20 @@
     'posts_per_page' => -1,
     'meta_query' => array(
         array(
-            'key' => 'set_featured',
+            'key' => 'options_set-featured',
             'value' => true
         )
     )
 );
 
-$feat_query = new WP_Query( $args );
+$featured_posts = get_posts($args);
 
-if ( $feat_query->have_posts() ) { ?>
+if($featured_posts) {
+    global $post; ?>
     <section class="js-flickity m-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
 
-        <?php while ( $feat_query->have_posts() ) {
-            $feat_query->the_post();
+        <?php foreach ($featured_posts as $post){
+            setup_postdata($post);
             echo '<a class="gallery-cell m-prf ratio-4-3 overlay" href="'.get_the_permalink().'" title="'.get_the_title().'">';
                 if ( function_exists('makeitSrcset') && has_post_thumbnail()) {
                     makeitSrcset(get_post_thumbnail_id($post->ID));

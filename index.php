@@ -4,30 +4,27 @@
 
     <?php if(is_home()){
 
-        if(is_paged()){
-            // Is Blog + Not first page
+        if(is_paged()){ // Is Blog + NOT first page -------------------------------------------------------------------------------------------------------------------
 
-        } else { // Is Blog + First page ?>
-            <section class="m-listitem__section aventyret-about">
-                <div id="js-instagram" class="m-prf ratio-1-1 s-is-hidden"></div>
-                <h2 class="a-large a-listitem-title">Äventyret</h2>
-                <div id="js-aventyret-about-bio" class="l-gutter">
-                    <p>Srcset är en metod för att välja rätt bildkälla för responsiva bilder med målet att aldrig läsa in för stora filer. Då responsiv design i övrigt är rätt straight forward, har bildhantering och framförallt att enas kring ”best practice” för bildhantering varit en käpphäst. Srcset är nu ett attribut som accepterats i W3C HTML-spec och får därmed ses som en av de lyckade metoder som lyfts till ett mer vanligt sätt att hantera responsiva bilder.</p>
-                    <p>Srcset är en metod för att välja rätt bildkälla för responsiva bilder med målet att aldrig läsa in för stora filer. Då responsiv design i övrigt är rätt straight forward, har bildhantering och framförallt att enas kring ”best practice” för bildhantering varit en käpphäst. Srcset är nu ett attribut som accepterats i W3C HTML-spec och får därmed ses som en av de lyckade metoder som lyfts till ett mer vanligt sätt att hantera responsiva bilder.</p>
-                </div>
-            </section>
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            echo '<header class="l-gutter l-clearfix m-archive__header">';
+                echo '<h1>Blogg &mdash; sida ' . $paged . '</h1>';
+            echo '</header>';
 
-            <?php get_template_part('partials/startpage/start-featured');
+
+        } else { // Is Blog + First page Is Blog + NOT first page -------------------------------------------------------------------------------------------------------------------
+
+            get_template_part('partials/startpage/start-about-aventyret');
+            get_template_part('partials/startpage/start-featured');
         }
 
-    } else {
-        // Archive-templates
+    } else { // NOT home. Probably looking for an archive-template -------------------------------------------------------------------------------------------------------------------
+
         get_template_part('partials/global-components/archive-header');
+
     }
 
-
-     // -----
-
+    // End home / start conditionals -------------------------------------------------------------------------------------------------------------------
 
 
     if ( have_posts() ) {

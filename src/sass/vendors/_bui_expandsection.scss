@@ -60,7 +60,7 @@
 
 
 .m-expand-section{
-  transition: max-height $transition-time*2 ease-in;
+  transition: max-height $transition-time ease-in;
 }
 
 .m-expand-section.s-is-expanded:after{

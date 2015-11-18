@@ -86,21 +86,10 @@ textarea {
   background:transparent;
 }
 
-img,
-object,
-embed {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 input,
 button,
 select {
   vertical-align: middle;
-  appearance: none;
-  -webkit-appearance: none;
-  -ms-touch-action: none !important;
 }
 
 button,

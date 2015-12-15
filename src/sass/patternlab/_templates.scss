@@ -1,7 +1,8 @@
 // STARTPAGE =============================================================================================================
 
-.startpage .m-listitem__section.aventyret-about{
-  margin-bottom: $leading*3;
+.startpage .a-ccard__bio p{
+  font-size: rem(21);
+  margin-bottom: rem($body_leading*3);
 }
 
 
@@ -64,11 +65,6 @@
 
 
 // SEARCH RESULTS =============================================================================================================
-
-.search-no-results .m-archive__header,
-.error404 .m-archive__header{
-  margin-bottom: 0;
-}
 
 
 

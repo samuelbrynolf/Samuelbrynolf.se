@@ -88,7 +88,7 @@
             type: 'POST',
             url: '/wp-admin/admin-ajax.php',
             data: {
-                action: $action_function,
+                action: $action_function
             },
             success: function (data, textStatus, XMLHttpRequest) {
                 feedTarget.append(data).removeClass('s-is-hidden');
@@ -155,7 +155,7 @@
             trigger = $($trigger),
             targetelem = $('<aside id="js-taglist" class="o-taglist s-is-hidden"></aside>');
 
-        if($('body').hasClass('search-no-results') && $.fn.smoothScroll){
+        if($('body').is('.search-no-results, .error404') && $.fn.smoothScroll){
             targetelem.insertBefore('#js-tags__ul');
             trigger.smoothScroll();
         } else {

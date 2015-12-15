@@ -2,37 +2,19 @@
 
 <main id="js-main">
 
-    <?php if(is_home()){
+    <?php if (is_home() && !is_paged()) { ?>
 
-        if(is_paged()){ // Is Blog + NOT first page -------------------------------------------------------------------------------------------------------------------
-
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            echo '<header class="l-gutter l-clearfix m-archive__header">';
-                echo '<h1>Blogg &mdash; sida ' . $paged . '</h1>';
-            echo '</header>';
-
-
-        } else { // Is Blog + First page Is Blog + NOT first page -------------------------------------------------------------------------------------------------------------------
-
-            get_template_part('partials/startpage/start-about-aventyret');
-            get_template_part('partials/startpage/start-featured');
-        }
-
-    } else { // NOT home. Probably looking for an archive-template -------------------------------------------------------------------------------------------------------------------
-
-        get_template_part('partials/global-components/archive-header');
-
+        <section class="l-gutter">
+            <?php get_template_part('partials/global-components/ccard_avatar'); ?>
+        </section>
+<!--        <h3 class="a-large">Populära poster</h3>-->
+        <?php get_template_part('partials/startpage/start-featured');
     }
 
-    // End home / start conditionals -------------------------------------------------------------------------------------------------------------------
-
+    get_template_part('partials/global-components/archive-header');
 
     if ( have_posts() ) {
         get_template_part('partials/listitems/loop-listitems');
-    }
-
-    if (!have_posts() && is_search() || is_404()) {
-        get_template_part('partials/global-components/no-content');
     } ?>
 
 </main>

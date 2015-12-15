@@ -6,7 +6,7 @@
 
     if (get_field('options_ccard_profilebio', 'option')) {
         echo '<div class="a-ccard__bio">';
-        echo get_field('options_ccard_profilebio', 'option');
+            echo get_field('options_ccard_profilebio', 'option');
         echo '</div>';
     }
 

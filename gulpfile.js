@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     ftp = require('gulp-ftp'),
     watch = require('gulp-watch'),
     ftpkey = JSON.parse(fs.readFileSync('./.ftppass')),
-    dbg = require('gulp-debug'),
     dev = true,
 
     settings = {
@@ -43,11 +42,10 @@ var gulp = require('gulp'),
             destination: '/mis/wp-content/themes/samuelbrynolf',
             fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!gulpfile.js', '!src', '!src/**', './**']
         }
-    }
+    };
 
 gulp.task('css', function () {
     return gulp.src(settings.css.srcFile).pipe(plumber()).pipe(sourcemaps.init()).pipe(sass({
-        //Todo: Get the sourcemap working
         sourceComments: 'none',
         imagePath: '../img',
         outputStyle: 'nested'
@@ -105,7 +103,7 @@ gulp.task('minify', function () {
     for (var i = 0; i < files.length; i++) {
         files[i] = '!' + files[i]
     }
-    ;
+
     files.push(settings.js.srcDirectory + '**/*.js');
     return gulp.src(files).pipe(plumber()).pipe(dev ? gutil.noop() : uglify()).pipe(gulp.dest(settings.js.outputDirectory)).pipe(settings.ftp.enabled ? ftp({
         host: settings.ftp.host,
@@ -127,10 +125,10 @@ gulp.task('jsbundle', function () {
         remotePath: settings.ftp.destination + "/" + settings.js.outputDirectory,
     }) : gutil.noop()).pipe(notify({
         title: "Bundle done",
-        message: "bundle of files done",
+        message: "Bundle of files done",
         onLast: true
     }))
-})
+});
 
 gulp.task('jsbundlemin', function () {
     gulp.src(settings.js.bundleFiles).pipe(plumber()).pipe(concat(settings.js.bundleOutputMin)).pipe(uglify()).pipe(gulp.dest(settings.js.outputDirectory)).pipe(settings.ftp.enabled ? ftp({
@@ -139,17 +137,17 @@ gulp.task('jsbundlemin', function () {
         pass: ftpkey[settings.ftp.key].password,
         remotePath: settings.ftp.destination + "/" + settings.js.outputDirectory,
     }) : gutil.noop())
-})
+});
 
 gulp.task('fullUpload', function () {
     return gulp.src(settings.ftp.fullUpload).pipe(plumber()).pipe(settings.ftp.enabled ? ftp({
-        host: settings.ftp.host,
-        user: ftpkey[settings.ftp.key].username,
-        pass: ftpkey[settings.ftp.key].password,
-        remotePath: settings.ftp.destination,
-    }) : gutil.noop())
+            host: settings.ftp.host,
+            user: ftpkey[settings.ftp.key].username,
+            pass: ftpkey[settings.ftp.key].password,
+            remotePath: settings.ftp.destination,
+        }) : gutil.noop())
         .pipe(notify({
-            title: "upload complete",
+            title: "Upload complete",
             message: "All files uploaded",
             onLast: true
         }))
@@ -166,7 +164,7 @@ gulp.task('watch', ['css', 'lint', 'jsbundle', 'minify'], function () {
     gulp.watch(settings.js.bundleFiles, ['jsbundle']);
     console.log()
     gulp.watch(files, ['minify']);
-})
+});
 
 gulp.task('_setprod', function () {
     dev = false;

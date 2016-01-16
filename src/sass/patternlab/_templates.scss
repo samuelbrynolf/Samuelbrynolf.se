@@ -2,30 +2,12 @@
 
 .startpage .a-ccard__bio p{
   font-size: rem(21);
-  margin-bottom: rem($body_leading*3);
+  margin-bottom: rem($body_leading*1.5);
 }
 
 
 // ARCHIVE =============================================================================================================
 
-.archive,
-.home{
-
-  .o-listitems .mis_container:before{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 75;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: rem(9) rem(9) 0 rem(9);
-    border-color: $body transparent transparent transparent;
-  }
-}
 
 // SINGLE =============================================================================================================
 
@@ -61,6 +43,11 @@
 .single .o-comments{
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading);
+}
+
+.single .a-large,
+.single .o-entry-content h2{
+  text-align: center;
 }
 
 

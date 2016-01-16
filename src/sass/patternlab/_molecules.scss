@@ -175,41 +175,20 @@
 
 .m-listitem__a{
   display: block;
-  text-align: center;
-}
 
-.a-listitem-title{
-  margin: 0;
-
-  &:before{
-    display: none;
+  .a-listitem-meta-date{
+    color: $bodycolor;
   }
-}
 
-.m-listitem__section{
-
-  .m-prf + .a-listitem-title{
-    margin-top: rem($body_leading+3);
+  .a-listitem-excerpt{
+    margin-top: rem($body_leading/2);
+    margin-bottom: 0;
   }
-}
-
-.a-listitem-meta-date{
-  margin: rem($body_leading*0.75) 0 0 0;
 }
 
 .m-listitem__a + .m-listitem__a,
-.js-addedPage{
-  margin-top: rem($body_leading*3);
-}
-
-.m-listitem__a.has-no-thumbnail + .m-listitem__a,
-.m-listitem__a.has-no-thumbnail + .js-addedPage{
-  padding-top: rem($body_leading*3);
-  border-top: 1px solid $subtle-border;
-}
-
-.m-listitem__a .mis_container{
-  margin-top: $leading*1.25;
+.m-listitem__a + .js-addedPage{
+  margin-top: rem($body_leading);
 }
 
 .js-addedPage .m-listitem__a{
@@ -227,8 +206,7 @@
 // ARCHIVE HEADER ---------------------------------------------------------------------
 
 .m-archive__header{
-  text-align: center;
-  margin-bottom: rem($body_leading*3);
+  margin-bottom: rem($body_leading);
 
   p{
     margin-top: rem($body_leading/2);

@@ -25,7 +25,7 @@ if ( !function_exists('listTags')) {
             echo '</li>';
 
             foreach ($tags as $tag) {
-                echo '<li>';
+                echo '<li class="l-clearfix">';
                 echo '<a href="'.get_tag_link($tag->term_id).'" title="'.sprintf(__("Se allt inom &auml;mnet %s"), $tag->name).'" rel="nofollow">';
                 echo '<h3 class="a-medium">'.$tag->name.'<span class="a-ul-large__span"> ['.$tag->count.']</span></h3>';
                 echo '</a>';

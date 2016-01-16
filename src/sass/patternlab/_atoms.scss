@@ -34,7 +34,7 @@ strong,
   @include type-to-em(33,39);
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading*2);
-  text-align: center;
+  // text-align: center;
 
   &:before {
     @include divider();
@@ -104,7 +104,7 @@ a[href^="http://samuelbrynolf.se"]{
 }
 
 .a-ul-large{
-  text-align: center;
+  // text-align: center;
 
   li{
     padding: rem($body_leading);
@@ -116,6 +116,9 @@ a[href^="http://samuelbrynolf.se"]{
 
   .a-ul-large__span,
   a .a-ul-large__span{
+    display: inline-block;
+    float: right;
+    font-size: rem(18);
     color: $bodycolor;
   }
 }
@@ -253,4 +256,10 @@ img.forcewidth{
   padding-right: $alpha_gutter*2/$btnfontsize+0em;
   text-align: right;
   color: $action;
+}
+
+.a-archive__divider{
+  height: 1px;
+  margin-top: rem($body_leading);
+  background-color: $subtle-border;
 }

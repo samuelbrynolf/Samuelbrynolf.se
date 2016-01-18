@@ -296,20 +296,17 @@
 // SHARE POST ---------------------------------------------------------------------
 
 .m-sharepost{
-  text-align: right;
+  //text-align: center;
+  margin-top: rem($body_leading*1.5);
 }
 
 .a-sharepost-title {
-  margin-bottom: $leading*1.25;
-
-  span {
-    padding-bottom: $leading/2;
-    border-bottom: 1px solid $subtle-border;
-  }
+  margin-bottom: rem($body_leading/2);
+  padding-bottom: rem($body_leading/2);
+  border-bottom: 1px solid $subtle-border;
 }
 
 .m-sharepost__ul li{
-  margin-top: $leading;
   margin-bottom: $leading;
   color: $bodycolor;
 }

@@ -1,7 +1,7 @@
 <aside class="o-single__aside">
 
     <div class="l-gutter m-sharepost">
-        <h4 class="a-fineprint a-sharepost-title"><span>Dela inl&auml;gg</span></h4>
+        <h4 class="a-fineprint a-sharepost-title">Dela inl&auml;gg</h4>
         <ul class="m-sharepost__ul">
             <li class="a-fineprint"><?php echo wp_get_shortlink(); ?></li>
         </ul>

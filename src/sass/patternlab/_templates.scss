@@ -30,7 +30,8 @@
 
 // SEARCH RESULTS =============================================================================================================
 
-.search-no-results .a-archive__divider{
+.search-no-results .a-archive__divider,
+.error404 .a-archive__divider{
   display: none;
 }
 

@@ -216,52 +216,32 @@
 
 
 
-// DUALNAV ---------------------------------------------------------------------
+// PREVIOUS NEXT POSTS ---------------------------------------------------------------------
 
+.m-prevnextposts {
+  margin-top: $leading*2;
+  padding-top: $leading*2;
+  background-color: $subtle-bg;
 
+  @media all and (min-width: $beta_query) {
+    //padding-bottom: $gutter_beta;
+  }
 
-.m-dual-nav{
+  @media all and (min-width: $charlie_query) {
+    //padding-bottom: $gutter_charlie;
+  }
 
-  @media all and (max-width: $beta_query) {
-    .l-span + .l-span{
-      margin-top: $gutter_alpha;
-    }
+  @media all and (min-width: $delta_query) {
+    //padding-bottom: $gutter_delta
+  }
+
+  @media all and (min-width: $echo_query) {
+    //padding-bottom: $gutter_echo;
   }
 
   .a-medium{
     text-align: center;
     margin-bottom: rem($body_leading*2);
-  }
-
-  .a-prf-text{
-    @extend .a-medium;
-  }
-
-  a{
-    color: $body;
-  }
-
-  .arrowleft:before,
-  .arrowright:after{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .arrowleft{
-    text-align: left;
-    padding-left: 1.25em;
-  }
-
-  .arrowright{
-    text-align: right;
-    padding-right: 1.25em;
-
-    &:after{
-      right: 0;
-      left: auto;
-    }
   }
 }
 

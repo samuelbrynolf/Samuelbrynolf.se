@@ -15,5 +15,30 @@
         echo '</div>';
     }
 
-    get_template_part('partials/single/nextprevnav'); ?>
+    $previousPost = get_adjacent_post( false, '', true );
+    $nextPost = get_adjacent_post( false, '', false );
+
+    if(!$previousPost){
+        $args = array(
+            'post__in' => array($nextPost->ID)
+        );
+    } elseif(!$nextPost){
+        $args = array(
+            'post__in' => array($previousPost->ID)
+        );
+    } else {
+        $args = array(
+            'post__in' => array($previousPost->ID, $nextPost->ID)
+        );
+    }
+
+    $queried_posts = get_posts($args);
+    if($queried_posts) {
+        echo '<div class="l-clearfix m-prevnextposts">';
+            echo '<h3 class="a-medium">Mer att l&auml;sa</h3>';
+            slider($queried_posts);
+        echo '</div>';
+    }
+    wp_reset_postdata(); ?>
+
 </aside>

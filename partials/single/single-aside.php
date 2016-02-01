@@ -17,20 +17,34 @@
 
     $previousPost = get_adjacent_post( false, '', true );
     $nextPost = get_adjacent_post( false, '', false );
+    $current_post_ID = $post->ID;
 
     if(!$previousPost){
-        $args = array(
-            'post__in' => array($nextPost->ID)
-        );
+        $nextprev_posts_id_arr = array($nextPost->ID);
     } elseif(!$nextPost){
-        $args = array(
-            'post__in' => array($previousPost->ID)
-        );
+        $nextprev_posts_id_arr = array($previousPost->ID);
     } else {
-        $args = array(
-            'post__in' => array($previousPost->ID, $nextPost->ID)
-        );
+        $nextprev_posts_id_arr = array($previousPost->ID, $nextPost->ID);
     }
+
+    $featured_id_arr = get_posts(array(
+        'fields' => 'ids',
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'post__not_in' => array($current_post_ID),
+        'meta_query' => array(
+            array(
+                'key' => 'options_set-featured',
+                'value' => true
+            )
+        )
+    ));
+
+    $merged_id_arr = array_merge($nextprev_posts_id_arr, $featured_id_arr);
+
+    $args = array(
+        'post__in'  => $merged_id_arr
+    );
 
     $queried_posts = get_posts($args);
     if($queried_posts) {

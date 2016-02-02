@@ -1,14 +1,22 @@
 <?php // LOAD Instagram -------------------------------------------------------------------
 
 if ( !function_exists( 'loadInstagram' )) {
+
     function loadInstagram(){
-        $content = pull_instagram('1537565402', 'd93b5d133c354946845bece40ea08617', '1', false);
+
+        if(function_exists('get_field') && get_field('options_instagram_userID', 'option') && get_field('options_instagram_clientID', 'option')) {
+            $user_id = get_field('options_instagram_userID', 'option');
+            $client_id = get_field('options_instagram_clientID', 'option');
+        } else {
+            return;
+        }
+
+        $content = pull_instagram($user_id, $client_id, '', false);
         die($content);
     }
     add_action('wp_ajax_nopriv_loadInstagram', 'loadInstagram');
     add_action('wp_ajax_loadInstagram', 'loadInstagram');
 }
-
 
 
 

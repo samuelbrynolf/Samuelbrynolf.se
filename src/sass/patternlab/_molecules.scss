@@ -290,3 +290,22 @@
   margin-bottom: $leading;
   color: $bodycolor;
 }
+
+
+
+// RESOURCES ---------------------------------------------------------------------
+
+.m-resources{
+
+  h2:first-of-type,
+  h3:first-of-type,
+  h4:first-of-type,
+  ul:first-of-type,
+  ol:first-of-type{
+    margin-top: 0 !important;
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading);
+    }
+  }
+}

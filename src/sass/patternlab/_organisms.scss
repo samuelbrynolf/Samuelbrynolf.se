@@ -75,10 +75,11 @@
 
   .a-entry-meta{
     margin-bottom: rem($body_leading*1.25);
+    color: $bodycolor;
   }
 
   .a-preamble{
-    margin: rem($body_leading*1.5) 0 rem($body_leading) 0;
+    margin: rem($body_leading*1.55) 0 rem($body_leading*1.25) 0;
 
     &:before{
       @include divider();

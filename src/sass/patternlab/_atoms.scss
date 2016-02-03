@@ -51,8 +51,8 @@ strong,
 }
 
 .a-preamble{
-  @include type-to-em(21,30);
-  text-align: center;
+  @include type-to-em(21,33);
+  color: $subtle-text;
 }
 
 .a-fineprint{

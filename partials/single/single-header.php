@@ -7,7 +7,7 @@
     <?php } ?>
 
     <p class="a-fineprint a-entry-meta">
-        <?php the_date('', '<span class="a-listitem-meta__span">', '</span>');
+        <?php the_date('', '', '');
         if (has_tag()) {
             the_tags(' &#183; ', ' &#183; ');
         }

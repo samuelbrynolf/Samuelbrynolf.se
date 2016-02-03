@@ -173,8 +173,12 @@
 
 // LIST ITEM ---------------------------------------------------------------------
 
-.m-listitem__a{
+.m-listitem {
   display: block;
+
+  .js-tappy{
+
+  }
 
   .a-listitem-meta-date{
     color: $bodycolor;
@@ -184,14 +188,19 @@
     margin-top: rem($body_leading/2);
     margin-bottom: 0;
   }
+
+  .a-external__a {
+    margin-top: rem($body_leading/2);
+  }
 }
 
-.m-listitem__a + .m-listitem__a,
-.m-listitem__a + .js-addedPage{
+.m-listitem + .m-listitem,
+.m-listitem + .js-added-HTML,
+.js-added-HTML + .js-added-HTML{
   margin-top: rem($body_leading);
 }
 
-.js-addedPage .m-listitem__a{
+.js-added-HTML .m-listitem {
   opacity: 0;
   transform: translate3d(0,rem($body_leading*3),0);
 }

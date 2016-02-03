@@ -263,3 +263,17 @@ img.forcewidth{
   margin-top: rem($body_leading);
   background-color: $subtle-border;
 }
+
+.js-jumper[href="#js-entry-content"] {
+  display: block;
+}
+
+.a-external__a {
+
+  a:after{
+    font-family: $icon-font;
+    font-size: rem(12);
+    content: ' \e9cb';
+    line-height: inherit;
+  }
+}

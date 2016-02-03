@@ -37,10 +37,14 @@ function process_instagram_URL($url){
     return $result;
 }
 
-function pull_instagram($user_id = '', $client_id = '', $count = '1', $container = true){
+function pull_instagram($user_id = '', $client_id = '', $count = null, $container = true){
 
     if (!is_numeric($user_id) && !is_numeric($client_id)) {
         return;
+    }
+
+    if(empty($count)){
+        $count = '1';
     }
 
     $url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?client_id=' . $client_id . '&count=' . $count;

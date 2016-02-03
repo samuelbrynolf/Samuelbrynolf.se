@@ -43,6 +43,9 @@ add_action( 'after_setup_theme', 'bento_setup' );
 // SCRIPTS & STYLES -------------------------------------------------------------------
 
 function bento_scripts() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+    wp_enqueue_script( 'jquery' );
 	wp_enqueue_style( 'bento-style', get_stylesheet_uri());
 	//wp_dequeue_style('contact-form-7');
     if(!is_single()){

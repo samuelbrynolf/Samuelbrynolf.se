@@ -12,9 +12,7 @@
   display: block;
   width: rem(33);
   height: $borderwidth;
-  margin-right: auto;
-  margin-bottom: rem(33);
-  margin-left: auto;
+  margin: 0 auto rem(33) auto;
   background-color: $bodycolor;
 }
 

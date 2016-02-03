@@ -50,14 +50,9 @@ strong,
   font-weight: bold;
 }
 
-.m-preamble{
-  @include type-to-em(27,33);
-  font-style: italic;
+.a-preamble{
+  @include type-to-em(21,30);
   text-align: center;
-
-  h2{
-    font-style: inherit;
-  }
 }
 
 .a-fineprint{

@@ -2,10 +2,8 @@
 
     <?php the_title( '<h1 class="a-xlarge a-entry-title">', '</h1>' );
 
-    if(function_exists('get_field') && get_field('preamble')){ ?>
-        <div class="m-preamble a-entry-preamble">
-            <h2><?php the_field('preamble'); ?></h2>
-        </div>
+    if(function_exists('get_field') && get_field('post_preamble')){ ?>
+        <h2 class="a-preamble"><?php echo acf_tag_stripper('post_preamble'); ?></h2>
     <?php } ?>
 
     <p class="a-fineprint a-entry-meta">

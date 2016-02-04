@@ -17,7 +17,7 @@
 
 // 1.1 -----------------------------------------------------------------------------------------------------------
 
-$beta_screen: 768; // (Use as variable: "$beta_query")
+$beta_screen: 767; // (Use as variable: "$beta_query")
 $charlie_screen: 1025; // (Use as variable: "$charlie_query")
 $delta_screen: 1440; // (Use as variable: "$delta_query")
 $echo_screen: 1880; // (Use as variable: "$echo_query")
@@ -48,8 +48,8 @@ $spanwidth-12: 100%;
 
 // 1.2 -----------------------------------------------------------------------------------------------------------
 
-$alpha_gutter: 18; // (Use as variable: "$gutter_alpha" and "$gutter_alpha_half")
-$beta_gutter: 30; // Use as variable: "$gutter_beta" and "$gutter_beta_half")
+$alpha_gutter: 17; // (Use as variable: "$gutter_alpha" and "$gutter_alpha_half")
+$beta_gutter: 36; // Use as variable: "$gutter_beta" and "$gutter_beta_half")
 $charlie_gutter: 30; // (Use as variable: "$gutter_charlie" and "$gutter_charlie_half")
 $delta_gutter: 30; // (Use as variable: "$gutter_delta" and "$gutter_delta_half")
 $echo_gutter: 30; // (Use as variable: "$gutter_echo" and "$gutter_echo_half")
@@ -61,8 +61,8 @@ $body_leading: 26; // (Use as variable: "$leading")
 
 // -- 
 
-$fontsize_beta: $fontsize;
-$body_leading_beta: $body_leading;
+$fontsize_beta: 20;
+$body_leading_beta: 30;
 
 $fontsize_charlie: $fontsize;
 $body_leading_charlie: $body_leading;
@@ -135,7 +135,7 @@ $icon-font: 'icomoon';
 $body-bgcolor: #fff;
 $body-textcolor: #222;
 $action-color: green;
-$subtle-textcolor: lighten($body-textcolor, 35%);
+$subtle-textcolor: lighten($body-textcolor, 30%);
 $subtle-bgcolor: #eee;
 $subtle-bordercolor: lighten($body-textcolor, 65%); // #c8c8c8
 $input-bgcolor: white;
@@ -147,7 +147,8 @@ $ratio-1-1: 100%;
 $ratio-4-3: 74%;
 $ratio-16-9: 56%;
 
-$flickety-cell-width: 86;
+$flickety-cell-width_alpha: 86;
+$flickety-cell-width_beta: 62.5;
 
 // 7 -----------------------------------------------------------------------------------------------------------
 

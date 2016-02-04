@@ -3,6 +3,12 @@
 .startpage .a-ccard__bio p{
   font-size: rem(21);
   margin-bottom: rem($body_leading*1.5);
+
+  @media all and (min-width: $beta_query) {
+    font-size: rem(24);
+    line-height: rem(36);
+    margin-bottom: rem($body_leading_beta*1.5);
+  }
 }
 
 
@@ -16,11 +22,20 @@
   margin-bottom: 0;
   padding-bottom: rem($body_leading*1.25);
   border-bottom: 1px solid $subtle-bordercolor;
+
+  @media all and (min-width: $beta_query) {
+    padding-bottom: rem($body_leading_beta*1.25);
+  }
 }
 
 .single .o-comments{
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    margin-bottom: rem($body_leading_beta);
+  }
 }
 
 .single .a-large,

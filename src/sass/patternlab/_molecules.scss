@@ -11,6 +11,10 @@
 
   .mis_img + .mis_figcaption{
     margin-top: rem($body_leading/3);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/3);
+    }
   }
 }
 
@@ -62,7 +66,11 @@
   overflow: hidden;
   background-color: transparent;
 
-  @media all and (orientation: landscape) {
+  @media all and (orientation: landscape)  {
+    padding-bottom: $ratio-16-9;
+  }
+
+  @media all and (min-width: $beta_query) {
     padding-bottom: $ratio-16-9;
   }
 
@@ -125,17 +133,8 @@
   width: 92%;
   margin: 0;
 
-  &.a-icon:before,
-  &.a-icon:after{
-    display: inline;
-    position: static;
-    font-size: 75%;
-    margin-right: 0.5rem;
-  }
-
-  &.a-icon:after{
-    margin-right: 0;
-    margin-left: 0.5rem;
+  @media all and (min-width: $beta_query) {
+    width: 81%;
   }
 }
 
@@ -154,6 +153,10 @@
     transform: translateY(-50%);
     font-size: rem(16);
     color: $action-color;
+
+    @media all and (min-width: $beta_query) {
+      font-size: rem(12);
+    }
   }
 
   .a-searchform__input{
@@ -176,10 +179,6 @@
 .m-listitem {
   display: block;
 
-  .js-tappy{
-
-  }
-
   .a-listitem-meta-date{
     color: $body-textcolor;
   }
@@ -187,10 +186,18 @@
   .a-listitem-excerpt{
     margin-top: rem($body_leading/2);
     margin-bottom: 0;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
   }
 
   .a-external__a {
     margin-top: rem($body_leading/2);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
   }
 }
 
@@ -198,17 +205,31 @@
 .m-listitem + .js-added-HTML,
 .js-added-HTML + .js-added-HTML{
   margin-top: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta);
+  }
 }
 
 .js-added-HTML .m-listitem {
   opacity: 0;
   transform: translate3d(0,rem($body_leading*3),0);
+
+  @media all and (min-width: $beta_query) {
+    transform: translate3d(0,rem($body_leading_beta*3),0);
+  }
 }
 
 .bap_loadbutton{
   margin-top: rem($body_leading*3);
   margin-right: rem($alpha_gutter);
   margin-left: rem($alpha_gutter);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    margin-right: rem($beta_gutter);
+    margin-left: rem($beta_gutter);
+  }
 }
 
 
@@ -217,9 +238,17 @@
 .m-archive__header{
   margin-bottom: rem($body_leading);
 
+  @media all and (min-width: $beta_query) {
+    margin-bottom: rem($body_leading_beta);
+  }
+
   p{
     margin-top: rem($body_leading/2);
     margin-bottom: 0;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
   }
 }
 
@@ -231,9 +260,11 @@
   margin-top: rem($body_leading*2);
   padding-top: rem($body_leading*2);
   background-color: $subtle-bgcolor;
+  box-shadow: inset 0 0 rem(12) 0 rgba($body-textcolor,0.09);
 
   @media all and (min-width: $beta_query) {
-    //padding-bottom: $gutter_beta;
+    margin-top: rem($body_leading_beta*2);
+    padding-top: rem($body_leading_beta*2);
   }
 
   @media all and (min-width: $charlie_query) {
@@ -251,6 +282,11 @@
   .a-medium{
     text-align: center;
     margin-bottom: rem($body_leading*2);
+    opacity: 0.75;
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta*2);
+    }
   }
 }
 
@@ -267,6 +303,11 @@
     line-height: rem($body_leading*2);
     border-top: 1px solid $subtle-bordercolor;
 
+    @media all and (min-width: $beta_query) {
+      padding-left: 1.5rem;
+      line-height: rem($body_leading_beta*2);
+    }
+
     &:before{
       color: $body-textcolor;
     }
@@ -275,6 +316,10 @@
 
 .a-ccard__p + .m-ccard__list{
   margin-top: rem($body_leading*2);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*2);
+  }
 }
 
 .m-ccard-avatar{
@@ -285,19 +330,31 @@
 // SHARE POST ---------------------------------------------------------------------
 
 .m-sharepost{
-  //text-align: center;
   margin-top: rem($body_leading*1.5);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*1.5);
+  }
 }
 
 .a-sharepost-title {
   margin-bottom: rem($body_leading/2);
   padding-bottom: rem($body_leading/2);
   border-bottom: 1px solid $subtle-bordercolor;
+
+  @media all and (min-width: $beta_query) {
+    margin-bottom: rem($body_leading_beta/2);
+    padding-bottom: rem($body_leading_beta/2);
+  }
 }
 
 .m-sharepost__ul li{
   margin-bottom: rem($body_leading);
   color: $body-textcolor;
+
+  @media all and (min-width: $beta_query) {
+    margin-bottom: rem($body_leading_beta);
+  }
 }
 
 
@@ -314,7 +371,7 @@
     margin-top: 0 !important;
 
     @media all and (min-width: $delta_query) {
-      margin-top: rem($body_leading);
+      margin-top: rem($body_leading_delta);
     }
   }
 }

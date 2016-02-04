@@ -46,7 +46,11 @@
 //==============================================================================================================
 
 main.tags-is-active{
-  padding-top: $leading*3;
+  padding-top: rem($body_leading*3);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($body_leading_beta*3);
+  }
 }
 
 // IS-PASSIVE
@@ -94,6 +98,10 @@ a.current-menu-item{
   visibility: hidden;
   overflow: hidden;
   height: 0;
+
+  @media all and (min-width: $beta_query) {
+    transform: translate3d(0,rem(-$body_leading_beta*2),0);
+  }
 
   a{
     pointer-events: none;

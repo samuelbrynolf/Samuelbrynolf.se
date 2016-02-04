@@ -38,6 +38,11 @@ strong,
   margin-bottom: rem($body_leading*2);
   // text-align: center;
 
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    margin-bottom: rem($body_leading_beta*2);
+  }
+
   &:before {
     @extend %divider;
   }
@@ -50,7 +55,6 @@ strong,
 
 .a-small{
   font-size: rem(16);
-  line-height: rem($body_leading);
   font-weight: bold;
 }
 
@@ -86,29 +90,49 @@ a[href^="http://samuelbrynolf.se"]{
 
 .a-ol,
 .a-ul{
-  margin-top: $leading;
-  margin-bottom: $leading;
+  margin-top: rem($body_leading);
+  margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta);
+    margin-bottom: rem($body_leading_beta);
+  }
 
   li + li{
     margin-top: rem($body_leading/2);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
   }
 }
 
 .a-ol{
-  margin-left: rem($alpha_gutter*1.8);
+  margin-left: rem($alpha_gutter*1.5);
   list-style: decimal;
+
+  @media all and (min-width: $beta_query) {
+    margin-left: rem($beta_gutter*0.75);
+  }
 }
 
 .a-ul{
-  margin-left: rem($alpha_gutter*1.5);
+  margin-left: rem($alpha_gutter*1.35);
   list-style: disc;
+
+  @media all and (min-width: $beta_query) {
+    margin-left: rem($beta_gutter*0.62);
+  }
 }
 
 .a-ul-large{
-  // text-align: center;
 
   li{
     padding: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      padding: rem($body_leading_beta);
+    }
   }
 
   li + li{
@@ -133,12 +157,12 @@ a[href^="http://samuelbrynolf.se"]{
 
 
 img.forcewidth{
-  width: 100%;
+  //width: 100%;
 }
 
 @media all and (min-width: $beta_query) {
   .js .js-medialoadEffect img{
-    opacity: 0;
+    //opacity: 0;
   }
 }
 
@@ -222,33 +246,22 @@ img.forcewidth{
 
 // FORMS ==============================================================================================================
 
-.a-inputText{
-  @include formText();
-  border: 1px solid $action-color;
-  background: $input-bgcolor;
-}
-
-.a-textarea{
-  @include formText();
-  line-height: 1.5;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
-  background: $input-bgcolor;
-}
 
 
 // BUTTONS + EVENT-ELEMENTS ==============================================================================================================
+
+// IN THE LAND OF THE MORNING STAR
 
 .a-btn,
 .bap_loadbutton{
   display: block;
   width: auto;
   height: rem($inputheight);
+  padding-right: rem($alpha_gutter/$btnfontsize);
+  padding-left:  rem($alpha_gutter/$btnfontsize);
   font-family: $bodyfont;
   font-size: rem($btnfontsize);
   line-height: rem($inputheight);
-  padding-right: rem($alpha_gutter/$btnfontsize);
-  padding-left:  rem($alpha_gutter/$btnfontsize);
   text-align: center;
   text-decoration: none;
   color: $action-color;
@@ -259,31 +272,29 @@ img.forcewidth{
     padding-right: rem($body_leading/$btnfontsize);
     padding-left: rem($body_leading/$btnfontsize);
   }
-
-  &.inline{
-    display: inline-block;
-    width: auto;
-  }
-
-  &.secondary{
-    color: $action-color;
-    border: 1px solid $action-color;
-    background-color: $body-bgcolor;
-  }
 }
 
 .a-topjump{
   @extend .a-fineprint;
-  margin-top: $leading*3;
-  padding-right: rem($alpha_gutter*2/$btnfontsize);
+  margin-top: rem($body_leading*3);
+  padding-right: rem($alpha_gutter);
   text-align: right;
   color: $action-color;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    padding-right: rem($beta_gutter*0.75);
+  }
 }
 
 .a-archive__divider{
   height: 1px;
   margin-top: rem($body_leading);
   background-color: $subtle-bordercolor;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta);
+  }
 }
 
 .js-jumper[href="#js-entry-content"] {

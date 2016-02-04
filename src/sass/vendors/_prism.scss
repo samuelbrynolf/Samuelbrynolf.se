@@ -6,7 +6,7 @@
  */
 code[class*="language-"],
 pre[class*="language-"] {
-  font-size: rem(16);
+  font-size: rem(14);
   color: #f8f8f2;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
@@ -28,13 +28,21 @@ pre[class*="language-"] {
 }
 /* Code blocks */
 pre[class*="language-"] {
-  padding: rem($body_leading) rem($alpha_gutter);
-  margin: $leading 0;
+  padding: rem($body_leading*0.75) rem($alpha_gutter*0.75);
+  margin-top: rem($body_leading);
+  margin-bottom: rem($body_leading);
   overflow: auto;
+
+  @media all and (min-width: $beta_query) {
+    padding: rem($body_leading_beta/2) rem($beta_gutter/2);
+    margin-top: rem($body_leading_beta);
+    margin-bottom: rem($body_leading_beta);
+  }
 }
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: darken($highlight-bgcolor, 69%);
+  background: darken($highlight-bgcolor, 68%);
 }
 /* Inline code */
 :not(pre) > code[class*="language-"] {

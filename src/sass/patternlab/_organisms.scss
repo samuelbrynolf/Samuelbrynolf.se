@@ -9,6 +9,10 @@
   transform: translateY(0);
   width: 100%;
   background-color: rgba($body-bgcolor, 0.93);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($body_leading_beta);
+  }
 }
 
 .o-global__header{
@@ -26,10 +30,18 @@
 
     li + li{
       padding-left: rem($body_leading/3);
+
+      @media all and (min-width: $beta_query) {
+        padding-left: rem($body_leading_beta/2);
+      }
     }
 
     a{
      font-size: rem(16);
+
+      @media all and (min-width: $beta_query) {
+        font-size: rem(14);
+      }
     }
   }
 }
@@ -40,6 +52,11 @@
   transform: translateZ(0); // Hackster
   padding-top: rem($body_leading*2.75);
   padding-bottom: rem($body_leading*3);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($body_leading_beta*2.75);
+    padding-bottom: rem($body_leading_beta*3);
+  }
 }
 
 
@@ -53,8 +70,16 @@
   padding-bottom: rem($body_leading*2);
   background-color: $action-color;
 
+  @media all and (min-width: $beta_query) {
+    padding-bottom: rem($body_leading_beta*2);
+  }
+
   .a-xlarge{
     margin-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta);
+    }
   }
 
   a{
@@ -75,10 +100,19 @@
   .a-entry-meta{
     margin-bottom: rem($body_leading*1.25);
     color: $body-textcolor;
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta*1.25);
+    }
   }
 
   .a-preamble{
     margin: rem($body_leading*1.55) 0 rem($body_leading*1.25) 0;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta*1.55);
+      margin-bottom: rem($body_leading_beta*1.25);
+    }
 
     &:before{
       @extend %divider;
@@ -88,6 +122,10 @@
 
 .o-entry-content{
 
+  @media all and (min-width: $beta_query) {
+    max-width: 95%;
+  }
+
   h2{
     @extend .a-large;
   }
@@ -96,17 +134,29 @@
     @extend .a-medium;
     margin-top: 2rem;
     margin-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta);
+    }
   }
 
   h4{
     @extend .a-small;
     margin-top: rem($body_leading);
 
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta);
+    }
+
     & + p,
     & + ol,
     & + ul,
     & + blockquote{
       margin-top: rem($body_leading/4);
+
+      @media all and (min-width: $beta_query) {
+        margin-top: rem($body_leading_beta/4);
+      }
     }
   }
 
@@ -122,6 +172,10 @@
     padding-left: rem($alpha_gutter);
     border-left: $borderwidth solid;
 
+    @media all and (min-width: $beta_query) {
+      padding-left: rem($beta_gutter/2);
+    }
+
     p{
       font-style: inherit;
     }
@@ -136,6 +190,11 @@
   .mis_container{
     margin-top: rem($body_leading);
     margin-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta);
+      margin-bottom: rem($body_leading_beta);
+    }
   }
 
   // All floated Images ----------------------------------------------------------
@@ -178,6 +237,11 @@
     float: right;
     margin-bottom: rem($body_leading);
     margin-left: rem($alpha_gutter);
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta);
+      margin-left: rem($beta_gutter);
+    }
   }
 }
 
@@ -198,5 +262,9 @@
   .a-fineprint{
     margin-top: rem($body_leading/2);
     text-align: center;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
   }
 }

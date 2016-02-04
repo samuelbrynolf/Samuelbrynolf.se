@@ -128,13 +128,13 @@ http://flickity.metafizzy.co
   width: 9px;
   height: 9px;
   margin: 0 ($body_leading/4) + 0px;
-  background-color: $subtle-border;
+  background-color: $subtle-bordercolor;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .flickity-page-dots .dot.is-selected {
-  background-color: $action;
+  background-color: $action-color;
 }
 
 // Custom
@@ -155,7 +155,7 @@ http://flickity.metafizzy.co
 
   .a-prf-text{
     text-align: left;
-    color: $body;
+    color: $body-bgcolor;
   }
 }
 

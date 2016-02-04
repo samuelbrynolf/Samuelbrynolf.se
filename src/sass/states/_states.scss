@@ -35,16 +35,11 @@
 // FOCUS
 //==============================================================================================================
 
-.a-inputText:focus{
-	border-color: $border-1;
-}
+.a-inputText:focus{}
 
 // Button focus 
 
-.a-btn:focus {
-	color: $body;
-	background-color: darken($action, 6%);
-}
+.a-btn:focus {}
 
 
 // IS-ACTIVE
@@ -58,8 +53,8 @@ main.tags-is-active{
 //==============================================================================================================
 
 .a-btn.s-is-passive{
-  color: $subtle-text;
-  border-color: $subtle-text;
+  color: $subtle-textcolor;
+  border-color: $subtle-bordercolor;
   opacity: 0.5;
 }
 
@@ -80,7 +75,7 @@ main.tags-is-active{
 
 .current-menu-item a,
 a.current-menu-item{
-  color: $subtle-text;
+  color: $subtle-textcolor;
 }
 
 // IS-MOVED
@@ -129,7 +124,7 @@ a.current-menu-item{
 //==============================================================================================================
 
 #js-colophon.s-is-highlighted{
-  background-color: $highlight;
+  background-color: $highlight-bgcolor;
 }
 
 // NO-JS
@@ -140,8 +135,8 @@ a.current-menu-item{
 //==============================================================================================================
 
 .bap_loadbutton.s-is-loading{
-  color: $bodycolor;
-  border-color: $subtle-border;
+  color: $body-textcolor;
+  border-color: $subtle-bordercolor;
 }
 
 // S-IS-UP

@@ -27,37 +27,43 @@ strong,
 }
 
 .a-xlarge{
-  @include type-to-em(42,48);
+  font-size: rem(42);
+  line-height: rem(48);
 }
 
 .a-large{
-  @include type-to-em(33,39);
+  font-size: rem(33);
+  line-height: rem(39);
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading*2);
   // text-align: center;
 
   &:before {
-    @include divider();
+    @extend %divider;
   }
 }
 
 .a-medium{
-  @include type-to-em(24,30);
+  font-size: rem(24);
+  line-height: rem(30);
 }
 
 .a-small{
-  @include type-to-em(16,$body_leading);
+  font-size: rem(16);
+  line-height: rem($body_leading);
   font-weight: bold;
 }
 
 .a-preamble{
-  @include type-to-em(21,33);
-  color: $subtle-text;
+  font-size: rem(21);
+  line-height: rem(33);
+  color: $subtle-textcolor;
 }
 
 .a-fineprint{
-  @include type-to-em(14,21);
-  color: $subtle-text;
+  font-size: rem(14);
+  line-height: rem(21);
+  color: $subtle-textcolor;
 }
 
 a[href^="http://"],
@@ -106,7 +112,7 @@ a[href^="http://samuelbrynolf.se"]{
   }
 
   li + li{
-    border-top: 1px solid $subtle-border;
+    border-top: 1px solid $subtle-bordercolor;
   }
 
   .a-ul-large__span,
@@ -114,7 +120,7 @@ a[href^="http://samuelbrynolf.se"]{
     display: inline-block;
     float: right;
     font-size: rem(18);
-    color: $bodycolor;
+    color: $body-textcolor;
   }
 }
 
@@ -218,8 +224,8 @@ img.forcewidth{
 
 .a-inputText{
   @include formText();
-  border: 1px solid $action;
-  background: $inputbg;
+  border: 1px solid $action-color;
+  background: $input-bgcolor;
 }
 
 .a-textarea{
@@ -227,7 +233,7 @@ img.forcewidth{
   line-height: 1.5;
   padding-top: 1.25em;
   padding-bottom: 1.25em;
-  background: $inputbg;
+  background: $input-bgcolor;
 }
 
 
@@ -235,21 +241,49 @@ img.forcewidth{
 
 .a-btn,
 .bap_loadbutton{
-  @include formBtn();
+  display: block;
+  width: auto;
+  height: rem($inputheight);
+  font-family: $bodyfont;
+  font-size: rem($btnfontsize);
+  line-height: rem($inputheight);
+  padding-right: rem($alpha_gutter/$btnfontsize);
+  padding-left:  rem($alpha_gutter/$btnfontsize);
+  text-align: center;
+  text-decoration: none;
+  color: $action-color;
+  border: 1px solid $action-color;
+  background-color: $body-bgcolor;
+
+  @media all and (min-width: $beta_query) {
+    padding-right: rem($body_leading/$btnfontsize);
+    padding-left: rem($body_leading/$btnfontsize);
+  }
+
+  &.inline{
+    display: inline-block;
+    width: auto;
+  }
+
+  &.secondary{
+    color: $action-color;
+    border: 1px solid $action-color;
+    background-color: $body-bgcolor;
+  }
 }
 
 .a-topjump{
   @extend .a-fineprint;
   margin-top: $leading*3;
-  padding-right: $alpha_gutter*2/$btnfontsize+0em;
+  padding-right: rem($alpha_gutter*2/$btnfontsize);
   text-align: right;
-  color: $action;
+  color: $action-color;
 }
 
 .a-archive__divider{
   height: 1px;
   margin-top: rem($body_leading);
-  background-color: $subtle-border;
+  background-color: $subtle-bordercolor;
 }
 
 .js-jumper[href="#js-entry-content"] {

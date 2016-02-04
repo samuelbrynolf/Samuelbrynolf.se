@@ -56,7 +56,7 @@
 
 .a-icon:before,
 .a-icon:after{
-  font-family: $icon-font;
+  font-family: $icon-font !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

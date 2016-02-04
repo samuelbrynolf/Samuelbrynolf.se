@@ -8,24 +8,24 @@
   z-index: $header-slide_z;
   transform: translateY(0);
   width: 100%;
-  background-color: rgba($body, 0.93);
+  background-color: rgba($body-bgcolor, 0.93);
 }
 
 .o-global__header{
 
   .m-global__nav{
     width: 60%;
-    line-height: 42px;
+    line-height: rem(42);
     text-align: right;
     padding-bottom: 1px;
-    border-bottom: 1px solid $subtle-border;
+    border-bottom: 1px solid $subtle-bordercolor;
 
     li{
       display: inline-block;
     }
 
     li + li{
-      padding-left: $leading/3;
+      padding-left: rem($body_leading/3);
     }
 
     a{
@@ -51,19 +51,18 @@
 .o-taglist .a-ul-large{
   padding-top: rem($header-slide__offset);
   padding-bottom: rem($body_leading*2);
-  background-color: $action;
+  background-color: $action-color;
 
   .a-xlarge{
     margin-bottom: rem($body_leading);
-    //padding-top: rem($body_leading*2);
   }
 
   a{
-    color: $body;
+    color: $body-bgcolor;
   }
 
   li + li{
-    border-color: rgba($bodycolor, 0.4);
+    border-color: rgba($body-textcolor, 0.4);
   }
 }
 
@@ -75,14 +74,14 @@
 
   .a-entry-meta{
     margin-bottom: rem($body_leading*1.25);
-    color: $bodycolor;
+    color: $body-textcolor;
   }
 
   .a-preamble{
     margin: rem($body_leading*1.55) 0 rem($body_leading*1.25) 0;
 
     &:before{
-      @include divider();
+      @extend %divider;
     }
   }
 }
@@ -95,7 +94,7 @@
 
   h3{
     @extend .a-medium;
-    margin-top: 2em;
+    margin-top: 2rem;
     margin-bottom: rem($body_leading);
   }
 
@@ -120,7 +119,7 @@
   }
 
   blockquote{
-    padding-left: $gutter_alpha;
+    padding-left: rem($alpha_gutter);
     border-left: $borderwidth solid;
 
     p{
@@ -143,8 +142,6 @@
 
   .mis_container.left,
   .mis_container.right{
-    //margin-top: 0;
-    //margin-bottom: 0;
     width: 46%;
   }
 
@@ -179,8 +176,8 @@
 
   .twitter-share-button{
     float: right;
-    margin-bottom: $leading;
-    margin-left: $gutter_alpha;
+    margin-bottom: rem($body_leading);
+    margin-left: rem($alpha_gutter);
   }
 }
 

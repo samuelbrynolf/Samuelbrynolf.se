@@ -1,6 +1,6 @@
 <footer id="js-colophon" class="l-gutter o-global__footer">
 
-    <?php if (is_home() && !is_paged()) {
+    <?php if ((is_home() && !is_paged()) || is_archive() || is_search()) {
         get_template_part('partials/global-components/ccard_socialnw');
     } else {
         get_template_part('partials/global-components/ccard_avatar');

@@ -156,8 +156,8 @@ a[href^="http://samuelbrynolf.se"]{
 // IMAGES + VIDEO/MEDIA =============================================================================================================
 
 
-img.forcewidth{
-  //width: 100%;
+img.a-forcewidth{
+  width: 100%;
 }
 
 @media all and (min-width: $beta_query) {
@@ -289,11 +289,11 @@ img.forcewidth{
 
 .a-archive__divider{
   height: 1px;
-  margin-top: rem($body_leading);
+  margin-top: rem($body_leading*1.1);
   background-color: $subtle-bordercolor;
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta);
+    margin-top: rem($body_leading_beta*1.1);
   }
 }
 

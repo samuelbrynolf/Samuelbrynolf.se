@@ -5,8 +5,6 @@
   margin-bottom: rem($body_leading*1.5);
 
   @media all and (min-width: $beta_query) {
-    font-size: rem(24);
-    line-height: rem(36);
     margin-bottom: rem($body_leading_beta*1.5);
   }
 }
@@ -52,9 +50,17 @@
 }
 
 
-// LISTPAGE =============================================================================================================
+// MIXED =============================================================================================================
 
+.startpage main,
+.single main{
 
+  @media all and (min-width: $beta_query) {
+    @media all and (min-width: $beta_query) {
+      padding-top: rem($header-slide__offset*1.35);
+    }
+  }
+}
 
 // 404 =============================================================================================================
 

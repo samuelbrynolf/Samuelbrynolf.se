@@ -64,10 +64,6 @@ body{
 
 main{
   padding-top: rem($header-slide__offset);
-
-  @media all and (min-width: $beta_query) {
-    padding-top: rem($header-slide__offset*1.18);
-  }
 }
 
 p{

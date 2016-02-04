@@ -11,6 +11,7 @@
   background-color: rgba($body-bgcolor, 0.93);
 
   @media all and (min-width: $beta_query) {
+    height: rem($header-slide_height*1.05);
     padding-top: rem($body_leading_beta);
   }
 }

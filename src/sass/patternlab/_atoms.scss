@@ -125,19 +125,6 @@ a[href^="http://samuelbrynolf.se"]{
 
 // IMAGES + VIDEO/MEDIA =============================================================================================================
 
-.a-sitename{
-  @include swap_text_for_img(60,60);
-  background-image: url(img/component_demo_imgs/logo.jpg);
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    background-image: url(img/component_demo_imgs/logo_hires.jpg);
-  }
-}
 
 img.forcewidth{
   width: 100%;
@@ -150,6 +137,12 @@ img.forcewidth{
 }
 
 // ICONS =============================================================================================================
+
+.a-sitename{
+  text-indent: -9999px;
+  height: 1px;
+  overflow: hidden;
+}
 
 .a-icon {
   position: relative;

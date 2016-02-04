@@ -7,7 +7,7 @@
         <section class="l-gutter">
             <?php get_template_part('partials/global-components/ccard_avatar'); ?>
         </section>
-<!--        <h3 class="a-large">Populära poster</h3>-->
+
         <?php get_template_part('partials/startpage/start-featured');
     }
 

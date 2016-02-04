@@ -15,7 +15,7 @@ if ( !function_exists( 'slider' )) {
                 if (function_exists('makeitSrcset') && has_post_thumbnail()) {
                     makeitSrcset(get_post_thumbnail_id($post->ID));
                 }
-                echo '<h3 class="a-medium a-prf-text">' . get_the_title() . '</h3>';
+                the_title( '<h3 class="a-medium a-prf-text">', '</h3>' );
                 echo '</a>';
             } ?>
 

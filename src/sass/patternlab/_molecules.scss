@@ -438,6 +438,34 @@
 
 
 
+// BLOGTAG ---------------------------------------------------------------------
+
+.m-blogtag {
+
+  .avatar {
+
+    @media all and (min-width: $beta_query) {
+      float: left;
+      margin: 0 rem($beta_gutter) $leading_beta*2 0;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin: 0 rem($charlie_gutter) $leading_charlie*2 0;
+    }
+  }
+
+  .a-ccard__bio p {
+
+    @media all and (min-width: $beta_query) {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+
+
+
 // RESOURCES ---------------------------------------------------------------------
 
 .m-resources{

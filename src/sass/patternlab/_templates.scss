@@ -1,5 +1,20 @@
 // STARTPAGE =============================================================================================================
 
+
+
+.startpage .m-flickity{
+
+  @media all and (min-width: $beta_query) {
+    padding-top: 4%;
+    background-color: $subtle-bgcolor;
+    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    //padding-top: rem($body_leading_charlie*2);
+  }
+}
+
 .startpage .a-ccard__bio p{
   font-size: rem(21);
   margin-bottom: rem($body_leading*1.5);
@@ -10,16 +25,6 @@
 
   @media all and (min-width: $charlie_query) {
     margin-bottom: rem($body_leading_charlie*1.5);
-  }
-}
-
-.startpage .m-flickity{
-
-  @media all and (min-width: $charlie_query) {
-    padding-top: rem($body_leading_charlie*2);
-    margin-top: rem($body_leading_charlie*3);
-    background-color: $subtle-bgcolor;
-    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
   }
 }
 
@@ -75,15 +80,10 @@
 
 // MIXED =============================================================================================================
 
-.startpage main,
 .single main{
 
   @media all and (min-width: $beta_query) {
     padding-top: rem($header-slide__offset*1.35);
-  }
-
-  @media all and (min-width: $charlie_query) {
-    padding-top: rem($header-slide__offset);
   }
 }
 

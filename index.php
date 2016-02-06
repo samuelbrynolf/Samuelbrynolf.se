@@ -4,7 +4,7 @@
 
     <?php if (is_home() && !is_paged()) { ?>
 
-        <section class="l-gutter">
+        <section class="l-gutter m-blogtag">
             <?php get_template_part('partials/global-components/ccard_avatar'); ?>
         </section>
 

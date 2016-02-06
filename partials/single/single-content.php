@@ -5,8 +5,11 @@
             <p class="a-external__a">
                 Direktl&auml;nk: <a class="js-tappy" href="<?php echo get_field('external_linkUrl'); ?>"><?php echo get_field('external_linkText'); ?></a>
             </p>
-        <?php } ?>
-        <?php the_content(); ?>
+        <?php }
+        if(function_exists('get_field') && get_field('post_preamble')){ ?>
+            <p class="a-preamble"><?php echo acf_tag_stripper('post_preamble'); ?></p>
+        <?php }
+        the_content(); ?>
         <div class="l-clear"></div>
     </div>
 

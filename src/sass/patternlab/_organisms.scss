@@ -104,19 +104,6 @@
       margin-bottom: rem($body_leading_charlie*1.25);
     }
   }
-
-  .a-preamble{
-    margin: rem($body_leading*1.55) 0 rem($body_leading*1.25) 0;
-
-    @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta*1.55);
-      margin-bottom: rem($body_leading_beta*1.25);
-    }
-
-    &:before{
-      @extend %divider;
-    }
-  }
 }
 
 .o-entry-content{
@@ -127,6 +114,21 @@
 
   @media all and (min-width: $charlie_query) {
     max-width: rem($containerwidth*0.67);
+  }
+
+  .a-preamble{
+    margin-top: $leading*1.5;
+    margin-bottom: $leading*1.5;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: $leading_beta*1.5;
+      margin-bottom: $leading_beta*1.5;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: $leading_charlie*1.5;
+      margin-bottom: $leading_charlie*1.5;
+    }
   }
 
   h2{
@@ -143,6 +145,7 @@
     }
 
     @media all and (min-width: $charlie_query) {
+      margin-top: 3rem;
       margin-bottom: rem($body_leading_charlie);
     }
   }
@@ -192,7 +195,9 @@
     }
 
     @media all and (min-width: $charlie_query) {
-      padding-left: rem($charlie_gutter/2);
+      font-size: rem(27);
+      line-height: rem(36);
+      padding-left: rem($charlie_gutter);
     }
 
     p{

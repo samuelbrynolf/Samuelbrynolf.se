@@ -43,6 +43,11 @@ strong,
     margin-bottom: rem($body_leading_beta*2);
   }
 
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*3);
+    margin-bottom: rem($body_leading_charlie*2);
+  }
+
   &:before {
     @extend %divider;
   }
@@ -98,11 +103,20 @@ a[href^="http://samuelbrynolf.se"]{
     margin-bottom: rem($body_leading_beta);
   }
 
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
   li + li{
     margin-top: rem($body_leading/2);
 
     @media all and (min-width: $beta_query) {
       margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
     }
   }
 }
@@ -114,6 +128,10 @@ a[href^="http://samuelbrynolf.se"]{
   @media all and (min-width: $beta_query) {
     margin-left: rem($beta_gutter*0.75);
   }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: rem($charlie_gutter*1.5);
+  }
 }
 
 .a-ul{
@@ -122,6 +140,10 @@ a[href^="http://samuelbrynolf.se"]{
 
   @media all and (min-width: $beta_query) {
     margin-left: rem($beta_gutter*0.62);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: rem($charlie_gutter*1.35);
   }
 }
 
@@ -132,6 +154,10 @@ a[href^="http://samuelbrynolf.se"]{
 
     @media all and (min-width: $beta_query) {
       padding: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding: rem($body_leading_charlie);
     }
   }
 
@@ -285,6 +311,11 @@ img.a-forcewidth{
     margin-top: rem($body_leading_beta*3);
     padding-right: rem($beta_gutter*0.75);
   }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*3);
+    padding-right: rem($charlie_gutter);
+  }
 }
 
 .a-archive__divider{
@@ -294,6 +325,10 @@ img.a-forcewidth{
 
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta*1.1);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*1.1);
   }
 }
 

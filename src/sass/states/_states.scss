@@ -51,6 +51,10 @@ main.tags-is-active{
   @media all and (min-width: $beta_query) {
     padding-top: rem($body_leading_beta*3);
   }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($body_leading_charlie*3);
+  }
 }
 
 // IS-PASSIVE
@@ -101,6 +105,10 @@ a.current-menu-item{
 
   @media all and (min-width: $beta_query) {
     transform: translate3d(0,rem(-$body_leading_beta*2),0);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    transform: translate3d(0,rem(-$body_leading_charlie*2),0);
   }
 
   a{

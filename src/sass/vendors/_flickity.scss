@@ -79,6 +79,10 @@ http://flickity.metafizzy.co
   @media all and (min-width: $beta_query) {
     margin-bottom: rem($body_leading_beta*4);
   }
+
+  @media all and (min-width: $charlie_query) {
+    margin-bottom: rem($body_leading_charlie*4);
+  }
 }
 
 .gallery-cell.m-prf {
@@ -94,6 +98,12 @@ http://flickity.metafizzy.co
   @media all and (min-width: $beta_query) {
     width: $flickety-cell-width_beta +0%;
     padding-bottom: $ratio-4-3 * ($flickety-cell-width_beta/100);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    width: $flickety-cell-width_charlie +0%;
+    margin-right: 3%;
+    padding-bottom: $ratio-4-3 * ($flickety-cell-width_charlie/100);
   }
 
   .a-prf-text{

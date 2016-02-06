@@ -74,6 +74,11 @@ p{
     margin-top: rem($body_leading_beta);
     margin-bottom: rem($body_leading_beta);
   }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
+  }
 }
 
 img,

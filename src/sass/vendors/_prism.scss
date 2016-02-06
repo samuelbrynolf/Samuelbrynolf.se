@@ -38,6 +38,12 @@ pre[class*="language-"] {
     margin-top: rem($body_leading_beta);
     margin-bottom: rem($body_leading_beta);
   }
+
+  @media all and (min-width: $charlie_query) {
+    padding: rem($body_leading_charlie/2) rem($charlie_gutter/2);
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
+  }
 }
 
 :not(pre) > code[class*="language-"],

@@ -13,6 +13,16 @@
   }
 }
 
+.startpage .m-flickity{
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($body_leading_charlie*2);
+    margin-top: rem($body_leading_charlie*3);
+    background-color: $subtle-bgcolor;
+    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
+  }
+}
+
 
 // ARCHIVE =============================================================================================================
 
@@ -69,9 +79,11 @@
 .single main{
 
   @media all and (min-width: $beta_query) {
-    @media all and (min-width: $beta_query) {
-      padding-top: rem($header-slide__offset*1.35);
-    }
+    padding-top: rem($header-slide__offset*1.35);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($header-slide__offset);
   }
 }
 

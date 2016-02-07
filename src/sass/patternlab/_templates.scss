@@ -61,22 +61,13 @@
 
 .search-no-results .a-archive__divider,
 .error404 .a-archive__divider{
-  display: none;
+  background-color: transparent;
 }
+
 
 
 // MIXED =============================================================================================================
 
-.single main{
-
-  //@media all and (min-width: $beta_query) {
-  //  padding-top: rem($header-slide__offset*1.25);
-  //}
-  //
-  //@media all and (min-width: $charlie_query) {
-  //  padding-top: rem($header-slide__offset);
-  //}
-}
 
 // 404 =============================================================================================================
 

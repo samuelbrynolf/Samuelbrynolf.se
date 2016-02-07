@@ -28,15 +28,18 @@ strong,
 
 .a-xlarge{
   font-size: rem(42);
-  line-height: rem(48);
+  line-height: (54/42);
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(48);
+  }
 }
 
 .a-large{
   font-size: rem(33);
-  line-height: rem(39);
+  line-height: (39/33);
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading*2);
-  // text-align: center;
 
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta*3);
@@ -45,7 +48,6 @@ strong,
 
   @media all and (min-width: $charlie_query) {
     font-size: rem(36);
-    line-height: rem(48);
     margin-top: rem($body_leading_charlie*3);
     margin-bottom: rem($body_leading_charlie*2);
   }
@@ -57,11 +59,10 @@ strong,
 
 .a-medium{
   font-size: rem(24);
-  line-height: rem(30);
+  line-height: (30/24);
 
   @media all and (min-width: $charlie_query) {
     font-size: rem(27);
-    line-height: rem(36);
   }
 }
 
@@ -72,16 +73,14 @@ strong,
 
 .a-preamble{
   font-size: rem(21);
-  line-height: rem(33);
+  line-height: (30/21);
 
   @media all and (min-width: $beta_query) {
     font-size: rem(24);
-    line-height: rem(36);
   }
 
   @media all and (min-width: $charlie_query) {
     font-size: rem(27);
-    line-height: rem(36);
   }
 }
 
@@ -142,11 +141,11 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: decimal;
 
   @media all and (min-width: $beta_query) {
-    margin-left: rem($beta_gutter*0.75);
+    margin-left: rem($beta_gutter*0.7);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-left: rem($charlie_gutter*1.5);
+    margin-left: 0;
   }
 }
 
@@ -155,11 +154,11 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: disc;
 
   @media all and (min-width: $beta_query) {
-    margin-left: rem($beta_gutter*0.62);
+    margin-left: rem($beta_gutter*0.58);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-left: rem($charlie_gutter*1.35);
+    margin-left: 0;
   }
 }
 

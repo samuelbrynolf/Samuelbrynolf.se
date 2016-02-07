@@ -138,7 +138,11 @@
   margin: 0;
 
   @media all and (min-width: $beta_query) {
-    width: 81%;
+    width: 88%;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    width: 84%;
   }
 }
 
@@ -333,7 +337,7 @@
 .m-prevnextposts {
   @extend %inset-section;
 
-  .a-medium{
+  > .a-medium{
     text-align: center;
     margin-bottom: rem($body_leading*2);
     opacity: 0.75;
@@ -441,28 +445,49 @@
 // BLOGTAG ---------------------------------------------------------------------
 
 .m-blogtag {
+  position: relative;
 
   .avatar {
 
     @media all and (min-width: $beta_query) {
-      float: left;
-      margin: 0 rem($beta_gutter) $leading_beta*2 0;
+      margin: 0 0 4% 0;
     }
 
     @media all and (min-width: $charlie_query) {
-      margin: 0 rem($charlie_gutter) $leading_charlie*2 0;
+      margin-bottom: 3%;
     }
   }
 
-  .a-ccard__bio p {
+  .a-ccard__bio {
 
     @media all and (min-width: $beta_query) {
-      margin-top: 0;
+      position: absolute;
+      top: 50%;
+      right: rem($beta-gutter);
+      left: $avatar-size + rem($beta-gutter*1.5);
+      transform: translateY(-50%);
       text-align: left;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      right: rem($charlie-gutter*2);
+      left: $avatar-size + rem($charlie-gutter*3);
+    }
+
+    p {
+      font-size: rem(21);
+      margin-bottom: rem($body_leading*1.5);
+
+      @media all and (min-width: $beta_query) {
+        margin: 0;
+      }
+
+      @media all and (min-width: $charlie_query) {
+        font-size: rem(24);
+      }
     }
   }
 }
-
 
 
 

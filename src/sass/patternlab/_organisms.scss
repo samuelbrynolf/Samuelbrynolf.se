@@ -109,25 +109,26 @@
 .o-entry-content{
 
   @media all and (min-width: $beta_query) {
-    max-width: 95%;
+    max-width: calc(100% - 3rem);
   }
 
   @media all and (min-width: $charlie_query) {
-    max-width: rem($containerwidth*0.67);
+    max-width: rem($containerwidth - ($body_leading_charlie*12));
   }
 
   .a-preamble{
-    margin-top: $leading*1.5;
     margin-bottom: $leading*1.5;
 
     @media all and (min-width: $beta_query) {
-      margin-top: $leading_beta*1.5;
+      margin-right: -1.5rem;
       margin-bottom: $leading_beta*1.5;
+      margin-left: -1.5rem;
     }
 
     @media all and (min-width: $charlie_query) {
-      margin-top: $leading_charlie*1.5;
+      margin-right: rem(-$body_leading_charlie*1.5);
       margin-bottom: $leading_charlie*1.5;
+      margin-left: rem(-$body_leading_charlie*1.5);
     }
   }
 
@@ -196,8 +197,10 @@
 
     @media all and (min-width: $charlie_query) {
       font-size: rem(27);
-      line-height: rem(36);
-      padding-left: rem($charlie_gutter);
+      line-height: (30/21);
+      margin-right: rem(-$body_leading_charlie*1.5);
+      margin-left: rem(-$body_leading_charlie*1.5);
+      padding-left: rem($charlie_gutter*2);
     }
 
     p{

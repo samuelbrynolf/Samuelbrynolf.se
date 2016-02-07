@@ -33,7 +33,7 @@
 }
 
 .l-gutter{
-	max-width: rem($containerwidth);
+	max-width: $containerwidth;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: rem($alpha_gutter);

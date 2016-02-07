@@ -61,11 +61,11 @@ $body_leading: 26; // (Use as variable: "$leading")
 
 // -- 
 
-$fontsize_beta: 20;
+$fontsize_beta: 21;
 $body_leading_beta: 30;
 
 $fontsize_charlie: $fontsize;
-$body_leading_charlie: $body_leading + 1;
+$body_leading_charlie: $body_leading;
 
 $fontsize_delta: 1;
 $body_leading_delta: $body_leading;

@@ -11,20 +11,7 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    //padding-top: rem($body_leading_charlie*2);
-  }
-}
-
-.startpage .a-ccard__bio p{
-  font-size: rem(21);
-  margin-bottom: rem($body_leading*1.5);
-
-  @media all and (min-width: $beta_query) {
-    margin-bottom: rem($body_leading_beta*1.5);
-  }
-
-  @media all and (min-width: $charlie_query) {
-    margin-bottom: rem($body_leading_charlie*1.5);
+    padding-top: 3%;
   }
 }
 
@@ -82,9 +69,13 @@
 
 .single main{
 
-  @media all and (min-width: $beta_query) {
-    padding-top: rem($header-slide__offset*1.35);
-  }
+  //@media all and (min-width: $beta_query) {
+  //  padding-top: rem($header-slide__offset*1.25);
+  //}
+  //
+  //@media all and (min-width: $charlie_query) {
+  //  padding-top: rem($header-slide__offset);
+  //}
 }
 
 // 404 =============================================================================================================

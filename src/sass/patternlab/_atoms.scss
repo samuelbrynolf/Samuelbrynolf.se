@@ -165,14 +165,17 @@ a[href^="http://samuelbrynolf.se"]{
 .a-ul-large{
 
   li{
-    padding: rem($body_leading);
+    padding-top: rem($body_leading);
+    padding-bottom: rem($body_leading);
 
     @media all and (min-width: $beta_query) {
-      padding: rem($body_leading_beta);
+      padding-top: rem($body_leading_beta);
+      padding-bottom: rem($body_leading_beta);
     }
 
     @media all and (min-width: $charlie_query) {
-      padding: rem($body_leading_charlie);
+      padding-top: rem($body_leading_charlie);
+      padding-bottom: rem($body_leading_charlie);
     }
   }
 

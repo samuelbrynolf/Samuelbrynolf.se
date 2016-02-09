@@ -63,7 +63,11 @@ body{
 }
 
 main{
-  padding-top: rem($header-slide__offset);
+  padding-top: rem($header-slide__offset*0.83);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($header-slide__offset);
+  }
 }
 
 p{
@@ -73,6 +77,11 @@ p{
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta);
     margin-bottom: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
   }
 }
 

@@ -1,4 +1,4 @@
-<header class="l-gutter l-clearfix m-archive__header">
+
     <?php if(is_search()){ ?>
         <h1>S&ouml;kresultat f&ouml;r <?php echo '<strong>'; the_search_query();echo '</strong>'; ?> &mdash; <?php echo $wp_query->found_posts ?> st.</h1>
         <?php if(!have_posts()){
@@ -20,12 +20,12 @@
     } ?>
 
     <div class="a-archive__divider"></div>
-</header>
+
 
 <?php // NO POSTS OF EMPTY SEARCH ------------------------------------------
 
 if (!have_posts() || is_404()) {
     echo '<section class="o-no-content">';
-    listTags();
+        listTags();
     echo '</section>';
 }

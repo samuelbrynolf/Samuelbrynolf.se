@@ -14,38 +14,14 @@
     height: rem($header-slide_height*1.05);
     padding-top: rem($body_leading_beta);
   }
-}
 
-.o-global__header{
-
-  .m-global__nav{
-    width: 60%;
-    line-height: rem(42);
-    text-align: right;
-    padding-bottom: 1px;
-    border-bottom: 1px solid $subtle-bordercolor;
-
-    li{
-      display: inline-block;
-    }
-
-    li + li{
-      padding-left: rem($body_leading/3);
-
-      @media all and (min-width: $beta_query) {
-        padding-left: rem($body_leading_beta/2);
-      }
-    }
-
-    a{
-     font-size: rem(16);
-
-      @media all and (min-width: $beta_query) {
-        font-size: rem(14);
-      }
-    }
+  @media all and (min-width: $charlie_query) {
+    height: rem($header-slide_height);
+    padding-top: rem($body_leading_charlie);
   }
 }
+
+
 
 // GLOBAL FOOTER ---------------------------------------------------------------------
 
@@ -58,6 +34,11 @@
     padding-top: rem($body_leading_beta*2.75);
     padding-bottom: rem($body_leading_beta*3);
   }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($body_leading_charlie*2.75);
+    padding-bottom: rem($body_leading_charlie*3);
+  }
 }
 
 
@@ -66,189 +47,249 @@
 // TAGLIST ---------------------------------------------------------------------
 
 
-.o-taglist .a-ul-large{
-  padding-top: rem($header-slide__offset);
-  padding-bottom: rem($body_leading*2);
+.o-taglist {
   background-color: $action-color;
 
-  @media all and (min-width: $beta_query) {
-    padding-bottom: rem($body_leading_beta*2);
-  }
+  .a-ul-large{
+    @extend .l-gutter;
+    padding-top: rem($header-slide__offset);
+    padding-bottom: rem($body_leading*2);
 
-  .a-xlarge{
-    margin-bottom: rem($body_leading);
 
     @media all and (min-width: $beta_query) {
-      margin-bottom: rem($body_leading_beta);
-    }
-  }
-
-  a{
-    color: $body-bgcolor;
-  }
-
-  li + li{
-    border-color: rgba($body-textcolor, 0.4);
-  }
-}
-
-
-// ENTRIES---------------------------------------------------------------------
-
-.o-entry__header{
-  text-align: center;
-
-  .a-entry-meta{
-    margin-bottom: rem($body_leading*1.25);
-    color: $body-textcolor;
-
-    @media all and (min-width: $beta_query) {
-      margin-bottom: rem($body_leading_beta*1.25);
-    }
-  }
-
-  .a-preamble{
-    margin: rem($body_leading*1.55) 0 rem($body_leading*1.25) 0;
-
-    @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta*1.55);
-      margin-bottom: rem($body_leading_beta*1.25);
+      padding-bottom: rem($body_leading_beta*2);
     }
 
-    &:before{
-      @extend %divider;
-    }
-  }
-}
-
-.o-entry-content{
-
-  @media all and (min-width: $beta_query) {
-    max-width: 95%;
-  }
-
-  h2{
-    @extend .a-large;
-  }
-
-  h3{
-    @extend .a-medium;
-    margin-top: 2rem;
-    margin-bottom: rem($body_leading);
-
-    @media all and (min-width: $beta_query) {
-      margin-bottom: rem($body_leading_beta);
-    }
-  }
-
-  h4{
-    @extend .a-small;
-    margin-top: rem($body_leading);
-
-    @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta);
+    @media all and (min-width: $charlie_query) {
+      padding-bottom: rem($body_leading_charlie*2);
     }
 
-    & + p,
-    & + ol,
-    & + ul,
-    & + blockquote{
-      margin-top: rem($body_leading/4);
+    .a-xlarge{
+      margin-bottom: rem($body_leading);
 
       @media all and (min-width: $beta_query) {
-        margin-top: rem($body_leading_beta/4);
+        margin-bottom: rem($body_leading_beta);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-bottom: rem($body_leading_charlie);
+      }
+    }
+
+    a{
+      color: $body-bgcolor;
+    }
+
+    li + li{
+      border-color: rgba($body-textcolor, 0.4);
+    }
+  }
+}
+
+
+
+  // LISTITEMS ---------------------------------------------------------------------
+
+
+
+  // ENTRIES---------------------------------------------------------------------
+
+  .o-entry__header{
+    text-align: center;
+
+    .a-entry-meta{
+      margin-bottom: rem($body_leading*1.25);
+      color: $body-textcolor;
+
+      @media all and (min-width: $beta_query) {
+        margin-bottom: rem($body_leading_beta*1.25);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-bottom: rem($body_leading_charlie*1.25);
       }
     }
   }
 
-  ol{
-    @extend .a-ol;
-  }
-
-  ul{
-    @extend .a-ul;
-  }
-
-  blockquote{
-    padding-left: rem($alpha_gutter);
-    border-left: $borderwidth solid;
+  .o-entry-content{
 
     @media all and (min-width: $beta_query) {
-      padding-left: rem($beta_gutter/2);
+      max-width: calc(100% - 3rem);
     }
 
-    p{
-      font-style: inherit;
+    @media all and (min-width: $charlie_query) {
+      max-width: rem($containerwidth - ($body_leading_charlie*12));
     }
 
-    p + p{
-      @extend .a-fineprint;
+    .a-preamble{
+      margin-bottom: $leading*1.5;
+
+      @media all and (min-width: $beta_query) {
+        margin-right: -1.5rem;
+        margin-bottom: $leading_beta*1.5;
+        margin-left: -1.5rem;
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-right: rem(-$body_leading_charlie*1.5);
+        margin-bottom: $leading_charlie*1.5;
+        margin-left: rem(-$body_leading_charlie*1.5);
+      }
+    }
+
+    blockquote{
+      padding-left: rem($alpha_gutter);
+      border-left: $borderwidth solid;
+
+      @media all and (min-width: $beta_query) {
+        padding-left: rem($beta_gutter/2);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        font-size: rem(27);
+        line-height: (30/21);
+        margin-right: rem(-$body_leading_charlie*1.5);
+        margin-left: rem(-$body_leading_charlie*1.5);
+        padding-left: rem($charlie_gutter*2);
+      }
+
+      p{
+        font-style: inherit;
+      }
+
+      p + p{
+        @extend .a-fineprint;
+      }
+    }
+
+    h2{
+      @extend .a-large;
+    }
+
+    h3{
+      @extend .a-medium;
+      margin-top: 2rem;
+      margin-bottom: rem($body_leading);
+
+      @media all and (min-width: $beta_query) {
+        margin-bottom: rem($body_leading_beta);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-top: 3rem;
+        margin-bottom: rem($body_leading_charlie);
+      }
+    }
+
+    h4{
+      @extend .a-small;
+      margin-top: rem($body_leading);
+
+      @media all and (min-width: $beta_query) {
+        margin-top: rem($body_leading_beta);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-top: rem($body_leading_charlie);
+      }
+
+      & + p,
+      & + ol,
+      & + ul,
+      & + blockquote{
+        margin-top: rem($body_leading/4);
+
+        @media all and (min-width: $beta_query) {
+          margin-top: rem($body_leading_beta/4);
+        }
+
+        @media all and (min-width: $charlie_query) {
+          margin-top: rem($body_leading_charlie/4);
+        }
+      }
+    }
+
+    ol{
+      @extend .a-ol;
+    }
+
+    ul{
+      @extend .a-ul;
+    }
+
+    // All images margin ----------------------------------------------------------
+
+    .mis_container{
+      margin-top: rem($body_leading);
+      margin-bottom: rem($body_leading);
+
+      @media all and (min-width: $beta_query) {
+        margin-top: rem($body_leading_beta);
+        margin-bottom: rem($body_leading_beta);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-top: rem($body_leading_charlie);
+        margin-bottom: rem($body_leading_charlie);
+      }
+    }
+
+    // All floated Images ----------------------------------------------------------
+
+    .mis_container.left,
+    .mis_container.right{
+      width: 46%;
+    }
+
+    .mis_container.left{
+      float: left;
+      margin-right: 4%;
+    }
+
+    .mis_container.right{
+      float: right;
+      margin-left: 4%;
+    }
+
+    // Floated Prf-images needs padding/2
+
+    .m-prf.left,
+    .m-prf.right{
+      padding-bottom: $ratio-4-3/2;
+    }
+
+    .mis_container.none{
+      clear: both;
+    }
+
+    // Adjust figcaption textalign
+
+    .mis_figure.left .mis_figcaption {
+      text-align: left;
+    }
+
+    // Tweet btn ----------------------------------------------------------
+
+    .twitter-share-button{
+      float: right;
+      margin-bottom: rem($body_leading);
+      margin-left: rem($alpha_gutter);
+
+      @media all and (min-width: $beta_query) {
+        margin-bottom: rem($body_leading_beta);
+        margin-left: rem($beta_gutter);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-bottom: rem($body_leading_charlie);
+        margin-left: rem($charlie_gutter);
+      }
     }
   }
 
-  // All images margin ----------------------------------------------------------
-
-  .mis_container{
-    margin-top: rem($body_leading);
-    margin-bottom: rem($body_leading);
-
-    @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta);
-      margin-bottom: rem($body_leading_beta);
-    }
-  }
-
-  // All floated Images ----------------------------------------------------------
-
-  .mis_container.left,
-  .mis_container.right{
-    width: 46%;
-  }
-
-  .mis_container.left{
-    float: left;
-    margin-right: 4%;
-  }
-
-  .mis_container.right{
-    float: right;
-    margin-left: 4%;
-  }
-
-  // Floated Prf-images needs padding/2
-
-  .m-prf.left,
-  .m-prf.right{
-    padding-bottom: $ratio-4-3/2;
-  }
-
-  .mis_container.none{
-    clear: both;
-  }
-
-  // Adjust figcaption textalign
-
-  .mis_figure.left .mis_figcaption {
-    text-align: left;
-  }
-
-  // Tweet btn ----------------------------------------------------------
-
-  .twitter-share-button{
-    float: right;
-    margin-bottom: rem($body_leading);
-    margin-left: rem($alpha_gutter);
-
-    @media all and (min-width: $beta_query) {
-      margin-bottom: rem($body_leading_beta);
-      margin-left: rem($beta_gutter);
-    }
-  }
-}
 
 
-
-// NO-CONTENT ---------------------------------------------------------------------
+  // NO-CONTENT ---------------------------------------------------------------------
 
 .o-no-content{
 
@@ -266,6 +307,10 @@
 
     @media all and (min-width: $beta_query) {
       margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
     }
   }
 }

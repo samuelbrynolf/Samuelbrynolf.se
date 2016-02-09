@@ -28,19 +28,28 @@ strong,
 
 .a-xlarge{
   font-size: rem(42);
-  line-height: rem(48);
+  line-height: (54/42);
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(48);
+  }
 }
 
 .a-large{
   font-size: rem(33);
-  line-height: rem(39);
+  line-height: (39/33);
   margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading*2);
-  // text-align: center;
 
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta*3);
     margin-bottom: rem($body_leading_beta*2);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(36);
+    margin-top: rem($body_leading_charlie*3);
+    margin-bottom: rem($body_leading_charlie*2);
   }
 
   &:before {
@@ -50,7 +59,11 @@ strong,
 
 .a-medium{
   font-size: rem(24);
-  line-height: rem(30);
+  line-height: (30/24);
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(27);
+  }
 }
 
 .a-small{
@@ -60,8 +73,15 @@ strong,
 
 .a-preamble{
   font-size: rem(21);
-  line-height: rem(33);
-  color: $subtle-textcolor;
+  line-height: (30/21);
+
+  @media all and (min-width: $beta_query) {
+    font-size: rem(24);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(27);
+  }
 }
 
 .a-fineprint{
@@ -98,11 +118,20 @@ a[href^="http://samuelbrynolf.se"]{
     margin-bottom: rem($body_leading_beta);
   }
 
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
   li + li{
     margin-top: rem($body_leading/2);
 
     @media all and (min-width: $beta_query) {
       margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
     }
   }
 }
@@ -112,7 +141,11 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: decimal;
 
   @media all and (min-width: $beta_query) {
-    margin-left: rem($beta_gutter*0.75);
+    margin-left: rem($beta_gutter*0.7);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: 0;
   }
 }
 
@@ -121,17 +154,28 @@ a[href^="http://samuelbrynolf.se"]{
   list-style: disc;
 
   @media all and (min-width: $beta_query) {
-    margin-left: rem($beta_gutter*0.62);
+    margin-left: rem($beta_gutter*0.58);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: 0;
   }
 }
 
 .a-ul-large{
 
   li{
-    padding: rem($body_leading);
+    padding-top: rem($body_leading);
+    padding-bottom: rem($body_leading);
 
     @media all and (min-width: $beta_query) {
-      padding: rem($body_leading_beta);
+      padding-top: rem($body_leading_beta);
+      padding-bottom: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-top: rem($body_leading_charlie);
+      padding-bottom: rem($body_leading_charlie);
     }
   }
 
@@ -195,6 +239,10 @@ img.a-forcewidth{
     right: 0;
   }
 
+  &.link:before{
+    content: '\e9cb';
+  }
+
   &.twitter:before{
     content: '\ea91';
   }
@@ -250,8 +298,6 @@ img.a-forcewidth{
 
 // BUTTONS + EVENT-ELEMENTS ==============================================================================================================
 
-// IN THE LAND OF THE MORNING STAR
-
 .a-btn,
 .bap_loadbutton{
   display: block;
@@ -285,6 +331,17 @@ img.a-forcewidth{
     margin-top: rem($body_leading_beta*3);
     padding-right: rem($beta_gutter*0.75);
   }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*3);
+    padding-right: rem($charlie_gutter);
+    text-align: center;
+  }
+
+  &:after{
+    position: static;
+    margin-top: 0.5rem;
+  }
 }
 
 .a-archive__divider{
@@ -294,6 +351,10 @@ img.a-forcewidth{
 
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta*1.1);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*1.1);
   }
 }
 
@@ -309,4 +370,9 @@ img.a-forcewidth{
     content: ' \e9cb';
     line-height: inherit;
   }
+}
+
+.a-shortlink{
+  padding: rem(9) rem(12);
+  background-color: $subtle-bgcolor;
 }

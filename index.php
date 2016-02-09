@@ -2,16 +2,25 @@
 
 <main id="js-main">
 
-    <?php if (is_home() && !is_paged()) { ?>
+    <?php if (is_home() && !is_paged()) {
 
-        <section class="l-gutter">
-            <?php get_template_part('partials/global-components/ccard_avatar'); ?>
-        </section>
+        echo '<section class="l-gutter m-blogtag">';
+            get_template_part('partials/global-components/ccard_avatar');
+        echo '</section>';
 
-        <?php get_template_part('partials/startpage/start-featured');
+        get_template_part('partials/startpage/start-featured');
+
+        echo '<div class="l-gutter l-clearfix m-archive__header">';
+            get_template_part('partials/global-components/archive-header');
+        echo '</div>';
+
+    } else {
+        echo '<header class="l-gutter l-clearfix m-archive__header">';
+            get_template_part('partials/global-components/archive-header');
+        echo '</header>';
     }
 
-    get_template_part('partials/global-components/archive-header');
+
 
     if ( have_posts() ) {
         get_template_part('partials/listitems/loop-listitems');

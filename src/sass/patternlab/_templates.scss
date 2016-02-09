@@ -1,11 +1,17 @@
 // STARTPAGE =============================================================================================================
 
-.startpage .a-ccard__bio p{
-  font-size: rem(21);
-  margin-bottom: rem($body_leading*1.5);
+
+
+.startpage .m-flickity{
 
   @media all and (min-width: $beta_query) {
-    margin-bottom: rem($body_leading_beta*1.5);
+    padding-top: 4%;
+    background-color: $subtle-bgcolor;
+    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: 3%;
   }
 }
 
@@ -24,15 +30,28 @@
   @media all and (min-width: $beta_query) {
     padding-bottom: rem($body_leading_beta*1.25);
   }
+
+  @media all and (min-width: $charlie_query) {
+    padding-bottom: rem($body_leading_charlie*1.25);
+  }
 }
 
 .single .o-comments{
-  margin-top: rem($body_leading*3);
+  margin-top: rem($body_leading*2);
   margin-bottom: rem($body_leading);
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta*3);
+    margin-top: rem($body_leading_beta*2);
     margin-bottom: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*2);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
+  .a-large{
+      margin-top: 0;
   }
 }
 
@@ -46,21 +65,13 @@
 
 .search-no-results .a-archive__divider,
 .error404 .a-archive__divider{
-  display: none;
+  background-color: transparent;
 }
+
 
 
 // MIXED =============================================================================================================
 
-.startpage main,
-.single main{
-
-  @media all and (min-width: $beta_query) {
-    @media all and (min-width: $beta_query) {
-      padding-top: rem($header-slide__offset*1.35);
-    }
-  }
-}
 
 // 404 =============================================================================================================
 

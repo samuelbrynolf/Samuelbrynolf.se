@@ -59,7 +59,7 @@
 <body <?php body_class(); ?>>
 
     <header id="js-masthead" class="o-global__header">
-        <?php echo (is_front_page() ? '<h1 class="a-sitename a-icon">' : '<h2 class="a-sitename a-icon">');
+        <?php echo (is_front_page() ? '<h1 class="a-sitename">' : '<h2 class="a-sitename">');
         echo bloginfo('name');
         echo (is_front_page() ? '</h1>' : '</h2>'); ?>
 

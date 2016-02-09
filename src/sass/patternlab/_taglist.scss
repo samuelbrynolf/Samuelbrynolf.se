@@ -1,0 +1,85 @@
+
+// ORGANISMS ------------------------------------------------------------------
+
+.o-taglist {
+  background-color: $action-color;
+
+  .a-ul-large{
+    @extend .l-gutter;
+    padding-top: rem($header-slide__offset);
+    padding-bottom: rem($body_leading*2);
+
+
+    @media all and (min-width: $beta_query) {
+      padding-bottom: rem($body_leading_beta*2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-bottom: rem($body_leading_charlie*2);
+    }
+
+    .a-xlarge{
+      margin-bottom: rem($body_leading);
+
+      @media all and (min-width: $beta_query) {
+        margin-bottom: rem($body_leading_beta);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-bottom: rem($body_leading_charlie);
+      }
+    }
+
+    a{
+      color: $body-bgcolor;
+    }
+
+    li + li{
+      border-color: rgba($body-textcolor, 0.4);
+    }
+  }
+}
+
+.o-no-content{
+
+  .m-listhead{
+    display: none;
+  }
+
+  .a-ul-large li:last-of-type{
+    padding-bottom: 0;
+  }
+}
+
+
+
+// STATES ------------------------------------------------------------------
+
+.o-taglist.s-is-hidden{
+  position: relative;
+  transform: translate3d(0,rem(-$body_leading*2),0);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+
+  @media all and (min-width: $beta_query) {
+    transform: translate3d(0,rem(-$body_leading_beta*2),0);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    transform: translate3d(0,rem(-$body_leading_charlie*2),0);
+  }
+
+  a{
+    pointer-events: none;
+  }
+}
+
+
+
+// ANIMATIONS ------------------------------------------------------------------
+
+.o-taglist{
+  transition: opacity $transition-time ease-out, transform $transition-time ease-out;
+}

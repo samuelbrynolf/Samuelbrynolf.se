@@ -1,6 +1,6 @@
 
 
-// FontIcons ---------------------------------------------------------------------------------------------------
+// FONTFACE---------------------------------------------------------------------------------------------------
 
 @font-face {
   font-family: $icon-font;
@@ -27,6 +27,88 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+// ATOMS ---------------------------------------------------------------------------------------------------
+
+.a-icon {
+  position: relative;
+  display: block;
+
+  &:before,
+  &:after{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $icon-font;
+    font-size: inherit;
+    line-height: inherit;
+    pointer-events: none;
+  }
+
+  &:after{
+    left: auto;
+    right: 0;
+  }
+
+  &.link:before{
+    content: '\e9cb';
+  }
+
+  &.twitter:before{
+    content: '\ea91';
+  }
+
+  &.github:before{
+    content: '\eab2';
+  }
+
+  &.linkedin:before{
+    content: '\eac9';
+  }
+
+  &.aventyret:before{
+    content: '\e916';
+  }
+
+  &.email:before{
+    content: '\e908';
+  }
+
+  &.phone:before{
+    content: '\e942';
+  }
+
+  &.arrowtop:after{
+    content: '\ea3a';
+  }
+
+  &.arrowright:after{
+    content: '\ea3c';
+  }
+
+  &.arrowleft:before{
+    content: '\ea40';
+  }
+
+  &.arrowdown:after{
+    content: '\ea3e';
+  }
+
+  &.search:before{
+    content: '\e986';
+  }
+
+  &.close:after{
+    content: '\ea0f';
+  }
+}
+
+
+
+// CLASSES -----------------------------------------------------------
 
 .icon-home:before {
   content: "\e900";

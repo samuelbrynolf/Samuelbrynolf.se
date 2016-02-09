@@ -1,0 +1,38 @@
+
+// TEMPLATES --------------------------------------------------------------------------
+
+.startpage .m-blogtag { // Startpage
+  position: relative;
+
+  .avatar {
+
+    @media all and (min-width: $beta_query) {
+      margin: 0 0 4% 0;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: 3%;
+    }
+  }
+}
+
+
+
+// STATES --------------------------------------------------------------------------
+
+main.tags-is-active{
+  padding-top: rem($body_leading*3);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($body_leading_beta*3);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($body_leading_charlie*3);
+  }
+}
+
+.current-menu-item a,
+a.current-menu-item{
+  color: $subtle-textcolor;
+}

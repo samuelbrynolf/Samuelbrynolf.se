@@ -1,0 +1,82 @@
+
+// ANIMATIONS ---------------------------------------------------------------
+
+.a-btn,
+.bap_loadbutton{
+  display: block;
+  width: auto;
+  height: rem($inputheight);
+  padding-right: rem($alpha_gutter/$btnfontsize);
+  padding-left:  rem($alpha_gutter/$btnfontsize);
+  font-family: $bodyfont;
+  font-size: rem($btnfontsize);
+  line-height: rem($inputheight);
+  text-align: center;
+  text-decoration: none;
+  color: $action-color;
+  border: 1px solid $action-color;
+  background-color: $body-bgcolor;
+
+  @media all and (min-width: $beta_query) {
+    padding-right: rem($body_leading/$btnfontsize);
+    padding-left: rem($body_leading/$btnfontsize);
+  }
+}
+
+.a-topjump{
+  @extend .a-fineprint;
+  margin-top: rem($body_leading*3);
+  padding-right: rem($alpha_gutter);
+  text-align: right;
+  color: $action-color;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    padding-right: rem($beta_gutter*0.75);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*3);
+    padding-right: rem($charlie_gutter);
+    text-align: center;
+  }
+
+  &:after{
+    position: static;
+    margin-top: 0.5rem;
+  }
+}
+
+.js-jumper[href="#js-entry-content"] {
+  display: block;
+}
+
+
+
+// STATES ---------------------------------------------------------------
+
+.a-btn:hover{
+  cursor: pointer;
+}
+
+.a-btn:focus {}
+
+.a-btn.s-is-passive{
+  color: $subtle-textcolor;
+  border-color: $subtle-bordercolor;
+  opacity: 0.5;
+}
+
+
+.bap_loadbutton.s-is-loading{
+  color: $body-textcolor;
+  border-color: $subtle-bordercolor;
+}
+
+
+
+// ANIMATIONS ---------------------------------------------------------------
+
+.bap_loadbutton{
+  transition: color $transition-time ease-out, border-color $transition-time ease-out;
+}

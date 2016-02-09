@@ -71,7 +71,9 @@ http://flickity.metafizzy.co
   background-color: $action-color;
 }
 
-// Custom
+
+
+// MODULES --------------------------------------------------------
 
 .m-flickity{
   margin-bottom: rem($body_leading*4);
@@ -85,29 +87,19 @@ http://flickity.metafizzy.co
   }
 }
 
-.gallery-cell.m-prf {
-  display: block;
-  width: $flickety-cell-width_alpha +0%;
-  margin-right: 4%;
-  padding-bottom: $ratio-4-3 * ($flickety-cell-width_alpha/100);
 
-  @media all and (orientation: landscape) {
-    padding-bottom: $ratio-16-9 * ($flickety-cell-width_alpha/100);
-  }
+
+// TEMPLATES --------------------------------------------------------
+
+.startpage .m-flickity{
 
   @media all and (min-width: $beta_query) {
-    width: $flickety-cell-width_beta +0%;
-    padding-bottom: $ratio-4-3 * ($flickety-cell-width_beta/100);
+    padding-top: 4%;
+    background-color: $subtle-bgcolor;
+    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
   }
 
   @media all and (min-width: $charlie_query) {
-    width: $flickety-cell-width_charlie +0%;
-    margin-right: 3%;
-    padding-bottom: $ratio-4-3 * ($flickety-cell-width_charlie/100);
-  }
-
-  .a-prf-text{
-    color: $body-bgcolor;
-    opacity: 1;
+    padding-top: 3%;
   }
 }

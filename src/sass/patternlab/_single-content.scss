@@ -1,0 +1,185 @@
+
+// ATOMS ------------------------------------------------------------------
+
+.a-external__a {
+
+  a:after{
+    font-family: $icon-font;
+    font-size: rem(12);
+    content: ' \e9cb';
+    line-height: inherit;
+  }
+}
+
+
+
+// ORGANISMS ------------------------------------------------------------------
+
+.o-entry-content{
+  position: relative;
+
+  @media all and (min-width: $beta_query) {
+    max-width: calc(100% - 3rem);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    max-width: rem($containerwidth - ($body_leading_charlie*12));
+  }
+
+  blockquote{
+    padding-left: rem($alpha_gutter);
+    border-left: $borderwidth solid;
+
+    @media all and (min-width: $beta_query) {
+      padding-left: rem($beta_gutter/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      font-size: rem(27);
+      line-height: (30/21);
+      margin-right: rem(-$body_leading_charlie*1.5);
+      margin-left: rem(-$body_leading_charlie*1.5);
+      padding-left: rem($charlie_gutter*2);
+    }
+
+    p{
+      font-style: inherit;
+    }
+
+    p + p{
+      @extend .a-fineprint;
+    }
+  }
+
+  h2{
+    @extend .a-large;
+  }
+
+  h3{
+    @extend .a-medium;
+    margin-top: 2rem;
+    margin-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: 3rem;
+      margin-bottom: rem($body_leading_charlie);
+    }
+  }
+
+  h4{
+    @extend .a-small;
+    margin-top: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie);
+    }
+
+    & + p,
+    & + ol,
+    & + ul,
+    & + blockquote{
+      margin-top: rem($body_leading/4);
+
+      @media all and (min-width: $beta_query) {
+        margin-top: rem($body_leading_beta/4);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-top: rem($body_leading_charlie/4);
+      }
+    }
+  }
+
+  ol{
+    @extend .a-ol;
+  }
+
+  ul{
+    @extend .a-ul;
+  }
+
+  // All images margin ----------------------------------------------------------
+
+  .mis_container{
+    margin-top: rem($body_leading);
+    margin-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta);
+      margin-bottom: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie);
+      margin-bottom: rem($body_leading_charlie);
+    }
+  }
+
+  // All floated Images ----------------------------------------------------------
+
+  .mis_container.left,
+  .mis_container.right{
+    width: 46%;
+  }
+
+  .mis_container.left{
+    float: left;
+    margin-right: 4%;
+  }
+
+  .mis_container.right{
+    float: right;
+    margin-left: 4%;
+  }
+
+  // Floated Prf-images needs padding/2
+
+  .m-prf.left,
+  .m-prf.right{
+    padding-bottom: $ratio-4-3/2;
+  }
+
+  .mis_container.none{
+    clear: both;
+  }
+
+  // Adjust figcaption textalign
+
+  .mis_figure.left .mis_figcaption {
+    text-align: left;
+  }
+
+  // Tweet btn ----------------------------------------------------------
+
+  .twitter-share-button{
+    float: right;
+    margin-bottom: rem($body_leading);
+    margin-left: rem($alpha_gutter);
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta);
+      margin-left: rem($beta_gutter);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: rem($body_leading_charlie);
+      margin-left: rem($charlie_gutter);
+    }
+  }
+}
+
+
+
+// TEMPLATES --------------------------------------------------------
+
+.single .o-entry-content h2{
+  text-align: center;
+}

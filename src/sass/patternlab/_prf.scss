@@ -1,0 +1,131 @@
+
+
+// ATOMS ---------------------------------------------------------------------
+
+.a-prf-text{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  a,
+  span,
+  strong{
+    font-weight: inherit;
+  }
+}
+
+
+
+// MOLECULES ---------------------------------------------------------------------
+
+.m-prf {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: $ratio-4-3;
+  overflow: hidden;
+  background-color: transparent;
+
+  @media all and (orientation: landscape)  {
+    padding-bottom: $ratio-16-9;
+  }
+
+  @media all and (min-width: $beta_query) {
+    padding-bottom: $ratio-16-9;
+  }
+
+  &.ratio-1-1{
+    padding-bottom: $ratio-1-1;
+  }
+
+  &.ratio-4-3{
+    padding-bottom: $ratio-4-3;
+  }
+
+  &.ratio-16-9{
+    padding-bottom: $ratio-16-9;
+  }
+
+  &.overlay {
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      width: 100%;
+      background-color: rgba($action-color, 0.5);
+      pointer-events: none;
+    }
+  }
+
+  .mis_img{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 50;
+    transform: translateY(-50%);
+    width:100%;
+  }
+
+  &.avatar{
+    width: $avatar-size;
+    padding-bottom: $avatar-size;
+
+    .mis_img{
+      top: 0;
+      transform: none;
+      padding: rem(3);
+      border-radius: 50%;
+    }
+  }
+}
+
+.a-prf-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  width: 92%;
+  margin: 0;
+
+  @media all and (min-width: $beta_query) {
+    width: 88%;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    width: 84%;
+  }
+}
+
+// Slider -> _flickety.scss
+
+.gallery-cell.m-prf {
+  display: block;
+  width: $flickety-cell-width_alpha +0%;
+  margin-right: 4%;
+  padding-bottom: $ratio-4-3 * ($flickety-cell-width_alpha/100);
+
+  @media all and (orientation: landscape) {
+    padding-bottom: $ratio-16-9 * ($flickety-cell-width_alpha/100);
+  }
+
+  @media all and (min-width: $beta_query) {
+    width: $flickety-cell-width_beta +0%;
+    padding-bottom: $ratio-4-3 * ($flickety-cell-width_beta/100);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    width: $flickety-cell-width_charlie +0%;
+    margin-right: 3%;
+    padding-bottom: $ratio-4-3 * ($flickety-cell-width_charlie/100);
+  }
+
+  .a-prf-text{
+    color: $body-bgcolor;
+    opacity: 1;
+  }
+}

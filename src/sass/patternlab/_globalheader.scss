@@ -1,0 +1,170 @@
+
+// ATOMS ---------------------------------------------------------------------
+
+.a-sitename{
+  text-indent: -9999px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.a-archive__divider{
+  height: 1px;
+  margin-top: rem($body_leading*1.1);
+  background-color: $subtle-bordercolor;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*1.1);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*1.1);
+  }
+}
+
+
+
+// MOLECULES ---------------------------------------------------------------------
+
+.m-searchform{
+  width: 40%;
+  margin-top: rem(3);
+
+  &.a-icon:before{
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: rem(16);
+    color: $action-color;
+
+    @media all and (min-width: $beta_query) {
+      font-size: rem(12);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      font-size: rem(16);
+    }
+  }
+
+  .a-searchform__input{
+    width: 100%;
+    height: rem(41);
+    padding-top: rem(3);
+    padding-left: 1.25rem;
+    font-family: $bodyfont;
+    font-size: rem(16);
+    line-height: rem(41);
+    color: $subtle-textcolor;
+    border-bottom: 2px solid $action-color;
+  }
+}
+
+.m-global__nav{
+  width: 60%;
+  line-height: rem(42);
+  text-align: right;
+  padding-bottom: 1px;
+  border-bottom: 1px solid $subtle-bordercolor;
+
+  li{
+    display: inline-block;
+  }
+
+  li + li{
+    padding-left: rem($body_leading/3);
+
+    @media all and (min-width: $beta_query) {
+      padding-left: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-left: rem($body_leading_charlie/2);
+    }
+  }
+
+  a{
+    font-size: rem(16);
+
+    @media all and (min-width: $beta_query) {
+      font-size: rem(14);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      font-size: rem(16);
+    }
+  }
+}
+
+.m-archive__header{
+  margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-bottom: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-bottom: rem($body_leading_charlie);
+  }
+
+  p{
+    margin-top: rem($body_leading/2);
+    margin-bottom: 0;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
+    }
+  }
+}
+
+// BY ID ---------------------------------------------------------------------
+
+#js-masthead {
+  height: rem($header-slide_height);
+  position: fixed;
+  top: 0;
+  padding-top: rem($body_leading);
+  z-index: $header-slide_z;
+  transform: translateY(0);
+  width: 100%;
+  background-color: rgba($body-bgcolor, 0.93);
+
+  @media all and (min-width: $beta_query) {
+    height: rem($header-slide_height*1.05);
+    padding-top: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    height: rem($header-slide_height);
+    padding-top: rem($body_leading_charlie);
+  }
+}
+
+
+
+// TEMPLATES ---------------------------------------------------------------------
+
+.search-no-results .a-archive__divider,
+.error404 .a-archive__divider{
+  background-color: transparent;
+}
+
+
+
+// STATES ---------------------------------------------------------------------
+
+#js-masthead {
+
+  &.s-is-up {
+    transform: translateY(rem(-$header-slide_height*1.2));
+  }
+}
+
+
+
+// ANIMATIONS ---------------------------------------------------------------------
+
+#js-masthead{
+  transition: transform $transition-time ease-in-out;
+}

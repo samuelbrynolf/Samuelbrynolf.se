@@ -1,0 +1,80 @@
+
+// FIGURE ---------------------------------------------------------------------
+
+.mis_figure{
+
+  .mis_figcaption{
+    @extend .a-fineprint;
+    text-align: right;
+  }
+
+  .mis_img + .mis_figcaption{
+    margin-top: rem($body_leading/3);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/3);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/3);
+    }
+  }
+}
+
+.no-js .mis_img.mis_omitSrc{
+  display: none; // Native srcset-support bugfix
+}
+
+// POPUP ---------------------------------------------------------------------
+
+.mis_popup{
+  cursor: pointer;
+}
+
+#mis_overlay,
+.mis_popup.mis_is-cloned{
+  visibility: hidden;
+  z-index: -500;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mis_overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($body-textcolor, 0.75);
+}
+
+// States
+
+.mis_popup.mis_is-cloned{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  max-width: $containerwidth;
+}
+
+#mis_overlay.s-is-visible,
+.mis_popup.mis_is-cloned.s-is-visible{
+  visibility: visible;
+  z-index: 500;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mis_popup.mis_is-cloned.s-is-visible{
+  z-index: 550;
+}
+
+// ANIMATIONS ---------------------------------------------------------------------
+
+#mis_overlay,
+.mis_popup.mis_is-cloned,
+.mis_img{
+  transition: opacity $transition-time ease-out;
+}

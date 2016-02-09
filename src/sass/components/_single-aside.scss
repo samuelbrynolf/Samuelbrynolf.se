@@ -63,6 +63,15 @@
 
   .a-tweetthis{
     float: right;
+    width: $spanwidth-3;
+
+    @media all and (min-width: $beta_query) {
+      width: $spanwidth-2;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      width: $spanwidth-1;
+    }
   }
 }
 

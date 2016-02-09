@@ -6,20 +6,20 @@
 @import "sass/skeleton/_base";
 @import "sass/skeleton/_layout";
 
-@import "sass/patternlab/_typography";
-@import "sass/patternlab/_prf";
-@import "sass/patternlab/_taglist";
-@import "sass/patternlab/_buttons-eventtriggers";
+@import "sass/components/_typography";
+@import "sass/components/_prf";
+@import "sass/components/_taglist";
+@import "sass/components/_buttons-eventtriggers";
 
-@import "sass/patternlab/_globalheader";
-@import "sass/patternlab/_globalfooter";
+@import "sass/components/_globalheader";
+@import "sass/components/_globalfooter";
 
-@import "sass/patternlab/_listitems";
+@import "sass/components/_listitems";
 
-@import "sass/patternlab/_single-header";
-@import "sass/patternlab/_single-content";
-@import "sass/patternlab/_single-footer";
-@import "sass/patternlab/_single-aside";
+@import "sass/components/_single-header";
+@import "sass/components/_single-content";
+@import "sass/components/_single-footer";
+@import "sass/components/_single-aside";
 
 @import "sass/vendors/_mis";
 @import "sass/vendors/_prism";

@@ -211,9 +211,6 @@
 
 // ==============================================================================================================
 
-	
-	$('html').addClass('transitions');
-    // $('.mis_img').not('.lazyload').css('opacity', '1');
     loadSocialData($('#js-instagram'), 'loadInstagram');
     bind_tappy($('.js-tappy'));
     show_contact();
@@ -311,21 +308,21 @@
 	// -------------------------------------------------------------------------------------------------------
 
 
-    if($.fn.mq_watcher){
-        $('body').mq_watcher();
-        var screen = getActiveMQ();
-
-        if(screen == 'aq' || screen == 'bq'){
-
-            if($.fn.expandSection){
-                $('#js-aventyret-about-bio').expandSection({
-                    timeout: 300,
-                    divideBy: 3,
-                    expandText: 'Läs allt'
-                });
-            }
-        }
-    }
+    //if($.fn.mq_watcher){
+    //    $('body').mq_watcher();
+    //    var screen = getActiveMQ();
+    //
+    //    if(screen == 'aq' || screen == 'bq'){
+    //
+    //        if($.fn.expandSection){
+    //            $('#js-aventyret-about-bio').expandSection({
+    //                timeout: 300,
+    //                divideBy: 3,
+    //                expandText: 'Läs allt'
+    //            });
+    //        }
+    //    }
+    //}
 	
 	
 	// -------------------------------------------------------------------------------------------------------

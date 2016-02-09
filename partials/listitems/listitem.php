@@ -5,6 +5,6 @@
 
 <?php if (function_exists('get_field') && get_field('external_linkText') && get_field('external_linkUrl')){ ?>
     <p class="a-fineprint a-external__a">
-        &mdash; Direktl&auml;nk: <a class="js-tappy" href="<?php echo get_field('external_linkUrl'); ?>"><?php echo get_field('external_linkText'); ?></a>
+        &mdash; Direktl&auml;nk: <a href="<?php echo get_field('external_linkUrl'); ?>" target="_blank"><?php echo get_field('external_linkText'); ?></a>
     </p>
 <?php } ?>

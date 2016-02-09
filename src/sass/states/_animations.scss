@@ -18,8 +18,7 @@
     transition: background-color $transition-time*2 ease-out $transition-time*2;
   }
 
-  .o-taglist,
-  .m-listitem {
+  .o-taglist{
     transition: opacity $transition-time ease-out, transform $transition-time ease-out;
   }
 

@@ -1,5 +1,5 @@
-<?php if(function_exists('get_field') && get_field('postfooter_resources')) { ?>
-    <footer class="l-span-A12 l-pre-D1 l-span-D4 m-resources">
-        <?php echo get_field('postfooter_resources'); ?>
-    </footer>
-<?php } ?>
+<?php if(function_exists('get_field') && get_field('postfooter_resources')) {
+    echo '<footer class="m-resources'.(get_field('postfooter_resources_sidebar') ? ' is-sidebar' : '').'">';
+        echo get_field('postfooter_resources');
+    echo '</footer>';
+} ?>

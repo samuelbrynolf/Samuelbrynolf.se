@@ -112,6 +112,7 @@
   }
 
   .o-entry-content{
+    position: relative;
 
     @media all and (min-width: $beta_query) {
       max-width: calc(100% - 3rem);
@@ -119,22 +120,6 @@
 
     @media all and (min-width: $charlie_query) {
       max-width: rem($containerwidth - ($body_leading_charlie*12));
-    }
-
-    .a-preamble{
-      margin-bottom: $leading*1.5;
-
-      @media all and (min-width: $beta_query) {
-        margin-right: -1.5rem;
-        margin-bottom: $leading_beta*1.5;
-        margin-left: -1.5rem;
-      }
-
-      @media all and (min-width: $charlie_query) {
-        margin-right: rem(-$body_leading_charlie*1.5);
-        margin-bottom: $leading_charlie*1.5;
-        margin-left: rem(-$body_leading_charlie*1.5);
-      }
     }
 
     blockquote{

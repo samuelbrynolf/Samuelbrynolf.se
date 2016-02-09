@@ -23,7 +23,7 @@
 	<?php wp_head(); ?>
 
     <script>
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js wfl');
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
         (function(d) {
             var config = {
                     kitId: 'nky2ajj',

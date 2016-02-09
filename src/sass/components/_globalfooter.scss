@@ -1,42 +1,10 @@
 
 // ATOMS ---------------------------------------------------------------------
 
-.a-ccard__bio{
+.o-global__footer .a-ccard__bio{
   text-align: center;
 }
 
-.m-blogtag {
-
-  .a-ccard__bio {
-
-    @media all and (min-width: $beta_query) {
-      position: absolute;
-      top: 50%;
-      right: rem($beta-gutter);
-      left: $avatar-size + rem($beta-gutter*1.5);
-      transform: translateY(-50%);
-      text-align: left;
-    }
-
-    @media all and (min-width: $charlie_query) {
-      right: rem($charlie-gutter*2);
-      left: $avatar-size + rem($charlie-gutter*3);
-    }
-
-    p {
-      font-size: rem(21);
-      margin-bottom: rem($body_leading*1.5);
-
-      @media all and (min-width: $beta_query) {
-        margin: 0;
-      }
-
-      @media all and (min-width: $charlie_query) {
-        font-size: rem(24);
-      }
-    }
-  }
-}
 
 
 // MOLECULES ---------------------------------------------------------------------
@@ -63,21 +31,28 @@
   }
 }
 
-.a-ccard__p + .m-ccard__list{
-  margin-top: rem($body_leading*2);
+.a-ccard__bio + .m-ccard__list{
+  margin-top: rem($body_leading*1.5);
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta*2);
+    margin-top: rem($body_leading_beta*1.5);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*2);
+    margin-top: rem($body_leading_charlie*1.5);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*1.5);
   }
 }
 
 .m-ccard-avatar{
   margin: 0 auto;
 }
+
+
+
 // ORGANISMS ---------------------------------------------------------------------
 
 .o-global__footer{
@@ -95,6 +70,8 @@
     padding-bottom: rem($body_leading_charlie*3);
   }
 }
+
+
 
 // STATES ---------------------------------------------------------------------
 

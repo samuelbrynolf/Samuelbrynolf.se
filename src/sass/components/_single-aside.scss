@@ -64,13 +64,24 @@
   .a-tweetthis{
     float: right;
     width: $spanwidth-3;
+    padding-left: rem($alpha_gutter);
 
     @media all and (min-width: $beta_query) {
       width: $spanwidth-2;
+      padding-left: rem($beta_gutter);
     }
 
     @media all and (min-width: $charlie_query) {
       width: $spanwidth-1;
+      padding-left: rem($charlie_gutter);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-left: rem($delta_gutter);
+    }
+
+    @media all and (min-width: $echo_query) {
+      padding-left: rem($echo_gutter);
     }
   }
 }

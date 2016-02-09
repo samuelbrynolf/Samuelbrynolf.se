@@ -7,7 +7,7 @@
             get_template_part('partials/global-components/ccard_avatar');
             get_template_part('partials/global-components/ccard_socialnw');
         } ?>
-        <a class="a-topjump a-icon arrowtop" id="js-topjump" href="#" rel="nofollow">Till toppen</a>
+        <a class="a-topjump a-icon arrowtop" id="js-topjump" href="#" rel="nofollow"></a>
     </section>
 
 </footer><!-- #colophon -->

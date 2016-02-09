@@ -413,30 +413,47 @@
 
 .a-sharepost-title {
   margin-bottom: rem($body_leading/2);
-  padding-bottom: rem($body_leading/2);
-  border-bottom: 1px solid $subtle-bordercolor;
 
   @media all and (min-width: $beta_query) {
     margin-bottom: rem($body_leading_beta/2);
-    padding-bottom: rem($body_leading_beta/2);
   }
 
   @media all and (min-width: $charlie_query) {
     margin-bottom: rem($body_leading_charlie/2);
-    padding-bottom: rem($body_leading_charlie/2);
   }
 }
 
-.m-sharepost__ul li{
-  margin-bottom: rem($body_leading);
-  color: $body-textcolor;
+.m-sharepost__ul {
 
-  @media all and (min-width: $beta_query) {
-    margin-bottom: rem($body_leading_beta);
+  li{
+    margin-bottom: rem($body_leading);
+    color: $body-textcolor;
   }
 
-  @media all and (min-width: $charlie_query) {
-    margin-bottom: rem($body_leading_charlie);
+  .a-icon:before{
+    top: 50%;
+    left: rem(12);
+    transform: translateY(-50%);
+    color: $action-color;
+  }
+
+  .a-shortlink{
+    float: left;
+    width: $spanwidth-9;
+    padding-left: rem(33);
+    font-style: italic;
+
+    @media all and (min-width: $beta_query) {
+      width: $spanwidth-10;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      width: $spanwidth-11;
+    }
+  }
+
+  .a-tweetthis{
+    float: right;
   }
 }
 

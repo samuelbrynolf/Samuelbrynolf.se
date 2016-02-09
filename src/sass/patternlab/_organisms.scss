@@ -137,6 +137,31 @@
       }
     }
 
+    blockquote{
+      padding-left: rem($alpha_gutter);
+      border-left: $borderwidth solid;
+
+      @media all and (min-width: $beta_query) {
+        padding-left: rem($beta_gutter/2);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        font-size: rem(27);
+        line-height: (30/21);
+        margin-right: rem(-$body_leading_charlie*1.5);
+        margin-left: rem(-$body_leading_charlie*1.5);
+        padding-left: rem($charlie_gutter*2);
+      }
+
+      p{
+        font-style: inherit;
+      }
+
+      p + p{
+        @extend .a-fineprint;
+      }
+    }
+
     h2{
       @extend .a-large;
     }
@@ -190,31 +215,6 @@
 
     ul{
       @extend .a-ul;
-    }
-
-    blockquote{
-      padding-left: rem($alpha_gutter);
-      border-left: $borderwidth solid;
-
-      @media all and (min-width: $beta_query) {
-        padding-left: rem($beta_gutter/2);
-      }
-
-      @media all and (min-width: $charlie_query) {
-        font-size: rem(27);
-        line-height: (30/21);
-        margin-right: rem(-$body_leading_charlie*1.5);
-        margin-left: rem(-$body_leading_charlie*1.5);
-        padding-left: rem($charlie_gutter*2);
-      }
-
-      p{
-        font-style: inherit;
-      }
-
-      p + p{
-        @extend .a-fineprint;
-      }
     }
 
     // All images margin ----------------------------------------------------------

@@ -1,11 +1,12 @@
 <aside class="o-single__aside">
 
-    <div class="l-gutter m-sharepost">
-        <h4 class="a-fineprint a-sharepost-title">Dela inl&auml;gg</h4>
+    <div class="l-gutter l-clearfix m-sharepost">
+        <h4 class="a-fineprint a-sharepost-title">Dela:</h4>
         <ul class="m-sharepost__ul">
-            <li class="a-fineprint"><?php echo wp_get_shortlink(); ?></li>
+            <li class="a-fineprint a-shortlink a-icon link"><?php echo wp_get_shortlink(); ?></li>
+            <li class="a-tweetthis"><?php get_template_part('partials/single/tweet-script'); ?></li>
         </ul>
-        <?php get_template_part('partials/single/tweet-script'); ?>
+
     </div>
 
     <?php if (comments_open() || get_comments_number()) {

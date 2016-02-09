@@ -239,6 +239,10 @@ img.a-forcewidth{
     right: 0;
   }
 
+  &.link:before{
+    content: '\e9cb';
+  }
+
   &.twitter:before{
     content: '\ea91';
   }
@@ -294,8 +298,6 @@ img.a-forcewidth{
 
 // BUTTONS + EVENT-ELEMENTS ==============================================================================================================
 
-// IN THE LAND OF THE MORNING STAR
-
 .a-btn,
 .bap_loadbutton{
   display: block;
@@ -333,6 +335,12 @@ img.a-forcewidth{
   @media all and (min-width: $charlie_query) {
     margin-top: rem($body_leading_charlie*3);
     padding-right: rem($charlie_gutter);
+    text-align: center;
+  }
+
+  &:after{
+    position: static;
+    margin-top: 0.5rem;
   }
 }
 
@@ -362,4 +370,9 @@ img.a-forcewidth{
     content: ' \e9cb';
     line-height: inherit;
   }
+}
+
+.a-shortlink{
+  padding: rem(9) rem(12);
+  background-color: $subtle-bgcolor;
 }

@@ -4,7 +4,7 @@
     </div>
 <?php } ?>
 
-<div id="js-entry-content" class="l-gutter l-clearfix o-entry-content">
+<div id="js-entry-content" class="l-gutter o-entry-content">
 
     <?php if (function_exists('get_field') && get_field('external_linkText') && get_field('external_linkUrl') && has_post_format('link', get_the_ID())){ ?>
         <p class="a-external__a">

@@ -16,6 +16,7 @@
   }
 
   .a-ccard__bio {
+    text-align: center;
 
     @media all and (min-width: $beta_query) {
       position: absolute;
@@ -23,6 +24,7 @@
       right: rem($beta-gutter);
       left: $avatar-size + rem($beta-gutter*1.5);
       transform: translateY(-50%);
+      text-align: left;
     }
 
     @media all and (min-width: $charlie_query) {
@@ -49,17 +51,17 @@
 
 // STATES --------------------------------------------------------------------------
 
-main.tags-is-active{
-  padding-top: rem($body_leading*3);
-
-  @media all and (min-width: $beta_query) {
-    padding-top: rem($body_leading_beta*3);
-  }
-
-  @media all and (min-width: $charlie_query) {
-    padding-top: rem($body_leading_charlie*3);
-  }
-}
+//main.tags-is-active{
+//  padding-top: rem($body_leading*5);
+//
+//  @media all and (min-width: $beta_query) {
+//    padding-top: rem($body_leading_beta*5);
+//  }
+//
+//  @media all and (min-width: $charlie_query) {
+//    padding-top: rem($body_leading_charlie*5);
+//  }
+//}
 
 .current-menu-item a,
 a.current-menu-item{

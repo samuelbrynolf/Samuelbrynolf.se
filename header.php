@@ -56,7 +56,7 @@
 		
 </head>
 
-<body <?php body_class(); ?>>
+<body id="js-body" <?php body_class(); ?>>
 
     <header id="js-masthead" class="o-global__header">
         <?php echo (is_front_page() ? '<h1 class="a-sitename">' : '<h2 class="a-sitename">');

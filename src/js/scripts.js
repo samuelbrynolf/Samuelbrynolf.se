@@ -173,7 +173,6 @@
 // ==============================================================================================================
 
 
-
     top_tags('.js-toptags a');
     loadSocialData($('#js-instagram'), 'loadInstagram');
     bind_tappy($('.js-tappy'));
@@ -196,12 +195,16 @@
     }
 
     if($.fn.header_slide) {
-
         $('#js-masthead').header_slide({
             disable: function(){
                 return $('#mis_overlay').hasClass('s-is-visible');
             }
         });
+    }
+
+    if($.fn.fitVids){
+        $('#js-video-embed').fitVids();
+        $('#js-entry-content').fitVids();
     }
 
 })(jQuery); // End self-invoking function

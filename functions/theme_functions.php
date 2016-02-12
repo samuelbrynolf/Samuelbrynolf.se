@@ -49,8 +49,12 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 
 if ( !function_exists( 'bento_body_classes' )) {
     function bento_body_classes($classes){
-        if (is_single() && !has_post_thumbnail() || is_page() && !has_post_thumbnail() && !is_page_template('page-instafeatured.php')){
+        if (is_single() && !has_post_thumbnail() && !has_post_format('video') || is_page() && !has_post_thumbnail() && !is_page_template('page-instafeatured.php')){
             $classes[] = 'no-thumb';
+        }
+
+        if (is_single() && has_post_format('video')){
+            $classes[] = 'has-video';
         }
 
         if (is_front_page() && is_home() && !is_paged()) {

@@ -128,7 +128,7 @@
 
 
     function smoothscroll_section_anchors(parent_elem){
-        var bloglink_arr = parent_elem.find($("a[href*=#]"));
+        var bloglink_arr = parent_elem.find($('a[href*="#"]'));
 
         if(bloglink_arr.length){
 
@@ -205,6 +205,15 @@
     if($.fn.fitVids){
         $('#js-video-embed').fitVids();
         $('#js-entry-content').fitVids();
+    }
+
+    if($.fn.toclist){
+        $('#js-entry-content.has-toc h2').toclist({
+            list_ID: 'js-toc',
+            list_classes: 'm-toclist__ol',
+            listitem_classes: 'a-toclist__li',
+            nodetarget: $('#js-toclist__section')
+        });
     }
 
 })(jQuery); // End self-invoking function

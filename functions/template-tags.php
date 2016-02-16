@@ -70,7 +70,7 @@ if ( !function_exists( 'pull_instagram' )) {
                     echo '<div class="m-prf ratio-1-1">';
                 }
 
-                echo '<img class="a-forcewidth a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
+                echo '<img class="js-instagram__img a-forcewidth a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
                 ' . $loressize_url . ' 306w,
                 ' . $thumbsize_url . ' 150w"
 

@@ -1,7 +1,9 @@
 
 // ATOMS ----------------------------------------------------------
 
-
+.js-jumper[href="#js-entry-content"] {
+  display: block;
+}
 
 // MOLECULES ----------------------------------------------------------
 
@@ -18,6 +20,25 @@
     max-width: rem($containerwidth - ($body_leading_charlie*9));
     margin-top: $leading_charlie*1.5;
     margin-bottom: $leading_charlie*0.5;
+  }
+}
+
+.m-instagram{
+
+  @media all and (min-width: $charlie_query) {
+    display: none;
+  }
+
+  .a-fineprint{
+    margin: $leading/2 rem($alpha_gutter);
+
+    @media all and (min-width: $beta_query) {
+      margin: $leading_beta/2 rem($beta_gutter);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin: $leading_charlie 0;
+    }
   }
 }
 

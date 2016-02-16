@@ -8,7 +8,7 @@ get_header(); ?>
                 <?php get_template_part('partials/single/single-header');
 
                 echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
-                    echo '<div id="js-instagram" class="s-is-hidden"></div>';
+                    echo '<div id="js-instagram" class="m-instagram s-is-hidden"></div>';
                 echo '</a>';
 
                 get_template_part('partials/single/single-content'); ?>

@@ -77,6 +77,7 @@
 
 
 
+
     // -------------------------------------------------------------------------------------------------------
 
 
@@ -163,6 +164,38 @@
             });
         }
     }
+
+
+
+    // -------------------------------------------------------------------------------------------------------
+
+
+
+    function mediaChecker(){
+        var load_container_id = load_container.attr('id');
+        var top_container_id = top_container.attr('id');
+        var instagram_img = $('.js-instagram__img');
+        screen = getActiveMQ();
+
+        if(is_cloned){
+           return;
+        }
+
+        if((screen === 'aq') || (screen === 'bq') && load_container_id === top_container_id){
+
+            if(!(top_container.find(instagram_img)).length){
+                instagram_img.clone().appendTo(top_container);
+                is_cloned = true;
+            }
+
+        } else {
+
+            if(!(bottom_container.find(instagram_img)).length){
+                instagram_img.clone().appendTo(bottom_container);
+                is_cloned = true;
+            }
+        }
+    }
 	
 
 
@@ -173,8 +206,36 @@
 // ==============================================================================================================
 
 
+
+    if($.fn.mq_watcher){
+        $('body').mq_watcher();
+        var viewPort = $(window);
+        var resizeTimeoutId = 0;
+        var screen = getActiveMQ();
+        var top_container = $('#js-instagram');
+        var bottom_container = $('#js-entry-content');
+        var load_container;
+        var is_cloned = false;
+
+        if((screen === 'aq') || (screen === 'bq')){
+            loadSocialData(top_container, 'loadInstagram');
+            load_container = top_container;
+        } else {
+            loadSocialData(bottom_container, 'loadInstagram');
+            load_container = bottom_container;
+        }
+
+        viewPort.on('resize', function(){
+            clearTimeout(resizeTimeoutId);
+            resizeTimeoutId = setTimeout(mediaChecker,300);
+        });
+    } else {
+        loadSocialData($('#js-instagram'), 'loadInstagram');
+    }
+
+
     top_tags('.js-toptags a');
-    loadSocialData($('#js-instagram'), 'loadInstagram');
+
     bind_tappy($('.js-tappy'));
 
     if($.fn.smoothScroll){

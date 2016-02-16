@@ -147,6 +147,17 @@
     text-align: left;
   }
 
+  // Instagram image ----------------------------------------------------------
+
+  .js-instagram__img{
+    display: none;
+
+    @media all and (min-width: $charlie_query) {
+      display: block;
+      margin-top: $leading_charlie*3;
+    }
+  }
+
   // Tweet btn ----------------------------------------------------------
 
   .twitter-share-button{

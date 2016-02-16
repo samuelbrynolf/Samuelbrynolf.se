@@ -183,3 +183,13 @@
 .single .o-entry-content h2{
   text-align: center;
 }
+
+
+
+// STATES --------------------------------------------------------
+
+@media all and (min-width: $charlie_query) {
+  .o-entry-content a:hover{
+    color: $body-textcolor;
+  }
+}

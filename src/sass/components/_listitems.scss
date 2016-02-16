@@ -75,6 +75,16 @@
 
 
 
+// STATES ---------------------------------------------------------------------
+
+@media all and (min-width: $charlie_query) {
+  .m-listitem:hover .a-medium{
+    color: $body-textcolor;
+  }
+}
+
+
+
 // ANIMATIONS ---------------------------------------------------------------------
 
 .m-listitem {

@@ -154,6 +154,18 @@
 
 // STATES ---------------------------------------------------------------------
 
+@media all and (min-width: $charlie_query) {
+
+  .m-global__nav .menu-item a:hover {
+    color: $body-textcolor;
+  }
+}
+
+.current-menu-item a,
+a.current-menu-item{
+  color: $subtle-textcolor;
+}
+
 #js-masthead {
 
   &.s-is-up {

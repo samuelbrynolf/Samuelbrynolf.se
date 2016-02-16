@@ -55,18 +55,21 @@
 
 // STATES ---------------------------------------------------------------
 
-.a-btn:hover{
-  cursor: pointer;
-}
+@media all and (min-width: $charlie_query) {
 
-.a-btn:focus {}
+  .a-btn:hover,
+  .bap_loadbutton:hover{
+    color: $body-textcolor;
+    border-color: $body-textcolor;
+    cursor: pointer;
+  }
+}
 
 .a-btn.s-is-passive{
   color: $subtle-textcolor;
   border-color: $subtle-bordercolor;
   opacity: 0.5;
 }
-
 
 .bap_loadbutton.s-is-loading{
   color: $body-textcolor;

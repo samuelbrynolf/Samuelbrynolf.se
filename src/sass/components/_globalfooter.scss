@@ -75,6 +75,14 @@
 
 // STATES ---------------------------------------------------------------------
 
+
+@media all and (min-width: $charlie_query) {
+  .m-ccard__list a:hover
+  .a-topjump:hover{
+    color: $body-textcolor;
+  }
+}
+
 #js-colophon.s-is-highlighted{
   background-color: $highlight-bgcolor;
 }

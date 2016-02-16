@@ -126,3 +126,13 @@ a{
     font-family: "eq";
   }
 }
+
+
+
+// STATES -----------------------------------------------------------------------
+
+@media all and (min-width: $charlie_query) {
+  p a:hover{
+    color: $body-textcolor;
+  }
+}

@@ -173,6 +173,10 @@ a.current-menu-item{
   }
 }
 
+.a-searchform__input:focus{
+  border-color: $body-textcolor;
+}
+
 
 
 // ANIMATIONS ---------------------------------------------------------------------

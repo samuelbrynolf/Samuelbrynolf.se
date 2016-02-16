@@ -1,18 +1,4 @@
 
-// ATOMS ------------------------------------------------------------------
-
-.a-external__a {
-
-  a:after{
-    font-family: $icon-font;
-    font-size: rem(12);
-    content: ' \e9cb';
-    line-height: inherit;
-  }
-}
-
-
-
 // ORGANISMS ------------------------------------------------------------------
 
 .o-entry-content{
@@ -49,6 +35,10 @@
     p + p{
       @extend .a-fineprint;
     }
+  }
+
+  .a-external__a a:after {
+    font-size: rem(14);
   }
 
   h2{

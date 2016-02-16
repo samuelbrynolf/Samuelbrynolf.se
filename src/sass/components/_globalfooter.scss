@@ -22,7 +22,7 @@
     }
 
     @media all and (min-width: $charlie_query) {
-      line-height: rem($body_leading_charlie*2);
+      line-height: rem($body_leading_charlie*3);
     }
 
     &:before{
@@ -77,7 +77,7 @@
 
 
 @media all and (min-width: $charlie_query) {
-  .m-ccard__list a:hover
+  .m-ccard__list a:hover,
   .a-topjump:hover{
     color: $body-textcolor;
   }

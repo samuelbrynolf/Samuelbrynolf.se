@@ -111,3 +111,11 @@
     background-color: rgba($action-color, 0.75);
   }
 }
+
+
+
+// ANIMATIONS ------------------------------------------------------------------
+
+.m-prf.overlay:after{
+  transition: background-color $transition-time ease-out;
+}

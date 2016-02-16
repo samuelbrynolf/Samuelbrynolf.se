@@ -43,7 +43,7 @@ body{
   color: $body-textcolor;
   background: $body-bgcolor;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color : rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color : rgba($action-color,0.2);
 
   @media all and (min-width: $beta_query) {
     line-height: $body_leading_beta/$fontsize_beta;

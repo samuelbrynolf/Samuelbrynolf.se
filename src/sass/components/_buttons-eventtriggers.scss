@@ -1,5 +1,5 @@
 
-// ANIMATIONS ---------------------------------------------------------------
+// ATOMS ---------------------------------------------------------------
 
 .a-btn,
 .bap_loadbutton{
@@ -36,19 +36,33 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*3);
-    padding-right: rem($charlie_gutter);
+    margin-top: rem($body_leading_charlie*6);
+    padding-right: 0;
     text-align: center;
   }
 
   &:after{
     position: static;
     margin-top: 0.5rem;
+
+    @media all and (min-width: $charlie_query) {
+      font-size: rem(16);
+    }
   }
 }
 
 .js-jumper[href="#js-entry-content"] {
   display: block;
+}
+
+.a-external__a {
+
+  a:after{
+    font-family: $icon-font;
+    font-size: rem(12);
+    content: ' \e005';
+    line-height: inherit;
+  }
 }
 
 
@@ -74,12 +88,4 @@
 .bap_loadbutton.s-is-loading{
   color: $body-textcolor;
   border-color: $subtle-bordercolor;
-}
-
-
-
-// ANIMATIONS ---------------------------------------------------------------
-
-.bap_loadbutton{
-  transition: color $transition-time ease-out, border-color $transition-time ease-out;
 }

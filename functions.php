@@ -33,7 +33,9 @@
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
         ) );
 
-        add_theme_support( 'post-formats', array( 'link', 'video' ));
+        add_theme_support( 'post-formats', array( 'video' ));
+        //add_theme_support( 'post-formats', array( 'link', 'video' ));
+        //add_theme_support( 'post-formats', array( 'link'));
     }
 endif;
 add_action( 'after_setup_theme', 'bento_setup' );

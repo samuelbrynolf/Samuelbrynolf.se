@@ -7,9 +7,7 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php get_template_part('partials/single/single-header');
 
-                echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
-                    echo '<div id="js-instagram" class="m-instagram s-is-hidden"></div>';
-                echo '</a>';
+                echo '<div id="js-instagram" class="m-instagram s-is-hidden"></div>';
 
                 get_template_part('partials/single/single-content'); ?>
             </article><!-- #post-## -->

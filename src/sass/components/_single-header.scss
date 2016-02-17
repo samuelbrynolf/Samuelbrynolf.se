@@ -5,6 +5,18 @@
   display: block;
 }
 
+.a-instagram__medialink{
+  margin-top: $leading/2;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: $leading_beta/2;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: $leading_charlie/2;
+  }
+}
+
 // MOLECULES ----------------------------------------------------------
 
 .m-entry-preamble{

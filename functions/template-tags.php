@@ -64,7 +64,7 @@ if ( !function_exists( 'pull_instagram' )) {
                 $thumbsize_url = $item['images']['thumbnail']['url'];
                 $loressize_url = $item['images']['low_resolution']['url'];
                 $standardsize_url = $item['images']['standard_resolution']['url'];
-                //$media_page = $item['link'];
+                $media_page = $item['link'];
 
                 if ($container) {
                     echo '<div class="m-prf ratio-1-1">';
@@ -74,7 +74,7 @@ if ( !function_exists( 'pull_instagram' )) {
                 ' . $loressize_url . ' 306w,
                 ' . $thumbsize_url . ' 150w"
 
-                sizes="100vw"/>';
+                sizes="100vw"/><p class="a-fineprint a-instagram__medialink">Bild: <a href="'.$media_page.'" title="Aventyrets Instagram-konto">Äventyret@Instagram</a></p>';
 
                 if ($container) {
                     echo '</div>';

@@ -171,10 +171,10 @@
 
 
 
-    function mediaChecker(){
+    function social_cloner(){
         var load_container_id = load_container.attr('id');
         var top_container_id = top_container.attr('id');
-        var instagram_img = $('.js-instagram__img');
+        var social_item = $('.js-instagram__img');
         screen = getActiveMQ();
 
         if(is_cloned){
@@ -183,15 +183,15 @@
 
         if((screen === 'aq') || (screen === 'bq') && load_container_id === top_container_id){
 
-            if(!(top_container.find(instagram_img)).length){
-                instagram_img.clone().appendTo(top_container);
+            if(!(top_container.find(social_item)).length){
+                social_item.clone().appendTo(top_container);
                 is_cloned = true;
             }
 
         } else {
 
-            if(!(bottom_container.find(instagram_img)).length){
-                instagram_img.clone().appendTo(bottom_container);
+            if(!(bottom_container.find(social_item)).length){
+                social_item.clone().appendTo(bottom_container);
                 is_cloned = true;
             }
         }
@@ -205,14 +205,13 @@
 
 // ==============================================================================================================
 
+    var top_container = $('#js-instagram');
 
-
-    if($.fn.mq_watcher){
+    if($.fn.mq_watcher && top_container.length){
         $('body').mq_watcher();
         var viewPort = $(window);
         var resizeTimeoutId = 0;
         var screen = getActiveMQ();
-        var top_container = $('#js-instagram');
         var bottom_container = $('#js-entry-content');
         var load_container;
         var is_cloned = false;
@@ -227,12 +226,12 @@
 
         viewPort.on('resize', function(){
             clearTimeout(resizeTimeoutId);
-            resizeTimeoutId = setTimeout(mediaChecker,300);
+            resizeTimeoutId = setTimeout(social_cloner,300);
         });
+
     } else {
         loadSocialData($('#js-instagram'), 'loadInstagram');
     }
-
 
     top_tags('.js-toptags a');
 

@@ -60,5 +60,6 @@ add_action( 'wp_enqueue_scripts', 'bento_scripts' );
 // IMPORT THEME, TEMPLATE & AJAX-FUNCTIONS -------------------------------------------------------------------
 
 require get_template_directory() . '/functions/theme_functions.php';
+require get_template_directory() . '/functions/advanced_custom_fields.php';
 require get_template_directory() . '/functions/template-tags.php';
 require get_template_directory() . '/functions/ajax_triggered_functions.php';

@@ -171,28 +171,22 @@
 
 
 
-    function social_cloner(){
-        var load_container_id = load_container.attr('id');
-        var top_container_id = top_container.attr('id');
-        var social_item = $('.js-instagram__img');
-        screen = getActiveMQ();
-
-        if(is_cloned){
-           return;
-        }
+    function social_cloner(container_1, container_2, container_current, loaditem){
+        var load_container_id = container_current.attr('id');
+        var top_container_id = container_1.attr('id');
+        var screen = getActiveMQ();
 
         if((screen === 'aq') || (screen === 'bq') && load_container_id === top_container_id){
+            console.log('run screen query');
 
-            if(!(top_container.find(social_item)).length){
-                social_item.clone().appendTo(top_container);
-                is_cloned = true;
+            if(!(container_1.find(loaditem)).length){
+                loaditem.clone().appendTo(container_1);
             }
 
         } else {
 
-            if(!(bottom_container.find(social_item)).length){
-                social_item.clone().appendTo(bottom_container);
-                is_cloned = true;
+            if(!(container_2.find(loaditem)).length){
+                loaditem.clone().appendTo(container_2);
             }
         }
     }
@@ -205,33 +199,41 @@
 
 // ==============================================================================================================
 
-    var top_container = $('#js-instagram');
+    function load_instagram(){
+        var top_container = $('#js-instagram');
 
-    if($.fn.mq_watcher && top_container.length){
-        $('body').mq_watcher();
-        var viewPort = $(window);
-        var resizeTimeoutId = 0;
-        var screen = getActiveMQ();
-        var bottom_container = $('#js-entry-content');
-        var load_container;
-        var is_cloned = false;
+        if(top_container.length){
 
-        if((screen === 'aq') || (screen === 'bq')){
-            loadSocialData(top_container, 'loadInstagram');
-            load_container = top_container;
-        } else {
-            loadSocialData(bottom_container, 'loadInstagram');
-            load_container = bottom_container;
+            if($.fn.mq_watcher){
+                $('body').mq_watcher();
+                var viewPort = $(window);
+                var resizeTimeoutId = 0;
+                var screen = getActiveMQ();
+                var bottom_container = $('#js-entry-content');
+                var load_container;
+
+                if((screen === 'aq') || (screen === 'bq')){
+                    loadSocialData(top_container, 'loadInstagram');
+                    load_container = top_container;
+                } else {
+                    loadSocialData(bottom_container, 'loadInstagram');
+                    load_container = bottom_container;
+                }
+
+                viewPort.on('resize', function(){
+                    clearTimeout(resizeTimeoutId);
+                    resizeTimeoutId = setTimeout(function(){
+                        social_cloner(top_container, bottom_container, load_container, $('.js-instagram__img'));
+                    },300);
+                });
+
+            } else {
+                loadSocialData(top_container, 'loadInstagram');
+            }
         }
-
-        viewPort.on('resize', function(){
-            clearTimeout(resizeTimeoutId);
-            resizeTimeoutId = setTimeout(social_cloner,300);
-        });
-
-    } else {
-        loadSocialData($('#js-instagram'), 'loadInstagram');
     }
+
+    load_instagram();
 
     top_tags('.js-toptags a');
 

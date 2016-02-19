@@ -1,3 +1,11 @@
+%divider{
+  content: '';
+  display: block;
+  width: rem(33);
+  height: $borderwidth;
+  margin: 0 auto rem(33) auto;
+  background-color: $body-textcolor;
+}
 
 // TYPOCLASSES -----------------------------------------------------------------------
 

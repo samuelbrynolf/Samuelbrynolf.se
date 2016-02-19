@@ -1,4 +1,3 @@
-
 // ATOMS ---------------------------------------------------------------------
 
 .a-shortlink{
@@ -75,7 +74,28 @@
 }
 
 .m-prevnextposts {
-  @extend %inset-section;
+  margin-top: rem($body_leading*2);
+  padding-top: rem($body_leading*2);
+  background-color: $subtle-bgcolor;
+  box-shadow: inset 0 0 rem(12) 0 rgba($body-textcolor,0.09);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*2);
+    padding-top: rem($body_leading_beta*2);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*2);
+    padding-top: rem($body_leading_charlie*2);
+  }
+
+  @media all and (min-width: $delta_query) {
+    //padding-bottom: $gutter_delta
+  }
+
+  @media all and (min-width: $echo_query) {
+    //padding-bottom: $gutter_echo;
+  }
 
   > .a-medium{
     text-align: center;

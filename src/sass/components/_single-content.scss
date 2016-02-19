@@ -113,19 +113,45 @@
     }
   }
 
+  // FIGURE ---------------------------------------------------------------------
+
+  .mis_figure{
+
+    .mis_figcaption{
+      @extend .a-fineprint;
+      text-align: right;
+    }
+
+    .mis_img + .mis_figcaption{
+      margin-top: rem($body_leading/3);
+
+      @media all and (min-width: $beta_query) {
+        margin-top: rem($body_leading_beta/3);
+      }
+
+      @media all and (min-width: $charlie_query) {
+        margin-top: rem($body_leading_charlie/3);
+      }
+    }
+  }
+
   // All floated Images ----------------------------------------------------------
 
   .mis_container.left,
-  .mis_container.right{
+  .mis_container.right,
+  img.left,
+  img.right{
     width: 46%;
   }
 
-  .mis_container.left{
+  .mis_container.left,
+  img.left{
     float: left;
     margin-right: 4%;
   }
 
-  .mis_container.right{
+  .mis_container.right,
+  img.right{
     float: right;
     margin-left: 4%;
   }
@@ -133,7 +159,9 @@
   // Floated Prf-images needs padding/2
 
   .m-prf.left,
-  .m-prf.right{
+  .m-prf.right,
+  img.left,
+  img.right{
     padding-bottom: $ratio-4-3/2;
   }
 

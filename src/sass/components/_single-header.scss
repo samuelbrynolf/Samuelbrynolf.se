@@ -33,6 +33,12 @@
     margin-top: $leading_charlie*1.5;
     margin-bottom: $leading_charlie*0.5;
   }
+
+  @media all and (min-width: $delta_query) {
+    max-width: rem($containerwidth - ($body_leading_delta*4));
+    margin-top: $leading_delta*1.5;
+    margin-bottom: $leading_delta;
+  }
 }
 
 .m-instagram{

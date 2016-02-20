@@ -90,11 +90,15 @@ strong,
   @media all and (min-width: $charlie_query) {
     font-size: rem(27);
   }
+
+  @media all and (min-width: $delta_query) {
+    font-size: rem(24);
+  }
 }
 
 .a-fineprint{
   font-size: rem(14);
-  line-height: rem(21);
+  line-height: (21/14);
   color: $subtle-textcolor;
 }
 

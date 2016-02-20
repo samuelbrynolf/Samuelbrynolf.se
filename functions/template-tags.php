@@ -12,10 +12,17 @@ if ( !function_exists( 'slider' )) {
                 setup_postdata($post);
 
                 echo '<a class="gallery-cell m-prf ratio-4-3 overlay" href="' . get_the_permalink() . '" title="' . get_the_title() . '">';
-                if (function_exists('makeitSrcset') && has_post_thumbnail()) {
-                    makeitSrcset(get_post_thumbnail_id($post->ID));
-                }
-                the_title( '<h3 class="a-medium a-prf-text">', '</h3>' );
+                    if (function_exists('makeitSrcset') && has_post_thumbnail()) {
+                        makeitSrcset(get_post_thumbnail_id($post->ID));
+                    }
+                    echo '<h3 class="a-medium a-prf-text">'.get_the_title();
+                    if (has_tag()) {
+                        echo '<br/>';
+                        echo '<span class="a-prf-text__span">';
+                            echo strip_tags(get_the_tag_list('',' &#183; ','</p>'));
+                        echo '</span>';
+                    }
+                    echo '</h3>';
                 echo '</a>';
             } ?>
 

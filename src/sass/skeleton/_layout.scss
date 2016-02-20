@@ -509,6 +509,11 @@
 
 @media all and (min-width: $delta_query) {
 
+	.l-container,
+	.l-gutter{
+		max-width: $containerwidth*1.2;
+	}
+
 	.l-container{
 		padding-right: rem($delta_gutter/2);
 		padding-left: rem($delta_gutter/2);

@@ -12,13 +12,9 @@
                     the_field('video_embed_code');
                 echo '</section>';
             } elseif ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-                echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
-                    makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
-                echo '</a>';
+                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
             } elseif (has_post_thumbnail()){
-                echo '<a class="js-jumper" href="#js-entry-content" rel="nofollow">';
-                    the_post_thumbnail();
-                echo '</a>';
+                the_post_thumbnail();
             }
 
             get_template_part('partials/single/single-content');

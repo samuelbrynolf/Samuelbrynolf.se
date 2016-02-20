@@ -9,15 +9,19 @@
 
 .a-archive__divider{
   height: 1px;
-  margin-top: rem($body_leading*1.1);
+  margin-top: rem($body_leading*1.5);
   background-color: $subtle-bordercolor;
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta*1.1);
+    margin-top: rem($body_leading_beta*1.5);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*1.1);
+    margin-top: rem($body_leading_charlie*1.5);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta);
   }
 }
 
@@ -41,6 +45,10 @@
 
     @media all and (min-width: $charlie_query) {
       font-size: rem(16);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      font-size: rem(14);
     }
   }
 
@@ -78,6 +86,10 @@
     @media all and (min-width: $charlie_query) {
       padding-left: rem($body_leading_charlie/2);
     }
+
+    @media all and (min-width: $delta_query) {
+      padding-left: rem($delta_gutter/2);
+    }
   }
 
   a{
@@ -90,18 +102,26 @@
     @media all and (min-width: $charlie_query) {
       font-size: rem(16);
     }
+
+    @media all and (min-width: $delta_query) {
+      font-size: rem(14);
+    }
   }
 }
 
 .m-archive__header{
-  margin-bottom: rem($body_leading);
+  margin-bottom: rem($body_leading*1.5);
 
   @media all and (min-width: $beta_query) {
-    margin-bottom: rem($body_leading_beta);
+    margin-bottom: rem($body_leading_beta*1.5);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-bottom: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie*2.5);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-bottom: rem($body_leading_delta*2);
   }
 
   p{
@@ -114,6 +134,10 @@
 
     @media all and (min-width: $charlie_query) {
       margin-top: rem($body_leading_charlie/2);
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading_delta/4);
     }
   }
 }
@@ -138,6 +162,16 @@
   @media all and (min-width: $charlie_query) {
     height: rem($header-slide_height);
     padding-top: rem($body_leading_charlie);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    height: rem($header-slide_height);
+    padding-top: rem($body_leading_charlie);
+  }
+
+  @media all and (min-width: $delta_query) {
+    height: rem($header-slide_height);
+    padding-top: rem($body_leading_delta);
   }
 }
 

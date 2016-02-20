@@ -55,7 +55,7 @@
       bottom: 0;
       z-index: 100;
       width: 100%;
-      background-color: rgba($action-color, 0.5);
+      background-color: rgba($action-color, 0.55);
       pointer-events: none;
     }
   }
@@ -85,7 +85,7 @@
 .a-prf-text {
   display: block;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 150;
@@ -99,6 +99,18 @@
   @media all and (min-width: $charlie_query) {
     width: 84%;
   }
+
+  .a-prf-text__span{
+    @extend .a-fineprint; // 14/21
+    display: block;
+    margin-top: 1rem;
+    color: rgba($body-bgcolor, 0.87);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: 1.5rem;
+    }
+  }
+
 }
 
 

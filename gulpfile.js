@@ -82,7 +82,7 @@ gulp.task('criticalcss', function () {
     return gulp.src(settings.criticalcss.srcFile).pipe(sass({
         sourceComments: 'none',
         imagePath: '../img',
-        outputStyle: 'compressed'
+        outputStyle: 'nested'
     })).pipe(rename(settings.criticalcss.outputFile))
         .pipe(postcss({
             'sourcemaps': false,

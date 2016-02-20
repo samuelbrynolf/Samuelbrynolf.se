@@ -1,4 +1,19 @@
 
+// ATOMS ---------------------------------------------------------------------
+
+.a-listitem-title{
+
+  @media all and (min-width: $charlie_query) {
+    float: left;
+    width: $spanwidth-6;
+    padding-right: rem($charlie_gutter);
+  }
+
+  @media all and (min-width: $delta_query) {
+    padding-right: rem($delta_gutter/2);
+  }
+}
+
 // MOLECULES ---------------------------------------------------------------------
 
 .m-listitem {
@@ -13,11 +28,19 @@
     margin-bottom: 0;
 
     @media all and (min-width: $beta_query) {
+      width: 90%;
       margin-top: rem($body_leading_beta/2);
     }
 
     @media all and (min-width: $charlie_query) {
-      margin-top: rem($body_leading_charlie/2);
+      float: right;
+      width: $spanwidth-6;
+      margin-top: 0.3rem;
+      padding-left: rem($charlie_gutter);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-left: rem($delta_gutter/2);
     }
   }
 
@@ -29,7 +52,12 @@
     }
 
     @media all and (min-width: $charlie_query) {
+      float: right;
       margin-top: rem($body_leading_charlie/2);
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading_delta/2);
     }
   }
 }
@@ -37,14 +65,18 @@
 .m-listitem + .m-listitem,
 .m-listitem + .js-added-HTML,
 .js-added-HTML + .js-added-HTML{
-  margin-top: rem($body_leading);
+  margin-top: rem($body_leading*1.5);
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta);
+    margin-top: rem($body_leading_beta*1.5);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie);
+    margin-top: rem($body_leading_charlie*2.5);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*2);
   }
 }
 

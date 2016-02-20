@@ -1,6 +1,6 @@
 <?php echo '<ul id="js-listitems" class="o-listitems">';
     while ( have_posts() ) {
-        echo '<li class="l-gutter l-cleafix m-listitem">';
+        echo '<li class="l-gutter l-clearfix m-listitem">';
             the_post();
             get_template_part('partials/listitems/listitem');
         echo '</li>';

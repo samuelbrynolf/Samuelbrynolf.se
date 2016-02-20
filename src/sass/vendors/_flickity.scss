@@ -53,6 +53,10 @@ http://flickity.metafizzy.co
   list-style: none;
   text-align: center;
   line-height: 1;
+
+  @media all and (min-width: $delta_query) {
+    bottom: rem(-($body_leading_delta*1.5 + 9));
+  }
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -85,6 +89,10 @@ http://flickity.metafizzy.co
   @media all and (min-width: $charlie_query) {
     margin-bottom: rem($body_leading_charlie*4);
   }
+
+  @media all and (min-width: $delta_query) {
+    margin-bottom: rem($body_leading_delta*4);
+  }
 }
 
 .gallery-cell.m-prf {
@@ -108,6 +116,12 @@ http://flickity.metafizzy.co
     padding-bottom: $ratio-4-3 * ($flickety-cell-width_charlie/100);
   }
 
+  @media all and (min-width: $delta_query) {
+    width: $flickety-cell-width_delta +0%;
+    margin-right: 2.7%;
+    padding-bottom: $ratio-4-3 * ($flickety-cell-width_delta/100);
+  }
+
   .a-prf-text{
     color: $body-bgcolor;
     opacity: 1;
@@ -128,5 +142,9 @@ http://flickity.metafizzy.co
 
   @media all and (min-width: $charlie_query) {
     padding-top: 3%;
+  }
+
+  @media all and (min-width: $delta_query) {
+    padding-top: 2.7%;
   }
 }

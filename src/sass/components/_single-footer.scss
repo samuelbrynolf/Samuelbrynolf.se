@@ -8,8 +8,9 @@
     @media all and (min-width: $delta_query) {
       position: absolute;
       top: $leading_delta;
-      right: -$spanwidth-5;
-      width: $spanwidth-4;
+      right: -$spanwidth-3;
+      width: $spanwidth-3;
+      transform: translateX(rem($delta_gutter));
     }
   }
 

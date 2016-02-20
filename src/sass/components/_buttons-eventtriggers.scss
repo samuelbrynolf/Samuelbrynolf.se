@@ -16,11 +16,6 @@
   color: $action-color;
   border: 1px solid $action-color;
   background-color: $body-bgcolor;
-
-  @media all and (min-width: $beta_query) {
-    padding-right: rem($body_leading/$btnfontsize);
-    padding-left: rem($body_leading/$btnfontsize);
-  }
 }
 
 .a-topjump{
@@ -37,6 +32,12 @@
 
   @media all and (min-width: $charlie_query) {
     margin-top: rem($body_leading_charlie*6);
+    padding-right: 0;
+    text-align: center;
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*5);
     padding-right: 0;
     text-align: center;
   }

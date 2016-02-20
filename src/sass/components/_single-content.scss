@@ -12,6 +12,10 @@
     max-width: rem($containerwidth - ($body_leading_charlie*12));
   }
 
+  @media all and (min-width: $delta_query) {
+    max-width: rem($containerwidth - ($body_leading_delta*9));
+  }
+
   blockquote{
     padding-left: rem($alpha_gutter);
     border-left: $borderwidth solid;
@@ -23,9 +27,16 @@
     @media all and (min-width: $charlie_query) {
       font-size: rem(27);
       line-height: (30/21);
-      margin-right: rem(-$body_leading_charlie*1.5);
+      margin-right: rem(-$body_leading_charlie*1.5); // Full bredd - 12 charlies är nya bredden för hela content. Om preamblen är full bredd minus nio charlies är mellanskillnaden 3. Hälften på varje sida blir 1.5
       margin-left: rem(-$body_leading_charlie*1.5);
       padding-left: rem($charlie_gutter*2);
+    }
+
+    @media all and (min-width: $delta_query) {
+      font-size: rem(24);
+      margin-right: rem(-$body_leading_delta*2.5);
+      margin-left: rem(-$body_leading_delta*2.5);
+      padding-left: rem($delta_gutter*2);
     }
 
     p{
@@ -58,6 +69,11 @@
       margin-top: 3rem;
       margin-bottom: rem($body_leading_charlie);
     }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: 3.42rem;
+      margin-bottom: rem($body_leading_delta);
+    }
   }
 
   h4{
@@ -70,6 +86,10 @@
 
     @media all and (min-width: $charlie_query) {
       margin-top: rem($body_leading_charlie);
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading_delta);
     }
 
     & + p,
@@ -85,6 +105,10 @@
       @media all and (min-width: $charlie_query) {
         margin-top: rem($body_leading_charlie/4);
       }
+
+      @media all and (min-width: $delta_query) {
+        margin-top: rem($body_leading_delta/4);
+      }
     }
   }
 
@@ -99,17 +123,22 @@
   // All images margin ----------------------------------------------------------
 
   .mis_container{
-    margin-top: rem($body_leading);
-    margin-bottom: rem($body_leading);
+    margin-top: rem($body_leading*2);
+    margin-bottom: rem($body_leading*2.5);
 
     @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta);
-      margin-bottom: rem($body_leading_beta);
+      margin-top: rem($body_leading_beta*2.5);
+      margin-bottom: rem($body_leading_beta*2.5);
     }
 
     @media all and (min-width: $charlie_query) {
-      margin-top: rem($body_leading_charlie);
-      margin-bottom: rem($body_leading_charlie);
+      margin-top: rem($body_leading_charlie*2);
+      margin-bottom: rem($body_leading_charlie*2.5);
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading_delta*2);
+      margin-bottom: rem($body_leading_delta*2.5);
     }
   }
 
@@ -132,6 +161,10 @@
       @media all and (min-width: $charlie_query) {
         margin-top: rem($body_leading_charlie/3);
       }
+
+      @media all and (min-width: $delta_query) {
+        margin-top: rem($body_leading_delta/3);
+      }
     }
   }
 
@@ -141,6 +174,7 @@
   .mis_container.right,
   img.left,
   img.right{
+    margin-top: 0;
     width: 46%;
   }
 
@@ -148,21 +182,27 @@
   img.left{
     float: left;
     margin-right: 4%;
+
+    @media all and (min-width: $delta_query) {
+      margin-left: rem(-$delta_gutter);
+    }
   }
 
   .mis_container.right,
   img.right{
     float: right;
     margin-left: 4%;
+
+    @media all and (min-width: $delta_query) {
+      margin-right: rem(-$delta_gutter);
+    }
   }
 
   // Floated Prf-images needs padding/2
 
   .m-prf.left,
-  .m-prf.right,
-  img.left,
-  img.right{
-    padding-bottom: $ratio-4-3/2;
+  .m-prf.right{
+    padding-bottom: $ratio-4-3 * (46/100);
   }
 
   .mis_container.none{
@@ -184,23 +224,32 @@
       display: block;
       margin-top: $leading_charlie*3;
     }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: $leading_delta*2;
+    }
   }
 
   // Tweet btn ----------------------------------------------------------
 
   .twitter-share-button{
     float: right;
-    margin-bottom: rem($body_leading);
-    margin-left: rem($alpha_gutter);
+    margin: 0.45rem 0 rem($body_leading) rem($alpha_gutter);
+    //padding: 1rem;
+    //background-color: $highlight-bgcolor;
 
     @media all and (min-width: $beta_query) {
-      margin-bottom: rem($body_leading_beta);
-      margin-left: rem($beta_gutter);
+      margin: 0.35rem 0 rem($body_leading_beta) rem($beta_gutter);
     }
 
     @media all and (min-width: $charlie_query) {
-      margin-bottom: rem($body_leading_charlie);
-      margin-left: rem($charlie_gutter);
+      margin-top: 0.3rem 0 rem($body_leading_charlie) rem($charlie_gutter);
+    }
+
+    @media all and (min-width: $delta_query) {
+      float: left;
+      margin-top: $leading_delta;
+      margin-left: -$spanwidth-3;
     }
   }
 }

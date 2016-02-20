@@ -1,0 +1,144 @@
+// ATOMS ---------------------------------------------------------------------
+
+.a-shortlink{
+  padding: rem(9) rem(12);
+  background-color: $subtle-bgcolor;
+}
+
+// MOLECULES ---------------------------------------------------------------------
+
+.m-sharepost{
+  margin-top: rem($body_leading*1.5);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*1.5);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*1.5);
+  }
+}
+
+.m-sharepost__ul {
+
+  li{
+    margin-bottom: rem($body_leading);
+    color: $body-textcolor;
+  }
+
+  .a-icon:before{
+    top: 50%;
+    left: rem(12);
+    transform: translateY(-50%);
+    color: $action-color;
+  }
+
+  .a-shortlink{
+    float: left;
+    width: $spanwidth-9;
+    padding-left: rem(33);
+    font-style: italic;
+
+    @media all and (min-width: $beta_query) {
+      width: $spanwidth-10;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      width: $spanwidth-11;
+    }
+  }
+
+  .a-tweetthis{
+    float: right;
+    width: $spanwidth-3;
+    padding-left: rem($alpha_gutter);
+
+    @media all and (min-width: $beta_query) {
+      width: $spanwidth-2;
+      padding-left: rem($beta_gutter);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      width: $spanwidth-1;
+      padding-left: rem($charlie_gutter);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-left: rem($delta_gutter);
+    }
+
+    @media all and (min-width: $echo_query) {
+      padding-left: rem($echo_gutter);
+    }
+  }
+}
+
+.m-prevnextposts {
+  margin-top: rem($body_leading*2);
+  padding-top: rem($body_leading*2);
+  background-color: $subtle-bgcolor;
+  box-shadow: inset 0 0 rem(12) 0 rgba($body-textcolor,0.09);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*2);
+    padding-top: rem($body_leading_beta*2);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*2);
+    padding-top: rem($body_leading_charlie*2);
+  }
+
+  @media all and (min-width: $delta_query) {
+    //padding-bottom: $gutter_delta
+  }
+
+  @media all and (min-width: $echo_query) {
+    //padding-bottom: $gutter_echo;
+  }
+
+  > .a-medium{
+    text-align: center;
+    margin-bottom: rem($body_leading*2);
+    opacity: 0.75;
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta*2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: rem($body_leading_charlie*2);
+    }
+  }
+}
+
+// ORGANISMS ---------------------------------------------------------------------
+
+.o-comments .a-large {
+  text-align: center;
+}
+
+// TEMPLATES ---------------------------------------------------------------------
+
+.single .o-comments{
+  margin-top: rem($body_leading*2);
+  margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*2);
+    margin-bottom: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*2);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
+  .a-large{
+    margin-top: 0;
+  }
+}
+
+// STATES ---------------------------------------------------------------------
+
+// ANIMATIONS ---------------------------------------------------------------------

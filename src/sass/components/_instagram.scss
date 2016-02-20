@@ -1,0 +1,22 @@
+
+// ATOMS ----------------------------------------------------
+
+img.a-forcewidth{
+  width: 100%;
+}
+
+
+
+// STATES ----------------------------------------------------
+
+#js-instagram.s-is-hidden{
+  opacity: 0;
+}
+
+
+
+// ANIMATION ----------------------------------------------------
+
+#js-instagram{
+  transition: opacity $transition-time ease-out;
+}

@@ -1,0 +1,97 @@
+
+// ATOMS ----------------------------------------------------------
+
+.js-jumper[href="#js-entry-content"] {
+  display: block;
+}
+
+.a-instagram__medialink{
+  margin-top: $leading/2;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: $leading_beta/2;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: $leading_charlie/2;
+  }
+}
+
+// MOLECULES ----------------------------------------------------------
+
+.m-entry-preamble{
+  margin-top: $leading*1.5;
+  margin-bottom: $leading*0.5;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: $leading_beta*1.5;
+    margin-bottom: $leading_beta*0.5;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    max-width: rem($containerwidth - ($body_leading_charlie*9));
+    margin-top: $leading_charlie*1.5;
+    margin-bottom: $leading_charlie*0.5;
+  }
+}
+
+.m-instagram{
+
+  @media all and (min-width: $charlie_query) {
+    display: none;
+  }
+
+  .a-fineprint{
+    margin: $leading/2 rem($alpha_gutter);
+
+    @media all and (min-width: $beta_query) {
+      margin: $leading_beta/2 rem($beta_gutter);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin: $leading_charlie 0;
+    }
+  }
+}
+
+// ORGANISMS ----------------------------------------------------------
+
+.o-entry__header{
+  text-align: center;
+
+  .a-entry-meta{
+    margin-bottom: rem($body_leading*1.25);
+    color: $body-textcolor;
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: rem($body_leading_beta*1.25);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: rem($body_leading_charlie*1.25);
+    }
+  }
+}
+
+// TENPLATES ----------------------------------------------------------
+
+.single.no-thumb .a-entry-meta,
+.page.no-thumb .a-entry-meta{
+  margin-bottom: 0;
+  padding-bottom: rem($body_leading*1.25);
+  border-bottom: 1px solid $subtle-bordercolor;
+
+  @media all and (min-width: $beta_query) {
+    padding-bottom: rem($body_leading_beta*1.25);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    padding-bottom: rem($body_leading_charlie*1.25);
+  }
+}
+
+
+
+// STATES ----------------------------------------------------------
+
+// ANIMATIONS ----------------------------------------------------------

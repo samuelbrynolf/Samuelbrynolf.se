@@ -1,0 +1,92 @@
+
+// MOLECULES ---------------------------------------------------------------------
+
+.m-listitem {
+  display: block;
+
+  .a-listitem-meta-date{
+    color: $body-textcolor;
+  }
+
+  .a-listitem-excerpt{
+    margin-top: rem($body_leading/2);
+    margin-bottom: 0;
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
+    }
+  }
+
+  .a-external__a {
+    margin-top: rem($body_leading/2);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
+    }
+  }
+}
+
+.m-listitem + .m-listitem,
+.m-listitem + .js-added-HTML,
+.js-added-HTML + .js-added-HTML{
+  margin-top: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+  }
+}
+
+.js-added-HTML .m-listitem {
+  opacity: 0;
+  transform: translate3d(0,rem($body_leading*3),0);
+
+  @media all and (min-width: $beta_query) {
+    transform: translate3d(0,rem($body_leading_beta*3),0);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    transform: translate3d(0,rem($body_leading_charlie*3),0);
+  }
+}
+
+.m-listitems-pagin .bap_loadbutton{
+  margin-top: rem($body_leading*3);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*3);
+  }
+}
+
+
+
+// STATES ---------------------------------------------------------------------
+
+@media all and (min-width: $charlie_query) {
+  .m-listitem:hover .a-medium{
+    color: $body-textcolor;
+  }
+}
+
+
+
+// ANIMATIONS ---------------------------------------------------------------------
+
+.m-listitem {
+  transition: opacity $transition-time ease-out, transform $transition-time ease-out;
+}

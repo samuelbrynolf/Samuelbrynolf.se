@@ -27,6 +27,11 @@ var gulp = require('gulp'),
             outputDirectory: "./",
             mapsDirectory: "./maps"
         },
+        criticalcss: {
+            srcFile: "src/critical.scss",
+            outputFile: "critical.css",
+            outputDirectory: "./"
+        },
         js: {
             srcDirectory: "src/js/",
             outputDirectory: "./js/",
@@ -73,6 +78,33 @@ gulp.task('css', function () {
     }))
 });
 
+gulp.task('criticalcss', function () {
+    return gulp.src(settings.criticalcss.srcFile).pipe(sass({
+        sourceComments: 'none',
+        imagePath: '../img',
+        outputStyle: 'compressed'
+    })).pipe(rename(settings.criticalcss.outputFile))
+        .pipe(postcss({
+            'sourcemaps': false,
+            'autoprefixer': true,
+            'filters': true,
+            'rem': true,
+            'pseudoElements': true,
+            'opacity': true,
+            'import': true,
+            'calc': true,
+            'mqpacker': !dev,
+            'minifier': !dev,
+            'next': false
+        }))
+        .pipe(gulp.dest(settings.criticalcss.outputDirectory)).pipe(settings.ftp.enabled ? ftp({
+        host: settings.ftp.host,
+        user: ftpkey[settings.ftp.key].username,
+        pass: ftpkey[settings.ftp.key].password,
+        remotePath: settings.ftp.destination + "/" + settings.criticalcss.outputDirectory,
+    }) : gutil.noop())
+});
+
 gulp.task('lint', function () {
     gulp.src(settings.js.syntaxCheck).pipe(plumber()).pipe(jshint())
         // Use gulp-notify as jshint reporter
@@ -96,6 +128,10 @@ gulp.task('clean:js', function (cb) {
 
 gulp.task('clean:css', function (cb) {
     del([settings.css.outputDirectory + settings.css.outputFile, settings.css.mapsDirectory], cb)
+});
+
+gulp.task('clean:criticalcss', function (cb) {
+    del([settings.criticalcss.outputDirectory + settings.criticalcss.outputFile], cb)
 });
 
 gulp.task('minify', function () {
@@ -153,16 +189,15 @@ gulp.task('fullUpload', function () {
         }))
 });
 
-gulp.task('watch', ['css', 'lint', 'jsbundle', 'minify'], function () {
+gulp.task('watch', ['css', 'criticalcss', 'lint', 'jsbundle', 'minify'], function () {
     var files = settings.js.bundleFiles.slice(0);
     for (var i = 0; i < files.length; i++) {
         files[i] = '!' + files[i]
     }
 
     files.unshift(settings.js.srcDirectory + '**/*.js');
-    gulp.watch(settings.srcDirectory + '**/*.scss', ['css']);
+    gulp.watch(settings.srcDirectory + '**/*.scss', ['css', 'criticalcss']);
     gulp.watch(settings.js.bundleFiles, ['jsbundle']);
-    console.log()
     gulp.watch(files, ['minify']);
 });
 
@@ -170,8 +205,8 @@ gulp.task('_setprod', function () {
     dev = false;
 });
 
-gulp.task('clean', ['clean:css', 'clean:js']);
-gulp.task('build', ['_setprod', 'css', 'lint', 'jsbundlemin', 'minify']);
+gulp.task('clean', ['clean:css', 'clean:criticalcss', 'clean:js']);
+gulp.task('build', ['_setprod', 'css', 'criticalcss', 'lint', 'jsbundlemin', 'minify']);
 gulp.task('default', function () {
     console.log("Use 'gulp watch' to start a sass compiler session or 'gulp build' to build the project");
     console.log("Use 'gulp clean' to clean compiled results");

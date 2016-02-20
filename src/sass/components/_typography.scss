@@ -1,0 +1,199 @@
+%divider{
+  content: '';
+  display: block;
+  width: rem(33);
+  height: $borderwidth;
+  margin: 0 auto rem(33) auto;
+  background-color: $body-textcolor;
+}
+
+// TYPOCLASSES -----------------------------------------------------------------------
+
+.a-xlarge,
+.a-large,
+.a-medium,
+.a-small,
+strong,
+.a-sitename{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  a,
+  span,
+  strong{
+    font-weight: inherit;
+  }
+}
+
+.a-xlarge,
+.a-large{
+  word-wrap: break-word;
+
+  @media all and (min-width: $beta_query) {
+    word-wrap: normal;
+  }
+}
+
+.a-xlarge{
+  font-size: rem(42);
+  line-height: (54/42);
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(48);
+  }
+}
+
+.a-large{
+  font-size: rem(33);
+  line-height: (39/33);
+  margin-top: rem($body_leading*3);
+  margin-bottom: rem($body_leading*2);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*3);
+    margin-bottom: rem($body_leading_beta*2);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(36);
+    margin-top: rem($body_leading_charlie*3);
+    margin-bottom: rem($body_leading_charlie*2);
+  }
+
+  &:before {
+    @extend %divider;
+  }
+}
+
+.a-medium{
+  font-size: rem(24);
+  line-height: (30/24);
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(27);
+  }
+}
+
+.a-small{
+  font-size: rem(16);
+  font-weight: bold;
+}
+
+.a-preamble{
+  font-size: rem(21);
+  line-height: (30/21);
+
+  @media all and (min-width: $beta_query) {
+    font-size: rem(24);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    font-size: rem(27);
+  }
+}
+
+.a-fineprint{
+  font-size: rem(14);
+  line-height: rem(21);
+  color: $subtle-textcolor;
+}
+
+a[href^="http://"],
+a[href^="https://"]{
+  word-wrap: break-word;
+}
+
+a[href^="http://www.mis.1979design.se"],
+a[href^="http://mis.1979design.se"],
+a[href^="http://www.samuelbrynolf.se"],
+a[href^="http://samuelbrynolf.se"]{
+  word-wrap: normal;
+}
+
+
+
+// LISTS -----------------------------------------------------------------------
+
+.a-ol,
+.a-ul{
+  margin-top: rem($body_leading);
+  margin-bottom: rem($body_leading);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta);
+    margin-bottom: rem($body_leading_beta);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
+  li + li{
+    margin-top: rem($body_leading/2);
+
+    @media all and (min-width: $beta_query) {
+      margin-top: rem($body_leading_beta/2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-top: rem($body_leading_charlie/2);
+    }
+  }
+}
+
+.a-ol{
+  margin-left: rem($alpha_gutter*1.5);
+  list-style: decimal;
+
+  @media all and (min-width: $beta_query) {
+    margin-left: rem($beta_gutter*0.7);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: 0;
+  }
+}
+
+.a-ul{
+  margin-left: rem($alpha_gutter*1.35);
+  list-style: disc;
+
+  @media all and (min-width: $beta_query) {
+    margin-left: rem($beta_gutter*0.58);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-left: 0;
+  }
+}
+
+.a-ul-large{
+
+  li{
+    padding-top: rem($body_leading);
+    padding-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      padding-top: rem($body_leading_beta);
+      padding-bottom: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-top: rem($body_leading_charlie);
+      padding-bottom: rem($body_leading_charlie);
+    }
+  }
+
+  li + li{
+    border-top: 1px solid $subtle-bordercolor;
+  }
+
+  .a-ul-large__span,
+  a .a-ul-large__span{
+    display: inline-block;
+    float: right;
+    font-size: rem(18);
+    color: $body-textcolor;
+  }
+}

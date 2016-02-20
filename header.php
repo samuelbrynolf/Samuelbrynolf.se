@@ -23,7 +23,7 @@
 	<?php wp_head(); ?>
 
     <script>
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js wfl');
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
         (function(d) {
             var config = {
                     kitId: 'nky2ajj',
@@ -56,5 +56,17 @@
 		
 </head>
 
-<body <?php body_class(); ?>>
-<?php get_template_part('partials/global-components/global-header'); ?>
+<body id="js-body" <?php body_class(); ?>>
+
+    <header id="js-masthead" class="o-global__header">
+        <?php echo (is_front_page() ? '<h1 class="a-sitename">' : '<h2 class="a-sitename">');
+        echo bloginfo('name');
+        echo (is_front_page() ? '</h1>' : '</h2>'); ?>
+
+        <div class="l-gutter l-clearfix">
+
+            <?php get_search_form();
+            wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-pull-right m-global__nav', 'items_wrap' => '<ul>%3$s</ul>')); ?>
+
+        </div>
+    </header><!-- #masthead -->

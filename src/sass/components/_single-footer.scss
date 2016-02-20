@@ -1,0 +1,48 @@
+
+// MOLECULES
+
+.m-resources{
+
+  &.is-sidebar{
+
+    @media all and (min-width: $delta_query) {
+      position: absolute;
+      top: $leading_delta;
+      right: -$spanwidth-5;
+      width: $spanwidth-4;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  ul,
+  ol{
+    @extend .a-small;
+    margin-bottom: $leading;
+    margin-top: 0 !important;
+    text-align: left !important;
+
+    @media all and (min-width: $beta_query) {
+      margin-bottom: $leading_beta;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: $leading_charlie;
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-bottom: $leading_delta;
+    }
+
+    &:before{
+      display: none;
+    }
+  }
+
+  p,
+  ul,
+  ol{
+    @extend .a-fineprint;
+  }
+}

@@ -1,0 +1,15 @@
+
+// ATOMS --------------------------------------------------
+
+.a-toclist__li {
+  color: $action-color;
+}
+
+
+
+// STATES --------------------------------------------------
+
+.a-toclist__li:hover{
+  color: $body-textcolor;
+  cursor: pointer;
+}

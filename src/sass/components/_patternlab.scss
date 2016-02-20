@@ -1,0 +1,64 @@
+
+// TEMPLATES --------------------------------------------------------------------------
+
+.startpage .m-blogtag { // Startpage
+  position: relative;
+
+  .m-ccard-avatar {
+
+    @media all and (min-width: $beta_query) {
+      margin: 0 0 4% 0;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      margin-bottom: 3%;
+    }
+  }
+
+  .a-ccard__bio {
+    text-align: center;
+
+    @media all and (min-width: $beta_query) {
+      position: absolute;
+      top: 50%;
+      right: rem($beta-gutter);
+      left: $avatar-size + rem($beta-gutter*1.5);
+      transform: translateY(-50%);
+      text-align: left;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      right: rem($charlie-gutter*2);
+      left: $avatar-size + rem($charlie-gutter*3);
+    }
+
+    p {
+      font-size: rem(21);
+      margin-bottom: rem($body_leading*1.5);
+
+      @media all and (min-width: $beta_query) {
+        margin: 0;
+      }
+
+      @media all and (min-width: $charlie_query) {
+        font-size: rem(24);
+      }
+    }
+  }
+}
+
+
+
+// STATES --------------------------------------------------------------------------
+
+//main.tags-is-active{
+//  padding-top: rem($body_leading*5);
+//
+//  @media all and (min-width: $beta_query) {
+//    padding-top: rem($body_leading_beta*5);
+//  }
+//
+//  @media all and (min-width: $charlie_query) {
+//    padding-top: rem($body_leading_charlie*5);
+//  }
+//}

@@ -1,0 +1,96 @@
+
+// ATOMS ---------------------------------------------------------------------
+
+.o-global__footer .a-ccard__bio{
+  text-align: center;
+}
+
+
+
+// MOLECULES ---------------------------------------------------------------------
+
+.m-ccard__list{
+
+  .a-icon{
+    padding-left: 2rem;
+    line-height: rem($body_leading*2);
+    border-top: 1px solid $subtle-bordercolor;
+
+    @media all and (min-width: $beta_query) {
+      padding-left: 1.5rem;
+      line-height: rem($body_leading_beta*2);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      line-height: rem($body_leading_charlie*3);
+    }
+
+    &:before{
+      color: $body-textcolor;
+    }
+  }
+}
+
+.a-ccard__bio + .m-ccard__list{
+  margin-top: rem($body_leading*1.5);
+
+  @media all and (min-width: $beta_query) {
+    margin-top: rem($body_leading_beta*1.5);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_charlie*1.5);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*1.5);
+  }
+}
+
+.m-ccard-avatar{
+  margin: 0 auto;
+}
+
+
+
+// ORGANISMS ---------------------------------------------------------------------
+
+.o-global__footer{
+  transform: translateZ(0); // Hackster
+  padding-top: rem($body_leading*2.75);
+  padding-bottom: rem($body_leading*3);
+
+  @media all and (min-width: $beta_query) {
+    padding-top: rem($body_leading_beta*2.75);
+    padding-bottom: rem($body_leading_beta*3);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    padding-top: rem($body_leading_charlie*2.75);
+    padding-bottom: rem($body_leading_charlie*3);
+  }
+}
+
+
+
+// STATES ---------------------------------------------------------------------
+
+
+@media all and (min-width: $charlie_query) {
+  .m-ccard__list a:hover,
+  .a-topjump:hover{
+    color: $body-textcolor;
+  }
+}
+
+#js-colophon.s-is-highlighted{
+  background-color: $highlight-bgcolor;
+}
+
+
+
+// ANIMATIONS ---------------------------------------------------------------------
+
+#js-colophon{
+  transition: background-color $transition-time*2 ease-out $transition-time*2;
+}

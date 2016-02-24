@@ -248,7 +248,7 @@
 
     @media all and (min-width: $delta_query) {
       float: left;
-      margin-top: $leading_delta;
+      margin-top: $leading_delta*1.2;
       margin-left: -$spanwidth-3;
     }
   }

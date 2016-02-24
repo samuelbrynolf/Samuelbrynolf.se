@@ -167,6 +167,7 @@
 
 
 
+
     // -------------------------------------------------------------------------------------------------------
 
 
@@ -238,7 +239,8 @@
     bind_tappy($('.js-tappy'));
 
     if($.fn.smoothScroll){
-         $('.js-jumper').smoothScroll();
+
+        $('.js-jumper').smoothScroll();
 
         $('.js-colophon-jumper a').smoothScroll({
             speed : 350,

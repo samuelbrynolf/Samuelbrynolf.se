@@ -47,15 +47,23 @@ http://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  bottom: rem(-($body_leading + 9));
+  bottom: rem(-($body_leading*1.5 + 9));
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: center;
   line-height: 1;
 
+  @media all and (min-width: $beta_query) {
+    bottom: rem(-($body_leading_beta*1.5 + 9));
+  }
+
+  @media all and (min-width: $charlie_query) {
+    bottom: rem(-($body_leading_charlie*1.5 + 9));
+  }
+
   @media all and (min-width: $delta_query) {
-    bottom: rem(-($body_leading_delta*1.5 + 9));
+    bottom: rem(-($body_leading_delta + 9));
   }
 }
 
@@ -132,19 +140,34 @@ http://flickity.metafizzy.co
 
 // TEMPLATES --------------------------------------------------------
 
-.startpage .m-flickity{
+.startpage {
 
-  @media all and (min-width: $beta_query) {
-    padding-top: 4%;
-    background-color: $subtle-bgcolor;
-    background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
+  .m-flickity-container {
+
+    @media all and (min-width: $charlie_query) {
+      padding-left: 3%;
+      background-color: $subtle-bgcolor;
+      background-image: linear-gradient(top, $subtle-bgcolor, $body-bgcolor);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-left: 2.7%;
+    }
   }
 
-  @media all and (min-width: $charlie_query) {
-    padding-top: 3%;
-  }
+  .m-flickity {
 
-  @media all and (min-width: $delta_query) {
-    padding-top: 2.7%;
+    @media all and (min-width: $beta_query) {
+      padding-top: 4%;
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-top: 3%;
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-bottom: $leading_delta*5;
+      padding-top: 2.7%;
+    }
   }
 }

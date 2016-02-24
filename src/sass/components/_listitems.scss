@@ -35,17 +35,18 @@
     @media all and (min-width: $charlie_query) {
       float: right;
       width: $spanwidth-6;
-      margin-top: 0.3rem;
+      margin-top: 0.2rem;
       padding-left: rem($charlie_gutter);
     }
 
     @media all and (min-width: $delta_query) {
-      padding-left: rem($delta_gutter/2);
+      padding-left: rem($delta_gutter);
     }
   }
 
   .a-external__a {
     margin-top: rem($body_leading/2);
+    margin-bottom: 0;
 
     @media all and (min-width: $beta_query) {
       margin-top: rem($body_leading_beta/2);
@@ -53,10 +54,13 @@
 
     @media all and (min-width: $charlie_query) {
       float: right;
+      width: $spanwidth-6;
       margin-top: rem($body_leading_charlie/2);
+      text-align: right;
     }
 
     @media all and (min-width: $delta_query) {
+      width: calc(50% - 40px); // spanwidth - deltagutter
       margin-top: rem($body_leading_delta/2);
     }
   }
@@ -72,7 +76,7 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*2.5);
+    margin-top: rem($body_leading_charlie*2);
   }
 
   @media all and (min-width: $delta_query) {
@@ -110,7 +114,8 @@
 // STATES ---------------------------------------------------------------------
 
 @media all and (min-width: $charlie_query) {
-  .m-listitem:hover .a-medium{
+  .m-listitem:hover .a-medium,
+  .m-listitem:hover .a-listitem-excerpt{
     color: $body-textcolor;
   }
 }

@@ -41,6 +41,10 @@ strong,
   @media all and (min-width: $charlie_query) {
     font-size: rem(48);
   }
+
+  @media all and (min-width: $delta_query) {
+    font-size: rem(54);
+  }
 }
 
 .a-large{

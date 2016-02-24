@@ -1,5 +1,5 @@
 <?php if(function_exists('get_field') && get_field('post_preamble')){ ?>
-    <div class="l-gutter m-entry-preamble">
+    <div id="js-entry-preamble" class="l-gutter m-entry-preamble">
         <h2 class="a-preamble"><?php echo acf_tag_stripper('post_preamble'); ?></h2>
     </div>
 <?php } ?>

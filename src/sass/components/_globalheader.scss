@@ -8,9 +8,22 @@
 }
 
 .a-archive__divider{
+  position: relative;
   height: 1px;
   margin-top: rem($body_leading*1.5);
   background-color: $subtle-bordercolor;
+
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    z-index: 50;
+    content: '';
+    width: 40%;
+    height: $borderwidth;
+    background-color: $body-textcolor;
+  }
 
   @media all and (min-width: $beta_query) {
     margin-top: rem($body_leading_beta*1.5);
@@ -61,7 +74,7 @@
     font-size: rem(16);
     line-height: rem(41);
     color: $subtle-textcolor;
-    border-bottom: 2px solid $action-color;
+    border-bottom: $borderwidth solid $action-color;
   }
 }
 
@@ -164,13 +177,8 @@
     padding-top: rem($body_leading_charlie);
   }
 
-  @media all and (min-width: $charlie_query) {
-    height: rem($header-slide_height);
-    padding-top: rem($body_leading_charlie);
-  }
-
   @media all and (min-width: $delta_query) {
-    height: rem($header-slide_height);
+    height: rem($header-slide_height*1.06);
     padding-top: rem($body_leading_delta);
   }
 }

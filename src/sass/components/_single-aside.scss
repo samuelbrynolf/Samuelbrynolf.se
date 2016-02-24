@@ -15,14 +15,17 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*1.5);
+    margin-top: rem($body_leading_charlie*3);
+  }
+
+  @media all and (min-width: $charlie_query) {
+    margin-top: rem($body_leading_delta*3);
   }
 }
 
 .m-sharepost__ul {
 
   li{
-    margin-bottom: rem($body_leading);
     color: $body-textcolor;
   }
 
@@ -122,16 +125,21 @@
 // TEMPLATES ---------------------------------------------------------------------
 
 .single .o-comments{
-  margin-top: rem($body_leading*2);
+  margin-top: rem($body_leading*3);
   margin-bottom: rem($body_leading);
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta*2);
+    margin-top: rem($body_leading_beta*3);
     margin-bottom: rem($body_leading_beta);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*2);
+    margin-top: rem($body_leading_charlie*3);
+    margin-bottom: rem($body_leading_charlie);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*3);
     margin-bottom: rem($body_leading_charlie);
   }
 

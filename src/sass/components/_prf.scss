@@ -23,7 +23,7 @@
   height: 0;
   padding-bottom: $ratio-4-3;
   overflow: hidden;
-  background-color: transparent;
+  background-color: $subtle-bgcolor;
 
   @media all and (orientation: landscape)  {
     padding-bottom: $ratio-16-9;
@@ -72,6 +72,7 @@
   &.avatar{
     width: $avatar-size;
     padding-bottom: $avatar-size;
+    background-color: transparent;
 
     .mis_img{
       top: 0;

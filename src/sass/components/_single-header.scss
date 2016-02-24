@@ -79,7 +79,7 @@
   }
 }
 
-// TENPLATES ----------------------------------------------------------
+// TEMPLATES ----------------------------------------------------------
 
 .single.no-thumb .a-entry-meta,
 .page.no-thumb .a-entry-meta{
@@ -93,6 +93,14 @@
 
   @media all and (min-width: $charlie_query) {
     padding-bottom: rem($body_leading_charlie*1.25);
+  }
+}
+
+.single.no-thumb .o-entry__header,
+.page.no-thumb .o-entry__header{
+
+  @media all and (min-width: $delta_query) {
+    margin-top: $leading_delta;
   }
 }
 

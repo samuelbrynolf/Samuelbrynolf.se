@@ -125,30 +125,31 @@
     background-color: $highlight-bgcolor;
   }
 
-  span{
+  p span{
     background-color: $highlight-bgcolor;
     text-decoration: none !important;
   }
 
   // All images margin ----------------------------------------------------------
 
-  .mis_container{
-    margin-top: rem($body_leading*2);
-    margin-bottom: rem($body_leading*2.5);
+  .mis_container,
+  img{
+    margin-top: rem($body_leading);
+    margin-bottom: rem($body_leading);
 
     @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta*2.5);
-      margin-bottom: rem($body_leading_beta*2.5);
+      margin-top: rem($body_leading_beta);
+      margin-bottom: rem($body_leading_beta);
     }
 
     @media all and (min-width: $charlie_query) {
-      margin-top: rem($body_leading_charlie*2);
-      margin-bottom: rem($body_leading_charlie*2.5);
+      margin-top: rem($body_leading_charlie);
+      margin-bottom: rem($body_leading_charlie);
     }
 
     @media all and (min-width: $delta_query) {
-      margin-top: rem($body_leading_delta*2);
-      margin-bottom: rem($body_leading_delta*2.5);
+      margin-top: rem($body_leading_delta);
+      margin-bottom: rem($body_leading_delta);
     }
   }
 
@@ -182,16 +183,16 @@
 
   .mis_container.left,
   .mis_container.right,
-  img.left,
-  img.right{
-    margin-top: 0;
-    width: 46%;
+  img.alignleft,
+  img.alignright{
+    margin-top: 0.3rem;
+    width: 44%;
   }
 
   .mis_container.left,
-  img.left{
+  img.alignleft{
     float: left;
-    margin-right: 4%;
+    margin-right: 6%;
 
     @media all and (min-width: $delta_query) {
       margin-left: rem(-$delta_gutter);
@@ -199,13 +200,17 @@
   }
 
   .mis_container.right,
-  img.right{
+  img.alignright{
     float: right;
-    margin-left: 4%;
+    margin-left: 6%;
 
     @media all and (min-width: $delta_query) {
       margin-right: rem(-$delta_gutter);
     }
+  }
+
+  .mis_figure.left .mis_figcaption {
+    text-align: left;
   }
 
   // Floated Prf-images needs padding/2
@@ -215,14 +220,15 @@
     padding-bottom: $ratio-4-3 * (46/100);
   }
 
+  // Full span imgs ----------------------------------------------------------
+
   .mis_container.none{
     clear: both;
-  }
 
-  // Adjust figcaption textalign
-
-  .mis_figure.left .mis_figcaption {
-    text-align: left;
+    @media all and (min-width: $delta_query) {
+      margin-right: rem(-$delta_gutter);
+      margin-left: rem(-$delta_gutter);
+    }
   }
 
   // Instagram image ----------------------------------------------------------

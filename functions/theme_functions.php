@@ -130,6 +130,24 @@ if ( !function_exists( 'trim_private_titles' )) {
 
 
 
+// ADD ACF TO FEED -------------------------------------------------------------------
+
+function add_acf_to_feed($content) {
+    if(is_feed() && is_main_query()) {
+        $preamble = get_post_meta( get_the_ID(), 'post_preamble', true );
+
+        if($preamble){
+            $preambleBuild = '<p>'.$preamble.'</p>';
+            $content = $preambleBuild . $content;
+        }
+    }
+    return $content;
+}
+
+add_filter('the_content','add_acf_to_feed');
+
+
+
 // APPEND TWEET-LINK SCRIPT TO THE CONTENT -------------------------------------------------------------------
 
 function include_tweetbtn_top($content) {

@@ -120,6 +120,16 @@
     @extend .a-ul;
   }
 
+  del{
+    color: $error-text;
+    background-color: $highlight-bgcolor;
+  }
+
+  span{
+    background-color: $highlight-bgcolor;
+    text-decoration: none !important;
+  }
+
   // All images margin ----------------------------------------------------------
 
   .mis_container{

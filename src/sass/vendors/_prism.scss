@@ -44,6 +44,12 @@ pre[class*="language-"] {
     margin-top: rem($body_leading_charlie);
     margin-bottom: rem($body_leading_charlie);
   }
+
+  @media all and (min-width: $delta_query) {
+    padding: rem($body_leading_delta/2) rem($delta_gutter/2);
+    margin-top: rem($body_leading_delta);
+    margin-bottom: rem($body_leading_delta);
+  }
 }
 
 :not(pre) > code[class*="language-"],

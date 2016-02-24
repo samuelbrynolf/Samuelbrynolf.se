@@ -178,7 +178,6 @@
   }
 
   @media all and (min-width: $delta_query) {
-    height: rem($header-slide_height*1.06);
     padding-top: rem($body_leading_delta);
   }
 }

@@ -113,6 +113,10 @@
     @media all and (min-width: $charlie_query) {
       margin-bottom: rem($body_leading_charlie*2);
     }
+
+    @media all and (min-width: $delta_query) {
+      margin-bottom: rem($body_leading_delta*2);
+    }
   }
 }
 
@@ -143,9 +147,9 @@
     margin-bottom: rem($body_leading_charlie);
   }
 
-  .a-large{
-    margin-top: 0;
-  }
+  //.a-large{
+  //  margin-top: 0;
+  //}
 }
 
 // STATES ---------------------------------------------------------------------

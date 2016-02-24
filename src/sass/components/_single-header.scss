@@ -15,6 +15,10 @@
   @media all and (min-width: $charlie_query) {
     margin-top: $leading_charlie/2;
   }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: $leading_delta/2;
+  }
 }
 
 // MOLECULES ----------------------------------------------------------
@@ -47,15 +51,11 @@
     display: none;
   }
 
-  .a-fineprint{
-    margin: $leading/2 rem($alpha_gutter);
+  .a-instagram__medialink{
+    margin-left: rem($alpha_gutter);
 
     @media all and (min-width: $beta_query) {
-      margin: $leading_beta/2 rem($beta_gutter);
-    }
-
-    @media all and (min-width: $charlie_query) {
-      margin: $leading_charlie 0;
+      margin-left: rem($beta_gutter);
     }
   }
 }
@@ -76,6 +76,10 @@
     @media all and (min-width: $charlie_query) {
       margin-bottom: rem($body_leading_charlie*1.25);
     }
+
+    @media all and (min-width: $delta_query) {
+      margin-bottom: rem($body_leading_delta*1.25);
+    }
   }
 }
 
@@ -93,6 +97,10 @@
 
   @media all and (min-width: $charlie_query) {
     padding-bottom: rem($body_leading_charlie*1.25);
+  }
+
+  @media all and (min-width: $delta_query) {
+    padding-bottom: rem($body_leading_delta*1.25);
   }
 }
 

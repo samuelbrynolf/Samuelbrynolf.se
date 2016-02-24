@@ -64,6 +64,11 @@ strong,
     margin-bottom: rem($body_leading_charlie*2);
   }
 
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*3);
+    margin-bottom: rem($body_leading_delta*2);
+  }
+
   &:before {
     @extend %divider;
   }
@@ -137,6 +142,11 @@ a[href^="http://samuelbrynolf.se"]{
     margin-bottom: rem($body_leading_charlie);
   }
 
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta);
+    margin-bottom: rem($body_leading_delta);
+  }
+
   li + li{
     margin-top: rem($body_leading/2);
 
@@ -146,6 +156,10 @@ a[href^="http://samuelbrynolf.se"]{
 
     @media all and (min-width: $charlie_query) {
       margin-top: rem($body_leading_charlie/2);
+    }
+
+    @media all and (min-width: $delta_query) {
+      margin-top: rem($body_leading_delta/2);
     }
   }
 }
@@ -190,6 +204,11 @@ a[href^="http://samuelbrynolf.se"]{
     @media all and (min-width: $charlie_query) {
       padding-top: rem($body_leading_charlie);
       padding-bottom: rem($body_leading_charlie);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-top: rem($body_leading_delta);
+      padding-bottom: rem($body_leading_delta);
     }
   }
 

@@ -6,7 +6,7 @@
   @media all and (min-width: $charlie_query) {
     float: left;
     width: $spanwidth-6;
-    padding-right: rem($charlie_gutter);
+    padding-right: rem($charlie_gutter/2);
   }
 
   @media all and (min-width: $delta_query) {
@@ -36,11 +36,11 @@
       float: right;
       width: $spanwidth-6;
       margin-top: 0.2rem;
-      padding-left: rem($charlie_gutter);
+      padding-left: rem($charlie_gutter/2);
     }
 
     @media all and (min-width: $delta_query) {
-      padding-left: rem($delta_gutter);
+      padding-left: rem($delta_gutter/2);
     }
   }
 
@@ -54,7 +54,7 @@
 
     @media all and (min-width: $charlie_query) {
       float: right;
-      width: $spanwidth-6;
+      width: calc(50% - 20px); // spanwidth - charlie gutter
       margin-top: rem($body_leading_charlie/2);
       text-align: right;
     }
@@ -95,6 +95,10 @@
   @media all and (min-width: $charlie_query) {
     transform: translate3d(0,rem($body_leading_charlie*3),0);
   }
+
+  @media all and (min-width: $delta_query) {
+    transform: translate3d(0,rem($body_leading_delta*3),0);
+  }
 }
 
 .m-listitems-pagin .bap_loadbutton{
@@ -106,6 +110,10 @@
 
   @media all and (min-width: $charlie_query) {
     margin-top: rem($body_leading_charlie*3);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-top: rem($body_leading_delta*3);
   }
 }
 

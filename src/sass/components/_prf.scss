@@ -97,10 +97,6 @@
     width: 88%;
   }
 
-  @media all and (min-width: $charlie_query) {
-    width: 84%;
-  }
-
   .a-prf-text__span{
     @extend .a-fineprint; // 14/21
     display: block;

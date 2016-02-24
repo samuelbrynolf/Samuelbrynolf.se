@@ -38,8 +38,6 @@
 
   @media all and (min-width: $delta_query) {
     margin-top: rem($body_leading_delta*5);
-    padding-right: 0;
-    text-align: center;
   }
 
   &:after{

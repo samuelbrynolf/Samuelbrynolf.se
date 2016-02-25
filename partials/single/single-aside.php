@@ -28,22 +28,23 @@
     }
 
     $featured_id_arr = get_posts(array(
-        'fields' => 'ids',
         'post_type' => 'post',
         'posts_per_page' => -1,
-        'post__not_in' => array($current_post_ID),
         'meta_query' => array(
             array(
                 'key' => 'options_set-featured',
                 'value' => true
             )
-        )
+        ),
+        'fields' => 'ids',
+        'post__not_in' => array($current_post_ID)
     ));
 
     $merged_id_arr = array_merge($nextprev_posts_id_arr, $featured_id_arr);
 
     $args = array(
-        'post__in'  => $merged_id_arr
+        'post__in'  => $merged_id_arr,
+        'posts_per_page' => -1
     );
 
     $queried_posts = get_posts($args);

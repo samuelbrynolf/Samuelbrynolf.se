@@ -245,7 +245,7 @@ body {
   background-color: #fff;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(255, 105, 180, 0.2); }
+  -webkit-tap-highlight-color: rgba(0, 128, 0, 0.2); }
   @media all and (min-width: 650px) {
     /* line 39, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     body {
@@ -326,7 +326,7 @@ blockquote {
 
 /* line 124, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
 a {
-  color: hotpink;
+  color: green;
   text-decoration: none; }
 
 /* line 129, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
@@ -1348,7 +1348,7 @@ a[href^="http://samuelbrynolf.se"] {
             transform: translateY(-50%);
     font-size: 16px;
     font-size: 0.88889rem;
-    color: hotpink; }
+    color: green; }
     @media all and (min-width: 650px) {
       /* line 53, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-searchform.a-icon:before {
@@ -1375,7 +1375,7 @@ a[href^="http://samuelbrynolf.se"] {
     font-size: 0.88889rem;
     line-height: 41px;
     line-height: 2.27778rem;
-    border-bottom: 2px solid hotpink; }
+    border-bottom: 2px solid green; }
 
 /* line 84, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .m-global__nav {
@@ -1573,7 +1573,7 @@ a.current-menu-item {
       /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
       .startpage .m-blogtag .a-ccard__bio {
         right: 1.66667rem;
-        left: 12.22222rem; } }
+        left: 13.05556rem; } }
     /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
     .startpage .m-blogtag .a-ccard__bio p {
       font-size: 21px;
@@ -1592,7 +1592,3 @@ a.current-menu-item {
         /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
         .startpage .m-blogtag .a-ccard__bio p {
           font-size: 1.5rem; } }
-      @media all and (min-width: 1900px) {
-        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-        .startpage .m-blogtag .a-ccard__bio p {
-          font-size: 1.66667rem; } }

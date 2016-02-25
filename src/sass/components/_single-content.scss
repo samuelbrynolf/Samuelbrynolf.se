@@ -40,12 +40,12 @@
     @media all and (min-width: $delta_query) {
       margin-right: rem(-$body_leading_delta*1.5);
       margin-left: rem(-$body_leading_delta*1.5);
-      padding-left: rem($delta_gutter*2);
+      padding-left: rem($delta_gutter);
     }
 
     @media all and (min-width: $echo_query) {
       margin-right: rem(-$body_leading_echo*3);
-      margin-left: rem(-$body_leading_echo*3);
+      margin-left: rem(-$body_leading_echo*1.5);
       padding-left: rem($echo_gutter*2);
     }
 
@@ -304,6 +304,7 @@
   .twitter-share-button{
     float: right;
     margin: 0.45rem 0 rem($body_leading) rem($alpha_gutter);
+
 
     @media all and (min-width: $beta_query) {
       margin: 0.35rem 0 rem($body_leading_beta) rem($beta_gutter);

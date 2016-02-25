@@ -37,7 +37,7 @@
   }
 
   @media all and (min-width: $echo_query) {
-    max-width: rem($echo_cont_width - ($body_leading_echo*15));
+    max-width: rem($echo_cont_width - ($body_leading_echo*18));
     margin-top: $leading_echo*1.5;
     margin-bottom: $leading_echo;
   }

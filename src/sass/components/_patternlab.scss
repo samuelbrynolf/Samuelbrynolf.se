@@ -43,7 +43,7 @@
 
     @media all and (min-width: $echo_query) {
       right: rem($echo-gutter);
-      left: $avatar-size + rem($echo-gutter*2);
+      left: $avatar-size + rem($echo-gutter*2.5);
     }
 
     p {
@@ -60,10 +60,6 @@
 
       @media all and (min-width: $delta_query) {
         font-size: rem(27);
-      }
-
-      @media all and (min-width: $echo_query) {
-        font-size: rem(30);
       }
     }
   }

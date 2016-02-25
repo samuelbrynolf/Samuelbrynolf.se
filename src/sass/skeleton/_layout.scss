@@ -511,7 +511,7 @@
 
 	.l-container,
 	.l-gutter{
-		max-width: $containerwidth*1.2;
+		max-width: $delta_cont_width;
 	}
 
 	.l-container{
@@ -643,6 +643,11 @@
 //==============================================================================================================
 
 @media all and (min-width: $echo_query) {
+
+	.l-container,
+	.l-gutter{
+		max-width: $echo_cont_width;
+	}
 
 	.l-container{
 		padding-right: rem($echo_gutter/2);

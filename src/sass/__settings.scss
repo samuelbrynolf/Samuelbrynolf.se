@@ -67,8 +67,8 @@ $body_leading_charlie: $body_leading;
 $fontsize_delta: 21;
 $body_leading_delta: 32;
 
-$fontsize_echo: $fontsize;
-$body_leading_echo: $body_leading;
+$fontsize_echo: 24;
+$body_leading_echo: 36;
 
 // --
 
@@ -78,7 +78,7 @@ $rem_base: 18;
 
 $inputfontsize: $fontsize;
 $inputheight: $body_leading*2; // used for input type="submit" aka .a-btn as well
-$btnfontsize: 16;
+$btnfontsize: 14;
 
 // 3 -----------------------------------------------------------------------------------------------------------
 
@@ -118,6 +118,9 @@ $charlie_query: $charlie_screen+0px;
 $delta_query: $delta_screen+0px;
 $echo_query: $echo_screen+0px;
 
+$delta_cont_width: $containerwidth*1.2;
+$echo_cont_width: $containerwidth*1.5;
+
 // 4 -----------------------------------------------------------------------------------------------------------
 
 $bodyfont: 'ff-tisa-web-pro', serif;
@@ -134,7 +137,7 @@ $body-textcolor: #191b19; // #222
 $action-color: green;
 $subtle-textcolor: lighten($body-textcolor, 30%);
 $subtle-bgcolor: #eee;
-$subtle-bordercolor: lighten($body-textcolor, 65%); // #c8c8c8
+$subtle-bordercolor: lighten($body-textcolor, 70%); // #c8c8c8
 $input-bgcolor: white;
 $highlight-bgcolor: lighten(yellow, 25%);
 $error-text: hotpink;
@@ -149,6 +152,7 @@ $flickety-cell-width_alpha: 86;
 $flickety-cell-width_beta: 62.5;
 $flickety-cell-width_charlie: 40;
 $flickety-cell-width_delta: 40;
+$flickety-cell-width_echo: 40;
 
 // 7 -----------------------------------------------------------------------------------------------------------
 

@@ -1,10 +1,57 @@
 
+
+
+// MODULES ------------------------------------------------------------------
+
+.m-ul-large{
+
+  li a{
+    display: block;
+    padding-top: rem($body_leading);
+    padding-bottom: rem($body_leading);
+
+    @media all and (min-width: $beta_query) {
+      padding-top: rem($body_leading_beta);
+      padding-bottom: rem($body_leading_beta);
+    }
+
+    @media all and (min-width: $charlie_query) {
+      padding-top: rem($body_leading_charlie);
+      padding-bottom: rem($body_leading_charlie);
+    }
+
+    @media all and (min-width: $delta_query) {
+      padding-top: rem($body_leading_delta);
+      padding-bottom: rem($body_leading_delta);
+    }
+
+    @media all and (min-width: $echo_query) {
+      padding-top: rem($body_leading_echo);
+      padding-bottom: rem($body_leading_echo);
+    }
+  }
+
+  li + li{
+    border-top: 1px solid $subtle-bordercolor;
+  }
+
+  .a-ul-large__span,
+  a .a-ul-large__span{
+    display: inline-block;
+    float: right;
+    font-size: rem($rem_base);
+    color: $body-textcolor;
+  }
+}
+
+
+
 // ORGANISMS ------------------------------------------------------------------
 
 .o-taglist {
   background-color: $action-color;
 
-  .a-ul-large{
+  .m-ul-large{
     @extend .l-gutter;
     padding-top: rem($header-slide__offset);
     padding-bottom: rem($body_leading*2);
@@ -24,6 +71,11 @@
       padding-bottom: rem($body_leading_delta*2);
     }
 
+    @media all and (min-width: $echo_query) {
+      padding-top: rem($header-slide__offset*1.15);
+      padding-bottom: rem($body_leading_echo*2);
+    }
+
     .a-xlarge{
       margin-bottom: rem($body_leading);
 
@@ -38,6 +90,10 @@
       @media all and (min-width: $delta_query) {
         margin-bottom: rem($body_leading_delta);
       }
+
+      @media all and (min-width: $echo_query) {
+        margin-bottom: rem($body_leading_echo);
+      }
     }
 
     a{
@@ -45,14 +101,14 @@
     }
 
     li + li{
-      border-color: rgba($body-textcolor, 0.4);
+      border-color: rgba($body-textcolor, 0.25);
     }
   }
 }
 
 .o-no-content{
 
-  .m-listhead{
+  .a-listhead{
     display: none;
   }
 
@@ -78,10 +134,26 @@
   }
 }
 
+@media all and (min-width: $charlie_query) {
+  .m-ul-large:hover li{
+    opacity: 0.4;
+    border-top-color: transparent !important;
+  }
+
+  .m-ul-large li:hover,
+  .m-ul-large:hover .a-listhead{
+    opacity: 1;
+  }
+}
+
 
 
 // ANIMATIONS ------------------------------------------------------------------
 
 .o-taglist{
   transition: opacity $transition-time ease-out, transform $transition-time ease-out;
+}
+
+.m-ul-large li{
+  transition: opacity $transition-time/2 ease-out;
 }

@@ -1,10 +1,6 @@
 
 // ATOMS ----------------------------------------------------------
 
-.js-jumper[href="#js-entry-content"] {
-  display: block;
-}
-
 .a-instagram__medialink{
   margin-top: $leading/2;
 
@@ -14,10 +10,6 @@
 
   @media all and (min-width: $charlie_query) {
     margin-top: $leading_charlie/2;
-  }
-
-  @media all and (min-width: $delta_query) {
-    margin-top: $leading_delta/2;
   }
 }
 
@@ -39,9 +31,15 @@
   }
 
   @media all and (min-width: $delta_query) {
-    max-width: rem($containerwidth - ($body_leading_delta*4));
+    max-width: rem($delta_cont_width - ($body_leading_delta*9));
     margin-top: $leading_delta*1.5;
     margin-bottom: $leading_delta;
+  }
+
+  @media all and (min-width: $echo_query) {
+    max-width: rem($echo_cont_width - ($body_leading_echo*15));
+    margin-top: $leading_echo*1.5;
+    margin-bottom: $leading_echo;
   }
 }
 
@@ -80,6 +78,10 @@
     @media all and (min-width: $delta_query) {
       margin-bottom: rem($body_leading_delta*1.25);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-bottom: rem($body_leading_echo*1.25);
+    }
   }
 }
 
@@ -102,6 +104,10 @@
   @media all and (min-width: $delta_query) {
     padding-bottom: rem($body_leading_delta*1.25);
   }
+
+  @media all and (min-width: $echo_query) {
+    padding-bottom: rem($body_leading_echo*1.25);
+  }
 }
 
 .single.no-thumb .o-entry__header,
@@ -109,6 +115,10 @@
 
   @media all and (min-width: $delta_query) {
     margin-top: $leading_delta;
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-top: 0;
   }
 }
 

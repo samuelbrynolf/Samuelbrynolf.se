@@ -36,6 +36,10 @@
   transform: translate(-50%, -50%);
   width: 96%;
   max-width: $containerwidth;
+
+  @media all and (min-width: $echo_query) {
+    max-width: $echo_cont_width;
+  }
 }
 
 #mis_overlay.s-is-visible,

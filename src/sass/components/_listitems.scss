@@ -12,6 +12,10 @@
   @media all and (min-width: $delta_query) {
     padding-right: rem($delta_gutter/2);
   }
+
+  @media all and (min-width: $echo_query) {
+    padding-right: rem($echo_gutter/2);
+  }
 }
 
 // MOLECULES ---------------------------------------------------------------------
@@ -42,6 +46,10 @@
     @media all and (min-width: $delta_query) {
       padding-left: rem($delta_gutter/2);
     }
+
+    @media all and (min-width: $echo_query) {
+      padding-left: rem($echo_gutter/2);
+    }
   }
 
   .a-external__a {
@@ -63,6 +71,11 @@
       width: calc(50% - 40px); // spanwidth - deltagutter
       margin-top: rem($body_leading_delta/2);
     }
+
+    @media all and (min-width: $echo_query) {
+      width: calc(50% - 40px); // spanwidth - deltagutter
+      margin-top: rem($body_leading_echo/2);
+    }
   }
 }
 
@@ -81,6 +94,10 @@
 
   @media all and (min-width: $delta_query) {
     margin-top: rem($body_leading_delta*2);
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-top: rem($body_leading_echo*2);
   }
 }
 
@@ -114,6 +131,10 @@
 
   @media all and (min-width: $delta_query) {
     margin-top: rem($body_leading_delta*3);
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-top: rem($body_leading_echo*3);
   }
 }
 

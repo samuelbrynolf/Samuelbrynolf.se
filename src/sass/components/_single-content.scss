@@ -13,7 +13,11 @@
   }
 
   @media all and (min-width: $delta_query) {
-    max-width: rem($containerwidth - ($body_leading_delta*9));
+    max-width: rem($delta_cont_width - ($body_leading_delta*12));
+  }
+
+  @media all and (min-width: $echo_query) {
+    max-width: rem($echo_cont_width - ($body_leading_echo*21));
   }
 
   blockquote{
@@ -21,11 +25,12 @@
     border-left: $borderwidth solid;
 
     @media all and (min-width: $beta_query) {
+      font-size: rem(21);
       padding-left: rem($beta_gutter/2);
     }
 
     @media all and (min-width: $charlie_query) {
-      font-size: rem(27);
+      font-size: rem(24);
       line-height: (30/21);
       margin-right: rem(-$body_leading_charlie*1.5); // Full bredd - 12 charlies är nya bredden för hela content. Om preamblen är full bredd minus nio charlies är mellanskillnaden 3. Hälften på varje sida blir 1.5
       margin-left: rem(-$body_leading_charlie*1.5);
@@ -33,10 +38,19 @@
     }
 
     @media all and (min-width: $delta_query) {
-      font-size: rem(24);
-      margin-right: rem(-$body_leading_delta*2.5);
-      margin-left: rem(-$body_leading_delta*2.5);
+      margin-right: rem(-$body_leading_delta*1.5);
+      margin-left: rem(-$body_leading_delta*1.5);
       padding-left: rem($delta_gutter*2);
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-right: rem(-$body_leading_echo*3);
+      margin-left: rem(-$body_leading_echo*3);
+      padding-left: rem($echo_gutter*2);
+    }
+
+    @media all and (min-width: $echo_query) {
+      font-size: rem(27);
     }
 
     p{
@@ -74,6 +88,11 @@
       margin-top: 3.42rem;
       margin-bottom: rem($body_leading_delta);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: rem($body_leading_echo*2);
+      margin-bottom: rem($body_leading_echo);
+    }
   }
 
   h4{
@@ -92,6 +111,10 @@
       margin-top: rem($body_leading_delta);
     }
 
+    @media all and (min-width: $echo_query) {
+      margin-top: rem($body_leading_echo);
+    }
+
     & + p,
     & + ol,
     & + ul,
@@ -108,6 +131,10 @@
 
       @media all and (min-width: $delta_query) {
         margin-top: rem($body_leading_delta/4);
+      }
+
+      @media all and (min-width: $echo_query) {
+        margin-top: rem($body_leading_echo/4);
       }
     }
   }
@@ -151,6 +178,11 @@
       margin-top: rem($body_leading_delta);
       margin-bottom: rem($body_leading_delta);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: rem($body_leading_echo);
+      margin-bottom: rem($body_leading_echo);
+    }
   }
 
   // FIGURE ---------------------------------------------------------------------
@@ -176,6 +208,10 @@
       @media all and (min-width: $delta_query) {
         margin-top: rem($body_leading_delta/3);
       }
+
+      @media all and (min-width: $echo_query) {
+        margin-top: rem($body_leading_echo/3);
+      }
     }
   }
 
@@ -197,6 +233,10 @@
     @media all and (min-width: $delta_query) {
       margin-left: rem(-$delta_gutter);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-left: rem(-$echo_gutter);
+    }
   }
 
   .mis_container.right,
@@ -206,6 +246,10 @@
 
     @media all and (min-width: $delta_query) {
       margin-right: rem(-$delta_gutter);
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-right: rem(-$echo_gutter);
     }
   }
 
@@ -229,6 +273,11 @@
       margin-right: rem(-$delta_gutter);
       margin-left: rem(-$delta_gutter);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-right: rem(-$echo_gutter);
+      margin-left: rem(-$echo_gutter);
+    }
   }
 
   // Instagram image ----------------------------------------------------------
@@ -244,6 +293,10 @@
     @media all and (min-width: $delta_query) {
       margin-top: $leading_delta*2;
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: $leading_echo*2;
+    }
   }
 
   // Tweet btn ----------------------------------------------------------
@@ -251,8 +304,6 @@
   .twitter-share-button{
     float: right;
     margin: 0.45rem 0 rem($body_leading) rem($alpha_gutter);
-    //padding: 1rem;
-    //background-color: $highlight-bgcolor;
 
     @media all and (min-width: $beta_query) {
       margin: 0.35rem 0 rem($body_leading_beta) rem($beta_gutter);
@@ -265,7 +316,11 @@
     @media all and (min-width: $delta_query) {
       float: left;
       margin-top: $leading_delta*1.2;
-      margin-left: -$spanwidth-3;
+      margin-left: -$spanwidth-2;
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: $leading_echo*1.17;
     }
   }
 }

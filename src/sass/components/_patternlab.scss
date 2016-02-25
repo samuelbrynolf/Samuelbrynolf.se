@@ -41,6 +41,11 @@
       left: $avatar-size + rem($delta-gutter*2);
     }
 
+    @media all and (min-width: $echo_query) {
+      right: rem($echo-gutter);
+      left: $avatar-size + rem($echo-gutter*2);
+    }
+
     p {
       font-size: rem(21);
       margin-bottom: rem($body_leading*1.5);
@@ -56,22 +61,10 @@
       @media all and (min-width: $delta_query) {
         font-size: rem(27);
       }
+
+      @media all and (min-width: $echo_query) {
+        font-size: rem(30);
+      }
     }
   }
 }
-
-
-
-// STATES --------------------------------------------------------------------------
-
-//main.tags-is-active{
-//  padding-top: rem($body_leading*5);
-//
-//  @media all and (min-width: $beta_query) {
-//    padding-top: rem($body_leading_beta*5);
-//  }
-//
-//  @media all and (min-width: $charlie_query) {
-//    padding-top: rem($body_leading_charlie*5);
-//  }
-//}

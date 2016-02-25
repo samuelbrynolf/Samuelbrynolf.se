@@ -36,6 +36,10 @@
   @media all and (min-width: $delta_query) {
     margin-top: rem($body_leading_delta);
   }
+
+  @media all and (min-width: $echo_query) {
+    margin-top: rem($body_leading_echo);
+  }
 }
 
 
@@ -103,6 +107,10 @@
     @media all and (min-width: $delta_query) {
       padding-left: rem($delta_gutter/2);
     }
+
+    @media all and (min-width: $echo_query) {
+      padding-left: rem($echo_gutter/2);
+    }
   }
 
   a{
@@ -137,6 +145,10 @@
     margin-bottom: rem($body_leading_delta*2);
   }
 
+  @media all and (min-width: $echo_query) {
+    margin-bottom: rem($body_leading_echo*2);
+  }
+
   p{
     margin-top: rem($body_leading/2);
     margin-bottom: 0;
@@ -152,6 +164,10 @@
     @media all and (min-width: $delta_query) {
       margin-top: rem($body_leading_delta/4);
     }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: rem($body_leading_echo/4);
+    }
   }
 }
 
@@ -165,7 +181,7 @@
   z-index: $header-slide_z;
   transform: translateY(0);
   width: 100%;
-  background-color: rgba($body-bgcolor, 0.93);
+  background-color: rgba($body-bgcolor, 0.87);
 
   @media all and (min-width: $beta_query) {
     height: rem($header-slide_height*1.05);
@@ -178,7 +194,13 @@
   }
 
   @media all and (min-width: $delta_query) {
+    height: rem($header-slide_height*1.09);
     padding-top: rem($body_leading_delta);
+  }
+
+  @media all and (min-width: $echo_query) {
+    height: rem($header-slide_height*1.12);
+    padding-top: rem($body_leading_echo);
   }
 }
 

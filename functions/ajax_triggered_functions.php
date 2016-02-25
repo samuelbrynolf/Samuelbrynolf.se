@@ -27,16 +27,16 @@ if ( !function_exists('listTags')) {
         $tags = get_tags();
 
         if ($tags) {
-            echo '<ul id="js-tags__ul" class="a-ul-large">';
-                echo '<li id="js-listhead" class="m-listhead">';
+            echo '<ul id="js-tags__ul" class="m-ul-large">';
+                echo '<li id="js-listhead" class="a-listhead">';
                     echo '<h2 class="a-xlarge">Etiketter<br/>A&mdash;&Ouml;</h2>';
-             echo '</li>';
+                echo '</li>';
 
             foreach ($tags as $tag) {
                 echo '<li class="l-clearfix">';
-                echo '<a href="'.get_tag_link($tag->term_id).'" title="'.sprintf(__("Se allt inom &auml;mnet %s"), $tag->name).'" rel="nofollow">';
-                echo '<h3 class="a-medium">'.$tag->name.'<span class="a-ul-large__span"> ['.$tag->count.']</span></h3>';
-                echo '</a>';
+                    echo '<a href="'.get_tag_link($tag->term_id).'" title="'.sprintf(__("Se allt inom &auml;mnet %s"), $tag->name).'" rel="nofollow">';
+                        echo '<h3 class="a-medium">'.$tag->name.'<span class="a-ul-large__span"> ['.$tag->count.']</span></h3>';
+                    echo '</a>';
                 echo '</li>';
             }
             echo '</ul>';

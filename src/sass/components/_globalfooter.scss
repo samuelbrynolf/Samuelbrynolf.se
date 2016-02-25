@@ -29,6 +29,10 @@
       line-height: rem($body_leading_delta*3);
     }
 
+    @media all and (min-width: $echo_query) {
+      line-height: rem($body_leading_echo*2);
+    }
+
     &:before{
       color: $body-textcolor;
     }
@@ -47,7 +51,11 @@
   }
 
   @media all and (min-width: $delta_query) {
-    margin-top: rem($body_leading_delta*1.25);
+    margin-top: rem($body_leading_delta*1.2);
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-top: 0;
   }
 }
 
@@ -77,6 +85,11 @@
   @media all and (min-width: $delta_query) {
     padding-top: rem($body_leading_delta*3);
     padding-bottom: rem($body_leading_delta*3);
+  }
+
+  @media all and (min-width: $echo_query) {
+    padding-top: rem($body_leading_echo*3);
+    padding-bottom: rem($body_leading_echo*3);
   }
 }
 

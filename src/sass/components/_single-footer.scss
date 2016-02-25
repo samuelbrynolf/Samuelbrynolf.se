@@ -8,9 +8,16 @@
     @media all and (min-width: $delta_query) {
       position: absolute;
       top: $leading_delta;
-      right: -$spanwidth-3;
+      right: -$spanwidth-2;
       width: $spanwidth-3;
       transform: translateX(rem($delta_gutter));
+    }
+
+    @media all and (min-width: $echo_query) {
+      top: $leading_echo;
+      right: -$spanwidth-4;
+      width: $spanwidth-4;
+      transform: translateX(rem($echo_gutter));
     }
   }
 
@@ -34,6 +41,10 @@
 
     @media all and (min-width: $delta_query) {
       margin-bottom: $leading_delta;
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-bottom: $leading_echo;
     }
 
     &:before{

@@ -69,6 +69,11 @@ strong,
     margin-bottom: rem($body_leading_delta*2);
   }
 
+  @media all and (min-width: $echo_query) {
+    margin-top: rem($body_leading_echo*3.5);
+    margin-bottom: rem($body_leading_echo*2);
+  }
+
   &:before {
     @extend %divider;
   }
@@ -92,16 +97,12 @@ strong,
   font-size: rem(21);
   line-height: (30/21);
 
-  @media all and (min-width: $beta_query) {
-    font-size: rem(24);
-  }
-
   @media all and (min-width: $charlie_query) {
-    font-size: rem(27);
+    font-size: rem(24);
   }
 
-  @media all and (min-width: $delta_query) {
-    font-size: rem(24);
+  @media all and (min-width: $echo_query) {
+    font-size: rem(27);
   }
 }
 
@@ -116,8 +117,6 @@ a[href^="https://"]{
   word-wrap: break-word;
 }
 
-a[href^="http://www.mis.1979design.se"],
-a[href^="http://mis.1979design.se"],
 a[href^="http://www.samuelbrynolf.se"],
 a[href^="http://samuelbrynolf.se"]{
   word-wrap: normal;
@@ -147,6 +146,11 @@ a[href^="http://samuelbrynolf.se"]{
     margin-bottom: rem($body_leading_delta);
   }
 
+  @media all and (min-width: $echo_query) {
+    margin-top: rem($body_leading_echo);
+    margin-bottom: rem($body_leading_echo);
+  }
+
   li + li{
     margin-top: rem($body_leading/2);
 
@@ -160,6 +164,10 @@ a[href^="http://samuelbrynolf.se"]{
 
     @media all and (min-width: $delta_query) {
       margin-top: rem($body_leading_delta/2);
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-top: rem($body_leading_echo/2);
     }
   }
 }
@@ -187,40 +195,5 @@ a[href^="http://samuelbrynolf.se"]{
 
   @media all and (min-width: $charlie_query) {
     margin-left: 0;
-  }
-}
-
-.a-ul-large{
-
-  li{
-    padding-top: rem($body_leading);
-    padding-bottom: rem($body_leading);
-
-    @media all and (min-width: $beta_query) {
-      padding-top: rem($body_leading_beta);
-      padding-bottom: rem($body_leading_beta);
-    }
-
-    @media all and (min-width: $charlie_query) {
-      padding-top: rem($body_leading_charlie);
-      padding-bottom: rem($body_leading_charlie);
-    }
-
-    @media all and (min-width: $delta_query) {
-      padding-top: rem($body_leading_delta);
-      padding-bottom: rem($body_leading_delta);
-    }
-  }
-
-  li + li{
-    border-top: 1px solid $subtle-bordercolor;
-  }
-
-  .a-ul-large__span,
-  a .a-ul-large__span{
-    display: inline-block;
-    float: right;
-    font-size: rem(18);
-    color: $body-textcolor;
   }
 }

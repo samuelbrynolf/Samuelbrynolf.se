@@ -65,6 +65,10 @@ http://flickity.metafizzy.co
   @media all and (min-width: $delta_query) {
     bottom: rem(-($body_leading_delta + 9));
   }
+
+  @media all and (min-width: $echo_query) {
+    bottom: rem(-($body_leading_echo + 12));
+  }
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -77,6 +81,11 @@ http://flickity.metafizzy.co
   background-color: $subtle-bordercolor;
   border-radius: 50%;
   cursor: pointer;
+
+  @media all and (min-width: $echo_query) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .flickity-page-dots .dot.is-selected {
@@ -100,6 +109,10 @@ http://flickity.metafizzy.co
 
   @media all and (min-width: $delta_query) {
     margin-bottom: rem($body_leading_delta*4);
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-bottom: rem($body_leading_echo*4);
   }
 }
 
@@ -128,6 +141,11 @@ http://flickity.metafizzy.co
     width: $flickety-cell-width_delta +0%;
     margin-right: 2.7%;
     padding-bottom: $ratio-4-3 * ($flickety-cell-width_delta/100);
+  }
+
+  @media all and (min-width: $echo_query) {
+    width: $flickety-cell-width_echo +0%;
+    padding-bottom: $ratio-4-3 * ($flickety-cell-width_echo/100);
   }
 
   .a-prf-text{
@@ -168,6 +186,10 @@ http://flickity.metafizzy.co
     @media all and (min-width: $delta_query) {
       margin-bottom: $leading_delta*5;
       padding-top: 2.7%;
+    }
+
+    @media all and (min-width: $echo_query) {
+      margin-bottom: $leading_echo*5;
     }
   }
 }

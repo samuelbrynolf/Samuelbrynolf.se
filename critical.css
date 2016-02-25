@@ -245,7 +245,7 @@ body {
   background-color: #fff;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 128, 0, 0.2); }
+  -webkit-tap-highlight-color: rgba(255, 105, 180, 0.2); }
   @media all and (min-width: 650px) {
     /* line 39, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     body {
@@ -326,7 +326,7 @@ blockquote {
 
 /* line 124, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
 a {
-  color: green;
+  color: hotpink;
   text-decoration: none; }
 
 /* line 129, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
@@ -1348,7 +1348,7 @@ a[href^="http://samuelbrynolf.se"] {
             transform: translateY(-50%);
     font-size: 16px;
     font-size: 0.88889rem;
-    color: green; }
+    color: hotpink; }
     @media all and (min-width: 650px) {
       /* line 53, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-searchform.a-icon:before {
@@ -1375,10 +1375,9 @@ a[href^="http://samuelbrynolf.se"] {
     font-size: 0.88889rem;
     line-height: 41px;
     line-height: 2.27778rem;
-    color: #636a63;
-    border-bottom: 2px solid green; }
+    border-bottom: 2px solid hotpink; }
 
-/* line 85, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 84, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .m-global__nav {
   width: 60%;
   line-height: 41px;
@@ -1386,89 +1385,89 @@ a[href^="http://samuelbrynolf.se"] {
   text-align: right;
   padding-bottom: 1px;
   border-bottom: 1px solid #cbcecb; }
-  /* line 92, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+  /* line 91, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
   .m-global__nav li {
     display: inline-block; }
-  /* line 96, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+  /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
   .m-global__nav li + li {
     padding-left: 8px;
     padding-left: 0.48148rem; }
     @media all and (min-width: 650px) {
-      /* line 96, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
         padding-left: 0.83333rem; } }
     @media all and (min-width: 900px) {
-      /* line 96, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
         padding-left: 0.72222rem; } }
     @media all and (min-width: 1430px) {
-      /* line 96, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
         padding-left: 1.11111rem; } }
     @media all and (min-width: 1900px) {
-      /* line 96, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
         padding-left: 0.83333rem; } }
-  /* line 116, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+  /* line 115, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
   .m-global__nav a {
     font-size: 16px;
     font-size: 0.88889rem; }
     @media all and (min-width: 650px) {
-      /* line 116, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 115, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav a {
         font-size: 0.77778rem; } }
     @media all and (min-width: 900px) {
-      /* line 116, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 115, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav a {
         font-size: 0.88889rem; } }
     @media all and (min-width: 1430px) {
-      /* line 116, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 115, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav a {
         font-size: 0.77778rem; } }
 
-/* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 132, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .m-archive__header {
   margin-bottom: 39px;
   margin-bottom: 2.16667rem; }
   @media all and (min-width: 650px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 132, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     .m-archive__header {
       margin-bottom: 2.5rem; } }
   @media all and (min-width: 900px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 132, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     .m-archive__header {
       margin-bottom: 3.61111rem; } }
   @media all and (min-width: 1430px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 132, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     .m-archive__header {
       margin-bottom: 3.55556rem; } }
   @media all and (min-width: 1900px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 132, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     .m-archive__header {
       margin-bottom: 4rem; } }
-  /* line 152, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+  /* line 151, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
   .m-archive__header p {
     margin-top: 12px;
     margin-top: 0.72222rem;
     margin-bottom: 0; }
     @media all and (min-width: 650px) {
-      /* line 152, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 151, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-archive__header p {
         margin-top: 0.83333rem; } }
     @media all and (min-width: 900px) {
-      /* line 152, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 151, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-archive__header p {
         margin-top: 0.72222rem; } }
     @media all and (min-width: 1430px) {
-      /* line 152, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 151, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-archive__header p {
         margin-top: 0.44444rem; } }
     @media all and (min-width: 1900px) {
-      /* line 152, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+      /* line 151, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-archive__header p {
         margin-top: 0.5rem; } }
 
-/* line 176, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 175, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 #js-masthead {
   height: 87px;
   height: 4.83889rem;
@@ -1482,52 +1481,52 @@ a[href^="http://samuelbrynolf.se"] {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.87); }
   @media all and (min-width: 650px) {
-    /* line 176, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 175, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
       height: 5.08083rem;
       padding-top: 1.66667rem; } }
   @media all and (min-width: 900px) {
-    /* line 176, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 175, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
       height: 4.83889rem;
       padding-top: 1.44444rem; } }
   @media all and (min-width: 1430px) {
-    /* line 176, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 175, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
       height: 5.27439rem;
       padding-top: 1.77778rem; } }
   @media all and (min-width: 1900px) {
-    /* line 176, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+    /* line 175, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
       height: 5.41956rem;
       padding-top: 2rem; } }
 
-/* line 211, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 210, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .search-no-results .a-archive__divider,
 .error404 .a-archive__divider {
   background-color: transparent; }
 
 @media all and (min-width: 900px) {
-  /* line 222, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+  /* line 221, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
   .m-global__nav .menu-item a:hover {
     color: #191b19; } }
 
-/* line 227, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 226, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .current-menu-item a,
 a.current-menu-item {
   color: #636a63; }
 
-/* line 234, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 233, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 #js-masthead.s-is-up {
   -webkit-transform: translateY(-5.80667rem);
           transform: translateY(-5.80667rem); }
 
-/* line 239, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 238, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 .a-searchform__input:focus {
   border-color: #191b19;
   background-color: rgba(255, 255, 128, 0.5); }
 
-/* line 248, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
+/* line 247, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
 #js-masthead {
   -webkit-transition: -webkit-transform 300ms ease-in-out;
           transition: transform 300ms ease-in-out; }

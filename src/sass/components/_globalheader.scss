@@ -238,6 +238,7 @@ a.current-menu-item{
 
 .a-searchform__input:focus{
   border-color: $body-textcolor;
+  background-color: rgba($highlight-bgcolor, 0.5);
 }
 
 

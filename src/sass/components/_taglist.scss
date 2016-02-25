@@ -101,7 +101,7 @@
     }
 
     li + li{
-      border-color: rgba($body-textcolor, 0.25);
+      border-color: rgba($body-textcolor, 0.3);
     }
   }
 }
@@ -135,9 +135,13 @@
 }
 
 @media all and (min-width: $charlie_query) {
-  .m-ul-large:hover li{
-    opacity: 0.4;
-    border-top-color: transparent !important;
+
+  .m-ul-large li:hover a{
+    color: $body-textcolor;
+  }
+
+  .o-taglist .m-ul-large li:hover a{
+    color: $body-textcolor;
   }
 
   .m-ul-large li:hover,
@@ -154,6 +158,6 @@
   transition: opacity $transition-time ease-out, transform $transition-time ease-out;
 }
 
-.m-ul-large li{
-  transition: opacity $transition-time/2 ease-out;
+.o-taglist a{
+  transition: color $transition-time/2 ease-out;
 }

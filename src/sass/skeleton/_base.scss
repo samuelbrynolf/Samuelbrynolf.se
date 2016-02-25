@@ -155,3 +155,10 @@ a{
     color: $body-textcolor;
   }
 }
+
+::selection {
+  background: $highlight-bgcolor; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $highlight-bgcolor; /* Gecko Browsers */
+}

@@ -58,22 +58,22 @@
 
 
     @media all and (min-width: $beta_query) {
-      padding-top: rem($header-slide__offset*0.77);
+      padding-top: rem($header-slide__offset*0.77 + $body_leading_beta);
       padding-bottom: rem($body_leading_beta*2);
     }
 
     @media all and (min-width: $charlie_query) {
-      padding-top: rem($header-slide__offset*0.88);
+      padding-top: rem($header-slide__offset*0.88 + $body_leading_charlie);
       padding-bottom: rem($body_leading_charlie*2);
     }
 
     @media all and (min-width: $delta_query) {
-      padding-top: rem($header-slide__offset*0.89);
+      padding-top: rem($header-slide__offset*0.89 + $body_leading_delta);
       padding-bottom: rem($body_leading_delta*2);
     }
 
     @media all and (min-width: $echo_query) {
-      padding-top: rem($header-slide__offset*0.96);
+      padding-top: rem($header-slide__offset*0.96 + $body_leading_echo);
       padding-bottom: rem($body_leading_echo*2);
     }
 

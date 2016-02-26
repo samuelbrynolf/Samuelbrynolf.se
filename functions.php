@@ -52,13 +52,14 @@ function bento_scripts() {
     wp_deregister_script('wp-embed');
 
 	//wp_dequeue_style('contact-form-7');
-//    if(!is_single()){
-//	    wp_dequeue_style('wp-prism-syntax-highlighter');
-//    }
+    // if(!is_single()){
+    //  wp_dequeue_style('wp-prism-syntax-highlighter');
+    //}
 
 	wp_enqueue_script( 'bento-scripts', get_template_directory_uri() . '/js/bundled.js', array(), '20150901', true );
 }
 add_action( 'wp_enqueue_scripts', 'bento_scripts' );
+
 
 
 // IMPORT THEME, TEMPLATE & AJAX-FUNCTIONS -------------------------------------------------------------------

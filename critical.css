@@ -265,8 +265,8 @@ body {
 
 /* line 66, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
 main {
-  padding-top: 124px;
-  padding-top: 6.93333rem; }
+  padding-top: 120px;
+  padding-top: 6.67333rem; }
   @media all and (min-width: 650px) {
     /* line 66, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     main {
@@ -333,32 +333,12 @@ a {
   color: green;
   text-decoration: none; }
 
-/* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
-#mq-watcher {
-  font-family: "aq"; }
-  @media all and (min-width: 650px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
-    #mq-watcher {
-      font-family: "bq"; } }
-  @media all and (min-width: 900px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
-    #mq-watcher {
-      font-family: "cq"; } }
-  @media all and (min-width: 1430px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
-    #mq-watcher {
-      font-family: "dq"; } }
-  @media all and (min-width: 1900px) {
-    /* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
-    #mq-watcher {
-      font-family: "eq"; } }
-
 @media all and (min-width: 900px) {
-  /* line 158, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
+  /* line 138, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
   p a:hover {
     color: #191b19; } }
 
-/* line 163, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
+/* line 143, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
 ::-moz-selection {
   background: #ffff80;
   /* WebKit/Blink Browsers */ }
@@ -366,7 +346,7 @@ a {
   background: #ffff80;
   /* WebKit/Blink Browsers */ }
 
-/* line 166, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
+/* line 146, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
 ::-moz-selection {
   background: #ffff80;
   /* Gecko Browsers */ }

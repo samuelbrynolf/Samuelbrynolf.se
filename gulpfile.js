@@ -55,7 +55,7 @@ gulp.task('css', function () {
         imagePath: '../img',
         outputStyle: 'nested'
     })).pipe(rename(settings.css.outputFile)).pipe(postcss({
-        'sourcemaps': true,
+        'sourcemaps': false,
         'autoprefixer': true,
         'filters': true,
         'rem': true,

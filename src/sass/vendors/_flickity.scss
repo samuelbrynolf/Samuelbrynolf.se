@@ -122,10 +122,6 @@ http://flickity.metafizzy.co
   margin-right: 4%;
   padding-bottom: $ratio-4-3 * ($flickety-cell-width_alpha/100);
 
-  @media all and (orientation: landscape) {
-    padding-bottom: $ratio-16-9 * ($flickety-cell-width_alpha/100);
-  }
-
   @media all and (min-width: $beta_query) {
     width: $flickety-cell-width_beta +0%;
     padding-bottom: $ratio-4-3 * ($flickety-cell-width_beta/100);

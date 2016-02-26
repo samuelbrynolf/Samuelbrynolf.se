@@ -1,10 +1,12 @@
-@import "sass/skeleton/_reset"; // Critical
 @import "sass/__settings";
-@import "sass/skeleton/_fonts"; // Critical
+
+@import "sass/skeleton/_reset"; // Critical check
+@import "sass/skeleton/_layout"; // Critical
+
 @import "sass/skeleton/_base"; // Critical
 @import "sass/skeleton/_mixins";
+
 @import "sass/components/_typography"; // Critical
-@import "sass/skeleton/_layout"; // Critical
 @import "sass/components/_globalheader"; // Critical
-//@import "sass/components/_single-header"; // Critical
 @import "sass/components/_blogtag";
+//@import "sass/components/_single-header"; // Critical

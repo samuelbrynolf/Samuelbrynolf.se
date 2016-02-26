@@ -12,7 +12,7 @@
                     the_field('video_embed_code');
                 echo '</section>';
             } elseif ( function_exists('makeitSrcset') && has_post_thumbnail()) {
-                makeitSrcset(get_post_thumbnail_id($post->ID), null, null, null, null, null, 'm-prf');
+                makeitSrcset(get_post_thumbnail_id($post->ID), 100, 100, 100, 100, 100, 'm-prf');
             } elseif (has_post_thumbnail()){
                 the_post_thumbnail();
             }

@@ -71,7 +71,7 @@ main{
   }
 
   @media all and (min-width: $charlie_query) {
-    padding-top: rem($header-slide__offset);
+    padding-top: rem($header-slide__offset*1.1);
   }
 
   @media all and (min-width: $echo_query) {

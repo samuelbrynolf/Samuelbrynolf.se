@@ -59,7 +59,7 @@
             type: 'POST',
             url: '/wp-admin/admin-ajax.php',
             data: {
-                action: 'build_tags',
+                action: 'build_tags'
             },
             success: function (data) {
                 $loadtarget.append(data).removeClass('s-is-hidden');
@@ -86,13 +86,15 @@
     function top_tags($trigger){
         var tagsloaded = false,
             trigger = $($trigger),
-            targetelem = $('<aside id="js-taglist" class="o-taglist s-is-hidden"></aside>');
+            targetelem = $('<aside id="js-taglist" class="o-taglist s-is-hidden"></aside>'),
+            js_body = $('body');
 
-        if($('body').is('.search-no-results, .error404') && $.fn.smoothScroll){
+
+        if(js_body.is('.search-no-results, .error404') && $.fn.smoothScroll){
             targetelem.insertBefore('#js-tags__ul');
             trigger.smoothScroll();
         } else {
-            targetelem.prependTo('body');
+            targetelem.prependTo(js_body);
             trigger.bind('tap', function(){
                 var $this = $(this);
                 var href = $this.attr('href');
@@ -111,7 +113,7 @@
                         }
 
                         if($('main').hasClass('tags-is-active')){
-                            $('body').animate({
+                            js_body.animate({
                                 scrollTop: 0
                             },'fast');
                         }
@@ -202,9 +204,10 @@
         var top_container = $('#js-instagram');
 
         if(top_container.length){
+            var js_body = $('#js-body');
 
             if($.fn.mq_watcher){
-                $('body').mq_watcher();
+                js_body.mq_watcher();
                 var viewPort = $(window);
                 var resizeTimeoutId = 0;
                 var screen = getActiveMQ();
@@ -214,7 +217,7 @@
                     loadSocialData(top_container, 'loadInstagram');
                 } else {
                     loadSocialData(bottom_container, 'loadInstagram');
-                    $('body').addClass('no-thumb');
+                    js_body.addClass('no-thumb');
                 }
 
                 viewPort.on('resize', function(){
@@ -245,14 +248,13 @@
     if($.fn.smoothScroll){
         $('.js-jumper').smoothScroll();
         $('.js-colophon-jumper a').smoothScroll({
-            speed : 350,
-            target_offset : 36,
+            speed : 750,
             highlight_target : true
         });
         smoothscroll_section_anchors($('#js-blogtag'));
     }
 
-    if($.fn.mis_popup) {
+    if ($.fn.mis_popup) {
         var popup_src = $('.mis_popup');
         popup_src.mis_popup();
     }
@@ -271,7 +273,8 @@
     }
 
     if($.fn.toclist){
-        $('#js-entry-content.has-toc h2').toclist({
+        var entry_content = $('#js-entry-content.has-toc');
+        entry_content.find('h2').toclist({
             list_ID: 'js-toc',
             list_classes: 'm-toclist__ol',
             listitem_classes: 'a-toclist__li',

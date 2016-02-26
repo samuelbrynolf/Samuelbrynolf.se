@@ -58,22 +58,22 @@
 
 
     @media all and (min-width: $beta_query) {
-      padding-top: rem($header-slide__offset*0.83);
+      padding-top: rem($header-slide__offset*0.77);
       padding-bottom: rem($body_leading_beta*2);
     }
 
     @media all and (min-width: $charlie_query) {
-      padding-top: rem($header-slide__offset);
+      padding-top: rem($header-slide__offset*0.88);
       padding-bottom: rem($body_leading_charlie*2);
     }
 
     @media all and (min-width: $delta_query) {
-      padding-top: rem($header-slide__offset*1.1);
+      padding-top: rem($header-slide__offset*0.89);
       padding-bottom: rem($body_leading_delta*2);
     }
 
     @media all and (min-width: $echo_query) {
-      padding-top: rem($header-slide__offset*1.15);
+      padding-top: rem($header-slide__offset*0.96);
       padding-bottom: rem($body_leading_echo*2);
     }
 

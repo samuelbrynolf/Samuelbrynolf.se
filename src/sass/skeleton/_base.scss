@@ -64,18 +64,22 @@ body{
 }
 
 main{
-  padding-top: rem($header-slide__offset); // Se taglist usage of $header-slide__offset
+  padding-top: rem($header-slide__offset*0.8); // Se taglist usage of $header-slide__offset
 
   @media all and (min-width: $beta_query) {
-    padding-top: rem($header-slide__offset*0.83);
+    padding-top: rem($header-slide__offset*0.77);
   }
 
   @media all and (min-width: $charlie_query) {
-    padding-top: rem($header-slide__offset*1.1);
+    padding-top: rem($header-slide__offset*0.88);
+  }
+
+  @media all and (min-width: $delta_query) {
+    padding-top: rem($header-slide__offset*0.89);
   }
 
   @media all and (min-width: $echo_query) {
-    padding-top: rem($header-slide__offset*1.15);
+    padding-top: rem($header-slide__offset*0.96);
   }
 }
 

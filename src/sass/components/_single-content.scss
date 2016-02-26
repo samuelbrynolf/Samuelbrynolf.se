@@ -298,32 +298,6 @@
       margin-top: $leading_echo*2;
     }
   }
-
-  // Tweet btn ----------------------------------------------------------
-
-  .twitter-share-button{
-    float: right;
-    margin: 0.45rem 0 rem($body_leading) rem($alpha_gutter);
-
-
-    @media all and (min-width: $beta_query) {
-      margin: 0.35rem 0 rem($body_leading_beta) rem($beta_gutter);
-    }
-
-    @media all and (min-width: $charlie_query) {
-      margin-top: 0.3rem 0 rem($body_leading_charlie) rem($charlie_gutter);
-    }
-
-    @media all and (min-width: $delta_query) {
-      float: left;
-      margin-top: $leading_delta*1.2;
-      margin-left: -$spanwidth-2;
-    }
-
-    @media all and (min-width: $echo_query) {
-      margin-top: $leading_echo*1.17;
-    }
-  }
 }
 
 

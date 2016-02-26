@@ -400,38 +400,6 @@
         'menu_order' => 0,
     ));
     register_field_group(array (
-        'id' => 'acf_tweetbox',
-        'title' => 'Tweetbox',
-        'fields' => array (
-            array (
-                'key' => 'field_56465b3a19af5',
-                'label' => 'Visa tweet-länk i toppen på inlägget?',
-                'name' => 'tweetbox_top',
-                'type' => 'true_false',
-                'message' => '',
-                'default_value' => 0,
-            ),
-        ),
-        'location' => array (
-            array (
-                array (
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'post',
-                    'order_no' => 0,
-                    'group_no' => 0,
-                ),
-            ),
-        ),
-        'options' => array (
-            'position' => 'side',
-            'layout' => 'default',
-            'hide_on_screen' => array (
-            ),
-        ),
-        'menu_order' => 0,
-    ));
-    register_field_group(array (
         'id' => 'acf_video-embed',
         'title' => 'Video-embed',
         'fields' => array (

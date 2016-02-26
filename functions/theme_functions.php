@@ -145,16 +145,3 @@ function add_acf_to_feed($content) {
 }
 
 add_filter('the_content','add_acf_to_feed');
-
-
-
-// APPEND TWEET-LINK SCRIPT TO THE CONTENT -------------------------------------------------------------------
-
-function include_tweetbtn_top($content) {
-    if( is_singular() && is_main_query() && function_exists('get_field') && get_field('tweetbox_top') ){
-        $new_content = get_template_part('partials/single/tweet-script');
-        $content .= $new_content;
-    }
-    return $content;
-}
-add_filter('the_content', 'include_tweetbtn_top');

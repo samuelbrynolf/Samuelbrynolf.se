@@ -13,6 +13,19 @@
 (function($) {
 
 
+    function easein_item(elem){
+        var arr_elem = $(elem);
+
+        arr_elem.each(function(i){
+            var $this = $(this);
+
+            setTimeout(function(){
+                $this.addClass('s-is-visible');
+            }, i*300);
+        });
+    }
+
+
 
 	// -------------------------------------------------------------------------------------------------------
 
@@ -154,9 +167,11 @@
 
 
 
-    function bind_tappy($element) {
+    function bind_tappy(elem) {
         if($.fn.tappy) {
-            $element.each(function () {
+            var var_elem = $(elem);
+
+            var_elem.each(function () {
                 var href = $(this).attr("href");
                 if (href.indexOf("#") !== 0) {
                     $(this).bind("tap", function () {
@@ -235,15 +250,16 @@
 
 
 
+
 // ==============================================================================================================
 
 // 2. EXECUTE
 
 // ==============================================================================================================
 
-    load_instagram();
+    easein_item('.mis_img');
     top_tags('.js-toptags a');
-    bind_tappy($('.js-tappy'));
+    bind_tappy('.js-tappy');
 
     if($.fn.smoothScroll){
         $('.js-jumper').smoothScroll();
@@ -281,5 +297,7 @@
             nodetarget: $('#js-toclist__section')
         });
     }
+
+    load_instagram();
 
 })(jQuery); // End self-invoking function

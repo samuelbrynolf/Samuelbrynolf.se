@@ -1,7 +1,7 @@
 
 // TEMPLATES --------------------------------------------------------------------------
 
-.startpage .m-blogtag { // Startpage
+.m-blogtag { // Only in startpage
   position: relative;
 
   .m-ccard-avatar {
@@ -63,4 +63,25 @@
       }
     }
   }
+}
+
+
+
+// STATES --------------------------------------------------------------------------
+
+.js .m-blogtag .a-ccard__bio{
+  opacity: 0;
+}
+
+.js.wf-active .m-blogtag .a-ccard__bio,
+.js.wf-inactive .m-blogtag .a-ccard__bio{
+  opacity: 1;
+}
+
+
+
+// ANIMATION --------------------------------------------------------------------------
+
+.a-ccard__bio{
+  transition: opacity $transition-time/3 ease-out;
 }

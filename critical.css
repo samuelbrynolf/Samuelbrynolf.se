@@ -1531,27 +1531,27 @@ a.current-menu-item {
   -webkit-transition: -webkit-transform 300ms ease-in-out;
           transition: transform 300ms ease-in-out; }
 
-/* line 4, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-.startpage .m-blogtag {
+/* line 4, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+.m-blogtag {
   position: relative; }
   @media all and (min-width: 650px) {
-    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-    .startpage .m-blogtag .m-ccard-avatar {
+    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+    .m-blogtag .m-ccard-avatar {
       margin: 0 0 4% 0; } }
   @media all and (min-width: 900px) {
-    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-    .startpage .m-blogtag .m-ccard-avatar {
+    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+    .m-blogtag .m-ccard-avatar {
       margin-bottom: 3%; } }
   @media all and (min-width: 1430px) {
-    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-    .startpage .m-blogtag .m-ccard-avatar {
+    /* line 7, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+    .m-blogtag .m-ccard-avatar {
       margin-bottom: 8.1%; } }
-  /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-  .startpage .m-blogtag .a-ccard__bio {
+  /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+  .m-blogtag .a-ccard__bio {
     text-align: center; }
     @media all and (min-width: 650px) {
-      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-      .startpage .m-blogtag .a-ccard__bio {
+      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+      .m-blogtag .a-ccard__bio {
         position: absolute;
         top: 50%;
         right: 2rem;
@@ -1560,35 +1560,51 @@ a.current-menu-item {
                 transform: translateY(-50%);
         text-align: left; } }
     @media all and (min-width: 900px) {
-      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-      .startpage .m-blogtag .a-ccard__bio {
+      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+      .m-blogtag .a-ccard__bio {
         right: 1.11111rem;
         left: 12.22222rem; } }
     @media all and (min-width: 1430px) {
-      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-      .startpage .m-blogtag .a-ccard__bio {
+      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+      .m-blogtag .a-ccard__bio {
         right: 2.22222rem;
         left: 13.33333rem; } }
     @media all and (min-width: 1900px) {
-      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-      .startpage .m-blogtag .a-ccard__bio {
+      /* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+      .m-blogtag .a-ccard__bio {
         right: 1.66667rem;
         left: 13.05556rem; } }
-    /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-    .startpage .m-blogtag .a-ccard__bio p {
+    /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+    .m-blogtag .a-ccard__bio p {
       font-size: 21px;
       font-size: 1.16667rem;
       margin-bottom: 39px;
       margin-bottom: 2.16667rem; }
       @media all and (min-width: 650px) {
-        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-        .startpage .m-blogtag .a-ccard__bio p {
+        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+        .m-blogtag .a-ccard__bio p {
           margin: 0; } }
       @media all and (min-width: 900px) {
-        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-        .startpage .m-blogtag .a-ccard__bio p {
+        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+        .m-blogtag .a-ccard__bio p {
           font-size: 1.33333rem; } }
       @media all and (min-width: 1430px) {
-        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_patternlab.scss */
-        .startpage .m-blogtag .a-ccard__bio p {
+        /* line 49, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+        .m-blogtag .a-ccard__bio p {
           font-size: 1.5rem; } }
+
+/* line 72, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+.js .m-blogtag .a-ccard__bio {
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+/* line 76, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+.js.wf-active .m-blogtag .a-ccard__bio,
+.js.wf-inactive .m-blogtag .a-ccard__bio {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+/* line 85, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_blogtag.scss */
+.a-ccard__bio {
+  -webkit-transition: opacity 100ms ease-out;
+          transition: opacity 100ms ease-out; }

@@ -79,6 +79,7 @@
       transform: none;
       padding: rem(3);
       border-radius: 50%;
+      opacity: 1 !important;
     }
   }
 }
@@ -114,6 +115,14 @@
 
 // STATES ---------------------------------------------------------------------
 
+.js .mis_img{
+  opacity: 0;
+}
+
+.js .mis_img.s-is-visible{
+  opacity: 1;
+}
+
 @media all and (min-width: $charlie_query) {
 
   .m-prf.overlay:hover:after{
@@ -127,4 +136,8 @@
 
 .m-prf.overlay:after{
   transition: background-color $transition-time ease-out;
+}
+
+.mis_img{
+  transition: opacity $transition-time ease-out;
 }

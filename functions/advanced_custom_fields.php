@@ -441,4 +441,42 @@
         ),
         'menu_order' => 0,
     ));
+    register_field_group(array (
+        'id' => 'acf_typekit',
+        'title' => 'Typekit',
+        'fields' => array (
+            array (
+                'key' => 'field_56d20c9d523be',
+                'label' => 'Typekit ID',
+                'name' => 'typekit_id',
+                'type' => 'text',
+                'instructions' => 'Skriv id för ditt webfont-kit (typekit.com)',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'default',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
+

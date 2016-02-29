@@ -29,7 +29,7 @@ if ( !function_exists('listTags')) {
         if ($tags) {
             echo '<ul id="js-tags__ul" class="m-ul-large">';
                 echo '<li id="js-listhead" class="a-listhead">';
-                    echo '<h2 class="a-xlarge">Etiketter<br/>A&mdash;&Ouml;</h2>';
+                    echo '<h2 class="a-xlarge">&Auml;mnen<br/>A&mdash;&Ouml;</h2>';
                 echo '</li>';
 
             foreach ($tags as $tag) {

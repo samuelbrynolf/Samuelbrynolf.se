@@ -42,15 +42,15 @@ var gulp = require('gulp'),
         },
         ftp: {
             enabled: true,
-            host: "ftp.1979design.se",
+            host: "es11.siteground.eu",
             key: "samuelbrynolf",
-            destination: '/mis/wp-content/themes/samuelbrynolf',
+            destination: '/public_html/wp-content/themes/samuelbrynolf',
             fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!gulpfile.js', '!src', '!src/**', './**']
         }
     };
 
 gulp.task('css', function () {
-    return gulp.src(settings.css.srcFile).pipe(plumber()).pipe(sourcemaps.init()).pipe(sass({
+    return gulp.src(settings.css.srcFile).pipe(plumber()).pipe(sass({
         sourceComments: 'none',
         imagePath: '../img',
         outputStyle: 'nested'
@@ -66,7 +66,7 @@ gulp.task('css', function () {
         'mqpacker': !dev,
         'minifier': !dev,
         'next': false
-    })).pipe(header(fs.readFileSync(settings.css.header, 'utf8'))).pipe(sourcemaps.write(settings.css.mapsDirectory)).pipe(gulp.dest(settings.css.outputDirectory)).pipe(settings.ftp.enabled ? ftp({
+    })).pipe(header(fs.readFileSync(settings.css.header, 'utf8'))).pipe(gulp.dest(settings.css.outputDirectory)).pipe(settings.ftp.enabled ? ftp({
         host: settings.ftp.host,
         user: ftpkey[settings.ftp.key].username,
         pass: ftpkey[settings.ftp.key].password,

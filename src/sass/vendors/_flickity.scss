@@ -19,8 +19,6 @@
   height: 100%;
 }
 
-/* draggable */
-
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
@@ -40,8 +38,6 @@
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
-
-/* ---- page dots ---- */
 
 .flickity-page-dots {
   position: absolute;

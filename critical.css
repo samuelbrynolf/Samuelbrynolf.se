@@ -922,8 +922,7 @@ a.current-menu-item {
   width: 100%;
   height: 100%; }
 
-/* draggable */
-/* line 24, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 22, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
@@ -932,19 +931,18 @@ a.current-menu-item {
   -ms-user-select: none;
   user-select: none; }
 
-/* line 33, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 31, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-enabled.is-draggable .flickity-viewport {
   cursor: move;
   cursor: -webkit-grab;
   cursor: grab; }
 
-/* line 39, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 37, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: -webkit-grabbing;
   cursor: grabbing; }
 
-/* ---- page dots ---- */
-/* line 46, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-page-dots {
   position: absolute;
   width: 100%;
@@ -956,27 +954,27 @@ a.current-menu-item {
   text-align: center;
   line-height: 1; }
   @media all and (min-width: 650px) {
-    /* line 46, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
       bottom: -3rem; } }
   @media all and (min-width: 900px) {
-    /* line 46, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
       bottom: -2.66667rem; } }
   @media all and (min-width: 1430px) {
-    /* line 46, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
       bottom: -2.27778rem; } }
   @media all and (min-width: 1900px) {
-    /* line 46, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
       bottom: -2.66667rem; } }
 
-/* line 73, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 69, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-rtl .flickity-page-dots {
   direction: rtl; }
 
-/* line 75, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 71, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-page-dots .dot {
   display: inline-block;
   width: 9px;
@@ -986,72 +984,72 @@ a.current-menu-item {
   border-radius: 50%;
   cursor: pointer; }
   @media all and (min-width: 1900px) {
-    /* line 75, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 71, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots .dot {
       width: 12px;
       height: 12px; } }
 
-/* line 90, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 86, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .flickity-page-dots .dot.is-selected {
   background-color: green; }
 
-/* line 98, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .m-flickity {
   margin-bottom: 104px;
   margin-bottom: 5.77778rem; }
   @media all and (min-width: 650px) {
-    /* line 98, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {
       margin-bottom: 6.66667rem; } }
   @media all and (min-width: 900px) {
-    /* line 98, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {
       margin-bottom: 5.77778rem; } }
   @media all and (min-width: 1430px) {
-    /* line 98, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {
       margin-bottom: 7.11111rem; } }
   @media all and (min-width: 1900px) {
-    /* line 98, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {
       margin-bottom: 8rem; } }
 
-/* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+/* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
 .gallery-cell.m-prf {
   display: block;
   width: 86%;
   margin-right: 4%;
   padding-bottom: 63.64%; }
   @media all and (min-width: 650px) {
-    /* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .gallery-cell.m-prf {
       width: 62.5%;
       padding-bottom: 46.25%; } }
   @media all and (min-width: 900px) {
-    /* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .gallery-cell.m-prf {
       width: 40%;
       margin-right: 3%;
       padding-bottom: 29.6%; } }
   @media all and (min-width: 1430px) {
-    /* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .gallery-cell.m-prf {
       width: 35%;
       margin-right: 2.7%;
       padding-bottom: 25.9%; } }
   @media all and (min-width: 1900px) {
-    /* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+    /* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .gallery-cell.m-prf {
       width: 29%;
       padding-bottom: 21.46%; } }
-  /* line 146, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 142, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .gallery-cell.m-prf .a-prf-text {
     color: #fff;
     opacity: 1;
     filter: alpha(opacity=100); }
 
 @media all and (min-width: 900px) {
-  /* line 158, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 154, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity-container {
     padding-left: 3%;
     background-color: #eee;
@@ -1059,27 +1057,27 @@ a.current-menu-item {
     background-image: linear-gradient(top, #eee, #fff); } }
 
 @media all and (min-width: 1430px) {
-  /* line 158, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 154, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity-container {
     padding-left: 2.7%; } }
 
 @media all and (min-width: 650px) {
-  /* line 171, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 167, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity {
     padding-top: 4%; } }
 
 @media all and (min-width: 900px) {
-  /* line 171, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 167, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity {
     padding-top: 3%; } }
 
 @media all and (min-width: 1430px) {
-  /* line 171, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 167, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity {
     margin-bottom: 8.88889rem;
     padding-top: 2.7%; } }
 
 @media all and (min-width: 1900px) {
-  /* line 171, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
+  /* line 167, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
   .startpage .m-flickity {
     margin-bottom: 10rem; } }

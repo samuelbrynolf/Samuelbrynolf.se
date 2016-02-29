@@ -2,4 +2,4 @@
     echo '<footer class="m-resources'.(get_field('postfooter_resources_sidebar') ? ' is-sidebar' : '').'">';
         echo get_field('postfooter_resources');
     echo '</footer>';
-} ?>
+}

@@ -4,8 +4,7 @@ if ( !function_exists( 'slider' )) {
     function slider($queried_posts){
 
         global $post; ?>
-        <section class="l-clear js-flickity m-flickity"
-                 data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
+        <section class="l-clear js-flickity m-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
 
             <?php foreach ($queried_posts as $post) {
 
@@ -98,7 +97,6 @@ if(!function_exists('acf_tag_stripper') && function_exists('get_field')) {
     function acf_tag_stripper($field ) {
         $field = get_field( $field );
         $field_stripped = wp_strip_all_tags( $field );
-
         return $field_stripped;
     }
 }

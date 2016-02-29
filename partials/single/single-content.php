@@ -16,9 +16,7 @@
         echo '<p>&mdash;</p>';
     }
 
-    the_content(); ?>
-    <div class="l-clear"></div>
-
-    <?php get_template_part('partials/single/single-footer'); ?>
-
-</div><!-- .entry-content -->
+    the_content();
+    echo '<div class="l-clear"></div>';
+    get_template_part('partials/single/single-footer'); ?>
+</div>

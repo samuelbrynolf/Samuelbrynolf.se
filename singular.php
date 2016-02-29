@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <main id="js-main">
 
     <?php while ( have_posts() ) : the_post(); ?>
@@ -22,9 +21,9 @@
             if(is_single()){
                 get_template_part('partials/single/single-aside'); ?>
             <?php } ?>
-        </article><!-- #post-## -->
+        </article>
 
-    <?php endwhile; // end of the loop. ?>
+    <?php endwhile; ?>
 
-</main><!-- #main -->
+</main>
 <?php get_footer();

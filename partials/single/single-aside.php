@@ -10,8 +10,8 @@
 
     <?php if (comments_open() || get_comments_number()) {
         echo '<div class="l-gutter o-comments">';
-        echo '<h3 class="a-large">Vad tycker du?</h3>';
-        comments_template();
+            echo '<h3 class="a-large">Vad tycker du?</h3>';
+            comments_template();
         echo '</div>';
     }
 

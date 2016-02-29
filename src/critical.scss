@@ -1,17 +1,9 @@
 @import "sass/__settings";
-
-@import "sass/skeleton/_reset"; // Critical check
-@import "sass/skeleton/_layout"; // Critical
-
-@import "sass/skeleton/_base"; // Critical
-@import "sass/skeleton/_mixins";
-
-@import "sass/components/_typography"; // Critical
-@import "sass/components/_globalheader"; // Critical
+@import "sass/skeleton/_reset";
+@import "sass/skeleton/_layout";
+@import "sass/skeleton/_base";
+@import "sass/components/_typography";
+@import "sass/components/_globalheader";
 @import "sass/components/_blogtag";
-
 @import "sass/components/_prf.scss";
 @import "sass/vendors/_flickity.scss";
-
-
-//@import "sass/components/_single-header"; // Critical

@@ -1,6 +1,4 @@
-<?php if ( ! function_exists( 'bento_setup' ) ) :
-
-
+<?php if ( ! function_exists( 'sb_setup' ) ) :
 
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -10,11 +8,9 @@
      * as indicating support for post thumbnails.
      */
 
-
-
     // THEME SETUP -------------------------------------------------------------------
 
-    function bento_setup() {
+    function sb_setup() {
 
         function complete_version_removal() {
             return '';
@@ -34,31 +30,23 @@
         ) );
 
         add_theme_support( 'post-formats', array( 'video' ));
-        //add_theme_support( 'post-formats', array( 'link', 'video' ));
-        //add_theme_support( 'post-formats', array( 'link'));
     }
 endif;
-add_action( 'after_setup_theme', 'bento_setup' );
+add_action( 'after_setup_theme', 'sb_setup' );
 
 
 
 // SCRIPTS & STYLES -------------------------------------------------------------------
 
-function bento_scripts() {
+function sb_scripts() {
     wp_deregister_script( 'jquery' );
     if(!function_exists('ccss_enqueue_full_css')) {
-        wp_enqueue_style( 'bento-style', get_stylesheet_uri() );
+        wp_enqueue_style( 'sb-style', get_stylesheet_uri() );
     }
     wp_deregister_script('wp-embed');
-
-	//wp_dequeue_style('contact-form-7');
-    // if(!is_single()){
-    //  wp_dequeue_style('wp-prism-syntax-highlighter');
-    //}
-
-	wp_enqueue_script( 'bento-scripts', get_template_directory_uri() . '/js/bundled.js', array(), null, true );
+	wp_enqueue_script( 'sb-scripts', get_template_directory_uri() . '/js/bundled.js', array(), null, true );
 }
-add_action( 'wp_enqueue_scripts', 'bento_scripts' );
+add_action( 'wp_enqueue_scripts', 'sb_scripts' );
 
 
 

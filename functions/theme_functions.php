@@ -11,25 +11,11 @@ if ( !function_exists( 'register_my_menu' )) {
 
 
 
-// REMOVE WIDTH-ATTRIBUTES FROM <IMG> -------------------------------------------------------------------
-
-if ( !function_exists( 'remove_width_attribute' )) {
-    function remove_width_attribute($html){
-        $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
-        return $html;
-    }
-
-    add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
-    add_filter('image_send_to_editor', 'remove_width_attribute', 10);
-}
-
-
-
 // BUILD CUSTOM PREV/PREVIOUS POST-LINKS CLASSES -------------------------------------------------------------------
 
 if ( !function_exists( 'posts_previouslink_attributes' )) {
     function posts_previouslink_attributes($output) {
-        $cssclass = 'class="a-prf-text a-icon arrowleft js-tappy"';
+        $cssclass = 'class="a-prf-text a-icon js-tappy"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('previous_post_link', 'posts_previouslink_attributes');
@@ -37,7 +23,7 @@ if ( !function_exists( 'posts_previouslink_attributes' )) {
 
 if ( !function_exists( 'posts_nextlink_attributes' )) {
     function posts_nextlink_attributes($output) {
-        $cssclass = 'class="a-prf-text a-icon arrowright js-tappy"';
+        $cssclass = 'class="a-prf-text a-icon js-tappy"';
         return str_replace('<a href=', '<a '.$cssclass.' href=', $output);
     }
     add_filter('next_post_link', 'posts_nextlink_attributes');
@@ -47,8 +33,8 @@ if ( !function_exists( 'posts_nextlink_attributes' )) {
 
 // ADD CUSTOM BODY CLASSES -------------------------------------------------------------------
 
-if ( !function_exists( 'bento_body_classes' )) {
-    function bento_body_classes($classes){
+if ( !function_exists( 'sb_body_classes' )) {
+    function sb_body_classes($classes){
         if (is_single() && !has_post_thumbnail() && !has_post_format('video') || is_page() && !has_post_thumbnail() && !is_page_template('page-instafeatured.php')){
             $classes[] = 'no-thumb';
         }
@@ -64,7 +50,7 @@ if ( !function_exists( 'bento_body_classes' )) {
         return $classes;
     }
 
-    add_filter('body_class', 'bento_body_classes');
+    add_filter('body_class', 'sb_body_classes');
 }
 
 
@@ -110,9 +96,7 @@ endif;
 // FILTER ARCHIVE TITLES -------------------------------------------------------------------
 
 add_filter('get_the_archive_title', function ($title) {
-    //if (is_category() || is_tag()) {
-        $title = single_cat_title('', false);
-    //}
+    $title = single_cat_title('', false);
     return $title;
 });
 
@@ -170,8 +154,7 @@ if ( !function_exists( 'fb_opengraph' )) {
             <meta property="og:site_name" content="<?php echo get_bloginfo(); ?>"/>
             <meta property="og:image" content="<?php echo $img_src[0]; ?>"/>
 
-            <?php
-        } else {
+        <?php } else {
             return;
         }
     }

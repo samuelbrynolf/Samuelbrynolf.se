@@ -21,9 +21,6 @@
 	<!--[if lte IE 8]>
 		<script type="text/javascript" src="<?php echo esc_url(get_template_directory_uri()); ?>/js/vendors_no_concat/respond.min.js"></script>
 	<![endif]-->
-
-<!--    --><?php //if (!current_user_can( 'manage_options' )) { ?>
-<!--    --><?php //}; ?>
 		
 </head>
 
@@ -31,13 +28,11 @@
 
     <header id="js-masthead" class="o-global__header">
         <?php echo (is_front_page() ? '<h1 class="a-sitename">' : '<h2 class="a-sitename">');
-        echo bloginfo('name');
+        	echo bloginfo('name');
         echo (is_front_page() ? '</h1>' : '</h2>'); ?>
 
         <div class="l-gutter l-clearfix">
-
             <?php get_search_form();
             wp_nav_menu(array('container' => 'nav', 'container_class' => 'l-pull-right m-global__nav', 'items_wrap' => '<ul>%3$s</ul>')); ?>
-
         </div>
-    </header><!-- #masthead -->
+    </header>

@@ -118,7 +118,9 @@ a[href^="https://"]{
 }
 
 a[href^="http://www.samuelbrynolf.se"],
-a[href^="http://samuelbrynolf.se"]{
+a[href^="http://samuelbrynolf.se"],
+a[href^="https://www.samuelbrynolf.se"],
+a[href^="https://samuelbrynolf.se"]{
   word-wrap: normal;
 }
 

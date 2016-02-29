@@ -8,7 +8,7 @@
             } ?>
             <a class="js-jumper a-topjump a-icon arrowtop" href="#js-body" rel="nofollow"></a>
         </section>
-    </footer><!-- #colophon -->
+    </footer>
 
     <?php wp_footer(); ?>
 

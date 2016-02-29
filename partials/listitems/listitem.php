@@ -14,4 +14,4 @@
     <p class="l-clear a-fineprint a-external__a">
         Direktl&auml;nk: <a href="<?php echo get_field('external_linkUrl'); ?>" target="_blank"><?php echo get_field('external_linkText'); ?></a>
     </p>
-<?php } ?>
+<?php }

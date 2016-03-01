@@ -1,7 +1,7 @@
 
 // MOLECULES
 
-.m-resources{
+.o-entry-content .m-resources{
 
   &.is-sidebar{
 
@@ -25,7 +25,7 @@
   h4,
   ul,
   ol{
-    font-size: rem(16) !important;
+    @extend .a-small;
     margin-bottom: $leading;
     text-align: left !important;
     font-weight: bold;

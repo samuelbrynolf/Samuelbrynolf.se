@@ -35,7 +35,7 @@ strong,
 }
 
 .a-xlarge{
-  font-size: rem(42);
+  font-size: rem(36);
   line-height: (54/42);
 
   @media all and (min-width: $charlie_query) {
@@ -48,12 +48,14 @@ strong,
 }
 
 .a-large{
-  font-size: rem(33);
-  line-height: (39/33);
+  font-size: rem(30);
+  line-height: (36/30);
   margin-top: rem($body_leading*3);
-  margin-bottom: rem($body_leading*2);
+  margin-bottom: rem($body_leading);
 
   @media all and (min-width: $beta_query) {
+    font-size: rem(33);
+    line-height: (39/33);
     margin-top: rem($body_leading_beta*3);
     margin-bottom: rem($body_leading_beta*2);
   }

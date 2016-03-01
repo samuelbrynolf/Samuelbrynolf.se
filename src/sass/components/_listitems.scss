@@ -64,13 +64,12 @@
 
     @media all and (min-width: $charlie_query) {
       float: right;
-      width: calc(50% - 20px); // spanwidth - charlie gutter
+      width: calc(50% - 10px); // spanwidth - charlie gutter
       margin-top: rem($body_leading_charlie/2);
-      text-align: right;
     }
 
     @media all and (min-width: $delta_query) {
-      width: calc(50% - 40px); // spanwidth - deltagutter
+      width: calc(50% - 20px); // spanwidth - deltagutter
       margin-top: rem($body_leading_delta/2);
     }
 

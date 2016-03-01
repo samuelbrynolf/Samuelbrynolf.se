@@ -7,14 +7,13 @@
 
     @media all and (min-width: $delta_query) {
       position: absolute;
-      top: $leading_delta;
-      right: -$spanwidth-2;
-      width: $spanwidth-3;
-      transform: translateX(rem($delta_gutter));
+      top: 0;
+      right: -$spanwidth-3;
+      width: $spanwidth-4;
+      transform: translateX(rem($delta_gutter*2));
     }
 
     @media all and (min-width: $echo_query) {
-      top: $leading_echo;
       right: -$spanwidth-4;
       width: $spanwidth-4;
       transform: translateX(rem($echo_gutter));
@@ -26,10 +25,10 @@
   h4,
   ul,
   ol{
-    @extend .a-small;
+    font-size: rem(16) !important;
     margin-bottom: $leading;
-    margin-top: 0 !important;
     text-align: left !important;
+    font-weight: bold;
 
     @media all and (min-width: $beta_query) {
       margin-bottom: $leading_beta;
@@ -40,6 +39,7 @@
     }
 
     @media all and (min-width: $delta_query) {
+      margin-top: 0;
       margin-bottom: $leading_delta;
     }
 

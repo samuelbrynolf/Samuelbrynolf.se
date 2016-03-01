@@ -38,13 +38,12 @@
     }
 
     @media all and (min-width: $delta_query) {
-      margin-right: rem(-$body_leading_delta*1.5);
+      margin-right: 0;
       margin-left: rem(-$body_leading_delta*1.5);
       padding-left: rem($delta_gutter);
     }
 
     @media all and (min-width: $echo_query) {
-      margin-right: rem(-$body_leading_echo*3);
       margin-left: rem(-$body_leading_echo*1.5);
       padding-left: rem($echo_gutter*2);
     }

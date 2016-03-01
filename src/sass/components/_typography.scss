@@ -100,10 +100,6 @@ strong,
   @media all and (min-width: $charlie_query) {
     font-size: rem(24);
   }
-
-  @media all and (min-width: $echo_query) {
-    font-size: rem(27);
-  }
 }
 
 .a-fineprint{

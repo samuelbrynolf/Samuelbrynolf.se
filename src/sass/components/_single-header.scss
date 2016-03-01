@@ -32,13 +32,13 @@
 
   @media all and (min-width: $delta_query) {
     max-width: rem($delta_cont_width - ($body_leading_delta*9));
-    margin-top: $leading_delta*1.5;
+    margin-top: $leading_delta;
     margin-bottom: $leading_delta;
   }
 
   @media all and (min-width: $echo_query) {
     max-width: rem($echo_cont_width - ($body_leading_echo*18));
-    margin-top: $leading_echo*1.5;
+    margin-top: $leading_echo;
     margin-bottom: $leading_echo;
   }
 }
@@ -134,14 +134,6 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: $leading_charlie*2;
-  }
-
-  @media all and (min-width: $delta_query) {
-      margin-top: $leading_delta*2;
-  }
-
-  @media all and (min-width: $echo_query) {
-    margin-top: $leading_echo*1.5;
+    margin-top: $leading_charlie;
   }
 }

@@ -1,4 +1,5 @@
 <a class="js-tappy m-listitem__a" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+
     <?php the_title( '<h2 class="a-medium a-listitem-title">', '</h2>' ); ?>
     <p class="a-fineprint a-listitem-excerpt">
         <span class="a-listitem-meta-date">
@@ -15,3 +16,11 @@
         Externt: <a href="<?php echo get_field('external_linkUrl'); ?>" target="_blank"><?php echo get_field('external_linkText'); ?></a>
     </p>
 <?php }
+
+
+
+//if (function_exists('makeitSrcset') && has_post_thumbnail()) {
+//    makeitSrcset(get_post_thumbnail_id($post->ID), 100, 100, 100, 100, 100, 'l-clear m-prf ratio-16-9');
+//} elseif (has_post_thumbnail()){
+//    the_post_thumbnail();
+//}

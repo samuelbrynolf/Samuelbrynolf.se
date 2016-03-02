@@ -37,6 +37,18 @@
       color: $body-textcolor;
     }
   }
+
+  @media all and (min-width: $charlie_query) {
+
+    li{
+      float: left;
+      width: 33%;
+
+      & + li{
+        padding-left: 2rem;
+      }
+    }
+  }
 }
 
 .a-ccard__bio + .m-ccard__list{

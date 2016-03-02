@@ -820,7 +820,7 @@ a.current-menu-item {
     bottom: 0;
     z-index: 100;
     width: 100%;
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 128, 0, 0.7);
     pointer-events: none; }
   /* line 63, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
   .m-prf .mis_img {
@@ -867,35 +867,31 @@ a.current-menu-item {
   /* line 101, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
   .a-prf-text .a-prf-text__span {
     display: block;
-    margin-top: 18px;
-    margin-top: 1rem;
+    margin-top: 5px;
+    margin-top: 0.3rem;
     color: rgba(255, 255, 255, 0.87); }
-    @media all and (min-width: 650px) {
-      /* line 101, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
-      .a-prf-text .a-prf-text__span {
-        margin-top: 1.5rem; } }
 
-/* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
+/* line 114, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
 .js .mis_img {
   opacity: 0;
   filter: alpha(opacity=0); }
 
-/* line 122, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
+/* line 118, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
 .js .mis_img.s-is-visible {
   opacity: 1;
   filter: alpha(opacity=100); }
 
 @media all and (min-width: 900px) {
-  /* line 128, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
+  /* line 124, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
   .m-prf.overlay:hover:after {
-    background-color: rgba(0, 128, 0, 0.75); } }
+    background-color: rgba(0, 128, 0, 0.87); } }
+
+/* line 133, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
+.m-prf.overlay:after {
+  -webkit-transition: background-color 150ms ease-out;
+          transition: background-color 150ms ease-out; }
 
 /* line 137, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
-.m-prf.overlay:after {
-  -webkit-transition: background-color 300ms ease-out;
-          transition: background-color 300ms ease-out; }
-
-/* line 141, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
 .mis_img {
   -webkit-transition: opacity 300ms ease-out;
           transition: opacity 300ms ease-out; }

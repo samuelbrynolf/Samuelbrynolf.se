@@ -1,25 +1,9 @@
 
 // ATOMS ---------------------------------------------------------------------
 
-.a-listitem-title{
-
-  @media all and (min-width: $charlie_query) {
-   // float: left;
-   // width: $spanwidth-6;
-   // padding-right: rem($charlie_gutter/2);
-  }
-
-  @media all and (min-width: $delta_query) {
-   // padding-right: rem($delta_gutter/2);
-  }
-
-  @media all and (min-width: $echo_query) {
-   // padding-right: rem($echo_gutter/2);
-  }
-}
-
 .a-listitem-meta-date{
   color: $body-textcolor;
+  background-color: rgba($highlight-bgcolor, 0.5);
 }
 
 .a-listitem-excerpt {
@@ -33,20 +17,39 @@
 
   @media all and (min-width: $charlie_query) {
     margin-top: rem($body_leading_charlie/2);
+    max-width: 33rem;
   }
 
-  @media all and (min-width: $delta_query) {
-    //margin-top: rem($body_leading_delta/2); löasdmflkajmsdlfkasdlöfkaösdlfkasdfökaäsDPFLÄaösf
-  }
-
-  @media all and (min-width: $echo_query) {
-    //margin-top: rem($body_leading_echo/2); löasdmflkajmsdlfkasdlöfkaösdlfkasdfökaäsDPFLÄaösf
+  &.has-thumb{
+    max-width: 45rem;
   }
 }
 
-.a-listitem__img{
-  margin-top: $leading/2;
-  margin-bottom: $leading/2;
+.m-prf.listitem__img{
+  margin-top: $leading*0.75;
+  margin-bottom: $leading*0.75;
+
+  @media all and (min-width: $beta_query) {
+    margin-top: $leading_beta;
+    margin-bottom: $leading_beta*0.5;
+  }
+
+  @media all and (min-width: $charlie_query) {
+    float: left;
+    width: 25%;
+    margin: 0.4rem $leading_charlie $leading_charlie/2 0;
+    padding-bottom: $ratio-16-9 * (25/100);
+  }
+
+  @media all and (min-width: $delta_query) {
+    margin-right: $leading_delta*0.75;
+    margin-bottom: $leading_delta/2;
+  }
+
+  @media all and (min-width: $echo_query) {
+    margin-right: $leading_echo*0.75;
+    margin-bottom: $leading_echo/2;
+  }
 }
 
 
@@ -55,31 +58,6 @@
 
 .m-listitem {
   display: block;
-
-  .a-external__a {
-    margin-top: rem($body_leading/2);
-    margin-bottom: 0;
-
-    @media all and (min-width: $beta_query) {
-      margin-top: rem($body_leading_beta/2);
-    }
-
-    @media all and (min-width: $charlie_query) {
-     // float: right;
-      //width: calc(50% - 10px); // spanwidth - charlie gutter
-      margin-top: rem(0);
-    }
-
-    @media all and (min-width: $delta_query) {
-     // width: calc(50% - 20px); // spanwidth - deltagutter
-      //margin-top: rem($body_leading_delta/2);
-    }
-
-    @media all and (min-width: $echo_query) {
-     // width: calc(50% - 40px); // spanwidth - deltagutter
-     // margin-top: rem($body_leading_echo/2);
-    }
-  }
 }
 
 .m-listitem + .m-listitem,
@@ -139,6 +117,14 @@
   @media all and (min-width: $echo_query) {
     margin-top: rem($body_leading_echo*3);
   }
+}
+
+
+
+// TEMPLATES ---------------------------------------------------------------------
+
+.search-results .a-listitem-meta-date{
+  background-color: transparent;
 }
 
 

@@ -1,27 +1,18 @@
-<a class="js-tappy m-listitem__a" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-
+<a class="l-clearfix js-tappy m-listitem__a" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
     <?php if (function_exists('makeitSrcset') && has_post_thumbnail()) {
-        makeitSrcset(get_post_thumbnail_id($post->ID), 100, 100, 100, 100, 100, 'm-prf ratio-16-9 a-listitem__img');
+        makeitSrcset(get_post_thumbnail_id($post->ID), 90, 89, 25, 21, 20, 'm-prf ratio-16-9 listitem__img');
     } elseif (has_post_thumbnail()){
         the_post_thumbnail();
     }
 
     the_title( '<h2 class="a-medium a-listitem-title">', '</h2>' ); ?>
-    <p class="a-fineprint a-listitem-excerpt">
+    <p class="a-fineprint a-listitem-excerpt<?php echo (has_post_thumbnail() ? ' has-thumb' : ''); ?>">
         <span class="a-listitem-meta-date">
             <?php the_time('Y-m-d');
             if (has_tag()) {
-                echo strip_tags(get_the_tag_list(' &#183; ',' &#183; ',' '));
+                echo strip_tags(get_the_tag_list(' &#183; ',' &#183; ',''));
             } ?>
         </span>
-        &#183; <?php echo get_the_excerpt(); ?></p>
+        <br/>
+        <?php echo get_the_excerpt(); ?></p>
 </a>
-
-<?php if (function_exists('get_field') && get_field('external_linkText') && get_field('external_linkUrl')){ ?>
-    <p class="l-clear a-fineprint a-external__a">
-        Externt: <a href="<?php echo get_field('external_linkUrl'); ?>" target="_blank"><?php echo get_field('external_linkText'); ?></a>
-    </p>
-<?php }
-
-
-

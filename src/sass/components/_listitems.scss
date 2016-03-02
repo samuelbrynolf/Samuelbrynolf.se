@@ -4,17 +4,17 @@
 .a-listitem-title{
 
   @media all and (min-width: $charlie_query) {
-    float: left;
-    width: $spanwidth-6;
-    padding-right: rem($charlie_gutter/2);
+   // float: left;
+   // width: $spanwidth-6;
+   // padding-right: rem($charlie_gutter/2);
   }
 
   @media all and (min-width: $delta_query) {
-    padding-right: rem($delta_gutter/2);
+   // padding-right: rem($delta_gutter/2);
   }
 
   @media all and (min-width: $echo_query) {
-    padding-right: rem($echo_gutter/2);
+   // padding-right: rem($echo_gutter/2);
   }
 }
 
@@ -32,19 +32,21 @@
   }
 
   @media all and (min-width: $charlie_query) {
-    float: right;
-    width: $spanwidth-6;
-    margin-top: 0.2rem;
-    padding-left: rem($charlie_gutter/2);
+    margin-top: rem($body_leading_charlie/2);
   }
 
   @media all and (min-width: $delta_query) {
-    padding-left: rem($delta_gutter/2);
+    //margin-top: rem($body_leading_delta/2); löasdmflkajmsdlfkasdlöfkaösdlfkasdfökaäsDPFLÄaösf
   }
 
   @media all and (min-width: $echo_query) {
-    padding-left: rem($echo_gutter/2);
+    //margin-top: rem($body_leading_echo/2); löasdmflkajmsdlfkasdlöfkaösdlfkasdfökaäsDPFLÄaösf
   }
+}
+
+.a-listitem__img{
+  margin-top: $leading/2;
+  margin-bottom: $leading/2;
 }
 
 
@@ -63,19 +65,19 @@
     }
 
     @media all and (min-width: $charlie_query) {
-      float: right;
-      width: calc(50% - 10px); // spanwidth - charlie gutter
-      margin-top: rem($body_leading_charlie/2);
+     // float: right;
+      //width: calc(50% - 10px); // spanwidth - charlie gutter
+      margin-top: rem(0);
     }
 
     @media all and (min-width: $delta_query) {
-      width: calc(50% - 20px); // spanwidth - deltagutter
-      margin-top: rem($body_leading_delta/2);
+     // width: calc(50% - 20px); // spanwidth - deltagutter
+      //margin-top: rem($body_leading_delta/2);
     }
 
     @media all and (min-width: $echo_query) {
-      width: calc(50% - 40px); // spanwidth - deltagutter
-      margin-top: rem($body_leading_echo/2);
+     // width: calc(50% - 40px); // spanwidth - deltagutter
+     // margin-top: rem($body_leading_echo/2);
     }
   }
 }
@@ -148,6 +150,10 @@
   .m-listitem:hover .a-listitem-excerpt{
     color: $body-textcolor;
   }
+}
+
+.js-added-HTML .mis_img{
+  opacity: 1;
 }
 
 

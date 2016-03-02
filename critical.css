@@ -820,7 +820,7 @@ a.current-menu-item {
     bottom: 0;
     z-index: 100;
     width: 100%;
-    background-color: rgba(0, 128, 0, 0.55);
+    background-color: rgba(0, 128, 0, 0.5);
     pointer-events: none; }
   /* line 63, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_prf.scss */
   .m-prf .mis_img {

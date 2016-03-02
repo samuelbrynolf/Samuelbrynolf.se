@@ -21,7 +21,7 @@
 
             setTimeout(function(){
                 $this.addClass('s-is-visible');
-            }, i*300);
+            }, i*100);
         });
     }
 

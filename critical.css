@@ -386,8 +386,8 @@ strong,
   font-size: 30px;
   font-size: 1.66667rem;
   line-height: 1.2;
-  margin-top: 77px;
-  margin-top: 4.33333rem;
+  margin-top: 52px;
+  margin-top: 2.88889rem;
   margin-bottom: 25px;
   margin-bottom: 1.44444rem; }
   @media all and (min-width: 650px) {
@@ -396,23 +396,23 @@ strong,
       font-size: 1.83333rem;
       line-height: 1.18182;
       margin-top: 5rem;
-      margin-bottom: 3.33333rem; } }
+      margin-bottom: 2.5rem; } }
   @media all and (min-width: 900px) {
     /* line 50, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-large {
       font-size: 2rem;
       margin-top: 4.33333rem;
-      margin-bottom: 2.88889rem; } }
+      margin-bottom: 2.16667rem; } }
   @media all and (min-width: 1430px) {
     /* line 50, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-large {
       margin-top: 5.33333rem;
-      margin-bottom: 3.55556rem; } }
+      margin-bottom: 2.66667rem; } }
   @media all and (min-width: 1900px) {
     /* line 50, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-large {
       margin-top: 7rem;
-      margin-bottom: 4rem; } }
+      margin-bottom: 3rem; } }
 
 /* line 84, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
 .a-medium {

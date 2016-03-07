@@ -151,7 +151,9 @@
     background-color: $highlight-bgcolor;
   }
 
-  p span{
+  p span,
+  ul span,
+  ol span{
     background-color: $highlight-bgcolor;
     text-decoration: none !important;
   }

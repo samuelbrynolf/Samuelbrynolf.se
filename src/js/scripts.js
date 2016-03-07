@@ -261,6 +261,13 @@
     top_tags('.js-toptags a');
     bind_tappy('.js-tappy');
 
+    $('.js-focus-search').bind('tap', function(e){
+        var global_header = $('#js-masthead');
+        $('#s').focus();
+        global_header.removeClass('s-is-up');
+        e.preventDefault();
+    });
+
     if($.fn.smoothScroll){
         $('.js-jumper').smoothScroll();
         $('.js-colophon-jumper a').smoothScroll({

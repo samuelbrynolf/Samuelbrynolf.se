@@ -23,10 +23,9 @@
   h2,
   h3,
   h4,
-  ul,
-  ol{
+  h5{
     @extend .a-small;
-    margin-bottom: $leading/2;
+    margin-bottom: rem(21);
     text-align: left !important;
     font-weight: bold;
 
@@ -56,5 +55,7 @@
   ul,
   ol{
     @extend .a-fineprint;
+    margin-top: rem(21);
+    margin-bottom: rem(21);
   }
 }

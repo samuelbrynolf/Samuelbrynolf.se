@@ -102,6 +102,18 @@ add_filter('get_the_archive_title', function ($title) {
 
 
 
+// FILTER ARCHIVE DESCRIPTIONS -------------------------------------------------------------------
+
+add_filter( 'get_the_archive_description', 'custom_archive_description' );
+
+function custom_archive_description($description) {
+    $remove = array( '<p>', '</p>' );
+    $description = str_replace( $remove, "", $description );
+    return $description;
+}
+
+
+
 // MARK PRIVATE-POST-TITLES -------------------------------------------------------------------
 
 if ( !function_exists( 'trim_private_titles' )) {
@@ -111,57 +123,6 @@ if ( !function_exists( 'trim_private_titles' )) {
     }
     add_filter('the_title', 'trim_private_titles');
 }
-
-
-
-// FACEBOOK OPENGRAPH -------------------------------------------------------------------
-// https://www.elegantthemes.com/blog/tips-tricks/how-to-add-open-graph-tags-to-wordpress
-
-if ( !function_exists( 'doctype_opengraph' )) {
-    function doctype_opengraph($output)
-    {
-        return $output . '
-    xmlns:og="http://opengraphprotocol.org/schema/"
-    xmlns:fb="http://www.facebook.com/2008/fbml"';
-    }
-
-    add_filter('language_attributes', 'doctype_opengraph');
-}
-
-if ( !function_exists( 'fb_opengraph' )) {
-    function fb_opengraph()
-    {
-        global $post;
-
-        if (is_single()) {
-            if (has_post_thumbnail($post->ID)) {
-                $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-            } else {
-                //$img_src = get_stylesheet_directory_uri() . '/img/opengraph_image.jpg';
-            }
-            if ($excerpt = $post->post_excerpt) {
-                $excerpt = strip_tags($post->post_excerpt);
-                $excerpt = str_replace("", "'", $excerpt);
-            } else {
-                $excerpt = get_bloginfo('description');
-            }
-            ?>
-
-            <meta property="og:title" content="<?php echo the_title(); ?>"/>
-            <meta property="og:description" content="<?php echo $excerpt; ?>"/>
-            <meta property="og:type" content="article"/>
-            <meta property="og:url" content="<?php echo the_permalink(); ?>"/>
-            <meta property="og:site_name" content="<?php echo get_bloginfo(); ?>"/>
-            <meta property="og:image" content="<?php echo $img_src[0]; ?>"/>
-
-        <?php } else {
-            return;
-        }
-    }
-
-    add_action('wp_head', 'fb_opengraph', 5);
-}
-
 
 
 
@@ -182,4 +143,17 @@ if ( !function_exists( 'add_acf_to_feed' )) {
     }
 
     add_filter('the_content', 'add_acf_to_feed');
+}
+
+
+
+
+
+if ( !function_exists( 'yoasttobottom' )) {
+    function yoasttobottom()
+    {
+        return 'low';
+    }
+
+    add_filter('wpseo_metabox_prio', 'yoasttobottom');
 }

@@ -3,14 +3,14 @@
 .a-archive__divider{
   position: relative;
   height: 1px;
-  margin-top: rem($body_leading*1.5);
-  background-color: $subtle-bordercolor;
+  padding-top: rem($body_leading*1.5);
+  border-bottom: 1px solid $subtle-bordercolor;
 
   &:before{
     display: block;
     position: absolute;
     left: 0;
-    top: -1px;
+    bottom: -1px;
     z-index: 50;
     content: '';
     width: 40%;
@@ -19,19 +19,19 @@
   }
 
   @media all and (min-width: $beta_query) {
-    margin-top: rem($body_leading_beta*1.5);
+    padding-top: rem($body_leading_beta*1.5);
   }
 
   @media all and (min-width: $charlie_query) {
-    margin-top: rem($body_leading_charlie*1.5);
+    padding-top: rem($body_leading_charlie*1.5);
   }
 
   @media all and (min-width: $delta_query) {
-    margin-top: rem($body_leading_delta);
+    padding-top: rem($body_leading_delta);
   }
 
   @media all and (min-width: $echo_query) {
-    margin-top: rem($body_leading_echo);
+    padding-top: rem($body_leading_echo);
   }
 }
 

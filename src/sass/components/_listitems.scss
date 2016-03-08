@@ -29,6 +29,10 @@
 
 // MOLECULES ---------------------------------------------------------------------
 
+.m-listitem__a{
+  display: block;
+}
+
 .m-listitem {
   display: block;
 
@@ -85,18 +89,6 @@
 .js-added-HTML .m-listitem {
   opacity: 0;
   transform: translate3d(0,rem($body_leading*3),0);
-
-  @media all and (min-width: $beta_query) {
-    transform: translate3d(0,rem($body_leading_beta*3),0);
-  }
-
-  @media all and (min-width: $charlie_query) {
-    transform: translate3d(0,rem($body_leading_charlie*3),0);
-  }
-
-  @media all and (min-width: $delta_query) {
-    transform: translate3d(0,rem($body_leading_delta*3),0);
-  }
 }
 
 .m-listitems-pagin .bap_loadbutton{
@@ -140,7 +132,7 @@
   }
 }
 
-.js-added-HTML .mis_img{
+.js .js-added-HTML .mis_img{
   opacity: 1;
 }
 

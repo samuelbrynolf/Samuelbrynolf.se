@@ -40,6 +40,8 @@ Thumbs.db
 
 .idea/workspace.xml
 
+search_replace.html
+
 #SASS generated folders#
 .cache/*
 .sass-cache/*
@@ -51,6 +53,7 @@ Thumbs.db
 node_modules
 .ftppass
 style.css
+critical.css
 maps/style.css.map
 
 js/bundled.js

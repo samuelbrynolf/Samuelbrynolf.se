@@ -25,9 +25,9 @@
   overflow: hidden;
   background-color: $subtle-bgcolor;
 
-  @media all and (orientation: landscape)  {
-    padding-bottom: $ratio-16-9;
-  }
+  //@media all and (orientation: landscape)  {
+  //  padding-bottom: $ratio-16-9;
+  //}
 
   @media all and (min-width: $beta_query) {
     padding-bottom: $ratio-16-9;

@@ -1,4 +1,4 @@
-<div class="m-flickity-container">
+<div id="js-featured-posts" class="m-flickity-container">
     <?php $args = array(
         'post_type' => 'post',
         'posts_per_page' => -1,

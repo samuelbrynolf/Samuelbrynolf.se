@@ -65,30 +65,35 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 * @param string $sep Optional separator.
 	 * @return string The filtered title.
 	 */
-	function bento_wp_title( $title, $sep ) {
-		if ( is_feed() ) {
-			return $title;
-		}
 
-		global $page, $paged;
+    if ( !function_exists( 'bento_wp_title' )) {
+        function bento_wp_title($title, $sep)
+        {
+            if (is_feed()) {
+                return $title;
+            }
 
-		// Add the blog name
-		$title .= get_bloginfo( 'name', 'display' );
+            global $page, $paged;
 
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
+            // Add the blog name
+            $title .= get_bloginfo('name', 'display');
 
-		// Add a page number if necessary:
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'bento' ), max( $paged, $page ) );
-		}
+            // Add the blog description for the home/front page.
+            $site_description = get_bloginfo('description', 'display');
+            if ($site_description && (is_home() || is_front_page())) {
+                $title .= " $sep $site_description";
+            }
 
-		return $title;
-	}
-	add_filter( 'wp_title', 'bento_wp_title', 10, 2 );
+            // Add a page number if necessary:
+            if (($paged >= 2 || $page >= 2) && !is_404()) {
+                $title .= " $sep " . sprintf(__('Page %s', 'bento'), max($paged, $page));
+            }
+
+            return $title;
+        }
+
+        add_filter('wp_title', 'bento_wp_title', 10, 2);
+    }
 endif;
 
 
@@ -146,7 +151,7 @@ if ( !function_exists( 'add_acf_to_feed' )) {
 }
 
 
-
+// MOVE YOAST SEO-MODULE TO POSTS BOTTOM -------------------------------------------------------------------
 
 
 if ( !function_exists( 'yoasttobottom' )) {

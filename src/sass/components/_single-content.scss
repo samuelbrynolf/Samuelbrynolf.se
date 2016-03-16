@@ -67,6 +67,7 @@
 
   h2{
     @extend .a-large;
+    text-align: center;
   }
 
   h3{
@@ -195,6 +196,10 @@
       text-align: right;
     }
 
+    img{
+      margin-bottom: 0;
+    }
+
     .mis_img + .mis_figcaption{
       margin-top: rem($body_leading/3);
 
@@ -288,27 +293,18 @@
 
     @media all and (min-width: $charlie_query) {
       display: block;
-      margin-top: $leading_charlie*3;
+      margin-top: $leading_charlie*1.5;
     }
 
     @media all and (min-width: $delta_query) {
-      margin-top: $leading_delta*2;
+      margin-top: $leading_delta*1.5;
     }
 
     @media all and (min-width: $echo_query) {
-      margin-top: $leading_echo*2;
+      margin-top: $leading_echo*1.5;
     }
   }
 }
-
-
-
-// TEMPLATES --------------------------------------------------------
-
-.single .o-entry-content h2{
-  text-align: center;
-}
-
 
 
 // STATES --------------------------------------------------------

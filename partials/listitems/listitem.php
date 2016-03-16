@@ -5,7 +5,7 @@
         the_post_thumbnail();
     }
 
-    the_title( '<h2 class="a-medium a-listitem-title">', '</h2>' ); ?>
+    the_title( '<h3 class="a-medium a-listitem-title">', '</h3>' ); ?>
     <p class="a-fineprint a-listitem-excerpt<?php echo (has_post_thumbnail() ? ' has-thumb' : ''); ?>">
         <span class="a-listitem-meta-date">
             <?php the_time('Y-m-d');

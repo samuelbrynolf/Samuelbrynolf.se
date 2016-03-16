@@ -58,9 +58,9 @@
     margin-bottom: rem($body_leading_echo*2);
   }
 
-  p{
+  .a-fineprint{
     margin-top: rem($body_leading/2);
-    margin-bottom: 0;
+    //margin-bottom: 0;
 
     @media all and (min-width: $beta_query) {
       margin-top: rem($body_leading_beta/2);

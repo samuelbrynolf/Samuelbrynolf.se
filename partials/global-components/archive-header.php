@@ -20,7 +20,7 @@
 
 } else {
     the_archive_title( '<h1>', '</h1>' );
-    the_archive_description('<p class="a-fineprint">','</p>');
+    the_archive_description('<h2 class="a-fineprint">','</h2>');
 }
 
 echo '<div class="a-archive__divider' . (is_search() || is_404() ? ' js-focus-search' : '') . '"></div>';

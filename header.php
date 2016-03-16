@@ -27,9 +27,14 @@
 <body id="js-body" <?php body_class(); ?>>
 
     <header id="js-masthead" class="o-global__header">
-        <?php echo (is_front_page() ? '<h1 class="a-sitename">' : '<h2 class="a-sitename">');
+
+		<?php if(is_front_page() && !is_paged()){
+			$startpage = true;
+		}
+
+		echo ($startpage ? '<h1 class="a-sitename">' : '<h3 class="a-sitename">');
         	echo bloginfo('name');
-        echo (is_front_page() ? '</h1>' : '</h2>'); ?>
+        echo ($startpage ? '</h1>' : '</h3>'); ?>
 
         <div class="l-gutter l-clearfix">
             <?php get_search_form();

@@ -93,10 +93,33 @@ if ( !function_exists( 'pull_instagram' )) {
 
 // REMOVE TAGS FROM ACF-FIELDS (APPLIED FOR PREAMBLES) -------------------------------------------------------------------
 
-if(!function_exists('acf_tag_stripper') && function_exists('get_field')) {
-    function acf_tag_stripper($field ) {
-        $field = get_field( $field );
-        $field_stripped = wp_strip_all_tags( $field );
+if(!function_exists('acf_tag_stripper') && function_exists('get_field') && !(function_exists('acf_tag_stripper'))) {
+    function acf_tag_stripper($acf_field=null, $alltags=true, $option=false) {
+
+        if(is_null($acf_field)) {
+            return;
+        } elseif($option){
+            if(!get_field($acf_field, 'option')){
+                return;
+            }
+        } else {
+            if(!get_field($acf_field)){
+                return;
+            }
+        }
+
+        $field = get_field($acf_field);
+
+        if($option){
+            $field = get_field($acf_field, 'option');
+        }
+
+        if($alltags){
+            $field_stripped = wp_strip_all_tags( $field );
+        } else {
+            $field_stripped = $field;
+        }
+        $field_stripped = preg_replace("/&nbsp;/", " ", $field_stripped);
         return $field_stripped;
     }
 }

@@ -109,12 +109,15 @@ add_filter('get_the_archive_title', function ($title) {
 
 // FILTER ARCHIVE DESCRIPTIONS -------------------------------------------------------------------
 
-add_filter( 'get_the_archive_description', 'custom_archive_description' );
+if ( !function_exists( 'strip_archive_descriptions_p' )) {
+    function strip_archive_descriptions_p($description)
+    {
+        $remove = array('<p>', '</p>');
+        $description = str_replace($remove, "", $description);
+        return $description;
+    }
 
-function custom_archive_description($description) {
-    $remove = array( '<p>', '</p>' );
-    $description = str_replace( $remove, "", $description );
-    return $description;
+    add_filter('get_the_archive_description', 'strip_archive_descriptions_p');
 }
 
 

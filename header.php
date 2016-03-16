@@ -28,7 +28,9 @@
 
     <header id="js-masthead" class="o-global__header">
 
-		<?php if(is_front_page() && !is_paged()){
+		<?php $startpage = null;
+
+		if(is_front_page() && !is_paged()){
 			$startpage = true;
 		}
 

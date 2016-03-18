@@ -43,6 +43,10 @@
   }
 }
 
+.js-instagram__img{ // STYLES ALSO APPLIED WHEN APPEARED IN _single-content.scss
+  width: 100%;
+}
+
 .m-instagram{
 
   @media all and (min-width: $charlie_query) {

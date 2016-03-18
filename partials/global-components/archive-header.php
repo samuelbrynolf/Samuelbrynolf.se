@@ -15,7 +15,7 @@
         echo '<h2>Senast publicerat</h2>';
     } else {
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        echo '<h1>Blogg &mdash; sida ' . $paged . '</h1>';
+        echo '<h1>Senast publicerat &mdash; sida ' . $paged . '</h1>';
     }
 
 } else {

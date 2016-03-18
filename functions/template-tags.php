@@ -76,7 +76,7 @@ if ( !function_exists( 'pull_instagram' )) {
                     echo '<div class="m-prf ratio-1-1">';
                 }
 
-                echo '<img class="js-instagram__img a-forcewidth a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
+                echo '<img class="js-instagram__img a-prf__img" src="' . $loressize_url . '" srcset="' . $standardsize_url . ' 612w,
                 ' . $loressize_url . ' 306w,
                 ' . $thumbsize_url . ' 150w"
 
@@ -91,7 +91,8 @@ if ( !function_exists( 'pull_instagram' )) {
 }
 
 
-// REMOVE TAGS FROM ACF-FIELDS (APPLIED FOR PREAMBLES) -------------------------------------------------------------------
+
+// CLEANUP & REMOVE TAGS FOR ACF (APPLIED FOR PREAMBLES ETC) -------------------------------------------------------------------
 
 if(!function_exists('acf_tag_stripper') && function_exists('get_field') && !(function_exists('acf_tag_stripper'))) {
     function acf_tag_stripper($acf_field=null, $alltags=true, $option=false) {

@@ -5,7 +5,7 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php get_template_part('partials/single/single-header');
-                echo '<div id="js-instagram" class="m-instagram s-is-hidden"></div>';
+                echo '<div id="js-instagram" class="m-instagram"></div>';
                 get_template_part('partials/single/single-content'); ?>
             </article>
 

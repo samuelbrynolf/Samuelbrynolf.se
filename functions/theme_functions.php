@@ -107,6 +107,21 @@ add_filter('get_the_archive_title', function ($title) {
 
 
 
+// REMOVE &NBSP; from the_content() -------------------------------------------------------------------
+// TODO Validate if mce-hack works works
+if ( !function_exists( 'wpse8170_change_mce_options' )) {
+    function wpse8170_change_mce_options($initArray)
+    {
+        // other settings...
+        $initArray['entities'] = '38,amp,34,quot,162,cent,8364,euro,163,pound,165,yen,169,copy,174,reg,8482,trade';
+
+        return $initArray;
+    }
+
+    add_filter('tiny_mce_before_init', 'wpse8170_change_mce_options');
+}
+
+
 // FILTER ARCHIVE DESCRIPTIONS -------------------------------------------------------------------
 
 if ( !function_exists( 'strip_archive_descriptions_p' )) {

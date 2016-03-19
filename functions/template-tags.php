@@ -93,7 +93,7 @@ if ( !function_exists( 'pull_instagram' )) {
 
 
 // CLEANUP & REMOVE TAGS FOR ACF (APPLIED FOR PREAMBLES ETC) -------------------------------------------------------------------
-
+// TODO Validate if preg_replace for &nbsp; works...
 if(!function_exists('acf_tag_stripper') && function_exists('get_field') && !(function_exists('acf_tag_stripper'))) {
     function acf_tag_stripper($acf_field=null, $alltags=true, $option=false) {
 

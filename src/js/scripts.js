@@ -138,31 +138,6 @@
 
 
 
-    // -------------------------------------------------------------------------------------------------------
-
-
-
-
-    function smoothscroll_section_anchors(parent_elem){
-        var bloglink_arr = parent_elem.find($('a[href*="#"]'));
-
-        if(bloglink_arr.length){
-
-            bloglink_arr.each(function(){
-                var $this = $(this);
-
-                $this.smoothScroll({
-                    speed : 350,
-                    target_offset : 36,
-                    highlight_target : true
-                });
-            });
-
-        }
-    }
-
-
-
 	// -------------------------------------------------------------------------------------------------------
 
 
@@ -274,7 +249,6 @@
             speed : 750,
             highlight_target : true
         });
-        smoothscroll_section_anchors($('#js-blogtag'));
     }
 
     if ($.fn.mis_popup) {

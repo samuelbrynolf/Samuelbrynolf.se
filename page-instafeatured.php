@@ -4,12 +4,12 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <?php get_template_part('partials/single/single-header');
+                <?php get_template_part('partials/singular/singular-header');
                 echo '<div id="js-instagram" class="m-instagram"></div>';
-                get_template_part('partials/single/single-content'); ?>
+                get_template_part('partials/singular/singular-content');
+                get_template_part('partials/singular/singular-aside');?>
             </article>
-
-        <?php endwhile; // end of the loop. ?>
+        <?php endwhile; ?>
 
     </main>
 <?php get_footer();

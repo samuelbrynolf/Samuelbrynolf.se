@@ -69,19 +69,19 @@
 
 // STATES --------------------------------------------------------------------------
 
-.js .m-blogtag .a-ccard__bio{
-  opacity: 0;
-}
+//.js .m-blogtag .a-ccard__bio{
+//  opacity: 0;
+//}
 
-.js.wf-active .m-blogtag .a-ccard__bio,
-.js.wf-inactive .m-blogtag .a-ccard__bio{
-  opacity: 1;
-}
+//.js.wf-active .m-blogtag .a-ccard__bio,
+//.js.wf-inactive .m-blogtag .a-ccard__bio{
+//  opacity: 1;
+//}
 
 
 
 // ANIMATION --------------------------------------------------------------------------
 
-.a-ccard__bio{
-  transition: opacity $transition-time/3 ease-out;
-}
+//.a-ccard__bio{
+//  transition: opacity $transition-time/3 ease-out;
+//}

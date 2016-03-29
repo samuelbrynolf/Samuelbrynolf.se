@@ -18,5 +18,6 @@
 
     the_content();
     echo '<div class="l-clear"></div>';
-    get_template_part('partials/single/single-footer'); ?>
+    get_template_part('partials/singular/singular-footer');
+    edit_post_link('Redigera inl&auml;gg', '<p class="a-fineprint">&mdash; ', '</p>'); ?>
 </div>

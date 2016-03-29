@@ -15,19 +15,19 @@ if ( !function_exists( 'slider' )) {
                         makeitSrcset(get_post_thumbnail_id($post->ID), 83, 62, 39, 34, 28);
                     }
                     echo '<h3 class="a-medium a-prf-text">'.get_the_title();
-                    if (has_tag()) {
-                        echo '<br/>';
+                    echo '<br/>';
                         echo '<span class="a-prf-text__span">';
-                            echo strip_tags(get_the_tag_list('',' &#183; ','</p>'));
+                            echo get_the_time('Y-m-d');
+                            if (has_tag()) {
+                                echo strip_tags(get_the_tag_list(' &#183; ',' &#183; ',''));
+                            }
                         echo '</span>';
-                    }
                     echo '</h3>';
                 echo '</a>';
             } ?>
 
         </section>
-        <?php
-        wp_reset_postdata();
+        <?php wp_reset_postdata();
     }
 }
 

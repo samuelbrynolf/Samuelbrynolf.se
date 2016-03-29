@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     ftp = require('gulp-ftp'),
     watch = require('gulp-watch'),
-    ftpkey = JSON.parse(fs.readFileSync('./.ftppass')),
+    ftpkey = JSON.parse(fs.readFileSync('./.ftppass2')),
     dev = true,
 
     settings = {
@@ -42,9 +42,9 @@ var gulp = require('gulp'),
         },
         ftp: {
             enabled: true,
-            host: "ftp.1979design.se",
-            key: "sb_staging",
-            destination: '/mis/wp-content/themes/samuelbrynolf',
+            host: "es11.siteground.eu",
+            key: "samuelbrynolf",
+            destination: '/public_html/wp-content/themes/samuelbrynolf',
             fullUpload: ['!node_modules/**', '!./.idea/**', '!./.cache**', '!./.sass-cache/**', '!./.false/**', '!./.grunt/**', '!.ftppass', '!.ftppass2' , '!gulpfile.js', '!gulpfile2.js', '!src', '!src/**', './**']
         }
     };

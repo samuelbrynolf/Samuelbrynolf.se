@@ -6,6 +6,6 @@
         if (has_tag()) {
             the_tags(' &#183; ', ' &#183; ');
         }
-        edit_post_link('Redigera', ' &mdash; ', '');
+        edit_post_link('Redigera inl&auml;gg', ' &mdash; ', '');
     echo '</p>'; ?>
 </header>

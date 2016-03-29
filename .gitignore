@@ -52,6 +52,8 @@ search_replace.html
 ./node_modules/*
 node_modules
 .ftppass
+.ftppass2
+.gulpfile2.js
 style.css
 critical.css
 maps/style.css.map

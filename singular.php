@@ -4,7 +4,7 @@
     <?php while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php get_template_part('partials/single/single-header');
+            <?php get_template_part('partials/singular/singular-header');
 
             if(function_exists('get_field') && get_field('video_embed_code') && has_post_format('video')){
                 echo '<section id="js-video-embed">';
@@ -16,13 +16,9 @@
                 the_post_thumbnail();
             }
 
-            get_template_part('partials/single/single-content');
-
-            if(is_single()){
-                get_template_part('partials/single/single-aside'); ?>
-            <?php } ?>
+            get_template_part('partials/singular/singular-content');
+            get_template_part('partials/singular/singular-aside'); ?>
         </article>
-
     <?php endwhile; ?>
 
 </main>

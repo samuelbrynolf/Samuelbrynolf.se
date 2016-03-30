@@ -31,7 +31,7 @@
   }
 
   @media all and (min-width: $delta_query) {
-    max-width: rem($delta_cont_width - ($body_leading_delta*9));
+    max-width: rem($delta_cont_width - ($body_leading_delta*12));
     margin-top: $leading_delta;
     margin-bottom: $leading_delta;
   }

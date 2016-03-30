@@ -13,7 +13,7 @@
   }
 
   @media all and (min-width: $delta_query) {
-    max-width: rem($delta_cont_width - ($body_leading_delta*12));
+    max-width: rem($delta_cont_width - ($body_leading_delta*16));
   }
 
   @media all and (min-width: $echo_query) {
@@ -39,8 +39,8 @@
 
     @media all and (min-width: $delta_query) {
       margin-right: 0;
-      margin-left: rem(-$body_leading_delta*1.5);
-      padding-left: rem($delta_gutter);
+      margin-left: rem(-$body_leading_delta*2);
+      padding-left: rem($delta_gutter*1.55);
     }
 
     @media all and (min-width: $echo_query) {

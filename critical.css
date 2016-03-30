@@ -218,7 +218,7 @@ body {
   @media all and (min-width: 900px) {
     /* line 39, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     body {
-      line-height: 1.47222; } }
+      line-height: 1.55556; } }
   @media all and (min-width: 1430px) {
     /* line 39, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     body {
@@ -263,8 +263,8 @@ p {
   @media all and (min-width: 900px) {
     /* line 86, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     p {
-      margin-top: 1.47222rem;
-      margin-bottom: 1.47222rem; } }
+      margin-top: 1.55556rem;
+      margin-bottom: 1.55556rem; } }
   @media all and (min-width: 1430px) {
     /* line 86, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/skeleton/_base.scss */
     p {
@@ -401,8 +401,8 @@ strong,
     /* line 50, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-large {
       font-size: 2rem;
-      margin-top: 4.41667rem;
-      margin-bottom: 2.20833rem; } }
+      margin-top: 4.66667rem;
+      margin-bottom: 2.33333rem; } }
   @media all and (min-width: 1430px) {
     /* line 50, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-large {
@@ -476,8 +476,8 @@ a[href^="https://samuelbrynolf.se"] {
     /* line 129, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-ol,
     .a-ul {
-      margin-top: 1.47222rem;
-      margin-bottom: 1.47222rem; } }
+      margin-top: 1.55556rem;
+      margin-bottom: 1.55556rem; } }
   @media all and (min-width: 1430px) {
     /* line 129, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
     .a-ol,
@@ -504,7 +504,7 @@ a[href^="https://samuelbrynolf.se"] {
       /* line 154, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
       .a-ol li + li,
       .a-ul li + li {
-        margin-top: 0.73611rem; } }
+        margin-top: 0.77778rem; } }
     @media all and (min-width: 1430px) {
       /* line 154, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_typography.scss */
       .a-ol li + li,
@@ -566,7 +566,7 @@ a[href^="https://samuelbrynolf.se"] {
     /* line 4, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
       height: 4.83889rem;
-      padding-top: 1.47222rem; } }
+      padding-top: 1.55556rem; } }
   @media all and (min-width: 1430px) {
     /* line 4, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
     #js-masthead {
@@ -647,7 +647,7 @@ a[href^="https://samuelbrynolf.se"] {
     @media all and (min-width: 900px) {
       /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
-        padding-left: 0.73611rem; } }
+        padding-left: 0.77778rem; } }
     @media all and (min-width: 1430px) {
       /* line 95, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/components/_globalheader.scss */
       .m-global__nav li + li {
@@ -934,7 +934,7 @@ a.current-menu-item {
   @media all and (min-width: 900px) {
     /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
-      bottom: -2.70833rem; } }
+      bottom: -2.83333rem; } }
   @media all and (min-width: 1430px) {
     /* line 42, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .flickity-page-dots {
@@ -978,7 +978,7 @@ a.current-menu-item {
   @media all and (min-width: 900px) {
     /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {
-      margin-bottom: 5.88889rem; } }
+      margin-bottom: 6.22222rem; } }
   @media all and (min-width: 1430px) {
     /* line 94, /Users/admin/Desktop/DEV/1_projects/Samuelbrynolf.se/src/sass/vendors/_flickity.scss */
     .m-flickity {

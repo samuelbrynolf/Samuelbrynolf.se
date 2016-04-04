@@ -64,6 +64,7 @@ body{
 }
 
 main{
+  display: block; // IE11needs this BADLY
   padding-top: rem($header-slide__offset*0.77); // Se taglist usage of $header-slide__offset
 
   @media all and (min-width: $beta_query) {

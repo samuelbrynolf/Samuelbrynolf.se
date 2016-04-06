@@ -1,6 +1,14 @@
 
 
 
+// ATOMS ------------------------------------------------------------------
+
+.a-listhead .a-icon.close:after{
+  font-size: 50%;
+}
+
+
+
 // MODULES ------------------------------------------------------------------
 
 .m-ul-large{
@@ -35,11 +43,11 @@
     border-top: 1px solid $subtle-bordercolor;
   }
 
-  .a-ul-large__span,
-  a .a-ul-large__span{
+  .a-ul-large__span{
     display: inline-block;
     float: right;
     font-size: rem($rem_base);
+    font-weight: 400;
     color: $body-textcolor;
   }
 }
@@ -137,6 +145,14 @@
 
 @media all and (min-width: $charlie_query) {
 
+  .a-listhead:hover{
+    cursor: pointer;
+
+    .a-icon:after{
+      color: $body-bgcolor;
+    }
+  }
+
   .m-ul-large li:hover a{
     color: $body-textcolor;
   }
@@ -159,6 +175,7 @@
   transition: opacity $transition-time ease-out, transform $transition-time ease-out;
 }
 
-.o-taglist a{
+.o-taglist a,
+.a-listhead .a-icon:after{
   transition: color $transition-time/2 ease-out;
 }

@@ -1,6 +1,13 @@
 
 // ATOMS ---------------------------------------------------------------------
 
+.a-listitem-title{
+
+  @media all and (min-width: $charlie_query) {
+    max-width: 39rem;
+  }
+}
+
 .a-listitem-meta-date{
   color: $body-textcolor;
   background-color: rgba($highlight-bgcolor, 0.5);
@@ -31,6 +38,7 @@
 
 .m-listitem__a{
   display: block;
+  color: $body-textcolor;
 }
 
 .m-listitem {
@@ -126,9 +134,12 @@
 // STATES ---------------------------------------------------------------------
 
 @media all and (min-width: $charlie_query) {
-  .m-listitem:hover .a-medium,
   .m-listitem:hover .a-listitem-excerpt{
     color: $body-textcolor;
+  }
+
+  .m-listitem:hover .a-medium{
+    color: $action-color;
   }
 }
 

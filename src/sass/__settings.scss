@@ -138,7 +138,7 @@ $action-color: 	green;
 $subtle-textcolor: lighten($body-textcolor, 30%);
 $subtle-bgcolor: #eee;
 $subtle-bordercolor: lighten($body-textcolor, 70%); // #c8c8c8
-$input-bgcolor: white;
+$input-bgcolor: $body-bgcolor;
 $highlight-bgcolor: lighten(yellow, 25%);
 $error-text: hotpink;
 

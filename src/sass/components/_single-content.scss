@@ -159,6 +159,11 @@
     text-decoration: none !important;
   }
 
+  p a,
+  li a{
+    border-bottom: 1px dotted;
+  }
+
   // All images margin ----------------------------------------------------------
 
   .mis_container,

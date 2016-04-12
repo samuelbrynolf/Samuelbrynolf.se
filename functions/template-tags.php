@@ -4,7 +4,7 @@ if ( !function_exists( 'slider' )) {
     function slider($queried_posts){
 
         global $post; ?>
-        <section class="l-clear js-flickity m-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true}'>
+        <section class="l-clear js-flickity m-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true, "prevNextButtons": false, "wrapAround": true, "autoPlay": true}'>
 
             <?php foreach ($queried_posts as $post) {
 

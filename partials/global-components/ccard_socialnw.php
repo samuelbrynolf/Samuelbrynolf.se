@@ -13,5 +13,4 @@
             <li><a class="a-icon email" href="mailto:<?php echo get_field('options_ccard_snw_emailUrl', 'option'); ?>" title="Eposta Samuel Brynolf"><?php echo get_field('options_ccard_snw_emailLabel', 'option'); ?></a></li>
         <?php }
     echo '</ul>';
-
 }

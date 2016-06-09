@@ -32,7 +32,6 @@
 
 
     function loadSocialData($feedTarget, $action_function){
-
         var feedTarget = $feedTarget;
 
         $.ajax({
@@ -189,7 +188,6 @@
     // -------------------------------------------------------------------------------------------------------
 
 
-
     function load_instagram(){
         var top_container = $('#js-instagram');
 
@@ -279,6 +277,6 @@
         });
     }
 
-    load_instagram();
+    // load_instagram();
 
 })(jQuery); // End self-invoking function

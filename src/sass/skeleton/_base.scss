@@ -40,7 +40,9 @@ body{
   font-family: $bodyfont;
   font-size: 1rem;
   line-height: $body_leading/$fontsize;
-  font-feature-settings: "kern", "liga";
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feature-settings: "kern", "liga", "clig", "calt";
   color: $body-textcolor;
   background-color: $body-bgcolor;
   -ms-text-size-adjust: 100%;

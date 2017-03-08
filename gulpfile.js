@@ -1,52 +1,52 @@
 var gulp = require('gulp'),
-    concatmap = require('gulp-concat-sourcemap'),
-    concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename'),
-    postcss = require('gulp-pleeease'),
-    header = require('gulp-header'),
-    sourcemaps = require('gulp-sourcemaps'),
-    plumber = require('gulp-plumber'),
-    notify = require('gulp-notify'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    gutil = require('gulp-util'),
-    del = require('del'),
-    fs = require('fs'),
-    watch = require('gulp-watch'),
-    dev = true,
+concatmap = require('gulp-concat-sourcemap'),
+concat = require('gulp-concat'),
+sass = require('gulp-sass'),
+rename = require('gulp-rename'),
+postcss = require('gulp-pleeease'),
+header = require('gulp-header'),
+sourcemaps = require('gulp-sourcemaps'),
+plumber = require('gulp-plumber'),
+notify = require('gulp-notify'),
+jshint = require('gulp-jshint'),
+uglify = require('gulp-uglify'),
+gutil = require('gulp-util'),
+del = require('del'),
+fs = require('fs'),
+watch = require('gulp-watch'),
+dev = true,
 
-    settings = {
-        srcDirectory: "src/",
-        css: {
-            srcFile: "src/master.scss",
-            header: "src/css/head.css",
-            outputFile: "style.css",
-            outputDirectory: "./",
-            mapsDirectory: "./maps"
-        },
-        criticalcss: {
-            srcFile: "src/critical.scss",
-            outputFile: "critical.css",
-            outputDirectory: "./"
-        },
-        js: {
-            srcDirectory: "src/js/",
-            outputDirectory: "./js/",
-            syntaxCheck: ['src/js/plugins-bento/*.js', 'src/js/scripts.js'],
-            bundleFiles: ['src/js/pluginsvendor/*.js', 'src/js/plugins-bento/*.js', 'src/js/scripts.js'],
-            bundleOutput: 'bundled.js',
-            bundleOutputMin: 'bundled.js'
-        }
-    };
+settings = {
+    srcDirectory: "src/",
+    css: {
+        srcFile: "src/master.scss",
+        header: "src/css/head.css",
+        outputFile: "style.css",
+        outputDirectory: "./",
+        mapsDirectory: "./maps"
+    },
+    criticalcss: {
+        srcFile: "src/critical.scss",
+        outputFile: "critical.css",
+        outputDirectory: "./"
+    },
+    js: {
+        srcDirectory: "src/js/",
+        outputDirectory: "./js/",
+        syntaxCheck: ['src/js/plugins-bento/*.js', 'src/js/scripts.js'],
+        bundleFiles: ['src/js/vendors/**/*.js', 'src/js/pluginsvendor/*.js', 'src/js/plugins-bento/*.js', 'src/js/scripts.js'],
+        bundleOutput: 'bundled.js',
+        bundleOutputMin: 'bundled.js'
+    }
+};
 
 gulp.task('css', function () {
-    return gulp.src(settings.css.srcFile).pipe(plumber()).pipe(sass({
+    return gulp.src(settings.css.srcFile).pipe(plumber()).pipe(sourcemaps.init()).pipe(sass({
         sourceComments: false,
         imagePath: '../img',
         outputStyle: 'nested'
     })).pipe(rename(settings.css.outputFile)).pipe(postcss({
-        'sourcemaps': false,
+        'sourcemaps': true,
         'autoprefixer': true,
         'filters': true,
         'rem': true,
@@ -57,7 +57,7 @@ gulp.task('css', function () {
         'mqpacker': !dev,
         'minifier': !dev,
         'next': false
-    })).pipe(header(fs.readFileSync(settings.css.header, 'utf8'))).pipe(gulp.dest(settings.css.outputDirectory)).pipe(notify({
+    })).pipe(header(fs.readFileSync(settings.css.header, 'utf8'))).pipe(sourcemaps.write(settings.css.mapsDirectory)).pipe(gulp.dest(settings.css.outputDirectory)).pipe(notify({
         title: "SASS done",
         message: "Sass is done",
         onLast: true
@@ -138,7 +138,7 @@ gulp.task('jsbundle', function () {
 });
 
 gulp.task('jsbundlemin', function () {
-    gulp.src(settings.js.bundleFiles).pipe(plumber()).pipe(concat(settings.js.bundleOutputMin)).pipe(uglify()).pipe(gulp.dest(settings.js.outputDirectory))
+    gulp.src(settings.js.bundleFiles).pipe(plumber()).pipe(concat(settings.js.bundleOutputMin)).pipe(uglify()).pipe(gulp.dest(settings.js.outputDirectory));
 });
 
 gulp.task('watch', ['css', 'criticalcss', 'lint', 'jsbundle', 'minify'], function () {
@@ -150,6 +150,7 @@ gulp.task('watch', ['css', 'criticalcss', 'lint', 'jsbundle', 'minify'], functio
     files.unshift(settings.js.srcDirectory + '**/*.js');
     gulp.watch(settings.srcDirectory + '**/*.scss', ['css', 'criticalcss']);
     gulp.watch(settings.js.bundleFiles, ['jsbundle']);
+    console.log()
     gulp.watch(files, ['minify']);
 });
 
